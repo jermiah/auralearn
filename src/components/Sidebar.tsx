@@ -1,5 +1,5 @@
 import { Link, useLocation } from "react-router-dom";
-import { Home, Users, FileCheck, LayoutDashboard, Lightbulb, FileText, Settings } from "lucide-react";
+import { Home, Users, FileCheck, LayoutDashboard, BookOpen, FileText, Settings, Heart, Lightbulb } from "lucide-react";
 import { cn } from "@/lib/utils";
 
 const navigation = [
@@ -7,7 +7,8 @@ const navigation = [
   { name: "Create Class", path: "/create-class", icon: Users },
   { name: "Assessment", path: "/assessment", icon: FileCheck },
   { name: "Dashboard", path: "/dashboard", icon: LayoutDashboard },
-  { name: "Insights", path: "/insights", icon: Lightbulb },
+  { name: "Teaching Guide", path: "/teaching-guide", icon: BookOpen },
+  { name: "Parent Guide", path: "/parent-guide", icon: Heart },
   { name: "Worksheets", path: "/worksheets", icon: FileText },
   { name: "Settings", path: "/settings", icon: Settings },
 ];
