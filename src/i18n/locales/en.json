@@ -1,0 +1,288 @@
+{
+  "common": {
+    "loading": "Loading...",
+    "error": "Error",
+    "success": "Success",
+    "cancel": "Cancel",
+    "save": "Save",
+    "delete": "Delete",
+    "edit": "Edit",
+    "close": "Close",
+    "back": "Back",
+    "next": "Next",
+    "previous": "Previous",
+    "submit": "Submit",
+    "search": "Search",
+    "filter": "Filter",
+    "export": "Export",
+    "import": "Import",
+    "upload": "Upload",
+    "download": "Download",
+    "view": "View",
+    "create": "Create",
+    "update": "Update",
+    "confirm": "Confirm",
+    "yes": "Yes",
+    "no": "No"
+  },
+  "navigation": {
+    "home": "Home",
+    "createClass": "Create Class",
+    "assessment": "Assessment",
+    "dashboard": "Dashboard",
+    "learningCategories": "Learning Categories",
+    "teachingGuide": "Teaching Guide",
+    "worksheets": "Worksheets",
+    "settings": "Settings",
+    "parentGuide": "Parent Guide",
+    "studentGuide": "Student Guide",
+    "insights": "Insights",
+    "signOut": "Sign Out"
+  },
+  "home": {
+    "title": "LearnAura",
+    "subtitle": "Classroom Intelligence System",
+    "tagline": "AI-Powered Classroom Intelligence",
+    "description": "Adapt learning to every student instantly through real-time classroom intelligence. Behavioral profiling, adaptive assessments, and intelligent grouping.",
+    "teacherLogin": "Teacher Login",
+    "parentLogin": "Parent Login",
+    "goToDashboard": "Go to Dashboard",
+    "noAccount": "Don't have an account?",
+    "signUpHere": "Sign up here",
+    "features": {
+      "adaptiveAssessment": {
+        "title": "Adaptive Assessment",
+        "description": "8-10 questions that adapt to each student's level"
+      },
+      "behavioralProfiles": {
+        "title": "Behavioral Profiles",
+        "description": "10+ learning patterns detected automatically"
+      },
+      "smartGrouping": {
+        "title": "Smart Grouping",
+        "description": "Automatic 3-tier grouping with contextual worksheets"
+      }
+    }
+  },
+  "dashboard": {
+    "title": "Student Dashboard",
+    "description": "Real-time classroom assessment insights - {{count}} students",
+    "loadingStudents": "Loading student assessments...",
+    "stats": {
+      "struggling": "Struggling",
+      "needsAttention": "Needs Attention",
+      "onTrack": "On Track",
+      "advanced": "Advanced",
+      "notAssessed": "Not Assessed",
+      "avgScore": "Avg Score"
+    },
+    "classHeatmap": "Class Heatmap",
+    "detailedStudentList": "Detailed Student List",
+    "notTested": "Not tested",
+    "level": "Level",
+    "score": "Score",
+    "assessments": "assessment",
+    "assessments_plural": "assessments",
+    "reassessSoon": "Reassess Soon",
+    "profile": "Profile",
+    "viewClassInsights": "View Class Insights",
+    "noStudents": {
+      "title": "No Students Found",
+      "description": "Create a class and add students to start tracking assessment data.",
+      "action": "Create Class"
+    },
+    "categories": {
+      "slow_processing": "Slow Processing",
+      "fast_processor": "Fast Processor",
+      "high_energy": "High Energy",
+      "visual_learner": "Visual Learner",
+      "logical_learner": "Logical Learner",
+      "sensitive_low_confidence": "Sensitive/Low Confidence",
+      "easily_distracted": "Easily Distracted",
+      "needs_repetition": "Needs Repetition",
+      "average_learner": "Average Learner",
+      "not_assessed": "Not assessed"
+    }
+  },
+  "assessment": {
+    "title": "Student Assessment Links",
+    "description": "Share these links with your students to have them complete their assessments",
+    "loadingClasses": "Loading classes...",
+    "assessmentLink": "Assessment Link",
+    "copyLink": "Copy Link",
+    "copied": "Copied!",
+    "openLink": "Open Link",
+    "students": "students",
+    "student": "student",
+    "howToUse": "📋 How to use:",
+    "instructions": {
+      "step1": "Copy the assessment link above",
+      "step2": "Share it with your students via email, LMS, or classroom platform",
+      "step3": "Students will select their name and complete the assessment",
+      "step4": "View results in your Dashboard once assessments are completed"
+    },
+    "createNewClass": "Create New Class",
+    "viewDashboard": "View Dashboard",
+    "noClasses": {
+      "title": "No Classes Found",
+      "description": "Create a class first to generate assessment links for your students.",
+      "action": "Create Your First Class"
+    },
+    "linkCopied": "Assessment link copied to clipboard!",
+    "linkCopyFailed": "Failed to copy link",
+    "loadFailed": "Failed to load classes"
+  },
+  "settings": {
+    "title": "Settings",
+    "description": "Customize your LearnAura experience",
+    "theme": {
+      "title": "Theme",
+      "selectTheme": "Select Theme",
+      "light": "Light",
+      "dark": "Dark",
+      "futuristic": "Futuristic",
+      "highContrast": "High Contrast"
+    },
+    "language": {
+      "title": "Language",
+      "selectLanguage": "Select Language",
+      "description": "Choose your preferred language for the interface",
+      "english": "English",
+      "french": "Français"
+    },
+    "profile": {
+      "title": "Teacher Profile",
+      "uploadPhoto": "Upload Photo",
+      "photoRecommendation": "Recommended: 400x400px, max 2MB"
+    },
+    "dataManagement": {
+      "title": "Data Management",
+      "exportClassData": "Export Class Data",
+      "clearAssessmentHistory": "Clear Assessment History"
+    }
+  },
+  "auth": {
+    "signIn": "Sign In",
+    "signUp": "Sign Up",
+    "email": "Email",
+    "password": "Password",
+    "fullName": "Full Name",
+    "confirmPassword": "Confirm Password",
+    "forgotPassword": "Forgot Password?",
+    "noAccount": "Don't have an account?",
+    "hasAccount": "Already have an account?",
+    "signInHere": "Sign in here",
+    "signUpHere": "Sign up here",
+    "teacher": "Teacher",
+    "parent": "Parent",
+    "selectRole": "Select Your Role",
+    "roleDescription": "Choose how you'll be using LearnAura",
+    "teacherDescription": "Create classes, assess students, and track progress",
+    "parentDescription": "Monitor your child's learning journey and progress",
+    "continue": "Continue",
+    "signingIn": "Signing in...",
+    "signingUp": "Signing up...",
+    "welcomeBack": "Welcome back!",
+    "createAccount": "Create your account"
+  },
+  "createClass": {
+    "title": "Create Class",
+    "description": "Set up a new class and add students",
+    "className": "Class Name",
+    "gradeLevel": "Grade Level",
+    "subject": "Subject",
+    "addStudents": "Add Students",
+    "studentName": "Student Name",
+    "addStudent": "Add Student",
+    "removeStudent": "Remove Student",
+    "createClass": "Create Class",
+    "creating": "Creating...",
+    "success": "Class created successfully!",
+    "error": "Failed to create class",
+    "validation": {
+      "classNameRequired": "Class name is required",
+      "atLeastOneStudent": "Add at least one student"
+    }
+  },
+  "insights": {
+    "title": "Class Insights",
+    "description": "AI-powered analysis of your classroom",
+    "loading": "Generating insights...",
+    "noData": "Not enough data to generate insights",
+    "categories": {
+      "performance": "Performance Overview",
+      "trends": "Learning Trends",
+      "recommendations": "Recommendations",
+      "grouping": "Suggested Groupings"
+    }
+  },
+  "teachingGuide": {
+    "title": "Teaching Guide",
+    "description": "Personalized teaching strategies for your students",
+    "selectStudent": "Select a student to view their teaching guide",
+    "strategies": "Teaching Strategies",
+    "activities": "Recommended Activities",
+    "resources": "Additional Resources"
+  },
+  "worksheets": {
+    "title": "Worksheets",
+    "description": "Generate adaptive worksheets for your students",
+    "generate": "Generate Worksheet",
+    "download": "Download",
+    "print": "Print",
+    "difficulty": {
+      "easy": "Easy",
+      "medium": "Medium",
+      "hard": "Hard"
+    }
+  },
+  "parentGuide": {
+    "title": "Parent Guide",
+    "description": "Support your child's learning journey",
+    "childProgress": "Child's Progress",
+    "tips": "Tips for Parents",
+    "activities": "Home Activities",
+    "communication": "Teacher Communication"
+  },
+  "studentGuide": {
+    "title": "Student Profile",
+    "backToDashboard": "Back to Dashboard",
+    "learningProfile": "Learning Profile",
+    "assessmentHistory": "Assessment History",
+    "strengths": "Strengths",
+    "areasForGrowth": "Areas for Growth",
+    "recommendations": "Recommendations"
+  },
+  "studentSelection": {
+    "title": "Select Your Name",
+    "description": "Find and select your name to begin the assessment",
+    "search": "Search for your name...",
+    "startAssessment": "Start Assessment",
+    "noStudents": "No students found in this class"
+  },
+  "studentAssessment": {
+    "title": "Assessment",
+    "question": "Question {{current}} of {{total}}",
+    "submit": "Submit Answer",
+    "next": "Next Question",
+    "finish": "Finish Assessment",
+    "completed": "Assessment Completed!",
+    "thankYou": "Thank you for completing the assessment.",
+    "resultsAvailable": "Your teacher will review your results."
+  },
+  "notifications": {
+    "error": "An error occurred",
+    "success": "Operation successful",
+    "saved": "Changes saved",
+    "deleted": "Deleted successfully",
+    "updated": "Updated successfully",
+    "created": "Created successfully"
+  },
+  "errors": {
+    "generic": "Something went wrong. Please try again.",
+    "network": "Network error. Please check your connection.",
+    "unauthorized": "You are not authorized to perform this action.",
+    "notFound": "The requested resource was not found.",
+    "validation": "Please check your input and try again."
+  }
+}

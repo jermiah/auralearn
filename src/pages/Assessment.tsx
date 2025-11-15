@@ -7,6 +7,7 @@ import { Link2, Copy, Users, ExternalLink, AlertCircle, Loader2 } from "lucide-r
 import { supabase } from "@/lib/supabase";
 import { useAuth } from "@/contexts/AuthContext";
 import { Badge } from "@/components/ui/badge";
+import { useTranslation } from "react-i18next";
 
 interface Class {
   id: string;
@@ -19,6 +20,7 @@ interface Class {
 export default function Assessment() {
   const navigate = useNavigate();
   const { user } = useAuth();
+  const { t } = useTranslation();
   const [classes, setClasses] = useState<Class[]>([]);
   const [isLoading, setIsLoading] = useState(true);
   const [copiedClassId, setCopiedClassId] = useState<string | null>(null);
@@ -59,7 +61,7 @@ export default function Assessment() {
       setClasses(classesWithCounts);
     } catch (error: any) {
       console.error("Error loading classes:", error);
-      toast.error("Failed to load classes");
+      toast.error(t('assessment.loadFailed'));
     } finally {
       setIsLoading(false);
     }
@@ -75,10 +77,10 @@ export default function Assessment() {
     try {
       await navigator.clipboard.writeText(link);
       setCopiedClassId(classId);
-      toast.success("Assessment link copied to clipboard!");
+      toast.success(t('assessment.linkCopied'));
       setTimeout(() => setCopiedClassId(null), 2000);
     } catch (error) {
-      toast.error("Failed to copy link");
+      toast.error(t('assessment.linkCopyFailed'));
     }
   };
 
@@ -92,7 +94,7 @@ export default function Assessment() {
       <div className="flex items-center justify-center min-h-[400px]">
         <div className="text-center">
           <Loader2 className="h-12 w-12 animate-spin text-purple-600 mx-auto mb-4" />
-          <p className="text-lg text-gray-600">Loading classes...</p>
+          <p className="text-lg text-gray-600">{t('assessment.loadingClasses')}</p>
         </div>
       </div>
     );
@@ -101,21 +103,21 @@ export default function Assessment() {
   return (
     <div className="space-y-6 animate-fade-in">
       <div>
-        <h1 className="text-4xl font-bold text-foreground mb-2">Student Assessment Links</h1>
+        <h1 className="text-4xl font-bold text-foreground mb-2">{t('assessment.title')}</h1>
         <p className="text-muted-foreground">
-          Share these links with your students to have them complete their assessments
+          {t('assessment.description')}
         </p>
       </div>
 
       {classes.length === 0 ? (
         <Card className="p-12 rounded-2xl text-center">
           <AlertCircle className="h-16 w-16 text-gray-400 mx-auto mb-4" />
-          <h3 className="text-2xl font-bold text-gray-700 mb-2">No Classes Found</h3>
+          <h3 className="text-2xl font-bold text-gray-700 mb-2">{t('assessment.noClasses.title')}</h3>
           <p className="text-gray-500 mb-6">
-            Create a class first to generate assessment links for your students.
+            {t('assessment.noClasses.description')}
           </p>
           <Button onClick={() => navigate("/create-class")} size="lg">
-            Create Your First Class
+            {t('assessment.noClasses.action')}
           </Button>
         </Card>
       ) : (
@@ -134,7 +136,7 @@ export default function Assessment() {
                   </div>
                   <Badge variant="secondary" className="flex items-center gap-1">
                     <Users className="w-3 h-3" />
-                    {classItem.student_count} {classItem.student_count === 1 ? "student" : "students"}
+                    {classItem.student_count} {classItem.student_count === 1 ? t('assessment.student') : t('assessment.students')}
                   </Badge>
                 </div>
               </CardHeader>
@@ -142,7 +144,7 @@ export default function Assessment() {
                 <div className="p-4 bg-secondary rounded-xl">
                   <div className="flex items-center gap-2 mb-2">
                     <Link2 className="w-4 h-4 text-muted-foreground" />
-                    <span className="text-sm font-medium text-muted-foreground">Assessment Link</span>
+                    <span className="text-sm font-medium text-muted-foreground">{t('assessment.assessmentLink')}</span>
                   </div>
                   <code className="block text-sm bg-card p-3 rounded-lg border break-all">
                     {getAssessmentLink(classItem.id)}
@@ -156,7 +158,7 @@ export default function Assessment() {
                     variant={copiedClassId === classItem.id ? "secondary" : "default"}
                   >
                     <Copy className="w-4 h-4 mr-2" />
-                    {copiedClassId === classItem.id ? "Copied!" : "Copy Link"}
+                    {copiedClassId === classItem.id ? t('assessment.copied') : t('assessment.copyLink')}
                   </Button>
                   <Button
                     onClick={() => openAssessmentLink(classItem.id)}
@@ -164,17 +166,17 @@ export default function Assessment() {
                     className="flex-1 rounded-xl"
                   >
                     <ExternalLink className="w-4 h-4 mr-2" />
-                    Open Link
+                    {t('assessment.openLink')}
                   </Button>
                 </div>
 
                 <div className="text-xs text-muted-foreground bg-blue-50 dark:bg-blue-950/20 p-3 rounded-lg">
-                  <p className="font-medium mb-1">📋 How to use:</p>
+                  <p className="font-medium mb-1">{t('assessment.howToUse')}</p>
                   <ol className="list-decimal list-inside space-y-1">
-                    <li>Copy the assessment link above</li>
-                    <li>Share it with your students via email, LMS, or classroom platform</li>
-                    <li>Students will select their name and complete the assessment</li>
-                    <li>View results in your Dashboard once assessments are completed</li>
+                    <li>{t('assessment.instructions.step1')}</li>
+                    <li>{t('assessment.instructions.step2')}</li>
+                    <li>{t('assessment.instructions.step3')}</li>
+                    <li>{t('assessment.instructions.step4')}</li>
                   </ol>
                 </div>
               </CardContent>
@@ -185,10 +187,10 @@ export default function Assessment() {
 
       <div className="flex justify-between items-center pt-4">
         <Button variant="outline" onClick={() => navigate("/create-class")} className="rounded-xl">
-          Create New Class
+          {t('assessment.createNewClass')}
         </Button>
         <Button onClick={() => navigate("/dashboard")} className="rounded-xl">
-          View Dashboard
+          {t('assessment.viewDashboard')}
         </Button>
       </div>
     </div>

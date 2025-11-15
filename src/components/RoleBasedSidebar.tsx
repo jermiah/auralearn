@@ -2,26 +2,29 @@ import { Link, useLocation } from "react-router-dom";
 import { Home, Users, FileCheck, LayoutDashboard, BookOpen, FileText, Settings, Heart, Lightbulb, LogOut, Brain } from "lucide-react";
 import { cn } from "@/lib/utils";
 import { useAuth } from "@/contexts/AuthContext";
-
-const teacherNavigation = [
-  { name: "Home", path: "/", icon: Home },
-  { name: "Create Class", path: "/create-class", icon: Users },
-  { name: "Assessment", path: "/assessment", icon: FileCheck },
-  { name: "Dashboard", path: "/dashboard", icon: LayoutDashboard },
-  { name: "Learning Categories", path: "/student-categories", icon: Brain },
-  { name: "Teaching Guide", path: "/teaching-guide", icon: BookOpen },
-  { name: "Worksheets", path: "/worksheets", icon: FileText },
-  { name: "Settings", path: "/settings", icon: Settings },
-];
-
-const parentNavigation = [
-  { name: "Parent Guide", path: "/parent-guide", icon: Heart },
-  { name: "Settings", path: "/settings", icon: Settings },
-];
+import { useTranslation } from "react-i18next";
+import LanguageSelector from "./LanguageSelector";
 
 export default function RoleBasedSidebar() {
   const location = useLocation();
   const { user, isParent, signOut } = useAuth();
+  const { t } = useTranslation();
+
+  const teacherNavigation = [
+    { name: t('navigation.home'), path: "/", icon: Home },
+    { name: t('navigation.createClass'), path: "/create-class", icon: Users },
+    { name: t('navigation.assessment'), path: "/assessment", icon: FileCheck },
+    { name: t('navigation.dashboard'), path: "/dashboard", icon: LayoutDashboard },
+    { name: t('navigation.learningCategories'), path: "/student-categories", icon: Brain },
+    { name: t('navigation.teachingGuide'), path: "/teaching-guide", icon: BookOpen },
+    { name: t('navigation.worksheets'), path: "/worksheets", icon: FileText },
+    { name: t('navigation.settings'), path: "/settings", icon: Settings },
+  ];
+
+  const parentNavigation = [
+    { name: t('navigation.parentGuide'), path: "/parent-guide", icon: Heart },
+    { name: t('navigation.settings'), path: "/settings", icon: Settings },
+  ];
 
   // Determine navigation based on role
   const navigation = isParent ? parentNavigation : teacherNavigation;
@@ -39,14 +42,17 @@ export default function RoleBasedSidebar() {
   return (
     <aside className="fixed left-0 top-0 h-screen w-64 bg-card border-r border-border flex flex-col">
       <div className="p-6">
-        <div className="flex items-center gap-3">
-          <div className="w-10 h-10 rounded-xl bg-gradient-to-br from-primary to-info flex items-center justify-center">
-            <Lightbulb className="w-6 h-6 text-white" />
+        <div className="flex items-center justify-between gap-3 mb-4">
+          <div className="flex items-center gap-3">
+            <div className="w-10 h-10 rounded-xl bg-gradient-to-br from-primary to-info flex items-center justify-center">
+              <Lightbulb className="w-6 h-6 text-white" />
+            </div>
+            <div>
+              <h1 className="text-xl font-bold text-foreground">LearnAura</h1>
+              <p className="text-xs text-muted-foreground">Intelligence System</p>
+            </div>
           </div>
-          <div>
-            <h1 className="text-xl font-bold text-foreground">LearnAura</h1>
-            <p className="text-xs text-muted-foreground">Intelligence System</p>
-          </div>
+          <LanguageSelector variant="ghost" />
         </div>
       </div>
 
@@ -95,7 +101,7 @@ export default function RoleBasedSidebar() {
           className="w-full flex items-center gap-3 px-4 py-3 rounded-xl text-muted-foreground hover:bg-secondary hover:text-foreground transition-all duration-300"
         >
           <LogOut className="w-5 h-5" />
-          <span className="font-medium">Sign Out</span>
+          <span className="font-medium">{t('navigation.signOut')}</span>
         </button>
       </div>
     </aside>
