@@ -23,7 +23,8 @@
     "update": "Update",
     "confirm": "Confirm",
     "yes": "Yes",
-    "no": "No"
+    "no": "No",
+    "class": "Class"
   },
   "navigation": {
     "home": "Home",
@@ -227,13 +228,14 @@
     }
   },
   "studentSelection": {
-    "title": "Select Your Name",
-    "description": "Find and select your name to begin the assessment",
+    "title": "Welcome to LearnAura Assessment",
+    "description": "Please select your name to begin",
     "searchPlaceholder": "Search for your name...",
     "startAssessment": "Start Assessment",
     "noStudents": "No students found in this class",
+    "contactTeacher": "Please contact your teacher",
     "loading": "Loading students...",
-    "selectStudent": "Please select your name to continue"
+    "selectStudent": "Please select your name"
   },
   "studentAssessment": {
     "title": "Assessment",

@@ -5,6 +5,7 @@ import { Card } from '@/components/ui/card';
 import { supabase } from '@/lib/supabase';
 import { toast } from 'sonner';
 import { Users, CheckCircle2 } from 'lucide-react';
+import { useTranslation } from 'react-i18next';
 
 interface Student {
   id: string;
@@ -15,6 +16,7 @@ interface Student {
 export default function StudentSelection() {
   const { classId } = useParams<{ classId: string }>();
   const navigate = useNavigate();
+  const { t } = useTranslation();
   const [students, setStudents] = useState<Student[]>([]);
   const [selectedStudentId, setSelectedStudentId] = useState<string | null>(null);
   const [isLoading, setIsLoading] = useState(true);
@@ -26,7 +28,7 @@ export default function StudentSelection() {
 
   const loadStudents = async () => {
     if (!classId) {
-      toast.error('Invalid class ID');
+      toast.error(t('errors.validation'));
       setIsLoading(false);
       return;
     }
@@ -54,7 +56,7 @@ export default function StudentSelection() {
       setStudents(studentsData || []);
     } catch (error) {
       console.error('Error loading students:', error);
-      toast.error('Failed to load class students');
+      toast.error(t('studentSelection.loading'));
     } finally {
       setIsLoading(false);
     }
@@ -66,7 +68,7 @@ export default function StudentSelection() {
 
   const handleStartAssessment = () => {
     if (!selectedStudentId) {
-      toast.error('Please select your name');
+      toast.error(t('studentSelection.selectStudent'));
       return;
     }
 
@@ -87,7 +89,7 @@ export default function StudentSelection() {
       <div className="min-h-screen flex items-center justify-center bg-gradient-to-br from-pastel-mint/20 via-pastel-sky/20 to-pastel-lavender/20">
         <div className="text-center">
           <div className="w-16 h-16 border-4 border-primary border-t-transparent rounded-full animate-spin mx-auto mb-4"></div>
-          <p className="text-muted-foreground">Loading students...</p>
+          <p className="text-muted-foreground">{t('studentSelection.loading')}</p>
         </div>
       </div>
     );
@@ -101,16 +103,16 @@ export default function StudentSelection() {
           <div className="w-20 h-20 mx-auto mb-6 rounded-xl bg-gradient-to-br from-primary to-info flex items-center justify-center">
             <Users className="w-12 h-12 text-white" />
           </div>
-          <h1 className="text-4xl font-bold text-foreground mb-2">Welcome to LearnAura Assessment</h1>
-          <p className="text-xl text-muted-foreground">Class: {className}</p>
-          <p className="text-lg text-muted-foreground mt-2">Please select your name to begin</p>
+          <h1 className="text-4xl font-bold text-foreground mb-2">{t('studentSelection.title')}</h1>
+          <p className="text-xl text-muted-foreground">{t('common.class')}: {className}</p>
+          <p className="text-lg text-muted-foreground mt-2">{t('studentSelection.description')}</p>
         </div>
 
         {/* Student Grid */}
         {students.length === 0 ? (
           <Card className="p-12 text-center">
-            <p className="text-lg text-muted-foreground">No students found in this class.</p>
-            <p className="text-sm text-muted-foreground mt-2">Please contact your teacher.</p>
+            <p className="text-lg text-muted-foreground">{t('studentSelection.noStudents')}</p>
+            <p className="text-sm text-muted-foreground mt-2">{t('studentSelection.contactTeacher')}</p>
           </Card>
         ) : (
           <div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-4 mb-8">
@@ -155,7 +157,7 @@ export default function StudentSelection() {
               size="lg"
               className="text-lg px-12 py-6 rounded-xl shadow-lg"
             >
-              Start Assessment
+              {t('studentSelection.startAssessment')}
             </Button>
           </div>
         )}
