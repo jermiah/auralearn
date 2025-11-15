@@ -23,7 +23,8 @@
     "update": "Mettre à jour",
     "confirm": "Confirmer",
     "yes": "Oui",
-    "no": "Non"
+    "no": "Non",
+    "class": "Classe"
   },
   "navigation": {
     "home": "Accueil",
@@ -228,13 +229,14 @@
     }
   },
   "studentSelection": {
-    "title": "Sélectionnez Votre Nom",
-    "description": "Trouvez et sélectionnez votre nom pour commencer l'évaluation",
+    "title": "Bienvenue à l'Évaluation LearnAura",
+    "description": "Veuillez sélectionner votre nom pour commencer",
     "searchPlaceholder": "Recherchez votre nom...",
     "startAssessment": "Commencer l'Évaluation",
     "noStudents": "Aucun élève trouvé dans cette classe",
+    "contactTeacher": "Veuillez contacter votre enseignant",
     "loading": "Chargement des élèves...",
-    "selectStudent": "Veuillez sélectionner votre nom pour continuer"
+    "selectStudent": "Veuillez sélectionner votre nom"
   },
   "studentAssessment": {
     "title": "Évaluation",
