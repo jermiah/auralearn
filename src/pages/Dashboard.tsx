@@ -7,6 +7,7 @@ import { supabase } from "@/lib/supabase";
 import { useAuth } from "@/contexts/AuthContext";
 import { useToast } from "@/hooks/use-toast";
 import { Badge } from "@/components/ui/badge";
+import { useTranslation } from "react-i18next";
 
 interface StudentWithAssessment {
   id: string;
@@ -25,6 +26,7 @@ export default function Dashboard() {
   const navigate = useNavigate();
   const { user } = useAuth();
   const { toast } = useToast();
+  const { t } = useTranslation();
   const [students, setStudents] = useState<StudentWithAssessment[]>([]);
   const [isLoading, setIsLoading] = useState(true);
 
@@ -110,8 +112,8 @@ export default function Dashboard() {
     } catch (error: any) {
       console.error("Error loading student data:", error);
       toast({
-        title: "Error",
-        description: "Failed to load student assessment data.",
+        title: t('common.error'),
+        description: t('errors.generic'),
         variant: "destructive",
       });
     } finally {
@@ -155,19 +157,8 @@ export default function Dashboard() {
   };
 
   const getCategoryDisplayName = (category: string | null): string => {
-    if (!category) return "Not assessed";
-    const categoryNames: Record<string, string> = {
-      slow_processing: "Slow Processing",
-      fast_processor: "Fast Processor",
-      high_energy: "High Energy",
-      visual_learner: "Visual Learner",
-      logical_learner: "Logical Learner",
-      sensitive_low_confidence: "Sensitive/Low Confidence",
-      easily_distracted: "Easily Distracted",
-      needs_repetition: "Needs Repetition",
-      average_learner: "Average Learner",
-    };
-    return categoryNames[category] || category;
+    if (!category) return t('dashboard.categories.not_assessed');
+    return t(`dashboard.categories.${category}`, category);
   };
 
   if (isLoading) {
@@ -175,7 +166,7 @@ export default function Dashboard() {
       <div className="flex items-center justify-center min-h-[400px]">
         <div className="text-center">
           <Loader2 className="h-12 w-12 animate-spin text-purple-600 mx-auto mb-4" />
-          <p className="text-lg text-gray-600">Loading student assessments...</p>
+          <p className="text-lg text-gray-600">{t('dashboard.loadingStudents')}</p>
         </div>
       </div>
     );
@@ -206,52 +197,52 @@ export default function Dashboard() {
   return (
     <div className="space-y-6 animate-fade-in">
       <div>
-        <h1 className="text-4xl font-bold text-foreground mb-2">Student Dashboard</h1>
-        <p className="text-muted-foreground">Real-time classroom assessment insights - {students.length} students</p>
+        <h1 className="text-4xl font-bold text-foreground mb-2">{t('dashboard.title')}</h1>
+        <p className="text-muted-foreground">{t('dashboard.description', { count: students.length })}</p>
       </div>
 
       <div className="grid grid-cols-6 gap-4">
         <Card className="p-6 rounded-2xl bg-gradient-to-br from-level-struggling/10 to-white">
           <div className="text-3xl font-bold text-level-struggling mb-1">{stats.struggling}</div>
-          <div className="text-sm text-muted-foreground">Struggling</div>
+          <div className="text-sm text-muted-foreground">{t('dashboard.stats.struggling')}</div>
         </Card>
         <Card className="p-6 rounded-2xl bg-gradient-to-br from-level-attention/10 to-white">
           <div className="text-3xl font-bold text-level-attention mb-1">{stats.attention}</div>
-          <div className="text-sm text-muted-foreground">Needs Attention</div>
+          <div className="text-sm text-muted-foreground">{t('dashboard.stats.needsAttention')}</div>
         </Card>
         <Card className="p-6 rounded-2xl bg-gradient-to-br from-level-ontrack/10 to-white">
           <div className="text-3xl font-bold text-level-ontrack mb-1">{stats.ontrack}</div>
-          <div className="text-sm text-muted-foreground">On Track</div>
+          <div className="text-sm text-muted-foreground">{t('dashboard.stats.onTrack')}</div>
         </Card>
         <Card className="p-6 rounded-2xl bg-gradient-to-br from-level-advanced/10 to-white">
           <div className="text-3xl font-bold text-level-advanced mb-1">{stats.advanced}</div>
-          <div className="text-sm text-muted-foreground">Advanced</div>
+          <div className="text-sm text-muted-foreground">{t('dashboard.stats.advanced')}</div>
         </Card>
         <Card className="p-6 rounded-2xl bg-gradient-to-br from-gray-200/50 to-white">
           <div className="text-3xl font-bold text-gray-600 mb-1">{stats.notAssessed}</div>
-          <div className="text-sm text-muted-foreground">Not Assessed</div>
+          <div className="text-sm text-muted-foreground">{t('dashboard.stats.notAssessed')}</div>
         </Card>
         <Card className="p-6 rounded-2xl bg-gradient-to-br from-primary/10 to-white">
           <div className="text-3xl font-bold text-primary mb-1">{stats.avgScore}{stats.avgScore > 0 ? '%' : ''}</div>
-          <div className="text-sm text-muted-foreground">Avg Score</div>
+          <div className="text-sm text-muted-foreground">{t('dashboard.stats.avgScore')}</div>
         </Card>
       </div>
 
       {studentsWithLevels.length === 0 ? (
         <Card className="p-12 rounded-2xl text-center">
           <AlertCircle className="h-16 w-16 text-gray-400 mx-auto mb-4" />
-          <h3 className="text-2xl font-bold text-gray-700 mb-2">No Students Found</h3>
+          <h3 className="text-2xl font-bold text-gray-700 mb-2">{t('dashboard.noStudents.title')}</h3>
           <p className="text-gray-500 mb-6">
-            Create a class and add students to start tracking assessment data.
+            {t('dashboard.noStudents.description')}
           </p>
           <Button onClick={() => navigate("/create-class")} size="lg">
-            Create Class
+            {t('dashboard.noStudents.action')}
           </Button>
         </Card>
       ) : (
         <>
           <Card className="p-6 rounded-2xl">
-            <h2 className="text-2xl font-bold text-foreground mb-6">Class Heatmap</h2>
+            <h2 className="text-2xl font-bold text-foreground mb-6">{t('dashboard.classHeatmap')}</h2>
             <div className="grid grid-cols-6 gap-3">
               {studentsWithLevels.map((student) => (
                 <div
@@ -266,7 +257,7 @@ export default function Dashboard() {
                     <div className="text-center">
                       <div className="text-xs font-semibold truncate w-full">{student.name.split(" ")[0]}</div>
                       <div className="text-xs opacity-90">
-                        {student.level === 0 ? "Not tested" : `Level ${student.level}`}
+                        {student.level === 0 ? t('dashboard.notTested') : `${t('dashboard.level')} ${student.level}`}
                       </div>
                     </div>
                   </div>
@@ -274,12 +265,12 @@ export default function Dashboard() {
                     <div className="font-bold mb-1">{student.name}</div>
                     {student.latest_score !== null ? (
                       <>
-                        <div>Score: {student.latest_score}/10</div>
-                        <div>Level: {student.level}/5</div>
+                        <div>{t('dashboard.score')}: {student.latest_score}/10</div>
+                        <div>{t('dashboard.level')}: {student.level}/5</div>
                         <div className="mt-1">{getCategoryDisplayName(student.primary_category)}</div>
                       </>
                     ) : (
-                      <div className="text-yellow-300">Not assessed yet</div>
+                      <div className="text-yellow-300">{t('dashboard.stats.notAssessed')}</div>
                     )}
                   </div>
                 </div>
@@ -288,7 +279,7 @@ export default function Dashboard() {
           </Card>
 
           <Card className="p-6 rounded-2xl">
-            <h2 className="text-2xl font-bold text-foreground mb-4">Detailed Student List</h2>
+            <h2 className="text-2xl font-bold text-foreground mb-4">{t('dashboard.detailedStudentList')}</h2>
             <div className="space-y-2">
               {studentsWithLevels.map((student) => (
                 <div
@@ -303,7 +294,7 @@ export default function Dashboard() {
                     <div className="text-sm text-muted-foreground">
                       {getCategoryDisplayName(student.primary_category)}
                       {student.total_assessments > 0 && (
-                        <span className="ml-2">• {student.total_assessments} assessment{student.total_assessments > 1 ? 's' : ''}</span>
+                        <span className="ml-2">• {student.total_assessments} {student.total_assessments > 1 ? t('dashboard.assessments_plural') : t('dashboard.assessments')}</span>
                       )}
                     </div>
                   </div>
@@ -312,23 +303,23 @@ export default function Dashboard() {
                       <>
                         <div className="text-center">
                           <div className="text-2xl font-bold text-foreground">{student.latest_score}</div>
-                          <div className="text-xs text-muted-foreground">Score</div>
+                          <div className="text-xs text-muted-foreground">{t('dashboard.score')}</div>
                         </div>
                         <div className="flex items-center gap-2 px-3 py-1 rounded-full bg-card">
                           {student.improvement_trend === "up" && <TrendingUp className="w-4 h-4 text-green-600" />}
                           {student.improvement_trend === "down" && <TrendingDown className="w-4 h-4 text-red-600" />}
                           {student.improvement_trend === "stable" && <Minus className="w-4 h-4 text-gray-600" />}
-                          <span className="text-sm font-medium">Level {student.level}</span>
+                          <span className="text-sm font-medium">{t('dashboard.level')} {student.level}</span>
                         </div>
                         {student.needs_reassessment && (
                           <Badge variant="outline" className="flex items-center gap-1">
                             <Calendar className="w-3 h-3" />
-                            Reassess Soon
+                            {t('dashboard.reassessSoon')}
                           </Badge>
                         )}
                       </>
                     ) : (
-                      <Badge variant="secondary">Not Assessed</Badge>
+                      <Badge variant="secondary">{t('dashboard.stats.notAssessed')}</Badge>
                     )}
                     <Button
                       size="sm"
@@ -337,7 +328,7 @@ export default function Dashboard() {
                       onClick={() => navigate(`/student-guide/${student.id}`)}
                     >
                       <Eye className="w-4 h-4 mr-1" />
-                      Profile
+                      {t('dashboard.profile')}
                     </Button>
                   </div>
                 </div>
@@ -347,7 +338,7 @@ export default function Dashboard() {
 
           <div className="flex justify-end gap-4">
             <Button onClick={() => navigate("/insights")} size="lg" className="rounded-xl px-8">
-              View Class Insights
+              {t('dashboard.viewClassInsights')}
             </Button>
           </div>
         </>
