@@ -1,29 +1,141 @@
 import { useEffect, useState } from "react";
 import { Card } from "@/components/ui/card";
 import { Button } from "@/components/ui/button";
-import { Eye, TrendingUp, TrendingDown, Minus } from "lucide-react";
+import { Eye, TrendingUp, TrendingDown, Minus, Loader2, AlertCircle, Calendar } from "lucide-react";
 import { useNavigate } from "react-router-dom";
+import { supabase } from "@/lib/supabase";
+import { useAuth } from "@/contexts/AuthContext";
+import { useToast } from "@/hooks/use-toast";
+import { Badge } from "@/components/ui/badge";
 
-interface StudentResult {
+interface StudentWithAssessment {
   id: string;
   name: string;
-  score: number;
-  level: number;
-  color: "struggling" | "attention" | "ontrack" | "advanced";
+  primary_category: string | null;
+  latest_score: number | null;
+  latest_assessment_date: string | null;
+  total_assessments: number;
+  needs_reassessment: boolean;
+  next_assessment_date: string | null;
+  confidence_score: number | null;
+  improvement_trend: "up" | "down" | "stable" | null;
 }
 
 export default function Dashboard() {
   const navigate = useNavigate();
-  const [students, setStudents] = useState<StudentResult[]>([]);
+  const { user } = useAuth();
+  const { toast } = useToast();
+  const [students, setStudents] = useState<StudentWithAssessment[]>([]);
+  const [isLoading, setIsLoading] = useState(true);
 
   useEffect(() => {
-    const results = localStorage.getItem("assessmentResults");
-    if (!results) {
-      navigate("/create-class");
-      return;
+    if (user?.id) {
+      loadStudentAssessmentData();
     }
-    setStudents(JSON.parse(results));
-  }, [navigate]);
+  }, [user]);
+
+  const loadStudentAssessmentData = async () => {
+    setIsLoading(true);
+    try {
+      // Get all classes for this teacher
+      const { data: classes, error: classError } = await supabase
+        .from("classes")
+        .select("id")
+        .eq("user_id", user?.id);
+
+      if (classError) throw classError;
+
+      if (!classes || classes.length === 0) {
+        setStudents([]);
+        setIsLoading(false);
+        return;
+      }
+
+      const classIds = classes.map(c => c.id);
+
+      // Get all students from teacher's classes with their latest assessment
+      const { data: studentsData, error: studentsError } = await supabase
+        .from("students")
+        .select(`
+          id,
+          name,
+          primary_category,
+          class_id
+        `)
+        .in("class_id", classIds)
+        .order("name");
+
+      if (studentsError) throw studentsError;
+
+      // For each student, get their latest assessment and calculate stats
+      const studentsWithData = await Promise.all(
+        (studentsData || []).map(async (student) => {
+          const { data: assessments } = await supabase
+            .from("student_assessments")
+            .select("*")
+            .eq("student_id", student.id)
+            .order("assessment_date", { ascending: false })
+            .limit(2);
+
+          const latestAssessment = assessments?.[0];
+          const previousAssessment = assessments?.[1];
+
+          let improvementTrend: "up" | "down" | "stable" | null = null;
+          if (latestAssessment && previousAssessment) {
+            if (latestAssessment.score > previousAssessment.score) {
+              improvementTrend = "up";
+            } else if (latestAssessment.score < previousAssessment.score) {
+              improvementTrend = "down";
+            } else {
+              improvementTrend = "stable";
+            }
+          }
+
+          return {
+            id: student.id,
+            name: student.name,
+            primary_category: student.primary_category,
+            latest_score: latestAssessment?.score || null,
+            latest_assessment_date: latestAssessment?.assessment_date || null,
+            total_assessments: assessments?.length || 0,
+            needs_reassessment: latestAssessment?.needs_reassessment || false,
+            next_assessment_date: latestAssessment?.next_assessment_date || null,
+            confidence_score: latestAssessment?.confidence_score || null,
+            improvement_trend: improvementTrend,
+          };
+        })
+      );
+
+      setStudents(studentsWithData);
+    } catch (error: any) {
+      console.error("Error loading student data:", error);
+      toast({
+        title: "Error",
+        description: "Failed to load student assessment data.",
+        variant: "destructive",
+      });
+    } finally {
+      setIsLoading(false);
+    }
+  };
+
+  const getPerformanceLevel = (score: number | null, totalQuestions: number = 10): number => {
+    if (!score) return 0;
+    const percentage = (score / totalQuestions) * 100;
+    if (percentage >= 80) return 5; // Advanced
+    if (percentage >= 60) return 4; // On track
+    if (percentage >= 40) return 3; // Needs attention
+    if (percentage >= 20) return 2; // Struggling
+    return 1; // Needs immediate help
+  };
+
+  const getPerformanceColor = (level: number): "struggling" | "attention" | "ontrack" | "advanced" | "unknown" => {
+    if (level === 0) return "unknown";
+    if (level <= 2) return "struggling";
+    if (level === 3) return "attention";
+    if (level === 4) return "ontrack";
+    return "advanced";
+  };
 
   const getColorClass = (color: string) => {
     switch (color) {
@@ -31,6 +143,7 @@ export default function Dashboard() {
       case "attention": return "bg-level-attention text-white";
       case "ontrack": return "bg-level-ontrack text-white";
       case "advanced": return "bg-level-advanced text-white";
+      case "unknown": return "bg-gray-400 text-white";
       default: return "bg-muted";
     }
   };
@@ -41,22 +154,63 @@ export default function Dashboard() {
     return <TrendingUp className="w-4 h-4" />;
   };
 
+  const getCategoryDisplayName = (category: string | null): string => {
+    if (!category) return "Not assessed";
+    const categoryNames: Record<string, string> = {
+      slow_processing: "Slow Processing",
+      fast_processor: "Fast Processor",
+      high_energy: "High Energy",
+      visual_learner: "Visual Learner",
+      logical_learner: "Logical Learner",
+      sensitive_low_confidence: "Sensitive/Low Confidence",
+      easily_distracted: "Easily Distracted",
+      needs_repetition: "Needs Repetition",
+      average_learner: "Average Learner",
+    };
+    return categoryNames[category] || category;
+  };
+
+  if (isLoading) {
+    return (
+      <div className="flex items-center justify-center min-h-[400px]">
+        <div className="text-center">
+          <Loader2 className="h-12 w-12 animate-spin text-purple-600 mx-auto mb-4" />
+          <p className="text-lg text-gray-600">Loading student assessments...</p>
+        </div>
+      </div>
+    );
+  }
+
+  const studentsWithLevels = students.map(s => ({
+    ...s,
+    level: getPerformanceLevel(s.latest_score),
+    color: getPerformanceColor(getPerformanceLevel(s.latest_score))
+  }));
+
   const stats = {
-    struggling: students.filter(s => s.level <= 2).length,
-    attention: students.filter(s => s.level === 3).length,
-    ontrack: students.filter(s => s.level === 4).length,
-    advanced: students.filter(s => s.level === 5).length,
-    avgScore: Math.round(students.reduce((acc, s) => acc + s.score, 0) / students.length)
+    struggling: studentsWithLevels.filter(s => s.level > 0 && s.level <= 2).length,
+    attention: studentsWithLevels.filter(s => s.level === 3).length,
+    ontrack: studentsWithLevels.filter(s => s.level === 4).length,
+    advanced: studentsWithLevels.filter(s => s.level === 5).length,
+    notAssessed: studentsWithLevels.filter(s => s.level === 0).length,
+    avgScore: students.filter(s => s.latest_score !== null).length > 0
+      ? Math.round(
+          students
+            .filter(s => s.latest_score !== null)
+            .reduce((acc, s) => acc + (s.latest_score || 0), 0) /
+          students.filter(s => s.latest_score !== null).length
+        )
+      : 0
   };
 
   return (
     <div className="space-y-6 animate-fade-in">
       <div>
         <h1 className="text-4xl font-bold text-foreground mb-2">Student Dashboard</h1>
-        <p className="text-muted-foreground">Real-time classroom intelligence and insights</p>
+        <p className="text-muted-foreground">Real-time classroom assessment insights - {students.length} students</p>
       </div>
 
-      <div className="grid grid-cols-5 gap-4">
+      <div className="grid grid-cols-6 gap-4">
         <Card className="p-6 rounded-2xl bg-gradient-to-br from-level-struggling/10 to-white">
           <div className="text-3xl font-bold text-level-struggling mb-1">{stats.struggling}</div>
           <div className="text-sm text-muted-foreground">Struggling</div>
@@ -73,83 +227,131 @@ export default function Dashboard() {
           <div className="text-3xl font-bold text-level-advanced mb-1">{stats.advanced}</div>
           <div className="text-sm text-muted-foreground">Advanced</div>
         </Card>
+        <Card className="p-6 rounded-2xl bg-gradient-to-br from-gray-200/50 to-white">
+          <div className="text-3xl font-bold text-gray-600 mb-1">{stats.notAssessed}</div>
+          <div className="text-sm text-muted-foreground">Not Assessed</div>
+        </Card>
         <Card className="p-6 rounded-2xl bg-gradient-to-br from-primary/10 to-white">
-          <div className="text-3xl font-bold text-primary mb-1">{stats.avgScore}%</div>
+          <div className="text-3xl font-bold text-primary mb-1">{stats.avgScore}{stats.avgScore > 0 ? '%' : ''}</div>
           <div className="text-sm text-muted-foreground">Avg Score</div>
         </Card>
       </div>
 
-      <Card className="p-6 rounded-2xl">
-        <h2 className="text-2xl font-bold text-foreground mb-6">Class Heatmap</h2>
-        <div className="grid grid-cols-6 gap-3">
-          {students.map((student) => (
-            <div
-              key={student.id}
-              className={`p-4 rounded-xl ${getColorClass(student.color)} shadow-sm hover:shadow-md transition-all cursor-pointer group relative`}
-            >
-              <div className="flex flex-col items-center gap-2">
-                <div className="w-12 h-12 rounded-full bg-white/20 backdrop-blur flex items-center justify-center text-sm font-bold">
-                  {student.name.split(" ").map(n => n[0]).join("")}
+      {studentsWithLevels.length === 0 ? (
+        <Card className="p-12 rounded-2xl text-center">
+          <AlertCircle className="h-16 w-16 text-gray-400 mx-auto mb-4" />
+          <h3 className="text-2xl font-bold text-gray-700 mb-2">No Students Found</h3>
+          <p className="text-gray-500 mb-6">
+            Create a class and add students to start tracking assessment data.
+          </p>
+          <Button onClick={() => navigate("/create-class")} size="lg">
+            Create Class
+          </Button>
+        </Card>
+      ) : (
+        <>
+          <Card className="p-6 rounded-2xl">
+            <h2 className="text-2xl font-bold text-foreground mb-6">Class Heatmap</h2>
+            <div className="grid grid-cols-6 gap-3">
+              {studentsWithLevels.map((student) => (
+                <div
+                  key={student.id}
+                  onClick={() => navigate(`/student-guide/${student.id}`)}
+                  className={`p-4 rounded-xl ${getColorClass(student.color)} shadow-sm hover:shadow-md transition-all cursor-pointer group relative`}
+                >
+                  <div className="flex flex-col items-center gap-2">
+                    <div className="w-12 h-12 rounded-full bg-white/20 backdrop-blur flex items-center justify-center text-sm font-bold">
+                      {student.name.split(" ").map(n => n[0]).join("")}
+                    </div>
+                    <div className="text-center">
+                      <div className="text-xs font-semibold truncate w-full">{student.name.split(" ")[0]}</div>
+                      <div className="text-xs opacity-90">
+                        {student.level === 0 ? "Not tested" : `Level ${student.level}`}
+                      </div>
+                    </div>
+                  </div>
+                  <div className="absolute inset-0 bg-black/80 rounded-xl opacity-0 group-hover:opacity-100 transition-opacity flex flex-col items-center justify-center text-white text-xs p-2">
+                    <div className="font-bold mb-1">{student.name}</div>
+                    {student.latest_score !== null ? (
+                      <>
+                        <div>Score: {student.latest_score}/10</div>
+                        <div>Level: {student.level}/5</div>
+                        <div className="mt-1">{getCategoryDisplayName(student.primary_category)}</div>
+                      </>
+                    ) : (
+                      <div className="text-yellow-300">Not assessed yet</div>
+                    )}
+                  </div>
                 </div>
-                <div className="text-center">
-                  <div className="text-xs font-semibold truncate w-full">{student.name.split(" ")[0]}</div>
-                  <div className="text-xs opacity-90">Level {student.level}</div>
-                </div>
-              </div>
-              <div className="absolute inset-0 bg-black/80 rounded-xl opacity-0 group-hover:opacity-100 transition-opacity flex flex-col items-center justify-center text-white text-xs p-2">
-                <div className="font-bold mb-1">{student.name}</div>
-                <div>Score: {student.score}%</div>
-                <div>Level: {student.level}/5</div>
-              </div>
+              ))}
             </div>
-          ))}
-        </div>
-      </Card>
+          </Card>
 
-      <Card className="p-6 rounded-2xl">
-        <h2 className="text-2xl font-bold text-foreground mb-4">Detailed Student List</h2>
-        <div className="space-y-2">
-          {students.map((student) => (
-            <div
-              key={student.id}
-              className="flex items-center gap-4 p-4 rounded-xl bg-secondary hover:bg-secondary/80 transition-all"
-            >
-              <div className={`w-12 h-12 rounded-full ${getColorClass(student.color)} flex items-center justify-center text-sm font-bold`}>
-                {student.name.split(" ").map(n => n[0]).join("")}
-              </div>
-              <div className="flex-1">
-                <div className="font-semibold text-foreground">{student.name}</div>
-                <div className="text-sm text-muted-foreground">
-                  {student.level <= 2 ? "Visual learner, needs repetition" : 
-                   student.level === 3 ? "Logical thinker, easily distracted" :
-                   student.level === 4 ? "Fast processor, verbal learner" :
-                   "Advanced, high confidence"}
+          <Card className="p-6 rounded-2xl">
+            <h2 className="text-2xl font-bold text-foreground mb-4">Detailed Student List</h2>
+            <div className="space-y-2">
+              {studentsWithLevels.map((student) => (
+                <div
+                  key={student.id}
+                  className="flex items-center gap-4 p-4 rounded-xl bg-secondary hover:bg-secondary/80 transition-all"
+                >
+                  <div className={`w-12 h-12 rounded-full ${getColorClass(student.color)} flex items-center justify-center text-sm font-bold`}>
+                    {student.name.split(" ").map(n => n[0]).join("")}
+                  </div>
+                  <div className="flex-1">
+                    <div className="font-semibold text-foreground">{student.name}</div>
+                    <div className="text-sm text-muted-foreground">
+                      {getCategoryDisplayName(student.primary_category)}
+                      {student.total_assessments > 0 && (
+                        <span className="ml-2">• {student.total_assessments} assessment{student.total_assessments > 1 ? 's' : ''}</span>
+                      )}
+                    </div>
+                  </div>
+                  <div className="flex items-center gap-4">
+                    {student.latest_score !== null ? (
+                      <>
+                        <div className="text-center">
+                          <div className="text-2xl font-bold text-foreground">{student.latest_score}</div>
+                          <div className="text-xs text-muted-foreground">Score</div>
+                        </div>
+                        <div className="flex items-center gap-2 px-3 py-1 rounded-full bg-card">
+                          {student.improvement_trend === "up" && <TrendingUp className="w-4 h-4 text-green-600" />}
+                          {student.improvement_trend === "down" && <TrendingDown className="w-4 h-4 text-red-600" />}
+                          {student.improvement_trend === "stable" && <Minus className="w-4 h-4 text-gray-600" />}
+                          <span className="text-sm font-medium">Level {student.level}</span>
+                        </div>
+                        {student.needs_reassessment && (
+                          <Badge variant="outline" className="flex items-center gap-1">
+                            <Calendar className="w-3 h-3" />
+                            Reassess Soon
+                          </Badge>
+                        )}
+                      </>
+                    ) : (
+                      <Badge variant="secondary">Not Assessed</Badge>
+                    )}
+                    <Button
+                      size="sm"
+                      variant="outline"
+                      className="rounded-lg"
+                      onClick={() => navigate(`/student-guide/${student.id}`)}
+                    >
+                      <Eye className="w-4 h-4 mr-1" />
+                      Profile
+                    </Button>
+                  </div>
                 </div>
-              </div>
-              <div className="flex items-center gap-4">
-                <div className="text-center">
-                  <div className="text-2xl font-bold text-foreground">{student.score}</div>
-                  <div className="text-xs text-muted-foreground">Score</div>
-                </div>
-                <div className="flex items-center gap-2 px-3 py-1 rounded-full bg-card">
-                  {getLevelIcon(student.level)}
-                  <span className="text-sm font-medium">Level {student.level}</span>
-                </div>
-                <Button size="sm" variant="outline" className="rounded-lg">
-                  <Eye className="w-4 h-4 mr-1" />
-                  Profile
-                </Button>
-              </div>
+              ))}
             </div>
-          ))}
-        </div>
-      </Card>
+          </Card>
 
-      <div className="flex justify-end gap-4">
-        <Button onClick={() => navigate("/insights")} size="lg" className="rounded-xl px-8">
-          View Class Insights
-        </Button>
-      </div>
+          <div className="flex justify-end gap-4">
+            <Button onClick={() => navigate("/insights")} size="lg" className="rounded-xl px-8">
+              View Class Insights
+            </Button>
+          </div>
+        </>
+      )}
     </div>
   );
 }
