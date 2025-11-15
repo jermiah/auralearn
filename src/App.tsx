@@ -28,6 +28,7 @@ import AuthCallback from "./pages/auth/AuthCallback";
 import StudentSelection from "./pages/StudentSelection";
 import StudentAssessment from "./pages/StudentAssessment";
 import StudentGuide from "./pages/StudentGuide";
+import StudentCategories from "./pages/StudentCategories";
 
 const queryClient = new QueryClient();
 
@@ -74,6 +75,7 @@ const App = () => (
               <Route path="/teaching-guide" element={<ProtectedRoute requireRole="teacher"><Layout><TeachingGuide /></Layout></ProtectedRoute>} />
               <Route path="/worksheets" element={<ProtectedRoute requireRole="teacher"><Layout><Worksheets /></Layout></ProtectedRoute>} />
               <Route path="/student-guide/:studentId" element={<ProtectedRoute requireRole="teacher"><Layout><StudentGuide /></Layout></ProtectedRoute>} />
+              <Route path="/student-categories" element={<ProtectedRoute requireRole="teacher"><Layout><StudentCategories /></Layout></ProtectedRoute>} />
 
               {/* Parent route (accessible by both teachers and parents) */}
               <Route path="/parent-guide" element={<ProtectedRoute><Layout><ParentGuide /></Layout></ProtectedRoute>} />

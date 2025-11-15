@@ -1,5 +1,5 @@
 import { Link, useLocation } from "react-router-dom";
-import { Home, Users, FileCheck, LayoutDashboard, BookOpen, FileText, Settings, Heart, Lightbulb, LogOut } from "lucide-react";
+import { Home, Users, FileCheck, LayoutDashboard, BookOpen, FileText, Settings, Heart, Lightbulb, LogOut, Brain } from "lucide-react";
 import { cn } from "@/lib/utils";
 import { useAuth } from "@/contexts/AuthContext";
 
@@ -8,6 +8,7 @@ const teacherNavigation = [
   { name: "Create Class", path: "/create-class", icon: Users },
   { name: "Assessment", path: "/assessment", icon: FileCheck },
   { name: "Dashboard", path: "/dashboard", icon: LayoutDashboard },
+  { name: "Learning Categories", path: "/student-categories", icon: Brain },
   { name: "Teaching Guide", path: "/teaching-guide", icon: BookOpen },
   { name: "Worksheets", path: "/worksheets", icon: FileText },
   { name: "Settings", path: "/settings", icon: Settings },
