@@ -186,28 +186,74 @@
   },
   "createClass": {
     "title": "Create Class",
-    "description": "Set up a new class and add students",
+    "description": "Set up your classroom to begin assessment",
     "className": "Class Name",
-    "gradeLevel": "Grade Level",
-    "subject": "Subject",
+    "classNamePlaceholder": "e.g., Grade 5 Mathematics",
     "addStudents": "Add Students",
-    "studentName": "Student Name",
+    "studentNamePlaceholder": "Enter student name (required)",
+    "parentEmail": "Parent Email (Optional)",
+    "parentEmailPlaceholder": "parent@email.com",
+    "secondParentEmail": "2nd Parent Email (Optional)",
+    "secondParentEmailPlaceholder": "parent2@email.com",
     "addStudent": "Add Student",
-    "removeStudent": "Remove Student",
-    "createClass": "Create Class",
-    "creating": "Creating...",
-    "success": "Class created successfully!",
-    "error": "Failed to create class",
-    "validation": {
-      "classNameRequired": "Class name is required",
-      "atLeastOneStudent": "Add at least one student"
+    "uploadCSV": "Upload CSV",
+    "students": "Students",
+    "studentAdded": "{{name}} added to class",
+    "studentRemoved": "Student removed",
+    "parentEmailsUpdated": "Parent emails updated",
+    "proceedToAssessment": "Proceed to Assessment",
+    "loadingClassData": "Loading class data...",
+    "enterClassName": "Please enter a class name",
+    "addAtLeastOneStudent": "Please add at least one student",
+    "enterClassNameFirst": "Please enter a class name first",
+    "save": "Save",
+    "cancel": "Cancel",
+    "csvUpload": {
+      "title": "Upload Class from CSV",
+      "description": "Upload a CSV file with student information. The file should have columns: Name, Parent Email, 2nd Parent Email",
+      "selectFile": "Select CSV File",
+      "format": "CSV Format:",
+      "uploadCSVFile": "Please upload a CSV file",
+      "successfullyAdded": "Successfully added {{count}} students",
+      "noValidStudents": "No valid students found in CSV",
+      "failedToProcess": "Failed to process CSV file"
+    },
+    "errors": {
+      "failedToLoad": "Failed to load class data",
+      "failedToCreate": "Failed to create class",
+      "failedToAdd": "Failed to add student",
+      "failedToRemove": "Failed to remove student",
+      "failedToUpdate": "Failed to update parent emails"
     }
+  },
+  "studentSelection": {
+    "title": "Select Your Name",
+    "description": "Find and select your name to begin the assessment",
+    "searchPlaceholder": "Search for your name...",
+    "startAssessment": "Start Assessment",
+    "noStudents": "No students found in this class",
+    "loading": "Loading students...",
+    "selectStudent": "Please select your name to continue"
+  },
+  "studentAssessment": {
+    "title": "Assessment",
+    "question": "Question {{current}} of {{total}}",
+    "submitAnswer": "Submit Answer",
+    "nextQuestion": "Next Question",
+    "finishAssessment": "Finish Assessment",
+    "completed": "Assessment Completed!",
+    "thankYou": "Thank you for completing the assessment.",
+    "resultsAvailable": "Your teacher will review your results.",
+    "loading": "Loading assessment...",
+    "submitting": "Submitting...",
+    "selectAnswer": "Please select an answer"
   },
   "insights": {
     "title": "Class Insights",
     "description": "AI-powered analysis of your classroom",
     "loading": "Generating insights...",
     "noData": "Not enough data to generate insights",
+    "refresh": "Refresh Insights",
     "categories": {
       "performance": "Performance Overview",
       "trends": "Learning Trends",
@@ -221,7 +267,9 @@
     "selectStudent": "Select a student to view their teaching guide",
     "strategies": "Teaching Strategies",
     "activities": "Recommended Activities",
-    "resources": "Additional Resources"
+    "resources": "Additional Resources",
+    "loading": "Loading guide...",
+    "noStudent": "No student selected"
   },
   "worksheets": {
     "title": "Worksheets",
@@ -229,6 +277,9 @@
     "generate": "Generate Worksheet",
     "download": "Download",
     "print": "Print",
+    "selectLevel": "Select Difficulty Level",
+    "selectTopic": "Select Topic",
+    "generating": "Generating worksheet...",
     "difficulty": {
       "easy": "Easy",
       "medium": "Medium",
@@ -241,7 +292,9 @@
     "childProgress": "Child's Progress",
     "tips": "Tips for Parents",
     "activities": "Home Activities",
-    "communication": "Teacher Communication"
+    "communication": "Teacher Communication",
+    "selectChild": "Select a child to view their progress",
+    "noChildren": "No children found"
   },
   "studentGuide": {
     "title": "Student Profile",
@@ -250,24 +303,9 @@
     "assessmentHistory": "Assessment History",
     "strengths": "Strengths",
     "areasForGrowth": "Areas for Growth",
-    "recommendations": "Recommendations"
-  },
-  "studentSelection": {
-    "title": "Select Your Name",
-    "description": "Find and select your name to begin the assessment",
-    "search": "Search for your name...",
-    "startAssessment": "Start Assessment",
-    "noStudents": "No students found in this class"
-  },
-  "studentAssessment": {
-    "title": "Assessment",
-    "question": "Question {{current}} of {{total}}",
-    "submit": "Submit Answer",
-    "next": "Next Question",
-    "finish": "Finish Assessment",
-    "completed": "Assessment Completed!",
-    "thankYou": "Thank you for completing the assessment.",
-    "resultsAvailable": "Your teacher will review your results."
+    "recommendations": "Recommendations",
+    "loading": "Loading student profile...",
+    "noData": "No assessment data available yet"
   },
   "notifications": {
     "error": "An error occurred",
