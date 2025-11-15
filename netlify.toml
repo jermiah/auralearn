@@ -1,0 +1,9 @@
+[build]
+  command = "bun run build"
+  publish = "dist"
+
+[build.environment]
+  NODE_VERSION = "18"
+  # Configure secrets scanning to omit VITE_ prefixed environment variables
+  # These are intentionally public client-side variables
+  SECRETS_SCAN_OMIT_KEYS = "VITE_SUPABASE_URL,VITE_SUPABASE_ANON_KEY,VITE_CLERK_PUBLISHABLE_KEY,VITE_BLACKBOX_API_KEY"
