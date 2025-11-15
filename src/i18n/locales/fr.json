@@ -187,28 +187,74 @@
   },
   "createClass": {
     "title": "Créer une Classe",
-    "description": "Configurez une nouvelle classe et ajoutez des élèves",
+    "description": "Configurez votre classe pour commencer l'évaluation",
     "className": "Nom de la Classe",
-    "gradeLevel": "Niveau Scolaire",
-    "subject": "Matière",
+    "classNamePlaceholder": "ex. Mathématiques 5e année",
     "addStudents": "Ajouter des Élèves",
-    "studentName": "Nom de l'Élève",
+    "studentNamePlaceholder": "Entrez le nom de l'élève (requis)",
+    "parentEmail": "E-mail du Parent (Optionnel)",
+    "parentEmailPlaceholder": "parent@email.com",
+    "secondParentEmail": "2e E-mail du Parent (Optionnel)",
+    "secondParentEmailPlaceholder": "parent2@email.com",
     "addStudent": "Ajouter un Élève",
-    "removeStudent": "Retirer l'Élève",
-    "createClass": "Créer la Classe",
-    "creating": "Création en cours...",
-    "success": "Classe créée avec succès !",
-    "error": "Échec de la création de la classe",
-    "validation": {
-      "classNameRequired": "Le nom de la classe est requis",
-      "atLeastOneStudent": "Ajoutez au moins un élève"
+    "uploadCSV": "Télécharger CSV",
+    "students": "Élèves",
+    "studentAdded": "{{name}} ajouté à la classe",
+    "studentRemoved": "Élève retiré",
+    "parentEmailsUpdated": "E-mails des parents mis à jour",
+    "proceedToAssessment": "Passer à l'Évaluation",
+    "loadingClassData": "Chargement des données de classe...",
+    "enterClassName": "Veuillez entrer un nom de classe",
+    "addAtLeastOneStudent": "Veuillez ajouter au moins un élève",
+    "enterClassNameFirst": "Veuillez d'abord entrer un nom de classe",
+    "save": "Enregistrer",
+    "cancel": "Annuler",
+    "csvUpload": {
+      "title": "Télécharger une Classe depuis CSV",
+      "description": "Téléchargez un fichier CSV avec les informations des élèves. Le fichier doit avoir les colonnes : Nom, E-mail Parent, 2e E-mail Parent",
+      "selectFile": "Sélectionner le Fichier CSV",
+      "format": "Format CSV :",
+      "uploadCSVFile": "Veuillez télécharger un fichier CSV",
+      "successfullyAdded": "{{count}} élèves ajoutés avec succès",
+      "noValidStudents": "Aucun élève valide trouvé dans le CSV",
+      "failedToProcess": "Échec du traitement du fichier CSV"
+    },
+    "errors": {
+      "failedToLoad": "Échec du chargement des données de classe",
+      "failedToCreate": "Échec de la création de la classe",
+      "failedToAdd": "Échec de l'ajout de l'élève",
+      "failedToRemove": "Échec de la suppression de l'élève",
+      "failedToUpdate": "Échec de la mise à jour des e-mails des parents"
     }
+  },
+  "studentSelection": {
+    "title": "Sélectionnez Votre Nom",
+    "description": "Trouvez et sélectionnez votre nom pour commencer l'évaluation",
+    "searchPlaceholder": "Recherchez votre nom...",
+    "startAssessment": "Commencer l'Évaluation",
+    "noStudents": "Aucun élève trouvé dans cette classe",
+    "loading": "Chargement des élèves...",
+    "selectStudent": "Veuillez sélectionner votre nom pour continuer"
+  },
+  "studentAssessment": {
+    "title": "Évaluation",
+    "question": "Question {{current}} sur {{total}}",
+    "submitAnswer": "Soumettre la Réponse",
+    "nextQuestion": "Question Suivante",
+    "finishAssessment": "Terminer l'Évaluation",
+    "completed": "Évaluation Terminée !",
+    "thankYou": "Merci d'avoir complété l'évaluation.",
+    "resultsAvailable": "Votre enseignant examinera vos résultats.",
+    "loading": "Chargement de l'évaluation...",
+    "submitting": "Soumission en cours...",
+    "selectAnswer": "Veuillez sélectionner une réponse"
   },
   "insights": {
     "title": "Analyses de Classe",
     "description": "Analyse alimentée par l'IA de votre classe",
     "loading": "Génération des analyses...",
     "noData": "Pas assez de données pour générer des analyses",
+    "refresh": "Actualiser les Analyses",
     "categories": {
       "performance": "Aperçu des Performances",
       "trends": "Tendances d'Apprentissage",
@@ -222,7 +268,9 @@
     "selectStudent": "Sélectionnez un élève pour voir son guide pédagogique",
     "strategies": "Stratégies d'Enseignement",
     "activities": "Activités Recommandées",
-    "resources": "Ressources Supplémentaires"
+    "resources": "Ressources Supplémentaires",
+    "loading": "Chargement du guide...",
+    "noStudent": "Aucun élève sélectionné"
   },
   "worksheets": {
     "title": "Fiches de Travail",
@@ -230,6 +278,9 @@
     "generate": "Générer une Fiche",
     "download": "Télécharger",
     "print": "Imprimer",
+    "selectLevel": "Sélectionner le Niveau de Difficulté",
+    "selectTopic": "Sélectionner le Sujet",
+    "generating": "Génération de la fiche...",
     "difficulty": {
       "easy": "Facile",
       "medium": "Moyen",
@@ -242,7 +293,9 @@
     "childProgress": "Progrès de l'Enfant",
     "tips": "Conseils pour les Parents",
     "activities": "Activités à la Maison",
-    "communication": "Communication avec l'Enseignant"
+    "communication": "Communication avec l'Enseignant",
+    "selectChild": "Sélectionnez un enfant pour voir ses progrès",
+    "noChildren": "Aucun enfant trouvé"
   },
   "studentGuide": {
     "title": "Profil de l'Élève",
@@ -251,24 +304,9 @@
     "assessmentHistory": "Historique d'Évaluation",
     "strengths": "Points Forts",
     "areasForGrowth": "Domaines à Améliorer",
-    "recommendations": "Recommandations"
-  },
-  "studentSelection": {
-    "title": "Sélectionnez Votre Nom",
-    "description": "Trouvez et sélectionnez votre nom pour commencer l'évaluation",
-    "search": "Recherchez votre nom...",
-    "startAssessment": "Commencer l'Évaluation",
-    "noStudents": "Aucun élève trouvé dans cette classe"
-  },
-  "studentAssessment": {
-    "title": "Évaluation",
-    "question": "Question {{current}} sur {{total}}",
-    "submit": "Soumettre la Réponse",
-    "next": "Question Suivante",
-    "finish": "Terminer l'Évaluation",
-    "completed": "Évaluation Terminée !",
-    "thankYou": "Merci d'avoir complété l'évaluation.",
-    "resultsAvailable": "Votre enseignant examinera vos résultats."
+    "recommendations": "Recommandations",
+    "loading": "Chargement du profil de l'élève...",
+    "noData": "Aucune donnée d'évaluation disponible pour le moment"
   },
   "notifications": {
     "error": "Une erreur s'est produite",

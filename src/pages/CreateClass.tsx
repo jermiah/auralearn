@@ -9,6 +9,7 @@ import { toast } from "sonner";
 import { Badge } from "@/components/ui/badge";
 import { supabase } from "@/lib/supabase";
 import { useAuth } from "@/contexts/AuthContext";
+import { useTranslation } from "react-i18next";
 import {
   Dialog,
   DialogContent,
@@ -27,6 +28,7 @@ interface Student {
 export default function CreateClass() {
   const navigate = useNavigate();
   const { user } = useAuth();
+  const { t } = useTranslation();
   const [className, setClassName] = useState("");
   const [classId, setClassId] = useState<string | null>(null);
   const [students, setStudents] = useState<Student[]>([]);
@@ -88,7 +90,7 @@ export default function CreateClass() {
       }
     } catch (error) {
       console.error('Error loading class data:', error);
-      toast.error('Failed to load class data');
+      toast.error(t('createClass.errors.failedToLoad'));
     } finally {
       setIsLoading(false);
     }
@@ -101,7 +103,7 @@ export default function CreateClass() {
     let currentClassId = classId;
     if (!currentClassId) {
       if (!className.trim()) {
-        toast.error("Please enter a class name first");
+        toast.error(t('createClass.enterClassNameFirst'));
         return;
       }
 
@@ -117,7 +119,7 @@ export default function CreateClass() {
 
       if (classError) {
         console.error('Error creating class:', classError);
-        toast.error('Failed to create class');
+        toast.error(t('createClass.errors.failedToCreate'));
         return;
       }
 
@@ -151,10 +153,10 @@ export default function CreateClass() {
       setNewStudentName("");
       setNewParentEmail("");
       setNewParentEmail2("");
-      toast.success(`${newStudent.name} added to class`);
+      toast.success(t('createClass.studentAdded', { name: newStudent.name }));
     } catch (error) {
       console.error('Error adding student:', error);
-      toast.error('Failed to add student');
+      toast.error(t('createClass.errors.failedToAdd'));
     }
   };
 
@@ -168,10 +170,10 @@ export default function CreateClass() {
       if (error) throw error;
 
       setStudents(students.filter(s => s.id !== id));
-      toast.success('Student removed');
+      toast.success(t('createClass.studentRemoved'));
     } catch (error) {
       console.error('Error removing student:', error);
-      toast.error('Failed to remove student');
+      toast.error(t('createClass.errors.failedToRemove'));
     }
   };
 
@@ -201,10 +203,10 @@ export default function CreateClass() {
       setEditingStudentId(null);
       setEditEmail1("");
       setEditEmail2("");
-      toast.success("Parent emails updated");
+      toast.success(t('createClass.parentEmailsUpdated'));
     } catch (error) {
       console.error('Error updating parent emails:', error);
-      toast.error('Failed to update parent emails');
+      toast.error(t('createClass.errors.failedToUpdate'));
     }
   };
 
@@ -220,7 +222,7 @@ export default function CreateClass() {
 
   const processCSVFile = async (file: File) => {
     if (!csvClassName.trim()) {
-      toast.error("Please enter a class name");
+      toast.error(t('createClass.enterClassName'));
       return;
     }
 
@@ -241,7 +243,7 @@ export default function CreateClass() {
       }).filter(s => s.name); // Only include rows with a name
 
       if (studentsToAdd.length === 0) {
-        toast.error("No valid students found in CSV");
+        toast.error(t('createClass.csvUpload.noValidStudents'));
         return;
       }
 
@@ -259,7 +261,7 @@ export default function CreateClass() {
 
         if (classError) {
           console.error('Error creating class:', classError);
-          toast.error('Failed to create class');
+          toast.error(t('createClass.errors.failedToCreate'));
           return;
         }
 
@@ -294,10 +296,10 @@ export default function CreateClass() {
       setStudents([...students, ...newStudents]);
       setShowCSVDialog(false);
       setCSVClassName("");
-      toast.success(`Successfully added ${newStudents.length} students`);
+      toast.success(t('createClass.csvUpload.successfullyAdded', { count: newStudents.length }));
     } catch (error) {
       console.error('Error processing CSV:', error);
-      toast.error('Failed to process CSV file');
+      toast.error(t('createClass.csvUpload.failedToProcess'));
     }
   };
 
@@ -305,7 +307,7 @@ export default function CreateClass() {
     const file = e.target.files?.[0];
     if (file) {
       if (!file.name.endsWith('.csv')) {
-        toast.error('Please upload a CSV file');
+        toast.error(t('createClass.csvUpload.uploadCSVFile'));
         return;
       }
       processCSVFile(file);
@@ -314,11 +316,11 @@ export default function CreateClass() {
 
   const proceedToAssessment = () => {
     if (!className.trim()) {
-      toast.error("Please enter a class name");
+      toast.error(t('createClass.enterClassName'));
       return;
     }
     if (students.length === 0) {
-      toast.error("Please add at least one student");
+      toast.error(t('createClass.addAtLeastOneStudent'));
       return;
     }
     
@@ -332,7 +334,7 @@ export default function CreateClass() {
       <div className="min-h-screen flex items-center justify-center">
         <div className="text-center">
           <div className="w-16 h-16 border-4 border-primary border-t-transparent rounded-full animate-spin mx-auto mb-4"></div>
-          <p className="text-muted-foreground">Loading class data...</p>
+          <p className="text-muted-foreground">{t('createClass.loadingClassData')}</p>
         </div>
       </div>
     );
@@ -342,13 +344,13 @@ export default function CreateClass() {
     <div className="max-w-5xl mx-auto space-y-6 animate-fade-in">
       <div className="flex items-center justify-between">
         <div>
-          <h1 className="text-4xl font-bold text-foreground mb-2">Create Class</h1>
-          <p className="text-muted-foreground">Set up your classroom to begin assessment</p>
+          <h1 className="text-4xl font-bold text-foreground mb-2">{t('createClass.title')}</h1>
+          <p className="text-muted-foreground">{t('createClass.description')}</p>
         </div>
         <div className="flex gap-2">
           <Button onClick={handleCSVUpload} variant="outline" size="lg" className="rounded-xl">
             <Upload className="w-4 h-4 mr-2" />
-            Upload CSV
+            {t('createClass.uploadCSV')}
           </Button>
         </div>
       </div>
@@ -356,53 +358,53 @@ export default function CreateClass() {
       <Card className="p-6 rounded-2xl shadow-sm">
         <div className="space-y-4">
           <div>
-            <label className="block text-sm font-medium text-foreground mb-2">Class Name</label>
+            <label className="block text-sm font-medium text-foreground mb-2">{t('createClass.className')}</label>
             <Input
               value={className}
               onChange={(e) => setClassName(e.target.value)}
-              placeholder="e.g., Grade 5 Mathematics"
+              placeholder={t('createClass.classNamePlaceholder')}
               className="rounded-xl"
             />
           </div>
 
           <div>
-            <label className="block text-sm font-medium text-foreground mb-2">Add Students</label>
+            <label className="block text-sm font-medium text-foreground mb-2">{t('createClass.addStudents')}</label>
             <div className="space-y-3">
               <Input
                 value={newStudentName}
                 onChange={(e) => setNewStudentName(e.target.value)}
-                placeholder="Enter student name (required)"
+                placeholder={t('createClass.studentNamePlaceholder')}
                 className="rounded-xl"
               />
               <div className="grid grid-cols-2 gap-2">
                 <div>
                   <Label className="text-xs text-muted-foreground mb-1 block">
-                    Parent Email (Optional)
+                    {t('createClass.parentEmail')}
                   </Label>
                   <Input
                     type="email"
                     value={newParentEmail}
                     onChange={(e) => setNewParentEmail(e.target.value)}
-                    placeholder="parent@email.com"
+                    placeholder={t('createClass.parentEmailPlaceholder')}
                     className="rounded-xl text-sm"
                   />
                 </div>
                 <div>
                   <Label className="text-xs text-muted-foreground mb-1 block">
-                    2nd Parent Email (Optional)
+                    {t('createClass.secondParentEmail')}
                   </Label>
                   <Input
                     type="email"
                     value={newParentEmail2}
                     onChange={(e) => setNewParentEmail2(e.target.value)}
-                    placeholder="parent2@email.com"
+                    placeholder={t('createClass.secondParentEmailPlaceholder')}
                     className="rounded-xl text-sm"
                   />
                 </div>
               </div>
               <Button onClick={addStudent} className="rounded-xl w-full" disabled={!newStudentName.trim()}>
                 <Plus className="w-4 h-4 mr-2" />
-                Add Student
+                {t('createClass.addStudent')}
               </Button>
             </div>
           </div>
@@ -412,7 +414,7 @@ export default function CreateClass() {
       {students.length > 0 && (
         <Card className="p-6 rounded-2xl shadow-sm">
           <h3 className="font-semibold text-foreground mb-4">
-            Students ({students.length})
+            {t('createClass.students')} ({students.length})
           </h3>
           <div className="space-y-3 max-h-[500px] overflow-y-auto">
             {students.map((student) => (
@@ -468,30 +470,30 @@ export default function CreateClass() {
                 {editingStudentId === student.id && (
                   <div className="mt-3 pt-3 border-t space-y-2">
                     <div className="grid grid-cols-2 gap-2">
-                      <div>
-                        <Label className="text-xs text-muted-foreground mb-1 block">
-                          Parent Email
-                        </Label>
-                        <Input
-                          type="email"
-                          value={editEmail1}
-                          onChange={(e) => setEditEmail1(e.target.value)}
-                          placeholder="parent@email.com"
-                          className="text-sm"
-                        />
-                      </div>
-                      <div>
-                        <Label className="text-xs text-muted-foreground mb-1 block">
-                          2nd Parent Email
-                        </Label>
-                        <Input
-                          type="email"
-                          value={editEmail2}
-                          onChange={(e) => setEditEmail2(e.target.value)}
-                          placeholder="parent2@email.com"
-                          className="text-sm"
-                        />
-                      </div>
+                  <div>
+                    <Label className="text-xs text-muted-foreground mb-1 block">
+                      {t('createClass.parentEmail')}
+                    </Label>
+                    <Input
+                      type="email"
+                      value={editEmail1}
+                      onChange={(e) => setEditEmail1(e.target.value)}
+                      placeholder={t('createClass.parentEmailPlaceholder')}
+                      className="text-sm"
+                    />
+                  </div>
+                  <div>
+                    <Label className="text-xs text-muted-foreground mb-1 block">
+                      {t('createClass.secondParentEmail')}
+                    </Label>
+                    <Input
+                      type="email"
+                      value={editEmail2}
+                      onChange={(e) => setEditEmail2(e.target.value)}
+                      placeholder={t('createClass.secondParentEmailPlaceholder')}
+                      className="text-sm"
+                    />
+                  </div>
                     </div>
                     <div className="flex gap-2">
                       <Button
@@ -500,7 +502,7 @@ export default function CreateClass() {
                         className="flex-1"
                       >
                         <Check className="w-4 h-4 mr-1" />
-                        Save
+                        {t('createClass.save')}
                       </Button>
                       <Button
                         size="sm"
@@ -509,7 +511,7 @@ export default function CreateClass() {
                         className="flex-1"
                       >
                         <X className="w-4 h-4 mr-1" />
-                        Cancel
+                        {t('createClass.cancel')}
                       </Button>
                     </div>
                   </div>
@@ -527,7 +529,7 @@ export default function CreateClass() {
           disabled={!className || students.length === 0}
           className="rounded-xl px-8"
         >
-          Proceed to Assessment
+          {t('createClass.proceedToAssessment')}
         </Button>
       </div>
 
@@ -535,23 +537,23 @@ export default function CreateClass() {
       <Dialog open={showCSVDialog} onOpenChange={setShowCSVDialog}>
         <DialogContent>
           <DialogHeader>
-            <DialogTitle>Upload Class from CSV</DialogTitle>
+            <DialogTitle>{t('createClass.csvUpload.title')}</DialogTitle>
             <DialogDescription>
-              Upload a CSV file with student information. The file should have columns: Name, Parent Email, 2nd Parent Email
+              {t('createClass.csvUpload.description')}
             </DialogDescription>
           </DialogHeader>
           <div className="space-y-4">
             <div>
-              <Label>Class Name</Label>
+              <Label>{t('createClass.className')}</Label>
               <Input
                 value={csvClassName}
                 onChange={(e) => setCSVClassName(e.target.value)}
-                placeholder="e.g., Grade 5 Mathematics"
+                placeholder={t('createClass.classNamePlaceholder')}
                 className="mt-2"
               />
             </div>
             <div>
-              <Label>Select CSV File</Label>
+              <Label>{t('createClass.csvUpload.selectFile')}</Label>
               <input
                 ref={fileInputRef}
                 type="file"
@@ -561,7 +563,7 @@ export default function CreateClass() {
               />
             </div>
             <div className="text-sm text-muted-foreground">
-              <p className="font-medium mb-2">CSV Format:</p>
+              <p className="font-medium mb-2">{t('createClass.csvUpload.format')}</p>
               <code className="block bg-secondary p-2 rounded text-xs">
                 Name,Parent Email,2nd Parent Email<br/>
                 John Doe,parent@email.com,<br/>
