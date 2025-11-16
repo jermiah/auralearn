@@ -1,6 +1,7 @@
 import { useState, useEffect } from "react";
 import { useParams, useNavigate } from "react-router-dom";
 import { supabase } from "@/lib/supabase";
+import { supabaseAnon } from "@/lib/supabase-anon";
 import { Button } from "@/components/ui/button";
 import { Card, CardContent, CardHeader, CardTitle, CardDescription } from "@/components/ui/card";
 import { RadioGroup, RadioGroupItem } from "@/components/ui/radio-group";
@@ -339,8 +340,17 @@ const StudentAssessment = () => {
       const correctCount = finalAnswers.filter(a => a.is_correct).length;
       const { category, confidence } = calculateCategoryAndScore(finalAnswers);
 
-      // Save to database
-      const { data: assessmentData, error: assessmentError } = await supabase
+      console.log('Submitting assessment:', {
+        student_id: student?.id,
+        score: correctCount,
+        total_questions: questions.length,
+        category_determined: category,
+        confidence_score: confidence,
+        time_taken: totalTimeTaken,
+      });
+
+      // Save to database using anonymous client (students are not authenticated)
+      const { data: assessmentData, error: assessmentError } = await supabaseAnon
         .from("student_assessments")
         .insert({
           student_id: student?.id,
@@ -359,13 +369,28 @@ const StudentAssessment = () => {
         .select()
         .single();
 
-      if (assessmentError) throw assessmentError;
+      if (assessmentError) {
+        console.error("Database error details:", {
+          message: assessmentError.message,
+          details: assessmentError.details,
+          hint: assessmentError.hint,
+          code: assessmentError.code,
+        });
+        throw assessmentError;
+      }
 
-      // Update student's primary category
-      await supabase
+      console.log('Assessment saved successfully:', assessmentData);
+
+      // Update student's primary category using anonymous client
+      const { error: updateError } = await supabaseAnon
         .from("students")
         .update({ primary_category: category })
         .eq("id", student?.id);
+
+      if (updateError) {
+        console.warn("Failed to update student category:", updateError);
+        // Don't throw - assessment is already saved
+      }
 
       // Show results
       setResult({
@@ -383,9 +408,22 @@ const StudentAssessment = () => {
       });
     } catch (error: any) {
       console.error("Error submitting assessment:", error);
+      
+      // Provide more specific error messages
+      let errorMessage = "Failed to submit assessment. Please try again.";
+      
+      if (error.message?.includes('permission denied') || error.message?.includes('RLS')) {
+        errorMessage = "Database permission error. Please contact your teacher.";
+        console.error("RLS Policy Error - Student assessments table may need policy update");
+      } else if (error.message?.includes('network') || error.message?.includes('fetch')) {
+        errorMessage = "Network error. Please check your internet connection and try again.";
+      } else if (error.code === '23505') {
+        errorMessage = "This assessment has already been submitted.";
+      }
+
       toast({
         title: t('common.error'),
-        description: "Failed to submit assessment. Please try again.",
+        description: errorMessage,
         variant: "destructive",
       });
     } finally {
