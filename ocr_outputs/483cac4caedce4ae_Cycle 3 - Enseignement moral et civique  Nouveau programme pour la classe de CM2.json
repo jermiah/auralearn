@@ -1,0 +1,874 @@
+{
+  "model": "mistral-ocr-2505",
+  "pages": [
+    {
+      "page_number": 1,
+      "markdown": "# Enseignements primaire et secondaire \n\n## Programme d'enseignement moral et civique du cours préparatoire à la classe terminale des voies générale, technologique et professionnelle et des classes préparant au CAP\n\n## Sommaire\n\n## Préambule\n\nLes valeurs et les principes de la République\nLa place de l'enseignement moral et civique dans le parcours citoyen\nLa citoyenneté républicaine\nConstruire une culture de la démocratie\nProgressivité\nMéthodes\nCP : Se reconnaitre comme individu et élève\nConnaissance et maîtrise de soi\nLes règles collectives et l'autonomie\nRègles d'hygiène et exigence d'intimité\nÊtre élève à l'école de la République\nCE1 : Respecter les autres\nAltérité et sociabilité\nRègles collectives et prise d'initiative\nPrincipes et symboles de la République\nCE2 : Apprendre ensemble et vivre ensemble\nL'engagement pour le bien commun\nLa République et son fonctionnement\nCM1 : Faire société\nCivisme et citoyenneté\nL'égalité dans la dignité\nComment faire société\nCM2 : Vivre en République\nCitoyenneté et nationalité\nLibertés et droits fondamentaux\nRespecter les droits de tous\nÀ l'école laïque\nSixième : Apprendre à vivre dans une société démocratique\nReprésenter les autres et servir l'intérêt général\nRespecter des règles et en comprendre la finalité : I'exemple de la laïcité à l'École\nAvoir des droits en tant que personne et respecter ceux des autres: I'exemple du droit à la vie privée\n\n## Cinquième : Égalité, fraternité et solidarité\n\nAgir pour l'égalité femmes-hommes et lutter contre les discriminations\nLa solidarité et ses échelles\n\n## Quatrième : Défendre les droits et les libertés\n\nL'État de droit et les libertés\nDéfendre le cadre démocratique : sécurité et défense nationale\n\n## Troisième : Faire vivre la démocratie\n\nLes règles du jeu démocratique\nLes acteurs du jeu démocratique et leur engagement (1) : I'opinion\nLes acteurs du jeu démocratique et leur engagement (2) : I'engagement collectif\n\n## Seconde : Droits, libertés et responsabilité\n\nL'État de droit garantit les droits et libertés et un pluralisme démocratique\nLiberté et responsabilité : I'exemple de l'information (vecteurs, nécessité et enjeux)\nDroits et responsabilité : I'exemple de la protection de l'environnement et de la sauvegarde de la biodiversité\n\n## Première : Cohésion et diversité dans une société démocratique\n\nLes valeurs et les principes de la République à l'épreuve de la cohésion sociale\nLa République et la Nation",
+      "text": "",
+      "dimensions": {
+        "dpi": 200,
+        "height": 2339,
+        "width": 1654
+      },
+      "images": [],
+      "index": 0,
+      "model_computed_fields": {},
+      "model_config": {
+        "populate_by_name": true,
+        "arbitrary_types_allowed": true,
+        "protected_namespaces": "()",
+        "validate_by_alias": true,
+        "validate_by_name": true
+      },
+      "model_extra": null,
+      "model_fields": {
+        "index": "annotation=int required=True",
+        "markdown": "annotation=str required=True",
+        "images": "annotation=List[OCRImageObject] required=True",
+        "dimensions": "annotation=Nullable[mistralai.models.ocrpagedimensions.OCRPageDimensions] required=True"
+      },
+      "model_fields_set": "{'index', 'markdown', 'images', 'dimensions'}"
+    },
+    {
+      "page_number": 2,
+      "markdown": "Terminale : La vie démocratique : débat, délibération et prise de décision\nLes principes et les espaces du débat démocratique\nLa délibération dans les institutions\nClasses préparant au certificat d'aptitude professionnelle\nDroits, libertés et responsabilité\nL'État de droit est garant des libertés et des droits fondamentaux\nLiberté et responsabilité : I'exemple de l'information (vecteurs, nécessité et enjeux)\nDroits et responsabilité : I'exemple de la protection de l'environnement et sauvegarde de la biodiversité\nLa délibération dans les institutions (nationales, européennes, internationales) : I'exemple des questions environnementales\nCohésion et diversité dans une société démocratique\nLes valeurs et les principes de la République à l'épreuve de la cohésion sociale\nLa République et la Nation\nL'engagement politique des citoyennes et citoyens au service de la société\n\n# Préambule \n\nLe programme d'enseignement moral et civique répond à l'ambition que nourrit l'École de la République de former les élèves à l'exercice et à une conscience claire de leur citoyenneté. Il les aide à élaborer une idée du bien public qui transcende les intérêts particuliers. Il structure leur parcours citoyen et l'enrichit en assurant la progressivité de leur apprentissage civique.\n\nLe programme d'enseignement moral et civique déploie l'ensemble des dimensions éthiques et politiques de la citoyenneté, depuis les rapports interpersonnels des enfants et des adolescents dans et hors de la classe, jusqu'à leur engagement dans la vie économique, sociale et politique, dont les enjeux sont tout à la fois locaux, nationaux et mondiaux, en passant par la part qu'ils peuvent prendre dans le cadre de la démocratie scolaire. Le programme assure une connaissance du cadre institutionnel de la République française et de l'Union européenne. Il participe pleinement à I'éducation aux médias et à l'information (EMI) ainsi qu'à l'éducation au développement durable (EDD). Il met en avant la dimension humaine des relations sociales, politiques, économiques et culturelles, en contribuant à développer la capacité d'empathie des élèves. Enfin, il développe et consolide des compétences qui permettront aux futurs adultes de contribuer à résoudre les problèmes collectifs de leur temps.\n\nConçu dans une perspective de cohérence et de progressivité des cycles d'apprentissage, le programme d'enseignement moral et civique présente distinctement, pour chaque année, les notions et les contenus que les élèves doivent acquérir. Il propose des démarches et situations d'apprentissage possibles en indiquant des sources et des ressources dans lesquelles puiser, ainsi que des dispositifs existants auxquels il peut s'articuler. Le programme d'enseignement moral et civique a également vocation à s'inscrire dans des démarches de labellisation, des partenariats avec les collectivités territoriales ou le monde associatif, ainsi que de multiples projets pédagogiques.\n\nL'ambition du programme est d'ouvrir l'enseignement moral et civique sur le monde extérieur, tantôt saisi dans sa proximité, en l'inscrivant dans une logique de territoire (l'école ou la commune), tantôt appréhendé dans sa globalité (la Nation, l'Europe et le monde, la planète Terre), sans omettre les enjeux de l'univers numérique dans lequel nous sommes de plus en plus engagés.\n\nLes valeurs et les principes de la République\nLe Code de l'éducation dispose depuis 2005 « qu'outre la transmission des connaissances, la Nation fixe comme mission première à l'école de faire partager aux élèves les valeurs de la République » (article L 111-1).\n\nLes valeurs et les principes de la République fondent le pacte républicain garant de la cohésion nationale, en même temps qu'ils protègent la liberté de chaque citoyen, contribuent à l'égalité de toutes et de tous, promeuvent les liens de civilité structurant une société proprement démocratique et permettent le débat d'idées. Les transmettre et les faire partager sont au cœur de l'œuvre d'intégration républicaine. Ces valeurs et ces principes relient également la France à la société des autres nations démocratiques, à l'échelle européenne comme à l'échelle mondiale.\n\nLes valeurs et les principes essentiels de la République française sont la liberté, l'égalité, la fraternité et la laïcité. S'en déduisent notamment l'égalité entre les femmes et les hommes, le refus de toutes les discriminations et la solidarité. L'enseignement moral et civique porte sur ces valeurs et ces principes, qui constituent un bien commun des citoyennes et des citoyens dans la vie démocratique de la République.\n\nLa place de l'enseignement moral et civique dans le parcours citoyen\nL'enseignement moral et civique transmet les principes éthiques, juridiques et politiques fondamentaux du parcours citoyen de l'élève. Ce parcours engage l'ensemble des enseignements dispensés à l'école, mais aussi la vie de I'établissement, dont les actions peuvent être menées en partenariat avec les collectivités locales, d'autres ministères, des organismes publics ou des associations. Il se nourrit également des «éducations » transversales présentes dans les programmes auxquelles il contribue : éducation aux médias et à l'information, au développement durable, à la défense, au",
+      "text": "",
+      "dimensions": {
+        "dpi": 200,
+        "height": 2339,
+        "width": 1654
+      },
+      "images": [],
+      "index": 1,
+      "model_computed_fields": {},
+      "model_config": {
+        "populate_by_name": true,
+        "arbitrary_types_allowed": true,
+        "protected_namespaces": "()",
+        "validate_by_alias": true,
+        "validate_by_name": true
+      },
+      "model_extra": null,
+      "model_fields": {
+        "index": "annotation=int required=True",
+        "markdown": "annotation=str required=True",
+        "images": "annotation=List[OCRImageObject] required=True",
+        "dimensions": "annotation=Nullable[mistralai.models.ocrpagedimensions.OCRPageDimensions] required=True"
+      },
+      "model_fields_set": "{'index', 'markdown', 'images', 'dimensions'}"
+    },
+    {
+      "page_number": 3,
+      "markdown": "droit, aux compétences économiques, budgétaires et financières, à la vie affective, relationnelle, et sexuelle et, enfin, aux arts et à la culture.\n\nL'éducation à la citoyenneté ne se limite pas à l'horaire dévolu à l'enseignement moral et civique. Le parcours citoyen, pour être pleinement réalisé, suppose l'explicitation des enjeux de citoyenneté présents dans tous les enseignements et dans la vie de l'école ou de l'établissement. Il vise à l'investissement des élèves dans les structures de la vie scolaire et, plus généralement, de la vie économique et sociale, de la politique et en somme de la démocratie : réalisation de projets dans le cadre de l'établissement, commémorations, engagement au sein d'institutions et d'associations ou pour la Nation (service civique, service national universel).\n\nL'enseignement moral et civique contribue ainsi à donner son sens à l'éducation à la citoyenneté, dont il est une pièce cardinale. Il constitue un foyer d'initiatives où sont explicitées et déployées les multiples dimensions d'une citoyenneté active, républicaine et démocratique.\n\n# La citoyenneté républicaine \n\nLa République française est une démocratie. Elle s'inscrit à la fois dans une histoire nationale et dans la communauté des nations démocratiques. Elle se fonde sur le patrimoine de la Nation française et permet l'actualisation de ses valeurs et de ses principes pour répondre aux évolutions de la société.\n\nLa citoyenneté repose sur l'autonomie du citoyen et sur son appartenance à une communauté politique, qui, en, est fermement adossée aux valeurs et aux principes de la République. Cette conception de la citoyenneté souligne l'importance de la loi et du droit tout en promouvant une éthique et une culture du débat et de la pluralité des opinions caractéristiques de l'espace démocratique.\n\nPlacé au cœur de la vie de l'école et de l'établissement, le développement d'une citoyenneté républicaine irrigue I'ensemble des enseignements. Elle inspire les actions qui mettent les élèves au contact de la société, en particulier celles qui concernent l'éducation au développement durable et la prise de conscience écologique, qui ont vocation à susciter un engagement individuel et collectif essentiel au respect et à la protection de l'environnement et de la biodiversité.\n\n## Construire une culture de la démocratie\n\nPour construire une culture de la démocratie, I'enseignement moral et civique vise à développer les compétences civiques et citoyennes des élèves. La construction de ces compétences s'opère à travers quatre grandes dimensions ${ }^{1}$ :\n\n- les valeurs et les principes auxquels on se réfère et que l'on cherche à promouvoir\n- liberté, égalité, fraternité et laïcité\n- solidarité, égalité entre femmes et hommes, refus de toutes les discriminations\n- respect de la dignité humaine\n- État de droit\n- les domaines de connaissances qui permettent aux élèves d'exercer leur compréhension critique\n- citoyenneté et institutions nationales et européennes\n- règle et droit\n- défense, sécurité et résilience nationale\n- développement durable et transition écologique\n- information et médias\n- les attitudes qui permettent de s'inscrire dans la vie démocratique\n- respect d'autrui et acceptation des différences\n- respect de soi, maîtrise de soi\n- prise d'initiative dans le respect des règles, des autres et de l'environnement\n- esprit civique et sentiment d'appartenance à une collectivité\n- engagement et sens des responsabilités\n- équilibre entre l'initiative individuelle et l'acceptation des règles communes\n- les aptitudes que cet enseignement cherche à développer\n- écoute et observation, réflexion et discernement, esprit critique\n- capacité à exprimer ce que l'on ressent et empathie\n- apprentissage autonome\n- implication dans un projet collectif et coopération\n- participation à un débat pour résoudre les conflits et/ou prendre des décisions\n\n[^0]\n[^0]:    ${ }^{1}$ Ces dimensions sont issues du cadre de référence des compétences pour une culture de la démocratie élaboré par le Conseil de l'Europe : https://www.coe.int/fr/web/reference-framework-of-competences-for-democratic-culture",
+      "text": "",
+      "dimensions": {
+        "dpi": 200,
+        "height": 2339,
+        "width": 1654
+      },
+      "images": [],
+      "index": 2,
+      "model_computed_fields": {},
+      "model_config": {
+        "populate_by_name": true,
+        "arbitrary_types_allowed": true,
+        "protected_namespaces": "()",
+        "validate_by_alias": true,
+        "validate_by_name": true
+      },
+      "model_extra": null,
+      "model_fields": {
+        "index": "annotation=int required=True",
+        "markdown": "annotation=str required=True",
+        "images": "annotation=List[OCRImageObject] required=True",
+        "dimensions": "annotation=Nullable[mistralai.models.ocrpagedimensions.OCRPageDimensions] required=True"
+      },
+      "model_fields_set": "{'index', 'markdown', 'images', 'dimensions'}"
+    },
+    {
+      "page_number": 4,
+      "markdown": "Ces quatre dimensions fixent un cadre au travail des élèves en enseignement moral et civique. Elles permettent de nourrir la réflexion didactique et pédagogique du professeur des écoles, du professeur d'histoire-géographie au collège et du professeur de lycée responsable de cet enseignement en visant l'acquisition progressive des compétences civiques et citoyennes.\n\nL'enseignement moral et civique étant au cœur du parcours citoyen, les quatre dimensions fournissent également un cadre à l'ensemble des actions conduites pour l'éducation à la citoyenneté.\n\nSans s'y résumer ni s'y substituer, la construction d'une culture de la démocratie participe au développement des compétences psychosociales des élèves, pour mieux prévenir notamment les situations de harcèlement et favoriser la coopération entre les élèves.\n\n# Progressivité \n\nL'explicitation des objectifs et des contenus de l'enseignement moral et civique est annualisée afin de garantir la progressivité de la formation des élèves. En tenant compte de leur âge, les contenus d'enseignement qui leur sont proposés sont investis de manières diverses :\n\n- en s'inscrivant dans une perspective d'approfondissement et une logique spiralaire, afin de susciter une authentique compréhension des piliers éthiques et politiques de notre République démocratique. Ses institutions, par exemple, ne sont pas abordées avec le même niveau de détail aux cycles 2,3 et 4 ;\n- en accordant une place accrue aux questions vives de la société contemporaine, discutées en ouvrant tout l'éventail possible des opinions prévalentes et en s'appuyant sur la pratique du débat réglé, au fur et à mesure que les élèves approchent de la majorité ;\n- en opérant progressivement un élargissement optimal de l'horizon intellectuel et citoyen de l'élève, qu'il concerne ses relations avec ses pairs ou la compréhension des grands enjeux de la société civile et des questions politiques dans un monde aux espaces et aux sociétés interdépendants.\n\nLa progressivité de l'enseignement moral et civique permet de dérouler de manière régulière et continue les notions ou les thématiques principales auxquelles il est adossé en évitant d'en concentrer l'étude sur une seule année du programme. Par exemple, les objectifs de développement durable (ODD) sont distribués de façon diversement approfondie tout au long de la scolarité des élèves.\n\nMéthodes\nL'enseignement moral et civique se déploie, dans la mesure du possible, à partir de l'examen de situations réelles (qui peuvent être issues de l'expérience des élèves eux-mêmes), d'analyses savantes (tirées de ressources scientifiques, historiques ou politiques) ou de descriptions imaginaires (puisées dans la littérature ou dans les arts, par exemple). Il contribue au développement des compétences orales à travers, notamment, la pratique de l'argumentation. Le débat réglé, comme la discussion argumentée ou le dilemme moral à partir du cycle 4, permettent aux élèves d'éprouver, de comprendre et de mettre en perspective les valeurs et les principes qui régissent notre société démocratique. Discussion ou débat privilégient, non l'expression polémique d'opinions antagonistes, mais la mobilisation de connaissances utiles à la formulation claire d'arguments rigoureux.\n\nL'enseignement moral et civique s'appuie sur un ensemble de documents de référence (juridiques, historiques, patrimoniaux, littéraires, etc.). Il est également un lieu de partage d'expériences, soit des élèves eux-mêmes, qui ont pu connaître des expériences d'engagement, soit d'adultes sollicités dans ce but.\n\nSelon des modalités pédagogiques variées en lien avec des contenus historiques, littéraires, artistiques, scientifiques ou institutionnels qu'il privilégie en fonction de l'âge et de la compréhension des élèves, le professeur suscite l'élaboration et l'échange d'arguments clairement formulés, à l'oral comme à l'écrit, et permet aux élèves d'exercer leur esprit critique avec discernement et de développer les compétences visées.\n\nL'enseignement moral et civique se prête particulièrement aux travaux et aux démarches qui placent les élèves en situation de coopérer et favorisent les échanges et la confrontation des idées. Il peut reposer sur des projets individuels et collectifs susceptibles de dépasser le cadre horaire de l'enseignement ou de la classe et d'impliquer l'établissement, voire des partenaires institutionnels ou associatifs.\n\nEnfin, dans une perspective résolument interdisciplinaire, l'enseignement moral et civique oriente l'attention des élèves vers des problématiques contemporaines particulièrement vives liées à l'EMI d'une part, à l'EDD d'autre part. L'enseignement moral et civique n'a pas vocation à se substituer à ces deux « éducations », mais contribue à faire naître des projets interdisciplinaires et y participe de plein droit, grâce à la coopération des professeurs de toutes les disciplines dans le second degré, notamment le professeur documentaliste pour l'EMI ou le professeur d'histoire-géographie ou de sciences de la vie et de la Terre pour l'EDD. Au lycée, la diversité des disciplines contribuant à cette interdisciplinarité s'enrichit, notamment avec les sciences économiques et sociales et la philosophie.\n\nDe fait, une approche plurielle de l'EMI et de l'EDD se décline tout au long du programme d'enseignement moral et civique selon le tableau suivant.",
+      "text": "",
+      "dimensions": {
+        "dpi": 200,
+        "height": 2339,
+        "width": 1654
+      },
+      "images": [],
+      "index": 3,
+      "model_computed_fields": {},
+      "model_config": {
+        "populate_by_name": true,
+        "arbitrary_types_allowed": true,
+        "protected_namespaces": "()",
+        "validate_by_alias": true,
+        "validate_by_name": true
+      },
+      "model_extra": null,
+      "model_fields": {
+        "index": "annotation=int required=True",
+        "markdown": "annotation=str required=True",
+        "images": "annotation=List[OCRImageObject] required=True",
+        "dimensions": "annotation=Nullable[mistralai.models.ocrpagedimensions.OCRPageDimensions] required=True"
+      },
+      "model_fields_set": "{'index', 'markdown', 'images', 'dimensions'}"
+    },
+    {
+      "page_number": 5,
+      "markdown": "|  | EMI | EDD |\n| :--: | :--: | :--: |\n| CP |  | Respect dû à l'environnement et au vivant à partir de la compréhension des règles collectives |\n| CE1 | Première approche des stéréotypes dans la production visuelle et audiovisuelle | Respect dû à l'environnement et au vivant à partir de la compréhension des règles collectives |\n| CE2 | Initiation des élèves à la construction de l'information pour leur faire comprendre qu'elle relève de l'intérêt général | Mise en relation des écogestes et de l'intérêt général Découverte des opérations locales en faveur de I'environnement quand on présente le rôle du maire |\n| CM1 | Civisme numérique <br> Recherches en ligne, production et diffusion d'information <br> Cyberviolences et harcèlement en ligne <br> Sobriété numérique | Lien entre civisme et conscience écologique Sobriété numérique |\n| CM2 | Liberté d'expression en ligne, liberté de l'information (Convention internationale des droits de l'enfant, CIDE) | Devoir civique dans ses aspects environnementaux Charte de l'environnement, première approche |\n| Sixième | Vie privée et vie publique en ligne, droit à l'intimité et droit à l'image, explication de la majorité numérique à 15 ans <br> Réflexion sur les données personnelles, les traces numériques | Explication du rôle de représentation et d'impulsion des écodélégués, début des références aux ODD poursuivies dans la suite du programme L'intérêt général dans une perspective durable |\n| Cinquième | Discours de haine en ligne, lien avec les discriminations et cadre législatif | La solidarité en rapport avec l'ODD 3, la prévention de la santé publique, l'intervention publique face aux risques environnementaux |\n| Quatrième | Liberté d'expression en ligne et hors ligne, ses atouts, ses abus et ses limites Liberté de la presse Guerre informationnelle et cyberdéfense | La police de l'environnement, les incendies de forêt, leur prévention et leur traitement |\n| Troisième | Le rôle des médias, des sondages, le couple information/désinformation, l'intelligence artificielle, les débats en ligne | La Charte de l'environnement |\n| CAP | Liberté et responsabilité : information, presse, travail journalistique, liberté d'expression et médias sociaux, intelligence artificielle | Charte de l'environnement, responsabilité sociétale des entreprises, conférences internationales, ODD |\n| Seconde | Liberté de la presse et de l'information, travail journalistique, régulation des réseaux sociaux (règlement européen sur les services numériques, Pharos) <br> L'intelligence artificielle et l'information | Droits environnementaux et conférences internationales sur les enjeux climatiques, la responsabilité sociétale des entreprises |\n| Première | Traitement médiatique des minorités (en lien avec la discrimination) |  |\n| Terminale | La place des discours scientifiques et leur réception dans l'opinion, avec l'exemple du changement climatique <br> Les débats sur les grands défis environnementaux et numériques (voie professionnelle) <br> Travail sur les sondages et leurs usages <br> Fiabilité des sources et débats sur les réseaux sociaux | La place des discours scientifiques et leur réception dans l'opinion, avec l'exemple du changement climatique <br> Les débats sur les grands défis environnementaux et numériques (voie professionnelle) <br> La naissance des ODD à l'ONU et à l'Unesco |\n\nLe programme d'enseignement moral et civique participe pleinement au développement des compétences psychosociales des élèves, qu'elles soient cognitives, émotionnelles ou sociales. À travers les notions qu'il aborde et les démarches pédagogiques qu'il engage, il répond à l'objectif principal des compétences psychosociales : améliorer les relations à soi et aux autres. De la même manière, il s'articule avec les trois dimensions de l'éducation à la vie affective, relationnelle et sexuelle : se connaître, vivre et grandir avec son corps ; rencontrer les autres et construire des relations, s'y épanouir ; trouver sa place dans la société, y être libre et responsable.\n\nL'articulation de ces enseignements et éducations concourt à développer chez les élèves des compétences de nature à favoriser un climat scolaire apaisé et à prévenir toutes formes de violence et de discrimination, notamment en lien avec les séances d'empathie.",
+      "text": "",
+      "dimensions": {
+        "dpi": 200,
+        "height": 2339,
+        "width": 1654
+      },
+      "images": [],
+      "index": 4,
+      "model_computed_fields": {},
+      "model_config": {
+        "populate_by_name": true,
+        "arbitrary_types_allowed": true,
+        "protected_namespaces": "()",
+        "validate_by_alias": true,
+        "validate_by_name": true
+      },
+      "model_extra": null,
+      "model_fields": {
+        "index": "annotation=int required=True",
+        "markdown": "annotation=str required=True",
+        "images": "annotation=List[OCRImageObject] required=True",
+        "dimensions": "annotation=Nullable[mistralai.models.ocrpagedimensions.OCRPageDimensions] required=True"
+      },
+      "model_fields_set": "{'index', 'markdown', 'images', 'dimensions'}"
+    },
+    {
+      "page_number": 6,
+      "markdown": "L'ensemble de ces compétences est indispensable à la formation de futurs citoyens éclairés, acteurs de leur vie et capables de contribuer positivement à la société.\n\nLe tableau suivant identifie pour chaque niveau de la scolarité les notions du programme d'enseignement moral et civique qui permettent d'établir des liens explicites avec les notions et compétences travaillées dans le cadre de l'éducation à la vie affective, relationnelle et sexuelle et du développement de l'empathie.\n\n|  | Éducation à la vie affective et relationnelle (école primaire) Éducation à la vie affective, relationnelle et sexuelle (collège et lycée) | Développement de l'empathie et des comportements altruistes et prosociaux |\n| :--: | :--: | :--: |\n| CP | Connaissance et maîtrise de soi Règles d'hygiène et exigence d'intimité : avoir conscience de son intégrité ; connaître et respecter les règles élémentaires de l'intimité personnelle | Connaissance et maîtrise de soi : comprendre ses émotions et ses sentiments |\n| CE1 | Altérité et sociabilité <br> Règles collectives et prise d'initiative (lien possible avec la promotion de relations égalitaires et la compréhension des enjeux d'une relation humaine) | Développer sa capacité d'empathie <br> Apprendre aux élèves à reconnaitre les situations de violence physique et/ou verbale, les situations de harcèlement |\n| CE2 | L'engagement pour le bien commun (lien possible avec la compréhension de ce qu'est le consentement et les différentes manières de le solliciter et de l'exprimer) | Sensibiliser à la notion de bien commun et amener les élèves à prendre conscience que les actions individuelles doivent tenir compte de l'intérêt collectif |\n| CM1 | L'égalité dans la dignité (lien possible avec la promotion des relations égalitaires et positives telle que l'égalité filles-garçons) | Comprendre ce qu'implique et permet l'empathie Cyberviolences et harcèlement en ligne |\n| CM2 | Respecter les droits de tous (lien possible avec la connaissance de ses droits et l'importance de se protéger dans les relations avec les autres et dans les réseaux sociaux) | La lutte contre les discriminations suppose la déconstruction des préjugés et des stéréotypes |\n| Sixième | Le droit à la vie privée : l'intimité d'une personne recouvre la vie affective, relationnelle et sexuelle de cette personne | Le développement de l'empathie se poursuit dans le second degré, dans le cadre de séances dédiées (heures de vie de classe, dans les enseignements ou lors d'interventions, etc.) ou dans le cadre de projets pédagogiques. |\n| Cinquième | Agir pour l'égalité femmes-hommes : les violences sexistes et sexuelles persistent, qui nécessitent l'action des pouvoirs publics et de la société civile Discriminations liées au sexe, à l'orientation sexuelle et à l'identité de genre |  |\n| Quatrième | L'État de droit et les libertés (lien possible avec les questions de harcèlement, de cyberharcèlement, de lutte contre la prostitution, etc.) |  |\n| Troisième | Citoyenneté active (lien possible avec la prise en compte de la sexualité dans la définition et le respect des droits humains) |  |\n| CAP | Liberté et responsabilité : l'information (lien possible avec l'importance de se protéger et de protéger les autres : l'intimité à l'ère des réseaux sociaux) |  |\n| Seconde | Liberté et responsabilité : l'information (lien possible avec l'importance de se protéger et de protéger les autres : l'intimité à l'ère des réseaux sociaux) |  |\n| Première | Les violences sexistes et sexuelles portent atteinte à la cohésion d'une société démocratique ; étudier les actions menées pour lutter contre |  |\n| Terminale | Citoyenneté active (lien possible avec la liberté d'être soi parmi les autres, et les conditions sociales pour garantir cette liberté). |  |",
+      "text": "",
+      "dimensions": {
+        "dpi": 200,
+        "height": 2339,
+        "width": 1654
+      },
+      "images": [],
+      "index": 5,
+      "model_computed_fields": {},
+      "model_config": {
+        "populate_by_name": true,
+        "arbitrary_types_allowed": true,
+        "protected_namespaces": "()",
+        "validate_by_alias": true,
+        "validate_by_name": true
+      },
+      "model_extra": null,
+      "model_fields": {
+        "index": "annotation=int required=True",
+        "markdown": "annotation=str required=True",
+        "images": "annotation=List[OCRImageObject] required=True",
+        "dimensions": "annotation=Nullable[mistralai.models.ocrpagedimensions.OCRPageDimensions] required=True"
+      },
+      "model_fields_set": "{'index', 'markdown', 'images', 'dimensions'}"
+    },
+    {
+      "page_number": 7,
+      "markdown": "# ÉCOLE ÉLÉMENTAIRE \n\n## CP : Se reconnaitre comme individu et élève\n\n## Attendus et objectifs\n\nLe cours préparatoire (CP) constitue le moment charnière entre l'école maternelle et l'école élémentaire. Tout au long du cycle 1, l'école s'est attachée à garantir la sécurité affective et à développer la confiance en eux-mêmes des enfants pour leur permettre de prendre plaisir à apprendre, à progresser et à vivre ensemble. Tout au long du cycle 2, et tout particulièrement au CP, l'école renforce une première acquisition des exigences du respect d'autrui et de la vie en société, en permettant à I'enfant de trouver sa place comme personne singulière et comme élève au sein d'un groupe. Au CP, l'enseignement moral et civique ouvre à une première approche des notions de liberté et d'égalité. Chaque enfant apprend ainsi à se comporter comme un élève en développant son identité dans le respect de soi, des autres et des règles collectives.\n\n## Connaissance et maîtrise de soi\n\n| Notions abordées | Contenus d'enseignement | Démarches et situations d'apprentissage possibles |\n| :--: | :--: | :--: |\n| Liberté | - Comprendre ses <br> émotions et ses <br> sentiments : leur origine <br> et leurs manifestations ; <br> - trouver les réponses <br> appropriées aux besoins <br> exprimés; <br> - consolider sa confiance <br> en soi ; <br> - acquérir une estime de <br> soi. | À partir de la lecture d'ouvrages de la littérature de jeunesse, travailler <br> avec les élèves sur l'origine et les manifestations des différentes <br> émotions de base (joie, tristesse, peur, colère, dégoût, surprise) pour <br> permettre à l'élève d'apprendre à les identifier, à les distinguer les <br> unes des autres et à les exprimer avec un vocabulaire adapté. Il accède <br> ainsi à une meilleure compréhension de lui-même et de sa relation <br> avec les autres. <br> Développer une aptitude à l'empathie qui permet la bienveillance <br> dans la relation humaine, I'harmonie avec autrui : <br> - à travers le visionnage de courtes vidéos ou la mise en scène de <br> saynètes, les élèves apprennent à déchiffrer les signaux non <br> verbaux : le son de la voix, l'expression du visage qui trahissent les <br> émotions des autres afin d'adopter la meilleure réaction pour <br> entrer en contact avec eux de manière appropriée ; <br> - lors de discussions réglées autour d'un album de littérature de <br> jeunesse, les élèves apprennent à écouter et à poser des questions <br> pertinentes, à distinguer ce qu'un autre dit ou fait de leurs propres <br> réactions et jugements. |\n\nLes règles collectives et l'autonomie\n\n| Notions abordées | Contenus d'enseignement | Démarches et situations d'apprentissage possibles |\n| :--: | :--: | :--: |\n| Droits et devoirs <br> de l'élève <br> Égalité <br> Responsabilité | - S'approprier les règles de <br> l'école (droits et devoirs), <br> pour soi-même (son <br> propre bien-être et sa <br> propre sécurité); | Présenter explicitement les règles de l'école aux élèves les conduit à <br> s'interroger sur leurs droits et leurs devoirs au sein de cet espace <br> partagé. L'élève est amené à comprendre et à adopter un <br> comportement responsable et approprié aux situations vécues dans <br> les différents temps et espaces de l'école. Cette prise de conscience <br> s'opère notamment à travers la construction des règles de vie de la <br> classe. En s'appuyant sur quelques droits fondamentaux de l'élève <br> (droit à la sécurité physique, droit d'apprendre, etc.), celui-ci prend <br> conscience que ses droits impliquent des devoirs. <br> À partir d'exemples concrets choisis dans le quotidien de l'élève, dans <br> l'école ou dans ses abords immédiats, le faire réfléchir sur le sens de la <br> règle en lui donnant la possibilité d'exprimer et d'expliquer ses choix. <br> Expliquer que tout manquement aux règles entraîne des conséquences <br> pour l'élève qui en est à l'origine comme pour ceux qui en subissent les <br> préjudices. Un échange portant sur les différents degrés de ces <br> manquements (en fonction de leur gravité) peut se révéler utile et <br> permettre à l'élève de réfléchir aux différents degrés d'un <br> manquement pouvant entraîner une sanction. |\n|  | - respecter les différents <br> adultes de l'école en <br> identifiant leur rôle ; <br> - développer son <br> autonomie ; <br> - prendre des initiatives <br> personnelles et faire des <br> choix sans craindre de se <br> tromper ; | Faire comprendre que le respect des règles garantit la sécurité de <br> l'enfant : son attention à l'autorité des adultes, dont chacun exerce un <br> rôle déterminé, lui permet d'adopter une conduite appropriée et de <br> les solliciter selon ses besoins. <br> Présenter la règle non pas seulement comme une contrainte mais aussi <br> comme une protection qui procure à l'élève le sentiment de sécurité <br> dont il a besoin pour apprendre et s'épanouir en collectivité tout en <br> offrant la possibilité de prendre des initiatives ; elle contribue au <br> développement de son autonomie. |",
+      "text": "",
+      "dimensions": {
+        "dpi": 200,
+        "height": 2339,
+        "width": 1654
+      },
+      "images": [],
+      "index": 6,
+      "model_computed_fields": {},
+      "model_config": {
+        "populate_by_name": true,
+        "arbitrary_types_allowed": true,
+        "protected_namespaces": "()",
+        "validate_by_alias": true,
+        "validate_by_name": true
+      },
+      "model_extra": null,
+      "model_fields": {
+        "index": "annotation=int required=True",
+        "markdown": "annotation=str required=True",
+        "images": "annotation=List[OCRImageObject] required=True",
+        "dimensions": "annotation=Nullable[mistralai.models.ocrpagedimensions.OCRPageDimensions] required=True"
+      },
+      "model_fields_set": "{'index', 'markdown', 'images', 'dimensions'}"
+    },
+    {
+      "page_number": 8,
+      "markdown": "|  |  | Faire saisir aux élèves le sens et l'utilité des règles en collectivité. Respecter les règles est une condition essentielle pour prendre des initiatives et agir de façon autonome sans nécessairement attendre I'autorisation de l'adulte. |\n| :--: | :--: | :--: |\n|  | - identifier les risques et les dangers de son environnement immédiat et adopter un comportement adapté ; | Attestation de première éducation à la route (APER). |\n|  | - respecter les équipements de la collectivité, condition du partage de biens communs ; | Le respect des biens et des équipements de la collectivité permet à l'élève d'en disposer et d'être dans un environnement sécurisé. Élargir cette perspective : ce qui est vrai pour lui l'est aussi pour les autres. L'initier à la distinction entre propriété personnelle et collective. [EDD] L'aider à comprendre le respect qui est dû à l'environnement et au vivant, des espaces familiers aux espaces plus lointains, qui sont des biens communs. |\n|  |  | Aborder la question du respect dû aux animaux de compagnie. |\n| Droits de l'enfant | - savoir que les enfants ont des droits (Convention internationale des droits de l'enfant, 1989). | Aborder les droits de l'enfant par des extraits choisis de la Convention internationale des droits de l'enfant donne à l'élève la possibilité de comprendre que sa protection dépasse le cadre national comme celui de l'école et que chaque enfant sans distinction a des droits. |\n| Règles d'hygiène et exigence d'intimité |  |  |\n| Notions abordées | Contenus d'enseignement | Démarches et situations d'apprentissage possibles |\n| Identité <br> Dignité | - Avoir conscience de son intégrité ; <br> - connaître et appliquer les règles élémentaires d'hygiène personnelle; <br> - connaître et respecter les règles élémentaires de l'intimité personnelle. | À partir de situations réelles ou fictives, développer le respect par les élèves de leur propre corps et de leur intimité (CIDE, art. 16) en abordant : <br> - la notion d'intimité et de droit à la vie privée ; <br> - le droit à la sécurité et à la protection ; <br> - l'égalité entre les filles et les garçons (en lien avec l'éducation à la vie affective et relationnelle). |\n| Être élève à l'école de la République |  |  |\n| Notions abordées | Contenus d'enseignement | Démarches et situations d'apprentissage possibles |\n| République | - Identifier le drapeau français; <br> - reconnaitre La Marseillaise. | À partir de la présence des symboles républicains dans la salle de classe (L. 111-1-2 du Code de l'éducation), faire reconnaitre aux élèves le drapeau tricolore français et l'hymne national, la Marseillaise. En les associant à des événements au cours desquels ces deux symboles sont convoqués pour représenter la France, ainsi que des lieux de la République dans lesquels ils sont présents, faire comprendre aux élèves qu'ils sont des symboles de la République française pour poser les premiers jalons d'une culture civique commune et susciter un sentiment d'appartenance à la Nation française et à la République. |\n\n# CE1 : Respecter les autres \n\n## Attendus et objectifs\n\nL'enseignement moral et civique au CE1 engage les élèves à se tourner davantage vers les autres pour développer des compétences en lien avec les principes d'égale dignité de tous et de respect de chacun. Les élèves sont amenés à accepter l'altérité. Par le développement de compétences sociales, ils apprennent à vivre ensemble dans le respect des règles collectives.\n\n## Altérité et sociabilité\n\n| Notions abordées | Contenus d'enseignement | Démarches et situations d'apprentissage possibles |\n| :-- | :-- | :-- |\n| Fraternité <br> Solidarité <br> Dignité de la <br> personne humaine <br> Stéréotype <br> Préjugé | - Reconnaître et prendre <br> en compte les émotions <br> et les sentiments <br> d'autrui ; <br> - développer sa capacité <br> d'empathie ; | En mobilisant les compétences psychosociales, apprendre aux élèves à <br> être attentifs aux autres, à entendre et respecter les émotions des <br> autres. <br> Initier les élèves à l'empathie : écouter l'autre et se rendre disponible à <br> l'autre. Permettre aux élèves de développer un regard positif sur les <br> différences. |",
+      "text": "",
+      "dimensions": {
+        "dpi": 200,
+        "height": 2339,
+        "width": 1654
+      },
+      "images": [],
+      "index": 7,
+      "model_computed_fields": {},
+      "model_config": {
+        "populate_by_name": true,
+        "arbitrary_types_allowed": true,
+        "protected_namespaces": "()",
+        "validate_by_alias": true,
+        "validate_by_name": true
+      },
+      "model_extra": null,
+      "model_fields": {
+        "index": "annotation=int required=True",
+        "markdown": "annotation=str required=True",
+        "images": "annotation=List[OCRImageObject] required=True",
+        "dimensions": "annotation=Nullable[mistralai.models.ocrpagedimensions.OCRPageDimensions] required=True"
+      },
+      "model_fields_set": "{'index', 'markdown', 'images', 'dimensions'}"
+    },
+    {
+      "page_number": 9,
+      "markdown": "|  | - s'entraider et partager avec les autres; <br> - reconnaitre la diversité comme richesse et ne pas faire des différences (sociales, physiques, culturelles, de genre) un motif de violence ; <br> - faire comprendre que la solidarité et l'entraide, en lien avec la notion de fraternité, permettent un renforcement de la notion d'égalité entre les personnes. | Apprendre aux élèves à reconnaitre les situations de violence physique et/ou verbale, les situations de harcèlement. Cette démarche peut s'inscrire dans le programme Phare. Leur permettre de prendre conscience des différentes postures engagées dans une situation de harcèlement (auteur, cible, témoin) et de comprendre que le harcèlement est une situation de violence punie par la loi. [EMI] Introduire la notion de stéréotype en prenant appui sur des exemples pris dans le quotidien des élèves (publicité, dessin animé). Entreprendre une première approche critique des médias. S'appuyer sur le questionnement des élèves. Comprendre que les préjugés ont une incidence sur son rapport à l'autre. <br> Développer le respect de l'autre et de sa dignité en abordant : <br> - la notion d'intimité et de respect de la vie privée (sanitaires, vestiaires, espace numérique de travail); <br> - le droit à la sécurité et à la protection; <br> - les violences sexistes (en lien avec l'éducation à la vie affective et relationnelle). |\n| :--: | :--: | :--: |\n| Règles collectives et prise d'initiative |  |  |\n| Notions abordées | Contenus d'enseignement | Démarches et situations d'apprentissage possibles |\n| Responsabilité <br> Civilité | - Connaître et appliquer les règles élémentaires de vie, de communication et d'échange en collectivité : l'idée de civilité ; <br> - identifier les dangers au sein des situations dans lesquelles on se trouve ; <br> - prendre des initiatives (faire des choix, les justifier). | Les élèves apprennent à respecter et à appliquer les règles communes. Ils adaptent leur posture, leur langage et leur comportement au contexte scolaire. <br> Ils respectent les biens personnels et collectifs dans la classe et dans l'école. Ils sont sensibilisés à la notion de bien commun. Ils adoptent un comportement responsable envers autrui et envers leur environnement [EDD]. <br> Développer la responsabilité des élèves et les amener à reconnaitre les situations dangereuses et les événements déclencheurs pouvant être à l'origine d'un dommage pour eux-mêmes ou pour les autres, même dans un environnement familier. <br> Développer leur autonomie pour les rendre capables de donner l'alerte (savoir où trouver les numéros d'urgence; savoir passer un message d'alerte efficace). S'appuyer sur l'attestation premiers secours (APS) et l'attestation de première éducation à la route (APER). |\n| Principes et symboles de la République |  |  |\n| Notions abordées | Contenus d'enseignement | Démarches et situations d'apprentissage possibles |\n| République <br> Laïcité | - Identifier les symboles républicains; <br> - apprendre à chanter le $1^{\\text {er }}$ couplet et le refrain de La Marseillaise ; <br> - comprendre la devise «Liberté, Égalité, Fraternité »; <br> - aborder le principe de la liberté de conscience ; <br> - savoir que le français est la langue de la République. | Repérer la présence de symboles de la République dans l'environnement proche de l'école, initier à leur histoire et identifier leur lien avec les valeurs et principes de la République. <br> Donner à connaître les lieux de mémoire locaux de la commune de l'école afin d'amorcer la construction d'une mémoire nationale. <br> Participer à des cérémonies ou événements mémoriels. <br> La laïcité est abordée comme liberté de croire, de ne pas croire ou de changer de croyance ; elle permet donc la diversité des croyances et des opinions philosophiques. En faire apparaître les implications dans le cadre du respect des règles de la vie collective, qui se traduisent dans la Charte de la laïcité (notamment les art. 6 et 8). <br> À partir de documents administratifs officiels (loi, pièce d'identité, acte de naissance, etc.), montrer l'usage et la place prépondérante du français. |\n\n# CE2 : Apprendre ensemble et vivre ensemble \n\n## Attendus et objectifs\n\nÀ la fin du CE1, les élèves ont compris et acquis les principes du respect de soi et des autres. Au cours de l'année de CE2, il s'agit de développer le sentiment d'appartenance à la communauté scolaire. La notion de fraternité est dès lors reprise dans le contexte de l'engagement des élèves dans cette communauté et d'une réflexion plus approfondie sur l'idée d'intérêt général.",
+      "text": "",
+      "dimensions": {
+        "dpi": 200,
+        "height": 2339,
+        "width": 1654
+      },
+      "images": [],
+      "index": 8,
+      "model_computed_fields": {},
+      "model_config": {
+        "populate_by_name": true,
+        "arbitrary_types_allowed": true,
+        "protected_namespaces": "()",
+        "validate_by_alias": true,
+        "validate_by_name": true
+      },
+      "model_extra": null,
+      "model_fields": {
+        "index": "annotation=int required=True",
+        "markdown": "annotation=str required=True",
+        "images": "annotation=List[OCRImageObject] required=True",
+        "dimensions": "annotation=Nullable[mistralai.models.ocrpagedimensions.OCRPageDimensions] required=True"
+      },
+      "model_fields_set": "{'index', 'markdown', 'images', 'dimensions'}"
+    },
+    {
+      "page_number": 10,
+      "markdown": "| Notions abordées | Contenus d'enseignement | Démarches et situations d'apprentissage possibles |\n| :--: | :--: | :--: |\n| Bien commun Responsabilité | - Sensibiliser à la notion de bien commun et amener les élèves à prendre conscience que les actions individuelles doivent tenir compte de l'intérêt collectif ; <br> - savoir qu'il existe des institutions et des associations au service du bien commun ; | Participer à la réalisation de projets communs. Expérimenter la prise de décision à la majorité dans la classe, à travers des conseils d'élèves qui permettent l'initiation, par la pratique, au fonctionnement du débat collectif démocratique et à l'autonomisation de l'élève. Développer chez l'élève le sens de la responsabilité individuelle et collective par rapport aux autres et à l'environnement [EDD]. La sensibilisation au bien commun passe notamment par l'initiation au développement durable (approche de la notion de ressources naturelles et de biodiversité). <br> Les élèves apprennent progressivement à différencier l'intérêt particulier de l'intérêt général dans des situations concrètes. La prise de conscience de l'intérêt général se construit dans la participation à ce qui est utile et nécessaire au collectif dans lequel on vit. Les élèves mettent en pratique les premières notions de gestion responsable de I'environnement par des actions simples (éco-gestes). <br> Reconnaitre les situations dangereuses et les événements déclencheurs pouvant être à l'origine d'un dommage pour soi ou pour les autres dans l'environnement extérieur à l'école ou à la maison (risques sanitaires, écologie). Ces démarches peuvent s'appuyer sur l'APS et le permis piéton (APER). <br> Présenter une institution ou une association servant l'intérêt général (pompiers, police, métiers de la santé, par exemple). Montrer que la fonction de l'école est d'être elle aussi au service de l'intérêt général. <br> Donner un sens à la notion de fraternité en s'appuyant sur l'article 4 de la Charte de la laïcité, et montrer que cette fraternité implique de se soucier de l'intérêt général. Organiser par exemple au sein de l'école une collecte de denrées de première nécessité ou de matériel scolaire au profit d'une épicerie solidaire de proximité ou d'une association humanitaire. <br> [EMI] Pour montrer que l'information relève de l'intérêt général, des activités de photo-langage peuvent être menées pour apprendre aux élèves à lire les images avec discernement. <br> Permettre aux élèves d'acquérir les principes de la vie en société et de se conformer au rythme collectif (faire quelque chose ensemble ou être attentif, prendre en compte des consignes collectives, etc.), de s'approprier les règles collectives (droits et devoirs) pour apprendre ensemble. Participer à une élaboration collective de règles de vie adaptées à la classe. |\n| Service public | - savoir qu'il existe des institutions et des associations au service du bien commun ; <br> - aborder des enjeux d'intérêt collectif : l'éducation pour tous, I'environnement, la sécurité, l'information. | La République et son fonctionnement |\n| Notions abordées | Contenus d'enseignement | Démarches et situations d'apprentissage possibles |\n| République | - Savoir qu'en France le chef de l'État est le président de la République et qu'il est élu ; <br> - savoir que le maire est un élu local, et le représentant de l'État dans la commune ; connaître son rôle à la tête de la collectivité (état civil, école, environnement) ; <br> - approfondir la compréhension de la devise «Liberté, Égalité, Fraternité ». | À partir de l'organisation d'une élection (délégué de classe par exemple), comprendre les règles et le fonctionnement de l'élection présidentielle. <br> Faire une enquête sur les compétences des élus de la commune ; interviewer le maire de la commune ou un conseiller municipal. [EDD] Apprendre à connaître les opérations locales en faveur de I'environnement ; y participer. <br> À partir d'un questionnement des élèves, mettre en évidence les liens entre les différents éléments de la devise de la République : la liberté sans l'égalité fait régner la loi du plus fort ; l'égalité sans la liberté empêche les différences de s'exprimer ; la liberté et l'égalité sans la fraternité, c'est une société où chacun ne pense qu'à soi. |",
+      "text": "",
+      "dimensions": {
+        "dpi": 200,
+        "height": 2339,
+        "width": 1654
+      },
+      "images": [],
+      "index": 9,
+      "model_computed_fields": {},
+      "model_config": {
+        "populate_by_name": true,
+        "arbitrary_types_allowed": true,
+        "protected_namespaces": "()",
+        "validate_by_alias": true,
+        "validate_by_name": true
+      },
+      "model_extra": null,
+      "model_fields": {
+        "index": "annotation=int required=True",
+        "markdown": "annotation=str required=True",
+        "images": "annotation=List[OCRImageObject] required=True",
+        "dimensions": "annotation=Nullable[mistralai.models.ocrpagedimensions.OCRPageDimensions] required=True"
+      },
+      "model_fields_set": "{'index', 'markdown', 'images', 'dimensions'}"
+    },
+    {
+      "page_number": 11,
+      "markdown": "# CM1 : Faire société \n\n## Attendus et objectifs\n\nDans la continuité des apprentissages du cycle 2, les élèves de CM1 trouvent progressivement leur place dans la collectivité scolaire et apprennent à y jouer un rôle croissant dans le respect de l'intérêt général. Ils acquièrent les premières connaissances du cadre général d'une société démocratique. Les apprentissages convergent désormais vers certains aspects du civisme dans les différents temps et espaces de socialisation, dont les espaces numériques. Ils s'ouvrent ainsi à la compréhension des notions de fraternité et d'égalité.\n\nCivisme et citoyenneté\n\n| Notions abordées | Contenus d'enseignement | Démarches et situations d'apprentissage possibles |\n| :--: | :--: | :--: |\n| Civisme | - Définir le civisme comme l'action d'un individu en fonction du bien public et dans le respect des règles ; | Sensibiliser les élèves à l'engagement individuel et collectif en s'appuyant sur des exemples concrets. <br> [EDD] Prendre en charge des aspects de la vie collective et de l'environnement en développant une conscience civique et écologique (notamment en partageant harmonieusement les lieux de vie et en respectant l'environnement). |\n| Sobriété numérique | - aborder des exemples de comportement civique dans la classe, l'école, dans la vie quotidienne, en ligne, et en faveur de l'environnement ; | Reconnaître des situations de danger, alerter et se mettre en sécurité (APS, APER). <br> [EMI] Afin de développer un civisme numérique, s'appuyer sur la charte pour l'éducation à la culture et à la citoyenneté numériques. Plus particulièrement : <br> - travailler sur les espaces de travail accessibles aux élèves (espace numérique de travail, blog de classe, d'école, etc.) ; <br> - penser cet apprentissage comme une déclinaison en ligne de ce qu'on leur demande de faire hors ligne ; <br> - renforcer les compétences des élèves en matière de recherche infodocumentaire en ligne : appréhender le lien entre image et texte, distinguer émetteur et récepteur, aborder la notion de « source», interroger la notion d'information; <br> - produire et diffuser de l'information en classe (initier à la pratique médiatique) ; <br> - envisager les conséquences en matière environnementale des usages du numérique (par exemple la consommation énergétique des serveurs, des applications, etc.) et souligner l'importance d'une sobriété numérique ; <br> - aborder la question du droit à la déconnexion numérique et de son importance pour la santé mentale et physique. Cette démarche contribue au développement des compétences numériques (CRCN). |\n| Incivilités | - connaître et appliquer les règles de civilité en société ; identifier les incivilités et comprendre pourquoi elles nuisent à la vie en commun ; | Montrer comment la politesse fait partie du civisme par la connaissance volontaire des règles et le respect des autres qu'elle implique. Montrer en s'appuyant sur des exemples pourquoi les incivilités nuisent à la collectivité. |\n| Démocratie | - apprendre la signification du terme «démocratie» et le fonctionnement du suffrage direct. | Exposer les principes généraux de la démocratie en France en abordant les notions de citoyenneté, de vote et de participation aux décisions. Expliciter les articles 3, 6 et 16 de la Déclaration des droits de l'homme et du citoyen (DDHC) : articuler une réflexion sur la démocratie scolaire (conseils d'élèves, conseils de classe, etc.) et les notions de souveraineté populaire, de volonté générale, d'égalité devant la loi et de séparation des pouvoirs. |\n\nL'égalité dans la dignité\n\n| Notions abordées | Contenus d'enseignement | Démarches et situations d'apprentissage possibles |\n| :-- | :-- | :-- |\n| Égalité, dignité, <br> discriminations | - Comprendre la notion <br> d'égalité en droit ; <br> - comprendre ce <br> qu'implique le principe <br> de dignité de la personne <br> humaine. | À partir de situations réelles ou fictives, identifier des situations dans <br> lesquelles l'égalité n'est pas respectée et des situations de <br> discrimination ou d'atteintes à la personne d'autrui. <br> Dans le cadre d'activités de groupe, développer chez l'élève le respect <br> de son intégrité personnelle et de celle des autres, dans leur <br> diversité (croyances, convictions, etc.). Mettre en place des situations |",
+      "text": "",
+      "dimensions": {
+        "dpi": 200,
+        "height": 2339,
+        "width": 1654
+      },
+      "images": [],
+      "index": 10,
+      "model_computed_fields": {},
+      "model_config": {
+        "populate_by_name": true,
+        "arbitrary_types_allowed": true,
+        "protected_namespaces": "()",
+        "validate_by_alias": true,
+        "validate_by_name": true
+      },
+      "model_extra": null,
+      "model_fields": {
+        "index": "annotation=int required=True",
+        "markdown": "annotation=str required=True",
+        "images": "annotation=List[OCRImageObject] required=True",
+        "dimensions": "annotation=Nullable[mistralai.models.ocrpagedimensions.OCRPageDimensions] required=True"
+      },
+      "model_fields_set": "{'index', 'markdown', 'images', 'dimensions'}"
+    },
+    {
+      "page_number": 12,
+      "markdown": "|  | permettant à chacun d'assumer ses choix et de respecter ceux des <br> autres. <br> [EMI] Aborder le phénomène des cyberviolences; démontrer que ces <br> actes peuvent entraîner du harcèlement en ligne ; rappeler la règle et le <br> droit ; faire le lien avec le CRCN. <br> Ces démarches peuvent s'appuyer sur le programme d'éducation à la <br> vie affective et relationnelle et le dispositif Phare. |\n| :-- | :-- |\n\nComment faire société\n\n| Notions abordées | Contenus d'enseignement | Démarches et situations d'apprentissage possibles |\n| :-- | :-- | :-- |\n\n# Fraternité et empathie \n\n- Comprendre la notion de fraternité, valeur et principe de la République ;\n- comprendre ce qu'implique et permet I'empathie.\n\nÀ l'occasion d'un débat réglé, amener l'élève à exprimer ses opinions personnelles tout en tenant compte de la sensibilité des autres (nuancer son propos, modérer son attitude).\nPar une discussion collective, amener les élèves à définir égoïsme et altruisme.\nÀ partir de situations de tensions entre élèves, réelles ou fictives, faire réfléchir les élèves à ce que cela implique d'être un élève parmi d'autres élèves (tolérance envers autrui et ses idées en dehors de la camaraderie et de l'amitié).\nDans le cadre du développement des compétences psychosociales, développer l'empathie comme moteur pour lutter contre les discriminations, la violence physique ou verbale, le harcèlement, les cyberviolences.\n\n## CM2 : Vivre en république\n\n## Attendus et objectifs\n\nPar la compréhension des notions de droit, de devoir, de règle et de liberté, les élèves ont commencé à appréhender la citoyenneté française. En CM2, ils sont amenés à comprendre les fondements de la vie en république. Ils découvrent ainsi le fonctionnement des institutions au moyen de cas pratiques en lien avec leur quotidien. Par la sensibilisation aux préjugés et aux stéréotypes, ils identifient les atteintes à autrui et apprennent le respect de la dignité de la personne humaine et l'égalité des droits.\n\n## Citoyenneté et nationalité\n\n| Notions abordées | Contenus d'enseignement | Démarches et situations d'apprentissage possibles |\n| :--: | :--: | :--: |\n| Citoyenneté <br> Droits civils et politiques | - Connaître les conditions d'acquisition de la nationalité française : montrer le lien étroit entre citoyenneté et nationalité. Un citoyen bénéficie de droits civils, puis politiques à sa majorité, et tout individu bénéficie de droits civils ; <br> - connaître le rôle politique des citoyennes et des citoyens : ils ont vocation à participer à la vie politique du pays et à l'évolution des institutions (découverte des procédures générales d'élaboration de la loi); | À partir de l'article 7 de la Convention internationale des droits de l'enfant, faire comprendre que tout enfant possède dès sa naissance des droits, dont celui d'acquérir une nationalité. Par des exemples choisis illustrant des droits, comprendre qu'en France, tout individu bénéficie de droits comme celui à l'éducation, d'être soigné, etc. <br> L'élève doit être en mesure à partir de la lecture d'articles choisis de la Déclaration des droits de l'homme et du citoyen (DDHC) de citer quelques droits individuels et collectifs comme le droit à la liberté d'expression (art. 11), d'opinion (art. 10), le droit à la sûreté (art. 2). Il doit savoir les distinguer des droits politiques comme le droit de vote et d'éligibilité qui permettent de participer aux décisions de la vie publique. Ces droits sont illustrés avec des situations concrètes de la vie quotidienne. <br> L'expérience des conseillers municipaux juniors est considérée en vue d'expliquer le rôle politique du citoyen qui, par le vote, participe à la vie de sa cité. Une rencontre avec des élus locaux (maire de la commune, conseillers municipaux) peut être ainsi l'occasion pour les élèves d'appréhender l'engagement de citoyennes et de citoyens actifs qui se sont portés candidats à une élection municipale, et de comprendre les modalités d'exercice de leur mandat local. <br> La participation au concours Le Parlement des enfants favorise la pratique du dialogue et du débat démocratique des élèves. Cette action éducative permet aux élèves de découvrir le rôle du législateur. |\n| Devoirs | - connaître les devoirs du citoyen et de toute personne résidant sur le territoire national : | L'étude de plusieurs articles de la DDHC permet également de caractériser différents devoirs du citoyen, comme sa participation au financement des charges supportées par l'État par le paiement de l'impôt (art. 13). |",
+      "text": "",
+      "dimensions": {
+        "dpi": 200,
+        "height": 2339,
+        "width": 1654
+      },
+      "images": [],
+      "index": 11,
+      "model_computed_fields": {},
+      "model_config": {
+        "populate_by_name": true,
+        "arbitrary_types_allowed": true,
+        "protected_namespaces": "()",
+        "validate_by_alias": true,
+        "validate_by_name": true
+      },
+      "model_extra": null,
+      "model_fields": {
+        "index": "annotation=int required=True",
+        "markdown": "annotation=str required=True",
+        "images": "annotation=List[OCRImageObject] required=True",
+        "dimensions": "annotation=Nullable[mistralai.models.ocrpagedimensions.OCRPageDimensions] required=True"
+      },
+      "model_fields_set": "{'index', 'markdown', 'images', 'dimensions'}"
+    },
+    {
+      "page_number": 13,
+      "markdown": "|  | respecter les lois, contribuer à financer les dépenses publiques. Chaque citoyen doit respecter les droits des autres qui sont identiques aux siens (Déclaration des droits de l'homme et du citoyen, art. 3 et 13) ; <br> - comprendre que le terme de devoir peut aussi désigner une réalité plus morale, qui doit guider le citoyen dans son comportement dans l'espace public ; <br> - connaître et comprendre les symboles républicains mentionnés par la Constitution: drapeau, hymne, devise, et d'autres coutumiers comme Marianne ; connaître la fête nationale du 14 juillet (héritière de la Fête de la Fédération de 1790); comprendre la nécessité de respecter ces symboles ; <br> - savoir que la République française est membre de I'Union européenne (UE). | En expliquant que les électeurs et les électrices sont à l'origine des lois en vigueur par l'intermédiaire de leurs représentants démocratiquement élus, et en se référant à l'article 3 de la DDHC et l'article 3 de la Constitution affirmant que la souveraineté nationale appartient au peuple, l'élève doit comprendre que les citoyennes et les citoyens participent de l'élaboration des lois en même temps qu'ils doivent les respecter. <br> La description d'une carte électorale peut être l'occasion de faire réfléchir à la notion de devoir civique à partir de la mention « Voter est un droit, c'est aussi un devoir civique » et de faire comprendre que par leur vote citoyennes et citoyens assurent le bon fonctionnement de la démocratie. <br> [EDD] Des exemples choisis de comportements dans la vie quotidienne (recyclage, réduction des déchets, lutte contre le gaspillage, etc.) sont mis en lien avec l'éco-citoyenneté et présentés comme un autre exemple de devoir civique, celui de défendre l'environnement. <br> La République est héritière d'une histoire, elle se rend visible par des symboles fédérateurs. Connaître des lieux de la mémoire collective et les dates de commémorations, et faire apparaître ce que nous devons aux générations antérieures (visiter des lieux de mémoire ; lire un témoignage d'ancien combattant ; identifier des traces laissées par I'histoire). Participer à la commémoration du 11 novembre. <br> Connaître le drapeau européen, comprendre pourquoi il est associé au drapeau tricolore sur les bâtiments publics et reconnaitre l'hymne européen. |\n| :--: | :--: | :--: |\n\nLibertés et droits fondamentaux\n\n| Notions abordées | Contenus d'enseignement | Démarches et situations d'apprentissage possibles |\n| :--: | :--: | :--: |\n| Liberté <br> Droits <br> fondamentaux | - Faire connaître les droits et libertés fondamentaux institués par la Déclaration des droits de I'homme et du citoyen (1789), la Déclaration universelle des droits de I'homme (1948) et la Charte des droits fondamentaux de l'Union européenne (2000) ; <br> - mettre en avant certains droits politiques, économiques et sociaux qui en découlent: suffrage universel, droit à l'emploi, à la protection de la santé, à la gratuité de l'enseignement public, accès à la culture, droits environnementaux (Charte de I'environnement) ; | Aborder des textes qui recensent les libertés et droits fondamentaux reconnus en France (depuis la Déclaration des droits de l'homme et du citoyen jusqu'à la Constitution de 1958) et au sein de l'Union européenne (Charte des droits fondamentaux). <br> Découvrir les libertés fondamentales, à la fois individuelles et collectives (liberté d'expression, liberté d'opinion, liberté d'association) ; expliquer que ces libertés comportent aussi des limites pour que la liberté des uns n'entrave pas celle des autres (art. 4 DDHC). Ainsi, la liberté d'expression énoncée à l'article 11 de la DDHC peut être mise en lien avec la loi du 29 juillet 1881 sur la liberté de la presse, de l'imprimerie et de la librairie, encadrant cette liberté. <br> Lire et expliquer les articles 1 et 2 de la DDHC (les droits fondamentaux et leurs fondements.) <br> [EDD] Expliquer comment la référence aux droits de l'homme permet de s'attaquer aux problèmes environnementaux (exemple de la Convention de Berne relative à la conservation de la vie sauvage et du milieu naturel de l'Europe, 1979). Présenter la Charte de l'environnement. |",
+      "text": "",
+      "dimensions": {
+        "dpi": 200,
+        "height": 2339,
+        "width": 1654
+      },
+      "images": [],
+      "index": 12,
+      "model_computed_fields": {},
+      "model_config": {
+        "populate_by_name": true,
+        "arbitrary_types_allowed": true,
+        "protected_namespaces": "()",
+        "validate_by_alias": true,
+        "validate_by_name": true
+      },
+      "model_extra": null,
+      "model_fields": {
+        "index": "annotation=int required=True",
+        "markdown": "annotation=str required=True",
+        "images": "annotation=List[OCRImageObject] required=True",
+        "dimensions": "annotation=Nullable[mistralai.models.ocrpagedimensions.OCRPageDimensions] required=True"
+      },
+      "model_fields_set": "{'index', 'markdown', 'images', 'dimensions'}"
+    },
+    {
+      "page_number": 14,
+      "markdown": "|  | - montrer que les droits fondamentaux s'exercent dans le cadre de la loi (exemple de la liberté d'expression);\n- approfondir avec les droits dits « de troisième génération », qui résultent du droit de chacun de « vivre dans un environnement équilibré et respectueux de la santé » (art. $1^{\\text {er }}$ de la Charte de I'environnement). | Un travail sur la liberté d'expression, abordée dans le cadre des médias d'information, peut être et mené lors de la Semaine de la presse et des médias dans l'école.\n\nEn lien avec les articles 13 et 17 (CIDE), lier la question des libertés et du droit à la découverte des réseaux sociaux (qui ne sont pas un espace de non-droit) et la liberté d'expression. Aborder la notion de pseudonymes et d'anonymat.\n[EMI] Aborder la question de la liberté d'expression par l'exemple de la liberté de la presse à travers le monde. Faire comprendre que l'accès à une information fiable et vérifiée est essentiel en démocratie. Appréhender la notion de «désinformation » avec les élèves (et ses possibles conséquences). Consolider les bonnes pratiques face à l'information (évoquer par exemple les lois de 2018 relatives à la manipulation de l'information). |\n| :--: | :--: | :--: |\n\nRespecter les droits de tous\n\n| Notions abordées | Contenus d'enseignement | Démarches et situations d'apprentissage possibles |\n| :--: | :--: | :--: |\n| Discriminations <br> Stéréotypes | - Montrer que la lutte contre les discriminations suppose la déconstruction des préjugés et des stéréotypes ; <br> - faire reconnaitre les atteintes aux personnes : le racisme, I'antisémitisme, le sexisme, la xénophobie, I'homophobie, le harcèlement ; savoir que I'expression des discriminations est sanctionnée par la loi. | [EMI] Conduire une réflexion avec les élèves sur le respect dans un contexte numérique et, notamment, celui des réseaux sociaux : étudier le rôle des médias dans la construction et le renforcement des stéréotypes et des préjugés ; aborder la notion de « haine »; questionner le rôle des réseaux sociaux et leur mécanique de diffusion de contenus irrespectueux ; faire comprendre que la diffusion et la rediffusion de ces contenus constituent des manières de porter atteinte à la dignité et à la sécurité des personnes ; expliquer pourquoi ils sont punis par la loi. <br> Les élèves comprennent le rôle du témoin de situations de discriminations ou de harcèlement et l'importance de signaler celles-ci. Cette démarche peut s'inscrire dans le programme Phare. |\n\nÀ l'école laïque\n\n| Notions abordées | Contenus d'enseignement | Démarches et situations d'apprentissage possibles |\n| :-- | :-- | :-- |\n\n# Laïcité (vue en \n\nCE1)\n\n- Le respect des croyances est assuré, mais, comme ailleurs, leur expression est limitée par la loi. Celle-ci protège les élèves de toute influence religieuse et préserve leur liberté de conscience ;\n- nul ne peut être discriminé pour sa croyance ou ses convictions, mais nul n'a non plus le droit d'imposer ses croyances ou ses convictions aux autres.\n\nLes élèves sont sensibilisés au respect de la diversité des croyances et des convictions de chacun dans les limites fixées par la loi.\nÀ partir de la lecture et de l'étude d'articles de la Charte de la laïcité, les élèves expliquent pourquoi l'école est laïque et discernent les comportements remettant en cause la laïcité (art. 13 du préambule de la Constitution de 1946, loi du 15 mars 2004). Des références historiques comme les lois scolaires de 1881-1882 peuvent être mobilisées pour démontrer l'ancrage historique de la laïcité et la place particulière de l'école dans la conquête de ce principe. Une approche de la loi de 1905 permet de comprendre la laïcité comme principe d'organisation de notre société.\nCes démarches peuvent être mises en œuvre à l'occasion de la Journée de la laïcité du 9 décembre.\n\n## COLLÈGE\n\nLes horaires indiqués ci-dessous le sont à titre indicatif.\n\n## Sixième : Apprendre à vivre dans une société démocratique\n\n## Attendus et objectifs\n\nAu collège, l'élève arrive dans un nouvel espace réglé auquel il a été préparé pendant les deux premières années du cycle 3. Il y poursuit l'apprentissage de la citoyenneté et affine sa compréhension de l'articulation entre l'individuel et le collectif en",
+      "text": "",
+      "dimensions": {
+        "dpi": 200,
+        "height": 2339,
+        "width": 1654
+      },
+      "images": [],
+      "index": 13,
+      "model_computed_fields": {},
+      "model_config": {
+        "populate_by_name": true,
+        "arbitrary_types_allowed": true,
+        "protected_namespaces": "()",
+        "validate_by_alias": true,
+        "validate_by_name": true
+      },
+      "model_extra": null,
+      "model_fields": {
+        "index": "annotation=int required=True",
+        "markdown": "annotation=str required=True",
+        "images": "annotation=List[OCRImageObject] required=True",
+        "dimensions": "annotation=Nullable[mistralai.models.ocrpagedimensions.OCRPageDimensions] required=True"
+      },
+      "model_fields_set": "{'index', 'markdown', 'images', 'dimensions'}"
+    },
+    {
+      "page_number": 15,
+      "markdown": "abordant des aspects fondamentaux de la vie dans une société démocratique : élire ses représentants et représenter les autres, respecter des règles collectives et comprendre pourquoi on les respecte - notamment sous l'angle de la laïcité scolaire -, protéger sa vie privée et celle des autres tout en participant à la vie publique. Prenant conscience de ses responsabilités, l'élève se familiarise avec certains principes fondamentaux : celui de la liberté de conscience, que garantit la laïcité ; celui de la dignité de la personne humaine, qui garantit à son tour le respect de sa vie privée et constitue une clef pour comprendre la raison d'être des règles et des lois de la démocratie.\n\nReprésenter les autres et servir l'intérêt général (5 à 6 heures)\n\n| Notions abordées | Contenus d'enseignement | Démarches et situations d'apprentissage possibles |\n| :--: | :--: | :--: |\n| Représentation et démocratie représentative (vue en CM1) Vote <br> Intérêt général (vu en CE2) <br> Responsabilité (vue en CP, CE1, CE2) | - Les représentantes et représentants, choisis par un vote, portent la parole des autres, participent à des délibérations collectives et à la prise de décision ; <br> - à toutes les échelles (classe, collège, commune, département, région, pays, Union européenne), ils répondent à des besoins collectifs : éducation, santé, secours, transport, enjeux du développement durable et de la transition écologique ; <br> - l'intérêt général est l'intérêt commun de tous les membres de la société. II n'est pas toujours compatible avec les intérêts de chacun ; <br> - dans une perspective de développement durable, la définition de l'intérêt général prend en compte les générations futures; <br> - les représentants élus sont responsables : ils expriment la parole des électeurs et suivent les règles des assemblées et des conseils dans lesquels ils sont élus. | À partir des missions du délégué de classe et des autres fonctions représentatives au collège (éco-délégués, représentants au conseil de la vie collégienne) ou en dehors (conseillers départementaux jeunes), travailler sur les différentes échelles de représentation (jusqu'à l'Assemblée nationale et au Parlement européen) pour faire comprendre l'intérêt du vote, les responsabilités d'un représentant et la contribution de chacun à des prises de décision qui concernent l'intérêt général. <br> Le Parlement des enfants peut être l'occasion, à partir d'un projet spécifique, de comprendre la notion d'intérêt général. <br> [EDD] À partir d'objectifs de développement durable (ODD 12, 13, 14), faire comprendre le sens de l'intérêt général, pour passer du geste individuel à l'action publique ; suivre et expliquer les mécanismes d'une décision prise, soit dans une instance du collège (par les éco-délégués ou d'autres élèves), soit par une collectivité territoriale, voire par l'État. |\n\nRespecter des règles et en comprendre la finalité : I'exemple de la laïcité à l'École (5 à 6 heures)\n\n| Notions abordées | Contenus d'enseignement | Démarches et situations d'apprentissage possibles |\n| :--: | :--: | :--: |\n| Laïcité (vue en CE1, CM2) <br> Liberté de conscience | - La laïcité garantit la liberté de conscience et l'égalité de toutes les citoyennes et tous les citoyens, quelles que soient leurs croyances ou opinions ; la neutralité de l'État à l'égard des religions et le libre exercice des cultes (loi de 1905) ; <br> - la liberté de conscience est celle de croire, celle de ne pas croire, celle aussi de changer de croyance ou de religion; <br> - la laïcité est un principe juridique et non une opinion, elle diffère par conséquent de l'athéisme ou de I'agnosticisme, qui constituent des options philosophiques personnelles ; <br> - la laïcité à l'école protège la liberté de choix de chaque enfant : elle crée un espace neutre à l'abri des prosélytismes (loi du 15 mars 2004 ; Charte de la laïcité) ; <br> - dans ce but, la laïcité impose des règles à tous les membres de la communauté scolaire, elle prépare les élèves à vivre dans une communauté nationale où différentes opinions philosophiques et religieuses peuvent s'exprimer et être discutées dans le cadre de la loi. | À partir de la Convention internationale des droits de I'enfant de 1989 (art. 2, 12 à 14 et 28) et d'une étude de ses principes, définir ce que sont des droits, notamment la liberté de conscience, et expliquer que des devoirs découlent de ces droits. <br> Comparer la loi du 15 mars 2004 (et sa traduction dans le règlement intérieur) avec les articles 4 et 10 de la DDHC et la Charte de la laïcité pour permettre aux élèves de comprendre pourquoi l'école est un espace particulier d'apprentissage les protégeant de toute pression et comment un interdit permet leur protection. <br> En s'appuyant sur la conception française de la laïcité (art. 1 et 2 de la loi de 1905), faire comprendre aux élèves que ce principe s'applique différemment selon les espaces et personnes concernés (sphère publique, espace public, sphère privée)., et mettre en évidence la particularité de l'école, pour les usagers et pour les personnels. <br> La Journée de la laïcité du 9 décembre est l'occasion de valoriser les projets conduits sur ce thème. |",
+      "text": "",
+      "dimensions": {
+        "dpi": 200,
+        "height": 2339,
+        "width": 1654
+      },
+      "images": [],
+      "index": 14,
+      "model_computed_fields": {},
+      "model_config": {
+        "populate_by_name": true,
+        "arbitrary_types_allowed": true,
+        "protected_namespaces": "()",
+        "validate_by_alias": true,
+        "validate_by_name": true
+      },
+      "model_extra": null,
+      "model_fields": {
+        "index": "annotation=int required=True",
+        "markdown": "annotation=str required=True",
+        "images": "annotation=List[OCRImageObject] required=True",
+        "dimensions": "annotation=Nullable[mistralai.models.ocrpagedimensions.OCRPageDimensions] required=True"
+      },
+      "model_fields_set": "{'index', 'markdown', 'images', 'dimensions'}"
+    },
+    {
+      "page_number": 16,
+      "markdown": "Avoir des droits en tant que personne et respecter ceux des autres: I'exemple du droit à la vie privée (5 à 6 heures)\n\n| Notions abordées | Contenus d'enseignement | Démarches et situations d'apprentissage possibles |\n| :--: | :--: | :--: |\n| Vie privée | - L'enfant comme l'adulte a droit au respect de sa vie privée (CIDE, DDHC et Charte des droits fondamentaux de I'Union européenne); <br> - le droit au respect de la vie privée comprend le droit à l'intimité et la protection du droit à l'image ; <br> - l'intimité d'une personne recouvre la vie affective et sexuelle de cette personne ; <br> - ce droit doit être également respecté dans l'univers numérique et les réseaux sociaux (majorité numérique, données personnelles, traces numériques, réputation numérique). | Mettre en rapport, d'une part, des textes garantissant ce droit de manière générale et, d'autre part, l'article 16 de la CIDE ; montrer que le droit à la vie privée est adossé au droit à la vie (art. 6) et au droit à un nom et à une nationalité (art. 7 et 8 ). <br> [EMI] À partir de situations concrètes, faire identifier aux élèves les risques liés aux usages numériques (cyberharcèlement, désinformation, risques pour la santé) pour faire comprendre pourquoi l'âge de la majorité numérique a été fixé à quinze ans par le législateur (loi du 7 juillet 2023). <br> À l'appui des ressources proposées par la CNIL dans le cadre du CRCN et de la Charte pour l'éducation à la culture et à la citoyenneté numérique, faire réfléchir à ce que sont des traces numériques, à la nécessité de les protéger (contre des usages commerciaux, mais aussi à des fins politiques) et à leur incidence sur la réputation d'une personne (tension entre droit à l'oubli et difficulté à le faire effectivement valoir). <br> Le Safer Internet Day, inscrit dans le programme Phare, est l'occasion de sensibiliser les élèves à un usage raisonné du numérique. <br> S'appuyer sur PIX. |\n\n# Cinquième : Égalité, fraternité et solidarité \n\n## Attendus et objectifs\n\nEn classe de cinquième, il s'agit de faire comprendre le projet social de la République qui se fonde sur les valeurs et principes d'égalité et de fraternité. On élargit à sa dimension citoyenne le travail que mènent les élèves sur leur rapport à autrui et sur leur place dans la collectivité, en exposant les mécanismes visant à réduire, compenser, voire supprimer les inégalités. L'étude d'exemples de l'action de la puissance publiques en matière de protection et de solidarité permet d'illustrer la mise en œuvre de l'idéal de la fraternité républicaine. On souligne ainsi le rôle des différents acteurs et intervenants, ainsi que leur complémentarité, qu'ils soient locaux, régionaux ou nationaux, associatifs ou étatiques. La fraternité suppose de considérer l'autre comme son égal et d'estimer qu'il est du devoir de chacun de venir en aide aux autres en cas de nécessité.\n\nAgir pour l'égalité femmes-hommes et lutter contre les discriminations (9-11 heures)\n\n| Notions abordées | Contenus d'enseignement | Démarches et situations d'apprentissage possibles |\n| :--: | :--: | :--: |\n| Égalité (vue en CM1) femmes-hommes <br> Égalité en droits, parité | - L'égalité entre les femmes et les hommes est un principe fondamental de la République française, garanti par la Constitution (article 3 du préambule de 1946 : «La loi garantit à la femme, dans tous les domaines, des droits égaux à ceux de I'homme. ») et des démocraties modernes, c'est aussi un objectif de développement durable (ODDS); <br> - dans la vie professionnelle et quotidienne, de nombreuses inégalités demeurent et les violences sexistes et sexuelles persistent, qui nécessitent l'action des pouvoirs publics et de la société civile ; | À partir de textes de loi (droit de vote des femmes en 1944, droit d'exercer une profession sans autorisation du mari en 1965, loi sur l'interruption volontaire de grossesse (IVG) en 1975, loi sur l'autorité parentale conjointe en 1987, loi sur la parité en 2000), montrer que l'égalité des droits entre les femmes et les hommes est le résultat de combats. L'étude de la loi sur la parité permet de montrer comment on passe de l'égalité en droits à un égal accès aux mandats politiques, tout en soulignant les limites de I'application de la loi. <br> À partir de la représentation féminine et masculine des branches de métiers, d'une part, et à partir des inégalités salariales, d'autre part, faire comprendre les décisions et I'action de l'État dans ce domaine en se référant à l'article 6 de la DDHC. <br> Travailler avec les élèves sur les stéréotypes de genre à l'école, notamment à partir de données sur l'orientation et les carrières professionnelles. Mettre en rapport les freins dans la carrière des femmes et les actions conduites pour y remédier. <br> En lien avec l'éducation à la vie affective, relationnelle et sexuelle, étudier la prévention des violences sexistes et sexuelles pour assurer la sécurité de toutes et tous. |",
+      "text": "",
+      "dimensions": {
+        "dpi": 200,
+        "height": 2339,
+        "width": 1654
+      },
+      "images": [],
+      "index": 15,
+      "model_computed_fields": {},
+      "model_config": {
+        "populate_by_name": true,
+        "arbitrary_types_allowed": true,
+        "protected_namespaces": "()",
+        "validate_by_alias": true,
+        "validate_by_name": true
+      },
+      "model_extra": null,
+      "model_fields": {
+        "index": "annotation=int required=True",
+        "markdown": "annotation=str required=True",
+        "images": "annotation=List[OCRImageObject] required=True",
+        "dimensions": "annotation=Nullable[mistralai.models.ocrpagedimensions.OCRPageDimensions] required=True"
+      },
+      "model_fields_set": "{'index', 'markdown', 'images', 'dimensions'}"
+    },
+    {
+      "page_number": 17,
+      "markdown": "| Discrimination (vue en CM1) <br> Inclusion <br> Racisme, antisémitisme, antitsiganisme, xénophobie, haine anti-LGBT | - la discrimination est un délit qui contrevient au principe d'égalité. Le Code pénal définit la discrimination comme « toute distinction opérée entre les personnes physiques » selon des critères liés à leur origine, à leur sexe, orientation sexuelle et identité de genre, à leur nationalité, à leur religion, à leur apparence physique, leur handicap, leur situation de grossesse, leur santé ou leur activité syndicale, etc. (art. 225-1), punie dans certaines situations constituant un traitement défavorable (art. 225-2) ; <br> - à la racine des agissements discriminatoires se trouvent des mécanismes d'exclusion (stéréotypes, préjugés, etc.) qui réduisent l'identité d'un individu à son appartenance à un groupe que l'on stigmatise. On retrouve ces stéréotypes dans le racisme, l'antisémitisme et la xénophobie, punis par la loi ; <br> - les agissements discriminatoires sont aussi à la racine du harcèlement, y compris du harcèlement en ligne (depuis 2022, le harcèlement scolaire est reconnu comme un délit). | Ces démarches peuvent s'inscrire dans les projets d'éducation à la citoyenneté visant à favoriser l'égalité fillesgarçons (concours, interventions de partenaires associatifs, démarche de labellisation, etc.) et nourrir le parcours Avenir des élèves (\" Découverte des métiers »). <br> Travailler à partir de situations ayant donné lieu à l'intervention du Défenseur des droits. Partir d'une situation de scolarisation d'enfants en situation de handicap pour évoquer l'inclusion scolaire de tous les enfants sans aucune distinction. <br> Montrer comment, dans le cadre du droit international (art. 23 CIDE), l'État cherche à corriger par la législation (loi du 11 février 2005 «Pour l'égalité des droits et des chances, la participation et la citoyenneté des personnes handicapées » et loi du 8 juillet 2013 sur la refondation de l'école) des situations d'inégalités et à améliorer progressivement l'accueil et la prise en charge des enfants en situation de handicap. <br> En se référant à la loi du 27 mai 2008 punissant les discriminations, étudier le cas d'une condamnation judiciaire (par exemple dans le monde du travail). <br> À partir de l'expression de stéréotypes ou de préjugés, montrer qu'ils constituent des mécanismes d'exclusion, parmi d'autres, qui peuvent être à l'origine d'agissements à caractère discriminatoire (injures, harcèlements, violences, etc.) punis par la loi. <br> Cette démarche peut s'inscrire dans les projets d'éducation à la citoyenneté visant à lutter contre les discriminations (concours, interventions de partenaires associatifs, commémorations, visites d'un lieu d'histoire et de mémoire, etc.). <br> [EMI] En abordant des discours haineux en ligne, qu'ils soient oraux ou écrits, faire émerger les mécanismes d'exclusion et de harcèlement qui s'appuient sur des stéréotypes et des préjugés posés sur une identité puis s'appuyer sur des points de droit spécifiques à la discrimination choisie comme support d'étude. Étudier comment le droit s'adapte pour mieux lutter contre les discours de haine (création de l'Observatoire de la haine en ligne rattaché à l'ARCOM créé par l'article 16 de la loi contre les discours haineux en ligne du 24 juin 2020 ; règlement européen sur les services numériques en ligne - Digital Services Act). <br> Cette démarche peut s'inscrire dans les projets d'éducation aux médias et à l'information (concours, interventions de partenaires, médias scolaires, etc.), et contribuer au développement des compétences numériques (CRCN). Le travail sur le harcèlement peut être inscrit dans le dispositif Pharee ou la participation au concours « Non au harcèlement ». |\n| :--: | :--: | :--: |\n\nLa solidarité et ses échelles (7-9 heures)\n\n| Notions abordées | Contenus d'enseignement | Démarches et situations d'apprentissage possibles |\n| :--: | :--: | :--: |\n| Solidarité <br> Fraternité | - Le principe de solidarité signifie que la Nation assure aux individus libres et égaux en droit une protection. Au nom de ce principe, lié à l'idéal de fraternité, l'État, les collectivités territoriales et la société civile (associations) unissent leurs forces pour réduire les inégalités et protéger les citoyennes et les citoyens contre | Donner des exemples de missions des communes, des départements et des régions. <br> Prendre l'exemple de l'Éducation nationale pour comprendre la mise en œuvre du principe de solidarité : sa part dans le budget de l'État, son ambition de réduire les inégalités en donnant à tous accès à la connaissance ; la contribution des régions, des départements et des communes. <br> Montrer la contribution des associations à la solidarité |",
+      "text": "",
+      "dimensions": {
+        "dpi": 200,
+        "height": 2339,
+        "width": 1654
+      },
+      "images": [],
+      "index": 16,
+      "model_computed_fields": {},
+      "model_config": {
+        "populate_by_name": true,
+        "arbitrary_types_allowed": true,
+        "protected_namespaces": "()",
+        "validate_by_alias": true,
+        "validate_by_name": true
+      },
+      "model_extra": null,
+      "model_fields": {
+        "index": "annotation=int required=True",
+        "markdown": "annotation=str required=True",
+        "images": "annotation=List[OCRImageObject] required=True",
+        "dimensions": "annotation=Nullable[mistralai.models.ocrpagedimensions.OCRPageDimensions] required=True"
+      },
+      "model_fields_set": "{'index', 'markdown', 'images', 'dimensions'}"
+    },
+    {
+      "page_number": 18,
+      "markdown": "|  | les risques sociaux et environnementaux ; <br> - l'impôt traduit la participation des citoyennes et des citoyens à la solidarité nationale (impôts directs et indirects) ; <br> - la solidarité s'exerce également à l'échelle de l'Union européenne et, dans le cadre de l'aide au développement (y compris durable), à l'échelle mondiale (institutions internationales et ONG) ; | nationale et leur reconnaissance par l'État (intérêt public, exonération fiscale). <br> Cette démarche peut s'inscrire dans les projets d'éducation à la citoyenneté (interventions de partenaires et d'élus, appui sur les élèves élus au conseil départemental, conseils municipaux de jeunes, etc.) et dans le cadre de l'éducation économique, budgétaire et financière (Éducfi). <br> [EDD] Montrer comment le droit international (accord de Paris sur le climat) prévoit une aide des pays développés aux pays en développement pour lutter contre les effets du changement climatique (atténuation et adaptation). |\n| :--: | :--: | :--: |\n| Risques sociaux <br> Sécurité sociale | - les risques sociaux (maladie, accident, invalidité, grossesse non désirée, perte d'emploi, perte d'autonomie liée à l'âge) sont tous les événements auxquels les individus risquent de ne pouvoir faire face avec leurs seules ressources. La Sécurité sociale et le système public de santé participent de la solidarité nationale ; le droit international garantit aux enfants le droit à la santé et à la sécurité sociale (art. 24 à 26 CIDE) ; | [EDD] L'ODD 3 « Bonne santé et bien-être » constitue un point d'entrée pour expliquer une politique de prévention en matière de santé publique ; par exemple : les campagnes de vaccination contre la grippe, contre l'infection du papillomavirus humain, le programme national nutrition santé (PNNS). Ces exemples aident à comprendre la responsabilité de l'État en matière de protection et de prévention et la responsabilité individuelle de chacun. <br> À partir de politiques publiques de santé, présenter des dispositifs nationaux d'accès aux soins, de prise en charge du grand âge, de développement des liens intergénérationnels, de lutte contre les déserts médicaux ainsi que leur mise en œuvre à l'échelle locale. Sensibiliser au don de sang, acte de citoyenneté et de solidarité. <br> À partir de l'exemple d'un territoire touché par une catastrophe environnementale, étudier comment se déploie la solidarité nationale - tant par l'intervention des forces de sécurité intérieure (sécurité civile, police et gendarmerie) que par la mobilisation des services de l'État - en vue de la prise en charge des victimes et de la reconstruction. <br> Considérer les territoires touchés par une pollution lente et invisible en lien avec les activités humaines ; leurs répercussions sur la santé publique ; l'environnement et les politiques de gestion des risques (expositions aux polluants et perturbateurs endocriniens, qualité des eaux). En s'appuyant sur la loi du 13 août 2004, montrer que la sécurité civile est l'affaire de tous et souligner l'importance de la prévention. S'appuyer sur le dispositif des cadets de la sécurité civile. |\n| Risques <br> environnementaux | - les risques environnementaux (pollutions, incendies, catastrophes naturelles liées ou non au changement climatique) nécessitent la mobilisation de moyens à toutes les échelles, pour la prévention, la mise en sécurité des personnes, l'aide aux victimes et la reconstruction (loi du 13 août 2004). | À partir de l'exemple d'un territoire touché par une catastrophe environnementale, étudier comment se déploie la solidarité nationale - tant par l'intervention des forces de sécurité intérieure (sécurité civile, police et gendarmerie) que par la mobilisation des services de l'État - en vue de la prise en charge des victimes et de la reconstruction. <br> Considérer les territoires touchés par une pollution lente et invisible en lien avec les activités humaines ; leurs répercussions sur la santé publique ; l'environnement et les politiques de gestion des risques (expositions aux polluants et perturbateurs endocriniens, qualité des eaux). En s'appuyant sur la loi du 13 août 2004, montrer que la sécurité civile est l'affaire de tous et souligner l'importance de la prévention. S'appuyer sur le dispositif des cadets de la sécurité civile. |\n\n# Quatrième : Défendre les droits et les libertés \n\n## Attendus et objectifs\n\nLa classe de quatrième s'attache à approfondir le sens du premier principe de la devise de la République : la liberté. Il s'agit de faire comprendre aux élèves comment la liberté se décline dans les libertés et comment celles-ci s'inscrivent dans un cadre légal qui les sauvegarde tout en les limitant au nom de l'intérêt général. La loi et l'organisation de la justice sont abordées comme des instruments en vue de la protection des individus, en tant qu'elles permettent de pallier les atteintes à leurs libertés et de maintenir l'ordre public garanti par l'État au nom de l'intérêt général de la Nation.\n\nL'État de droit et les libertés (9 heures)\n\n| Notions abordées | Contenus d'enseignement | Démarches et situations d'apprentissage possibles |\n| :-- | :-- | :-- |\n| Libertés et droits <br> fondamentaux <br> (vus en CM2) | - Les libertés individuelles permettent <br> aux citoyennes et aux citoyens d'être <br> maîtres de leurs mouvements et de <br> leurs choix (liberté de circulation ou <br> de mariage, par exemple), mais aussi <br> de leurs opinions et croyances (liberté <br> d'opinion, liberté de conscience), <br> ainsi que d'exprimer celles-ci (liberté | À partir de la Déclaration des droits de l'homme et du <br> citoyen (préambule, art. 2), de la Déclaration universelle <br> des droits de l'homme (préambule, art. 1 et 2) et de la <br> Convention internationale des droits de l'enfant, faire <br> comprendre aux élèves que ces textes leur garantissent <br> des droits et libertés au quotidien : intérêt supérieur de <br> l'enfant (art. 3 CIDE), liberté d'expression (art. 13), liberté <br> d'association et de réunion (art. 15), liberté d'information |",
+      "text": "",
+      "dimensions": {
+        "dpi": 200,
+        "height": 2339,
+        "width": 1654
+      },
+      "images": [],
+      "index": 17,
+      "model_computed_fields": {},
+      "model_config": {
+        "populate_by_name": true,
+        "arbitrary_types_allowed": true,
+        "protected_namespaces": "()",
+        "validate_by_alias": true,
+        "validate_by_name": true
+      },
+      "model_extra": null,
+      "model_fields": {
+        "index": "annotation=int required=True",
+        "markdown": "annotation=str required=True",
+        "images": "annotation=List[OCRImageObject] required=True",
+        "dimensions": "annotation=Nullable[mistralai.models.ocrpagedimensions.OCRPageDimensions] required=True"
+      },
+      "model_fields_set": "{'index', 'markdown', 'images', 'dimensions'}"
+    },
+    {
+      "page_number": 19,
+      "markdown": "|  | d'expression), y compris en ligne. Les libertés collectives leur permettent de s'associer les uns avec les autres et de s'engager dans la vie de la société (droit de réunion, d'association, de manifestation, droit syndical, liberté de la presse). Il s'agit de libertés fondamentales et de droits inconditionnels associés à l'idée de dignité humaine; | (art. 17). <br> À partir d'un exemple, étudier différents aspects de la liberté d'expression et de la liberté de la presse (définition, fondement en droit, enjeux, menaces, limites). <br> [EMI] Travailler sur la liberté d'expression en ligne. |\n| :--: | :--: | :--: |\n| Ordre public | - nos libertés sont toutefois encadrées par la loi et limitées, en premier lieu par les libertés des autres, que nous n'avons pas le droit d'entraver ou de violer (art. 4 DDHC) ; ensuite par la défense de l'ordre public qui concerne non seulement la sécurité, mais également la tranquillité, la salubrité, le respect de la dignité de la personne humaine, qui permettent à chacun de jouir de ses droits et de ses libertés; | À partir de l'exemple de la lutte contre les dérives sectaires, montrer que la loi ne définit pas la secte (au nom de la liberté de croyance), mais permet de réprimer les dérives sectaires, qui portent atteinte à l'ordre public, mais aussi aux droits fondamentaux, à la sécurité ou à l'intégrité des personnes. |\n| État de droit et hiérarchie des normes | - les libertés sont garanties par le droit : elles figurent dans le bloc de constitutionnalité reconnu par le Conseil constitutionnel, et l'action de l'État elle-même est soumise à la justice (son action ne peut violer les droits du citoyen); | À partir de décisions du Conseil constitutionnel ou du Défenseur des droits, étudier les lieux de privation de liberté ; leur diversité, les contrôles auxquels ils sont assujettis. |\n| Justice et institutions judiciaires | - l'indépendance de la justice est une condition de l'État de droit, son organisation garantissant le traitement équitable des justiciables ; <br> - les droits et libertés sont enfin garantis par des traités internationaux et leur respect contrôlé par des cours supranationales (Cour européenne des droits de l'homme notamment). | À partir d'un cas précis (audience correctionnelle), présenter les grands principes d'organisation et de fonctionnement de la justice : dualité des ordres de juridiction ; distinction première instance, appel et cassation ; rôle des cours suprêmes, Conseil d'État et Cour de cassation; le rôle et le fonctionnement des jurys populaires ; la justice des mineurs et le droit à la protection. Ces propositions peuvent s'inscrire dans un projet d'éducation à la citoyenneté, aux médias et à l'information (concours Découvrons notre Constitution, intervention de partenaires dans le champ des médias et de l'information, Semaine de la presse et des médias dans l'école, etc.). Utiliser le Passeport Educdroit pour aborder les différents aspects traités sous l'angle des règles de droit. |\n\nDéfendre le cadre démocratique : sécurité et défense nationale ( 9 heures)\n\n| Notions abordées | Contenus d'enseignement | Démarches et situations d'apprentissage possibles |\n| :--: | :--: | :--: |\n| Ordre public et souveraineté nationale Défense | - La « sûreté » fait partie des droits affirmés par la Déclaration des droits de l'homme et du citoyen (DDHC, art 2). Elle signifie à la fois que les droits du citoyen sont protégés et qu'il doit se trouver en sécurité. Les forces de sécurité intérieure, comme la police, la gendarmerie, les pompiers et les douanes, répondent à cette exigence ; <br> - les forces armées ont vocation à défendre la souveraineté nationale, qui peut se trouver menacée; elles ont aussi pour mission de servir la Nation quand elle est engagée par des traités ou comme membre d'organisations internationales comme l'ONU. La défense doit également affronter de | Aborder des exemples (plan Vigipirate, crise du Covid). Prendre l'exemple des incendies de forêt, pour montrer l'action des pompiers et de la sécurité civile, et en particulier la sécurisation des habitations. <br> [EDD] Aborder un exemple d'action de l'Office français de la biodiversité. <br> Appréhender les missions des forces de sécurité et des armées à partir d'une participation à une opération internationale. <br> [EMI] À partir de l'étude de tentatives d'ingérences étrangères repérées par VIGINUM, comprendre les mécanismes et enjeux de la guerre informationnelle. <br> Ces propositions peuvent s'inscrire dans la participation aux exercices de sécurité de l'établissement, à différents dispositifs en lien avec l'éducation à la défense (classe de défense à la sécurité globale, intervention d'acteurs de la défense et de la sécurité). |",
+      "text": "",
+      "dimensions": {
+        "dpi": 200,
+        "height": 2339,
+        "width": 1654
+      },
+      "images": [],
+      "index": 18,
+      "model_computed_fields": {},
+      "model_config": {
+        "populate_by_name": true,
+        "arbitrary_types_allowed": true,
+        "protected_namespaces": "()",
+        "validate_by_alias": true,
+        "validate_by_name": true
+      },
+      "model_extra": null,
+      "model_fields": {
+        "index": "annotation=int required=True",
+        "markdown": "annotation=str required=True",
+        "images": "annotation=List[OCRImageObject] required=True",
+        "dimensions": "annotation=Nullable[mistralai.models.ocrpagedimensions.OCRPageDimensions] required=True"
+      },
+      "model_fields_set": "{'index', 'markdown', 'images', 'dimensions'}"
+    },
+    {
+      "page_number": 20,
+      "markdown": "| nouveaux enjeux comme la guerre |  |\n| :-- | :-- |\n| informationnelle et la cyberdéfense; |  |\n| la police de l'environnement assure la |  |\n| protection du droit de chacun à vivre |  |\n| dans un environnement «sain et |  |\n| équilibré ». |  |\n\n# Troisième : Faire vivre la démocratie \n\n## Attendus et objectifs\n\nLa troisième, dernière année du cycle 4, offre une vue synthétique de la vie démocratique, dans une approche permettant de montrer comment les institutions de la République sont vivifiées par les débats qu'elles rendent possibles et qu'elles encadrent. Elle permet en outre de souligner que la vie démocratique repose essentiellement sur l'engagement effectif des citoyennes et des citoyens dans la vie économique, sociale et politique. La démocratie est ainsi envisagée comme un idéal à atteindre et non comme une réalité figée et immuable. Il en résulte que chaque citoyen peut agir et participer à la vie de la démocratie.\nLes règles du jeu démocratique (6 à 8 heures)\n\n| Notions abordées | Contenus d'enseignement | Démarches et situations d'apprentissage possibles |\n| :--: | :--: | :--: |\n| Constitution | - La Constitution, norme juridique fondamentale, garantit les droits et libertés, détermine la séparation des pouvoirs, ainsi que le contrôle de I'action du gouvernement par le Parlement ; <br> - la Constitution de la Ve République fait référence à d'autres textes qui ont une valeur constitutionnelle (DDHC, préambule de la Constitution de 1946, Charte de l'environnement) ; | Montrer comment fonctionnent les institutions : <br> - à partir d'une question prioritaire de constitutionnalité (QPC), mettre en évidence l'indépendance de l'autorité judiciaire et la garantie des droits et libertés ; <br> - à partir d'un exemple concret, suivre le trajet d'élaboration d'une loi pour illustrer les rôles respectifs de chaque institution ; <br> - se pencher sur le travail d'une commission d'enquête parlementaire. |\n| Séparation des pouvoirs et laïcité de l'État (vue en $6^{\\circ}$ ) | - elle affirme que la République est laïque, ce qui signifie que l'autorité politique est indépendante des autorités religieuses. Toutefois, ces dernières peuvent participer au débat public dans les limites fixées par la loi (art. 35.1 et 36.3 de la loi de 1905) ; <br> - depuis 1958, elle a été l'objet de plusieurs modifications qui témoignent du caractère évolutif de la République française, notamment pour prendre en compte les enjeux environnementaux (Charte de I'environnement) ; | À partir de textes constitutionnels, montrer qu'il n'y a aucune référence religieuse dans le lien qui unit l'autorité politique à la Nation. <br> En lien avec le programme d'histoire, étudier et contextualiser les évolutions de la Constitution portant sur l'organisation des pouvoirs publics : élection du président de la République au suffrage universel direct à partir de 1962, importance accrue du Conseil constitutionnel à partir de 1971 (encore amplifiée par la réforme de 2008), introduction de la parité en 1999, passage du septennat au quinquennat en 2000, extension de la décentralisation en 2003, adjonction de la Charte de l'environnement en 2004, réforme de 2008. |\n| Institutions européennes | - depuis l'après-guerre, la démocratie française s'inscrit dans les institutions du Conseil de l'Europe et de l'UE, qui élargissent le champ du débat et définissent une citoyenneté européenne. Au sein de l'UE, les États membres sont tenus d'appliquer le droit communautaire (traités, règlements, directives, décisions de la Cour de justice de l'UE). | À partir d'un exemple de questions débattues au niveau européen, présenter les institutions européennes en montrant ce qui relève de la souveraineté des États et ce qui relève d'une logique supranationale. <br> L'idée de citoyenneté européenne : un citoyen européen est habilité à faire valoir ses droits devant une juridiction européenne (Cour de justice de l'Union européenne ou Cour européenne des droits de l'Homme) ; à partir d'une procédure, aborder les différents droits liés à la citoyenneté européenne dans l'UE (traités européens et Charte des droits fondamentaux de l'Union européenne). Ces propositions peuvent s'inscrire dans un projet d'éducation à la citoyenneté (concours Découvrons notre Constitution, visite de l'Assemblée nationale ou d'une haute juridiction ou d'institutions européennes, rencontre avec un élu, intervention d'un partenaire, dispositif Passeport Educdroit, etc.). |",
+      "text": "",
+      "dimensions": {
+        "dpi": 200,
+        "height": 2339,
+        "width": 1654
+      },
+      "images": [],
+      "index": 19,
+      "model_computed_fields": {},
+      "model_config": {
+        "populate_by_name": true,
+        "arbitrary_types_allowed": true,
+        "protected_namespaces": "()",
+        "validate_by_alias": true,
+        "validate_by_name": true
+      },
+      "model_extra": null,
+      "model_fields": {
+        "index": "annotation=int required=True",
+        "markdown": "annotation=str required=True",
+        "images": "annotation=List[OCRImageObject] required=True",
+        "dimensions": "annotation=Nullable[mistralai.models.ocrpagedimensions.OCRPageDimensions] required=True"
+      },
+      "model_fields_set": "{'index', 'markdown', 'images', 'dimensions'}"
+    },
+    {
+      "page_number": 21,
+      "markdown": "| Notions abordées | Contenus d'enseignement | Démarches et situations d'apprentissage possibles |\n| :--: | :--: | :--: |\n| Démocratie (vue en <br> CM1 et $6^{\\circ}$ ) <br> délibérative et <br> opinion publique <br> Information/désin- <br> formation <br> Complotisme <br> Lanceurs d'alerte | - La démocratie est un régime où <br> l'opinion publique joue un rôle <br> capital, qui s'exprime par <br> l'intermédiaire des médias, dont les <br> médias sociaux, et qu'on essaie de <br> saisir par des sondages de natures <br> diverses ; <br> - l'information constitue donc un enjeu <br> essentiel, tout particulièrement à <br> l'ère du numérique et avec <br> l'émergence des « intelligences <br> artificielles »; <br> - les médias sociaux sont eux aussi le <br> lieu de débats et de mobilisations. <br> Dans ce contexte, des lanceurs <br> d'alerte prennent des risques pour <br> informer leurs concitoyennes et leurs <br> concitoyens. | [EMI] Développer l'esprit critique à partir d'une réflexion <br> sur la notion d'opinion publique ainsi que sur la <br> conception, la conduite et le rôle des sondages. <br> Étudier des exemples de désinformation et d'opérations <br> de déstabilisation en s'appuyant sur la loi du 22 décembre <br> 2018 relative à la lutte contre la manipulation de <br> l'information. Montrer comment la désinformation peut <br> nourrir le complotisme, en lien notamment avec le <br> racisme et l'antisémitisme. <br> À travers la production d'une information, montrer <br> l'importance de l'établissement rigoureux des faits et de la <br> distinction entre croyance, opinion et savoir. <br> Analyser des exemples d'alerte ou de mobilisation dans les <br> réseaux sociaux (le mouvement \\#MeToo, les affaires <br> financières); le cas de Chelsea Manning ou celui d'Irène <br> Frachon (lanceurs d'alerte), en s'appuyant sur la loi du <br> 21 mars 2022 visant à améliorer la protection des lanceurs <br> d'alerte. <br> Ces propositions peuvent s'inscrire dans un projet <br> d'éducation à la citoyenneté, aux médias et à l'information <br> (concours ou intervention d'un partenaire en lien avec l'EMI, <br> etc.) et contribuer au développement des compétences <br> numériques (CRCN). |\n\nLes acteurs du jeu démocratique et leur engagement (2) : I'engagement collectif (5 à 6 heures)\n\n| Notions abordées | Contenus d'enseignement | Démarches et situations d'apprentissage possibles |\n| :--: | :--: | :--: |\n| Citoyenneté active (vue en CM1) Élections et référendum | - Les campagnes électorales et les campagnes référendaires sont des occasions de débats (entre tous les citoyens, comme entre ceux qui sont déjà ou aspirent à être des représentants politiques) et des moments décisifs de la vie démocratique - le vote n'étant pas obligatoire, mais marquant un engagement au sein de la cité ; <br> - les formes traditionnelles de l'engagement demeurent décisives : engagement politique et exercice d'un mandat, engagement syndical, engagement associatif ou humanitaire, démocratie scolaire ; <br> - l'engagement dans les institutions (armée, police, justice, éducation); <br> - l'exercice de la liberté de manifester permet aux citoyennes et aux citoyens d'exprimer leurs opinions et de faire pression sur les gouvernements. | Exposer les différentes temporalités et modalités électorales (élections présidentielles, législatives, sénatoriales, régionales, départementales, municipales, européennes). <br> Étudier une campagne électorale ou référendaire. Examiner les procédures et le caractère public des délibérations municipales (filmées, enregistrées, données disponibles). <br> Étudier des parcours d'engagement dans une institution ou une association. <br> Étudier le fonctionnement de la démocratie scolaire et insister sur le rôle que les élèves sont amenés à y jouer. Prendre l'exemple de l'engagement en faveur de la cause animale. <br> Présenter le service national universel (SNU), dispositif national permettant de découvrir différentes formes et domaines d'engagement. <br> Ces propositions peuvent s'inscrire dans un projet d'éducation à la citoyenneté aux médias et à l'information (intervention d'un partenaire, d'élus, de bénévoles d'associations, visite d'institutions publiques, actions concrètes d'engagement, etc.) ou d'éducation à la défense. Proposition globale et synthétique : suivre le parcours d'une loi, de la situation à laquelle elle répond jusqu'à son application en passant par mobilisations et débats, pour voir le jeu des acteurs des institutions et appréhender comment agit le contrôle de l'action publique (par exemple la loi Veil de 1975 ou la loi sur le mariage pour tous en 2013). |",
+      "text": "",
+      "dimensions": {
+        "dpi": 200,
+        "height": 2339,
+        "width": 1654
+      },
+      "images": [],
+      "index": 20,
+      "model_computed_fields": {},
+      "model_config": {
+        "populate_by_name": true,
+        "arbitrary_types_allowed": true,
+        "protected_namespaces": "()",
+        "validate_by_alias": true,
+        "validate_by_name": true
+      },
+      "model_extra": null,
+      "model_fields": {
+        "index": "annotation=int required=True",
+        "markdown": "annotation=str required=True",
+        "images": "annotation=List[OCRImageObject] required=True",
+        "dimensions": "annotation=Nullable[mistralai.models.ocrpagedimensions.OCRPageDimensions] required=True"
+      },
+      "model_fields_set": "{'index', 'markdown', 'images', 'dimensions'}"
+    },
+    {
+      "page_number": 22,
+      "markdown": "# LYCÉE \n\nParce qu'il porte des ambitions civiques communes pour toutes les lycéennes et tous les lycéens, le programme d'enseignement moral et civique du lycée présente des notions et contenus d'enseignement identiques pour toutes les voies. Sa mise en œuvre est toutefois adaptée aux horaires et aux différents contextes d'enseignement. Les horaires indiqués ci-dessous le sont à titre indicatif.\n\n## Seconde : Droits, libertés et responsabilité\n\n## Attendus et objectifs\n\nEn classe de seconde, les acquis de la scolarité obligatoire sont mobilisés pour engager une réflexion renouvelée sur l'État de droit, sur son origine et son évolution. Il s'agit de souligner que l'État de droit garantit nos libertés, en même temps qu'un authentique pluralisme démocratique. Ainsi se poursuit la réflexion sur la laïcité, d'une part, et, d'autre part, sur le potentiel de création de nouveaux droits au sein d'une société démocratique. L'exercice des libertés appelle à la responsabilité, autant pour les sauvegarder ou les étendre que pour répondre aux considérables défis de la société contemporaine : la montée d'une information pléthorique et inégale, les risques environnementaux ou la transition écologique.\nL'État de droit garantit les droits et libertés et un pluralisme démocratique ( 6 heures en voies générale et technologique, 5 heures en voie professionnelle)\n\n| Notions abordées | Contenus d'enseignement | Démarches et situations d'apprentissage possibles |\n| :--: | :--: | :--: |\n| État de droit (vu en $4^{\\circ}$ ) | - L'État de droit, dans lequel la justice est indépendante, les pouvoirs publics sont soumis au droit et les citoyens égaux devant la loi, est garant des libertés et des droits fondamentaux ; | À partir des textes européens (Convention européenne des droits de l'homme - CEDH, Charte européenne des droits fondamentaux), définir, par une approche historique, l'État de droit en s'appuyant sur les éléments abordés en quatrième. <br> Étudier une décision de justice administrative (Conseil d'État). |\n| Sécularisation <br> Hiérarchie des normes | - l'État de droit est le fruit d'une triple évolution: la sécularisation de la politique (séparation des autorités politique et religieuse), l'affirmation des droits fondamentaux de la personne humaine et la mise en place d'une hiérarchie des normes de droit (qui soumet l'appareil étatique luimême à la loi) ; |  |\n| Laïcité (vue en CM2, $6^{e}$ et $3^{\\circ}$ ) <br> Pluralisme | - en France, la distinction du politique et du religieux est adossée au principe de la laïcité, qui consacre la séparation des Églises et de l'État (loi de 1905) et impose la neutralité à ses agents. Ainsi, l'État ne reconnait, ne salarie, ni ne subventionne aucun culte. En assurant que l'État traite de manière égale les citoyens, quelles que soient leurs convictions, la laïcité garantit de manière ferme la liberté de conscience et le pluralisme des croyances ; | Étudier la loi de séparation des Églises et de l'État du 9 décembre 1905 (art. 1, 2, 31, 44) : définir le principe de séparation, décrire son organisation, faire comprendre le primat du droit positif sur les règles religieuses et, notamment, en quoi il consolide les droits et les libertés publiques ; rappeler que la laïcité n'est pas l'athéisme. Étudier plus particulièrement les implications du principe de laïcité à l'école (primat des connaissances sur les croyances, espace de neutralité propre au développement de l'esprit critique) et dans le monde du travail, en distinguant services publics et entreprises privées, agents publics et usagers. |\n| Ordre public (vu en $4^{\\circ}$ ) | - l'État de droit constitue une garantie des libertés fondamentales et ouvre une possibilité d'évolution de la loi. Il peut créer de nouveaux droits et de nouvelles libertés; <br> - l'État de droit est promu par les nations démocratiques, par le Conseil de l'Europe et par l'Union européenne ; <br> - l'État de droit n'est cependant pas exclusif de la restriction des libertés (par exemple pour le maintien de l'ordre public) ni de la privation de liberté (par exemple pour les individus condamnés par la justice). | Par une recherche documentaire, expliquer comment de nouveaux droits répondant à une demande sociale forte (droits des femmes, maîtrise de la fécondité) ont été progressivement consacrés par la loi depuis les années 1960 (contraception, IVG, divorce par consentement mutuel, mariage pour tous, procréation médicalement assistée). <br> Montrer, par l'analyse d'une décision, comment les cours européennes de Strasbourg et de Luxembourg contrôlent l'action de l'État en matière de droits fondamentaux (par exemple dans les lieux de privation de liberté). À partir d'une étude de cas, aborder la question pénitentiaire, celle du maintien des droits et des devoirs civiques des détenus ou encore celle du sens de la peine dans un régime démocratique. |",
+      "text": "",
+      "dimensions": {
+        "dpi": 200,
+        "height": 2339,
+        "width": 1654
+      },
+      "images": [],
+      "index": 21,
+      "model_computed_fields": {},
+      "model_config": {
+        "populate_by_name": true,
+        "arbitrary_types_allowed": true,
+        "protected_namespaces": "()",
+        "validate_by_alias": true,
+        "validate_by_name": true
+      },
+      "model_extra": null,
+      "model_fields": {
+        "index": "annotation=int required=True",
+        "markdown": "annotation=str required=True",
+        "images": "annotation=List[OCRImageObject] required=True",
+        "dimensions": "annotation=Nullable[mistralai.models.ocrpagedimensions.OCRPageDimensions] required=True"
+      },
+      "model_fields_set": "{'index', 'markdown', 'images', 'dimensions'}"
+    },
+    {
+      "page_number": 23,
+      "markdown": "Liberté et responsabilité : I'exemple de l'information (vecteurs, nécessité et enjeux) (6 heures en voies générale et technologique, 5 heures en voie professionnelle)\n\n| Notions abordées | Contenus d'enseignement | Démarches et situations d'apprentissage possibles |\n| :--: | :--: | :--: |\n| Liberté de la presse (vue en $4^{\\text {e }}$ ) <br> Liberté de <br> l'information <br> (vue en $4^{\\text {e }}$ ) <br> Pluralisme <br> Liberté d'expression (vue en $4^{e}$ ) | - La liberté de la presse et la liberté de s'informer constituent deux piliers fondamentaux de la démocratie. Remises en cause dans tous les régimes autoritaires, elles sont consubstantielles aux libertés d'opinion et d'expression, et elles permettent le pluralisme en matière d'information. <br> - Encadrée par la loi, la liberté de la presse doit relever le défi du numérique, qui multiplie les possibilités d'information, mais altère la fiabilité des sources et fragilise les circuits de diffusion réglée de l'information. Par un phénomène de boucle, de nouvelles possibilités d'information donnent lieu à de nouvelles possibilités de désinformation ; <br> - les médias sociaux sont un lieu de liberté d'expression, mais ils sont aussi un vecteur de désinformation et amplifient les «discours de haine». | [EMI] Étudier le travail des journalistes : ses méthodes, sa déontologie, sa rigueur, mais aussi ses difficultés propres (pressions, censure ou autocensure, atteintes à la liberté de la presse), à partir d'un ou deux exemples concrets. S'appuyer sur les rapports établis par Reporters sans Frontières. Mettre à profit la rencontre avec des journalistes dans le cadre de la Semaine de la presse et des médias dans l'école. <br> Pour aborder l'enjeu du pluralisme, évoquer la réglementation et les obligations des médias audiovisuels (ARCOM) concernant le pluralisme politique. <br> À partir des normes juridiques, montrer et expliquer que la liberté d'expression est garantie par la DDHC (art. 11) et encadrée par la loi de 1881 sur la liberté de la presse. Sont notamment interdits la diffamation, l'incitation à la haine raciale (loi Pleven de 1972), le négationnisme (loi Gayssot de 1990), I'apologie du terrorisme (Code pénal, art. 421-2-5). <br> [EMI] La nouvelle donne que constituent Internet et les réseaux sociaux. Engager une réflexion sur l'évaluation des sources d'information et sur les critères de leur fiabilité ; les problèmes soulevés par l'intelligence artificielle (IA), les algorithmes de recommandation; les désordres informationnels (mésinformation, malinformation, désinformation, réinformation, «chambres d'écho»). <br> Aborder la question de la régulation des médias sociaux au niveau national, européen (lois françaises, directives européennes) et mondial. Quelles réponses législatives ? Quelle est la responsabilité des utilisateurs? Quelle est celle des fournisseurs d'accès ? (règlement européen sur les services numériques, Code européen des bonnes pratiques contre la désinformation (2018), Pharos). Ces démarches participent au développement des compétences numériques (CRCN). |\n\nDroits et responsabilité : I'exemple de la protection de l'environnement et de la sauvegarde de la biodiversité (6 heures en voies générale et technologique, 5 heures en voie professionnelle)\n\n| Notions abordées | Contenus d'enseignement | Démarches et situations d'apprentissage possibles |\n| :--: | :--: | :--: |\n| Droits environnementaux Développement durable Transition écologique Responsabilité (vue en $6^{\\text {e }}$ ) | - Intégrée au bloc de constitutionnalité, la Charte de I'environnement (2004) consacre le droit à un environnement sain et engage la responsabilité individuelle et collective pour le respect et la protection du vivant et de la biodiversité ; <br> - le droit environnemental induit la responsabilité des États, des producteurs, et même des consommateurs ; <br> - L'animal y est institué comme « objet de droit » dans le contexte d'un «respect du vivant». | Étudier la Charte de l'environnement en considérant son appartenance au bloc de constitutionnalité. <br> À partir d'une recherche documentaire, discuter la notion de démocratie environnementale. <br> Se saisir d'une des nombreuses questions d'actualité sur le sujet, à différentes échelles, des conférences internationales aux enjeux de consommation. Inciter les élèves à agir à leur échelle (écodélégués, CVL, etc.). Étudier des enquêtes conduites sur les groupes de pression (ou lobbies) et mesurer l'influence qu'ils peuvent avoir sur les politiques publiques liées à la santé ou à l'environnement. <br> Ces démarches peuvent s'articuler avec les actions d'éducation au développement durable. <br> Les démarches proposées pour l'année de seconde peuvent s'inscrire dans les projets des classes engagées et être valorisées lors des séjours de cohésion du SNU. |",
+      "text": "",
+      "dimensions": {
+        "dpi": 200,
+        "height": 2339,
+        "width": 1654
+      },
+      "images": [],
+      "index": 22,
+      "model_computed_fields": {},
+      "model_config": {
+        "populate_by_name": true,
+        "arbitrary_types_allowed": true,
+        "protected_namespaces": "()",
+        "validate_by_alias": true,
+        "validate_by_name": true
+      },
+      "model_extra": null,
+      "model_fields": {
+        "index": "annotation=int required=True",
+        "markdown": "annotation=str required=True",
+        "images": "annotation=List[OCRImageObject] required=True",
+        "dimensions": "annotation=Nullable[mistralai.models.ocrpagedimensions.OCRPageDimensions] required=True"
+      },
+      "model_fields_set": "{'index', 'markdown', 'images', 'dimensions'}"
+    },
+    {
+      "page_number": 24,
+      "markdown": "# Première : Cohésion et diversité dans une société démocratique \n\n## Attendus et objectifs\n\nLa classe de première aborde la question de la cohésion des sociétés démocratiques, dans lesquelles les diverses conceptions du monde et les cultures les plus diverses peuvent s'exprimer librement. La réflexion conduite met en regard les valeurs et les principes de la République française et, plus largement, le projet démocratique, avec la complexité de la réalité sociale. Comment ces valeurs et ces principes peuvent-ils être source de cohésion sociale ? Sous quelle forme de cohésion se traduisent-ils concrètement ? Comment forme-t-on une nation démocratique et comment la France se définitelle comme une communauté nationale ? Par-delà la prise en compte des diversités, ces questions problématisent la nature et la dynamique du lien social en tant que tel.\nLes valeurs et les principes de la République à l'épreuve de la cohésion sociale ( 9 heures en voies générale et technologique, 7 à 8 heures en voie professionnelle)\n\n| Notions abordées | Contenus d'enseignement | Démarches et situations d'apprentissage possibles |\n| :--: | :--: | :--: |\n| Solidarité et fraternité (vues en $5^{\\text {e }}$ ) | - En mettant en avant les principes de liberté, d'égalité et de fraternité, la devise de la République française, comme l'article premier de la Constitution, indiquent que la Nation est porteuse d'un projet social. Celuici implique à la fois de lutter contre toutes les formes d'inégalité et de tisser des liens étroits de solidarité entre les citoyens ; | À partir d'un ou plusieurs cas (par exemple, le financement de l'école publique et les fonds sociaux à destination des élèves), étudier la notion de solidarité appliquée à différentes échelles, en abordant à la fois ses conditions formelles (rôle de l'impôt, logique d'assurance autant que d'assistance, contributions obligatoires ou dons volontaires, comme le don de sang), et ses modalités concrètes de mise en œuvre (redistribution, secours). <br> Étudier la décision du Conseil constitutionnel du 6 juillet 2018, reconnaissant la valeur constitutionnelle du principe de fraternité. |\n|  | - les inégalités économiques et sociales peuvent présenter un danger pour la cohésion sociale et la démocratie ; | Après avoir dressé un état des lieux de la pauvreté en France, s'appuyer sur une ou deux actions clefs de l'État français (notamment menées par l'Agence nationale de cohésion des territoires) pour lutter contre les inégalités territoriales et favoriser la mixité sociale. |\n| Égalité femmeshommes (vue en $5^{\\text {e }}$ ) | - l'égalité entre les femmes et les hommes illustre la manière dont un principe, objet de mobilisations et de politiques volontaristes, transforme progressivement la société, tout en se heurtant à diverses formes de résistance ; | Mettre en regard l'évolution juridique (textes nationaux et internationaux) et les données statistiques relatives à la place des femmes dans la vie quotidienne, l'univers professionnel, la vie politique, pour ouvrir un champ à la réflexion des élèves, notamment sur les causes historiques de ces inégalités (stéréotypes et préjugés). <br> Étudier la question de la représentation genrée des formations et des professions, et les actions mises en œuvre pour la dépasser. <br> En lien avec l'éducation à la vie affective, relationnelle et sexuelle, montrer que les violences sexistes et sexuelles portent atteinte à la cohésion d'une société démocratique ; étudier les actions menées pour lutter contre. |\n| Discriminations et société inclusive (vues en $5^{\\text {e }}$ ) | - appuyée par la loi, la lutte contre les discriminations se nourrit du principe d'égalité et de celui de fraternité. La conception d'une société inclusive tournée vers les personnes en situation de handicap y ajoute un impératif de solidarité ; | Distinguer la définition juridique des discriminations (Code pénal, art. 225-1 et suivants) et la manière dont celles-ci sont ressenties ; examiner la question des moyens mis en œuvre par l'État pour mesurer les discriminations ; étudier l'action d'une institution (Défenseur des droits, Dilcrah, CNCDH, etc.) ou d'une association luttant contre les discriminations (un exemple). <br> [EMI] En lien avec les discriminations, aborder la question du traitement médiatique des minorités. |\n| Racisme, antisémitisme, antitsiganisme, xénophobie, haine anti-LGBT (vus en $5^{\\text {e }}$ ) | - portant atteinte à la cohésion d'une société démocratique, le racisme, I'antisémitisme, l'antitsiganisme, la xénophobie et la haine anti-LGBT sont punis par la loi ; | À partir d'exemples réels ou fictifs d'agissements discriminatoires (paroles, violences, harcèlement, etc.), réfléchir aux objectifs et aux contours des normes juridiques qui les punissent (loi du $1^{\\text {er }}$ juillet 1972 dite loi Pleven ; loi du 13 juillet 1990 dite loi Gayssot ; loi du 30 décembre 2004). |",
+      "text": "",
+      "dimensions": {
+        "dpi": 200,
+        "height": 2339,
+        "width": 1654
+      },
+      "images": [],
+      "index": 23,
+      "model_computed_fields": {},
+      "model_config": {
+        "populate_by_name": true,
+        "arbitrary_types_allowed": true,
+        "protected_namespaces": "()",
+        "validate_by_alias": true,
+        "validate_by_name": true
+      },
+      "model_extra": null,
+      "model_fields": {
+        "index": "annotation=int required=True",
+        "markdown": "annotation=str required=True",
+        "images": "annotation=List[OCRImageObject] required=True",
+        "dimensions": "annotation=Nullable[mistralai.models.ocrpagedimensions.OCRPageDimensions] required=True"
+      },
+      "model_fields_set": "{'index', 'markdown', 'images', 'dimensions'}"
+    },
+    {
+      "page_number": 25,
+      "markdown": "| Pluralisme | - le principe de la laïcité vise à rendre possible la coexistence pacifique d'individus et de groupes dont les options philosophiques ou religieuses restent différentes. | Montrer l'importance de l'autorité arbitrale de l'État, notamment dans la police des cultes (loi de 1905, art. 27 et 28), et montrer qu'il crée ainsi les conditions de la coexistence et du pluralisme. La Cour européenne des droits de l'Homme reconnaît que des restrictions à la liberté de manifester sa religion ou ses convictions sont possibles. <br> Ces démarches peuvent s'appuyer sur la participation à un concours ou des interventions de partenaires. |\n| :--: | :--: | :--: |\n\nLa République et la Nation ( 9 heures en voies générale et technologique, 7 à 8 heures en voie professionnelle)\n\n| Notions abordées | Contenus d'enseignement | Démarches et situations d'apprentissage possibles |\n| :--: | :--: | :--: |\n| Indivisibilité de la République <br> Décentralisation <br> Nationalité et citoyenneté (vues en CM2) <br> Défense et sécurité nationale (vues en $4^{\\circ}$ ) <br> Société numérique | - Disposant que la République est «indivisible» et que «son organisation est décentralisée », la Constitution de la Ve République assure un équilibre entre l'unité de la Nation et la diversité de ses territoires ; <br> - la décentralisation opérée depuis 1982 a transféré certaines compétences de l'État aux collectivités territoriales ; les territoires ultramarins ont vu leurs statuts évoluer ; <br> - dans la République française, la communauté nationale est une communauté ouverte marquée par la possibilité d'acquérir la nationalité française (distinction du droit du sang et du droit du sol) comme par l'existence d'une citoyenneté européenne ; <br> - les questions mémorielles contribuent à une réflexion sur l'identité de la Nation, constituant, tantôt le ferment de son unité, tantôt un champ d'affrontements idéologiques et politiques ; <br> - l'idée de patriotisme constitutionnel exprime l'attachement des citoyens aux principes fondateurs de la République et de la démocratie françaises, ainsi que le souci de les voir respectés et de mieux en mieux réalisés ; <br> - la communauté nationale se matérialise aussi par l'existence d'une défense nationale. Celle-ci est confrontée à des enjeux renouvelés (terrorisme, cybersécurité, etc.) dans un monde à la fois de plus en plus interdépendant et soumis à des tensions économiques, politiques et culturelles constantes. | À partir d'exemples en lien avec l'éducation, la santé et le travail, étudier (a) le statut et l'organisation des collectivités territoriales ; (b) la décentralisation et le transfert de certaines compétences préalablement étatiques ; (c) le statut des territoires ultramarins pour définir le principe d'indivisibilité. <br> À partir de la question des langues régionales, reconnues dans la Constitution comme appartenant au « patrimoine de la France » (art. 75-1), faire le lien entre unité $d u$ territoire et reconnaissance d'une diversité des territoires. <br> Examiner les diverses procédures par lesquelles s'acquiert la nationalité française ; mettre en lumière des personnalités d'origine étrangère ayant joué un rôle significatif dans l'histoire nationale (s'appuyer sur le recueil Portraits de France) ; présenter les droits afférents à la citoyenneté européenne. <br> Saisir les enjeux mémoriels à partir, par exemple, d'un personnage historique, d'un lieu, d'un monument ou d'un événement afin de clarifier le sens des commémorations et de discuter la notion de «devoir de mémoire». Les exemples peuvent être choisis à différentes échelles. <br> Comprendre ce que recouvre la notion de « sécurité nationale » introduite par le Livre blanc sur la défense et la sécurité nationale (2008), en l'articulant aux perspectives d'une défense européenne. <br> [EMI] À partir d'études de cas, préciser présenter les modalités et les enjeux des « guerres hybrides ». <br> Outre le service national universel, dont un des objectifs est de renforcer l'engagement des jeunes et la cohésion nationale, évoquer les dispositifs en lien avec la formation professionnelle : service militaire volontaire, cadets de la République, classes de défense et de sécurité globales, classes et lycées engagés (en lien avec l'éducation à la défense). |",
+      "text": "",
+      "dimensions": {
+        "dpi": 200,
+        "height": 2339,
+        "width": 1654
+      },
+      "images": [],
+      "index": 24,
+      "model_computed_fields": {},
+      "model_config": {
+        "populate_by_name": true,
+        "arbitrary_types_allowed": true,
+        "protected_namespaces": "()",
+        "validate_by_alias": true,
+        "validate_by_name": true
+      },
+      "model_extra": null,
+      "model_fields": {
+        "index": "annotation=int required=True",
+        "markdown": "annotation=str required=True",
+        "images": "annotation=List[OCRImageObject] required=True",
+        "dimensions": "annotation=Nullable[mistralai.models.ocrpagedimensions.OCRPageDimensions] required=True"
+      },
+      "model_fields_set": "{'index', 'markdown', 'images', 'dimensions'}"
+    },
+    {
+      "page_number": 26,
+      "markdown": "# Terminale : La vie démocratique : débat, délibération et prise de décision \n\n## Attendus et objectifs\n\nLa classe terminale parachève l'éducation à la citoyenneté active en approfondissant la question du débat démocratique. Il s'agit de s'interroger sur la manière dont, dans une société de communication et à l'ère numérique, les citoyens s'informent et échangent, pour préserver une véritable éthique de la discussion. La délibération dans les institutions à différentes échelles fonde les démocraties, dans lesquelles la légitimité et l'efficacité des décisions reposent sur des échanges, controverses, négociations et consensus. Le programme permet également d'aborder les enjeux spécifiques du débat dans les institutions internationales, notamment dans l'Union européenne ou au sein de l'Organisation des Nations unies (ONU). Les principes et les espaces du débat démocratique ( 9 heures en voies générale et technologique, 7 heures en voie professionnelle)\n\n| Notions abordées | Contenus d'enseignement | Démarches et situations d'apprentissage possibles |\n| :--: | :--: | :--: |\n| Culture du débat et éthique de la discussion <br> Partis politiques et société civile organisée | - La République française est organisée de manière à permettre des débats entre les citoyens ainsi qu'entre leurs représentants, et elle garantit la possibilité de confronter des options différentes et même opposées. Les partis politiques tiennent une place essentielle dans la vie démocratique, garantissant le pluralisme politique (Constitution de 1958, art. 4), même si leur rôle est parfois remis en question ; | À partir d'un ou deux exemples de débats engagés sur des grands défis contemporains (environnement, numérique, bioéthique), étudier les principales positions tenues par les parties prenantes (partis, presse, organisations de la société civile) ; montrer qu'il peut y avoir des tensions entre principes, valeurs ou idéaux qui nécessitent des arbitrages (ce qui est le propre de la vie politique). <br> Discuter du rôle et de la fonction des partis politiques : structuration de la vie politique (droite, centre, gauche), termes de leur remise en question contemporaine, importance historique du droit de vote et problème de l'abstention. |\n| Opinion publique (vue en $3^{\\text {e }}$ ) | - I'opinion publique occupe une place centrale dans une société de communication : particulièrement manifeste au moment des consultations électorales ou référendaires (art. 11 de la Constitution), elle s'exprime à travers les médias et nourrit la vie politique ; elle peut également s'exprimer par voie de pétition ou de manifestation (liberté fondamentale inscrite dans le droit français depuis 1935) ; | [EMI] À partir de l'étude de sondages (commanditaire, méthodologie, multiplicité des interprétations possibles, diffusion dans les médias, y compris numériques), interroger la façon dont ils mesurent l'opinion publique et la rendent visible dans les médias traditionnels ou sur les réseaux sociaux : est-elle seulement exprimée par eux ou est-elle aussi produite par eux ? |\n| Démocratie participative | - de nouveaux espaces de délibération ont diversifié les modalités de consultation des citoyennes et des citoyens, ainsi que leur association à la prise de décision, afin d'élargir leur participation à la démocratie ; <br> - dans les lycées, la démocratie scolaire permet aux élèves de participer au processus de décision ; | [EDD] Prendre l'exemple du changement climatique pour étudier le rapport entre théories scientifiques, médias et opinion publique ; pointer une concurrence des discours dits «scientifiques» selon leur provenance (ONG ou lobbies industriels). |\n| Société numérique | - avec le numérique et les réseaux sociaux, les nouvelles conditions du débat posent le problème de la place des discours experts ou scientifiques en démocratie et de leur mise en concurrence avec les discours individuels, lesquels sont amplifiés par les technologies de la communication. | Recenser les différents espaces délibératifs et participatifs à l'échelle locale (conseils de quartier, budgets participatifs, etc.), éventuellement y contribuer dans le cadre d'un projet de classe ou d'établissement. <br> Présenter le rôle du Conseil économique, social et environnemental et l'organisation de conventions citoyennes, et aborder la question du tirage au sort pour l'organisation de délibérations (exemple des conventions citoyennes sur le climat et sur la fin de vie). <br> Évoquer le référendum d'initiative citoyenne (UE) ou partagée (France). |\n| Citoyenneté active (vue en $3^{\\text {e }}$ ) | - Sauf mesure judiciaire particulière, tous les citoyens de la République sont éligibles à des fonctions représentatives (maire, député, sénateur à partir de 24 ans, etc.) et ils | Examiner les voies d'accès aux responsabilités politiques : associations, partis ; rôle des campagnes électorales. Prendre un exemple de professionnalisation politique d'une personnalité et poser la question de la nature de l'expertise en politique. Présenter les différentes |",
+      "text": "",
+      "dimensions": {
+        "dpi": 200,
+        "height": 2339,
+        "width": 1654
+      },
+      "images": [],
+      "index": 25,
+      "model_computed_fields": {},
+      "model_config": {
+        "populate_by_name": true,
+        "arbitrary_types_allowed": true,
+        "protected_namespaces": "()",
+        "validate_by_alias": true,
+        "validate_by_name": true
+      },
+      "model_extra": null,
+      "model_fields": {
+        "index": "annotation=int required=True",
+        "markdown": "annotation=str required=True",
+        "images": "annotation=List[OCRImageObject] required=True",
+        "dimensions": "annotation=Nullable[mistralai.models.ocrpagedimensions.OCRPageDimensions] required=True"
+      },
+      "model_fields_set": "{'index', 'markdown', 'images', 'dimensions'}"
+    },
+    {
+      "page_number": 27,
+      "markdown": "|  | ont donc accès à l'exercice de responsabilités sociales et politiques variées. Si le personnel politique est ainsi à la fois ouvert et renouvelable, c'est que tout citoyen a, en vertu de la loi, le statut de gouvernant potentiel. Les citoyens français sont également éligibles au Parlement européen. | possibilités d'engagement des jeunes (institutions, associations, partis politiques, syndicats, etc.). Réfléchir au rapport entre l'idée de démocratie et la réalité du renouvellement des responsables politiques (parité entre les femmes et les hommes, représentation des différentes catégories socio-professionnelles, place des minorités). |\n| :--: | :--: | :--: |\n\nLa délibération dans les institutions (nationales, européennes, internationales) ( 9 heures en voies générale et technologique, 7 heures en voie professionnelle)\n\n| Notions abordées | Contenus d'enseignement | Démarches et situations d'apprentissage possibles |\n| :--: | :--: | :--: |\n| Légitimité <br> Consensus ou majorité <br> Droit européen <br> Droit international | - Dans les institutions, les représentants qui délibèrent trouvent leur légitimité dans l'élection ; <br> - dans le cadre institutionnel, toute délibération a vocation à se traduire par une décision (par consensus ou à la majorité). Le rôle du débat est en ce sens de fonder la légitimité de la décision prise ; <br> - l'élaboration de la loi suit un parcours comprenant plusieurs étapes (projet ou proposition de loi, vote à l'Assemblée nationale et au Sénat, navette parlementaire, promulgation) ; la loi votée est soumise à un contrôle constitutionnel. Les lois peuvent aussi résulter de directives européennes ; <br> - avec l'ONU, le projet d'une délibération mondiale trouve quelques points de consensus (notamment dans le domaine du développement durable et de la protection de l'environnement), mais se heurte à des situations de blocage. | À partir d'une campagne électorale, réfléchir à ce qui contribue à la légitimité des élus (taux de participation) et à la façon dont se constitue une majorité au sein des institutions délibérantes (modes de scrutin, négociations). Étudier un ou plusieurs exemples afin de rendre compte des difficultés à parvenir à un consensus : les politiques migratoires française et européenne ; la protection de l'environnement et les normes sanitaires, etc. Étudier des procédures de résolution de blocage et leurs conséquences sur la vie démocratique : vote bloqué, engagement de la responsabilité du gouvernement (art. 49-3 de Constitution de la Ve République) ; majorité qualifiée au Conseil de l'Union européenne. <br> Analyser un débat et sa traduction en matière de décisions et de politiques publiques à l'échelle nationale, européenne ou éventuellement internationale, par exemple sur les questions de bioéthique, de fiscalité, de laïcité, de migration de populations, ou celles liées à l'égalité entre les hommes et les femmes. <br> Examiner la mise en œuvre d'une politique environnementale de l'Union européenne en soulignant les différents niveaux auxquels débattent différentes instances ; le principe de subsidiarité. <br> Cette démarche peut prendre la forme d'une simulation de débat. <br> [EDD] Aborder la fabrique des objectifs de développement durable (ODD) dans le cadre de l'ONU et de l'UNESCO ; étudier les succès et échecs de la délibération internationale en prenant l'exemple des conférences sur le climat (COP). <br> À partir de l'étude des projets de réforme du fonctionnement de l'ONU, montrer que l'institution est traversée par une tension entre principe démocratique (assemblée générale) et inégalité de puissances (conseil de sécurité). <br> Le rôle et le fonctionnement de l'ONU peuvent être étudiés à travers le dispositif MNU (modélisation des Nations unies). |  |\n\n# Classes préparant au certificat d'aptitude professionnelle \n\nLe programme recouvre l'intégralité de la formation, quel que soit le nombre d'années qu'elle suppose. Le professeur peut choisir l'ordre de traitement des thèmes.\n\n## Droits, libertés et responsabilité\n\n## Attendus et objectifs\n\nAu cours de la formation menant au CAP, les acquis de la scolarité obligatoire sont mobilisés pour engager une réflexion renouvelée sur l'État de droit, sur son origine et son évolution. Il s'agit de souligner que l'État de droit garantit nos libertés, en même temps qu'un authentique pluralisme démocratique. Ainsi se poursuit la réflexion sur la laïcité, d'une part, et, d'autre part, sur le potentiel de création de nouveaux droits au sein d'une société démocratique. Car l'exercice des libertés",
+      "text": "",
+      "dimensions": {
+        "dpi": 200,
+        "height": 2339,
+        "width": 1654
+      },
+      "images": [],
+      "index": 26,
+      "model_computed_fields": {},
+      "model_config": {
+        "populate_by_name": true,
+        "arbitrary_types_allowed": true,
+        "protected_namespaces": "()",
+        "validate_by_alias": true,
+        "validate_by_name": true
+      },
+      "model_extra": null,
+      "model_fields": {
+        "index": "annotation=int required=True",
+        "markdown": "annotation=str required=True",
+        "images": "annotation=List[OCRImageObject] required=True",
+        "dimensions": "annotation=Nullable[mistralai.models.ocrpagedimensions.OCRPageDimensions] required=True"
+      },
+      "model_fields_set": "{'index', 'markdown', 'images', 'dimensions'}"
+    },
+    {
+      "page_number": 28,
+      "markdown": "appelle à la responsabilité, autant pour les sauvegarder ou les étendre que pour répondre aux considérables défis de la société contemporaine : la montée d'une information pléthorique et inégale, les risques environnementaux ou la transition écologique. Cet enjeu essentiel est l'occasion d'aborder le fonctionnement de la démocratie délibérative à différentes échelles. Il permet de souligner un fondement des démocraties, garantissant la légitimité et l'efficacité des décisions.\nL'État de droit est garant des libertés et des droits fondamentaux\n\n| Notions abordées | Contenus d'enseignement | Démarches et situations d'apprentissage possibles |\n| :--: | :--: | :--: |\n| État de droit (vu en $4^{\\circ}$ ) | - L'État de droit est le fruit d'une triple évolution : la séparation des espaces politique et religieux, l'affirmation des droits fondamentaux de la personne humaine et la soumission de l'appareil étatique lui-même à la loi ; | À partir des textes européens (CEDH, Charte européenne des droits fondamentaux), rappeler et approfondir la définition de l'État de droit qui a été donnée en classe de quatrième. Étudier une décision de justice administrative. |\n| Laïcité <br> (vue en $6^{\\circ}$ et $3^{\\circ}$ ) | - en France, la séparation du politique et du religieux est adossée au principe de laïcité, qui consacre la séparation des Églises et de l'État et impose la neutralité à ses agents dans l'exercice de leurs fonctions. Ainsi, l'État ne reconnait, ne salarie, ni ne subventionne aucun culte. La laïcité garantit de manière ferme la liberté de conscience et le pluralisme des croyances ; <br> - l'État de droit constitue à la fois une garantie des libertés fondamentales et la possibilité d'une évolution et/ou d'un approfondissement de la loi. II crée de nouveaux droits et de nouvelles libertés. Membre de l'Union européenne, la France doit conformer son droit au droit européen ; <br> - l'État de droit n'est cependant pas exclusif de la restriction des libertés (par exemple pour le maintien de I'ordre public) ni de la privation de liberté (par exemple pour les individus condamnés par la justice). | Étudier la loi de séparation des Églises et de l'État du 9 décembre 1905 (art. 1, 2, 31, 44) : définir et expliciter le principe de séparation qui consolide les droits et les libertés publiques, rappeler le primat du droit positif sur les règles religieuses. Étudier plus particulièrement les implications du principe de laïcité à l'École (primat des connaissances sur les croyances, espace de neutralité propre à développer l'esprit critique) et dans le monde du travail, en distinguant service public et entreprises privées, agents publics et usagers. <br> Dans une approche interdisciplinaire, on pourra étudier les évolutions contemporaines du droit européen du travail, notamment concernant les mineurs, en s'appuyant sur la Charte des droits fondamentaux de l'Union européenne (2000), son article 32 (interdiction du travail des enfants et protection des jeunes au travail) et les dispositions prévues par le Code du travail français (travaux interdits et réglementés, dérogation pour les jeunes en formation professionnelle). <br> À partir d'une étude de cas, aborder la question pénitentiaire, celle du maintien des droits et des devoirs civiques des détenus ou encore celle du sens de la peine dans un régime démocratique. |\n\nLiberté et responsabilité : I'exemple de l'information (vecteurs, nécessité et enjeux)\n\n| Notions abordées | Contenus d'enseignement | Démarches et situations d'apprentissage possibles |\n| :--: | :--: | :--: |\n| Liberté de la presse (vue en $4^{\\circ}$ ) <br> Liberté de l'information (vue en $4^{\\circ}$ ) <br> Pluralisme <br> Liberté d'expression (vue en $4^{\\circ}$ ) | - La liberté de la presse et la liberté de s'informer constituent deux piliers fondamentaux de la démocratie. Remises en cause dans tous les régimes autoritaires, elles sont consubstantielles aux libertés d'opinion et d'expression et elles permettent le pluralisme en matière d'information; <br> - encadrée par la loi, la liberté de la presse doit relever le défi du numérique, qui développe les possibilités d'information mais altère la fiabilité des sources et fragilise les circuits de diffusion réglée de l'information. Par un phénomène de boucle, de nouvelles possibilités d'information donnent lieu à de nouvelles possibilités de désinformation ; | [EMI] Le travail des journalistes : ses méthodes, sa déontologie, sa rigueur, ses difficultés propres (pressions, censure ou autocensure, atteintes à la liberté de la presse). S'appuyer sur les rapports établis par Reporters sans Frontières. Mettre à profit la rencontre avec des journalistes dans le cadre de la semaine de la presse et des médias dans l'École. Sur le pluralisme, évoquer la réglementation et les obligations des médias audiovisuels (ARCOM) concernant le pluralisme politique. <br> [EMI] La nouvelle donne que constituent Internet et les réseaux sociaux. Engager une réflexion sur l'évaluation des sources d'information et sur les critères de leur fiabilité ; les problèmes soulevés par l'intelligence artificielle (IA) ; les désordres informationnels (désinformation, « réinformation », « chambres d'écho»). <br> Aborder la question de la régulation des médias sociaux au niveau national, européen (lois françaises, directives européennes) et mondial. Quelles réponses législatives ? Quelle est la responsabilité des utilisateurs ? Quelle est |",
+      "text": "",
+      "dimensions": {
+        "dpi": 200,
+        "height": 2339,
+        "width": 1654
+      },
+      "images": [],
+      "index": 27,
+      "model_computed_fields": {},
+      "model_config": {
+        "populate_by_name": true,
+        "arbitrary_types_allowed": true,
+        "protected_namespaces": "()",
+        "validate_by_alias": true,
+        "validate_by_name": true
+      },
+      "model_extra": null,
+      "model_fields": {
+        "index": "annotation=int required=True",
+        "markdown": "annotation=str required=True",
+        "images": "annotation=List[OCRImageObject] required=True",
+        "dimensions": "annotation=Nullable[mistralai.models.ocrpagedimensions.OCRPageDimensions] required=True"
+      },
+      "model_fields_set": "{'index', 'markdown', 'images', 'dimensions'}"
+    },
+    {
+      "page_number": 29,
+      "markdown": "|  | les médias sociaux sont un lieu de liberté d'expression, mais ils sont aussi un vecteur de désinformation et amplifient les «discours de haine». | celle des fournisseurs d'accès ? (règlement européen sur les services numériques - Digital Services Act, Code européen des bonnes pratiques contre la désinformation (2018), Pharos).\nCes démarches participent au développement des compétences numériques (CRCN). |\n| :--: | :--: | :--: |\n| Droits et responsabilité : l'exemple de la protection de l'environnement et sauvegarde de la biodiversité |  |  |\n| Notions abordées | Contenus d'enseignement | Démarches et situations d'apprentissage possibles |\n| Droits environnementaux Développement durable Transition écologique Responsabilité (vue en $6^{\\circ}$ ) | - La Charte de l'environnement de 2004 a été intégrée au bloc de constitutionnalité en 2005 ; <br> - elle consacre le droit à un environnement sain et engage la responsabilité individuelle et collective face au respect et à la protection du vivant et de la biodiversité. | [EDD] Étudier la Charte de l'environnement en considérant son appartenance au bloc de constitutionnalité. En lien avec ses articles 2 et 3, étudier des exemples de mise en œuvre de la démarche «responsabilité sociétale des entreprises» à partir d'un ou plusieurs exemples de grands groupes (portée et limites). Se saisir d'une des nombreuses questions d'actualité sur le sujet, à différentes échelles, des conférences internationales aux enjeux de consommation. On peut inciter les élèves à agir à leur échelle (écodélégués, CVL, etc.). |\n| La délibération dans les institutions (nationales, européennes, internationales) : I'exemple des questions environnementales |  |  |\n| Notions abordées | Contenus d'enseignement | Démarches et situations d'apprentissage possibles |\n| Démocratie représentative (vue en $6^{\\circ}$ ) Légitimité <br> Démocratie participative | - Dans une démocratie représentative, la délibération a vocation à fonder la légitimité de la décision prise ; <br> - cette délibération pour prendre des décisions se retrouve aux échelles européenne et internationale ; <br> - de nouveaux espaces de délibération ont diversifié les modalités de consultation des citoyennes et des citoyens, ainsi que leur association à la prise de décision, afin d'élargir leur participation à la démocratie ; <br> - dans les lycées, la démocratie scolaire permet aux élèves de participer au processus de décision ; <br> - avec le numérique et les réseaux sociaux, les discours individuels et privés concurrencent fortement ceux des experts ou des scientifiques. | Étudier la portée et les limites des conférences internationales sur le climat (COP). <br> Recenser les différents espaces délibératifs et participatifs à l'échelle locale (conseils de quartier, budgets participatifs). Éventuellement y contribuer dans le cadre d'un projet de classe ou d'établissement sur le modèle de la convention pour le climat. <br> Rendre compte de ce que peut être un débat sur les médias sociaux. Poser la question des critères pour la fiabilité d'une source à partir des méthodes du travail journalistique. |\n\n# Cohésion et diversité dans une société démocratique \n\n## Attendus et objectifs\n\nLa formation menant au CAP aborde la question de la cohésion des sociétés démocratiques, dans lesquelles la diversité des individus, leurs conceptions du monde et leurs cultures peuvent s'exprimer librement. La réflexion conduite met en regard les valeurs et les principes de la République française et, plus largement, l'idéal démocratique, avec les différences et la complexité de la réalité sociale. La question de l'engagement politique des individus pour servir la communauté est également soulevée. Comment ces valeurs et ces principes peuvent-ils être source de cohésion sociale ? Sous quelle forme de cohésion se traduisent-ils concrètement ? Comment forme-t-on une nation démocratique et comment la France se définit-elle comme une communauté nationale ? Par-delà la prise en compte des diversités, ces questions interrogent la nature et la dynamique du lien social en tant que tel.\nLes valeurs et les principes de la République à l'épreuve de la cohésion sociale\n\n| Notions abordées | Contenus d'enseignement | Démarches et situations d'apprentissage possibles |\n| :-- | :-- | :-- |\n| Solidarité et <br> fraternité <br> (vues en $5^{\\circ}$ ) | - En mettant en avant les principes de <br> liberté, d'égalité et de fraternité, la <br> devise de la République française <br> indique que la Nation est porteuse | Étudier la notion de solidarité appliquée à différentes <br> échelles, en abordant à la fois ses conditions formelles <br> (rôle de l'impôt, logique d'assurance autant que <br> d'assistance, contributions obligatoires ou dons |",
+      "text": "",
+      "dimensions": {
+        "dpi": 200,
+        "height": 2339,
+        "width": 1654
+      },
+      "images": [],
+      "index": 28,
+      "model_computed_fields": {},
+      "model_config": {
+        "populate_by_name": true,
+        "arbitrary_types_allowed": true,
+        "protected_namespaces": "()",
+        "validate_by_alias": true,
+        "validate_by_name": true
+      },
+      "model_extra": null,
+      "model_fields": {
+        "index": "annotation=int required=True",
+        "markdown": "annotation=str required=True",
+        "images": "annotation=List[OCRImageObject] required=True",
+        "dimensions": "annotation=Nullable[mistralai.models.ocrpagedimensions.OCRPageDimensions] required=True"
+      },
+      "model_fields_set": "{'index', 'markdown', 'images', 'dimensions'}"
+    },
+    {
+      "page_number": 30,
+      "markdown": "|  | d'un projet social. Celui-ci implique à la fois de lutter contre toutes les formes d'inégalité et de tisser des liens étroits de solidarité entre les citoyens; | volontaires) et ses modalités concrètes de mise en œuvre (redistribution, secours). Le financement de l'École publique par l'État et les collectivités territoriales ainsi que celui des fonds sociaux à destination des élèves pourront servir d'exemples concrets à l'étude. <br> Après avoir dressé un état des lieux de la pauvreté en France, s'appuyer sur une ou deux actions clefs de l'État français (notamment menées par l'Agence nationale de cohésion des territoires) pour lutter contre les inégalités territoriales et favoriser la mixité sociale. <br> Mettre en regard l'évolution législative, les textes nationaux et internationaux et les données relatives à la place des femmes dans la vie quotidienne, I'univers professionnel, la vie politique, pour ouvrir un champ à la réflexion des élèves. Étudier particulièrement la question de la représentation genrée des formations et des professions et les actions mises en œuvre pour la dépasser. <br> Examiner la question des moyens mis en œuvre par l'État pour lutter contre les discriminations, notamment celles liées au handicap en milieu scolaire et dans le monde du travail (rôle du Défenseur des droits) ; étudier l'action d'une association luttant contre les discriminations (un exemple). <br> S'appuyer sur les travaux de la Commission nationale consultative des droits de l'homme pour dresser un état des lieux de la question en France. Montrer l'action de la puissance publique, notamment au travers des lois (loi Gayssot, 1990). <br> Ces démarches peuvent s'appuyer sur des temps forts (journée internationale des femmes, journée internationale des personnes handicapées), ou la participation à des concours (prix Ilan Halimi, Nous autres). |\n| :--: | :--: | :--: |\n\nLa République et la Nation\n\n| Notions abordées | Contenus d'enseignement | Démarches et situations d'apprentissage possibles |\n| :--: | :--: | :--: |\n| Indivisibilité de la <br> République <br> Décentralisation | - Disposant que la République est <br> «indivisible» et que «son <br> organisation est décentralisée», la <br> Constitution de la Ve République <br> assure un équilibre entre l'unité de la <br> Nation et la diversité de ses <br> territoires ; | Étudier le statut et l'organisation des collectivités <br> territoriales ; la décentralisation et le transfert de <br> certaines compétences préalablement étatiques ; le statut <br> des territoires ultramarins. On pourra notamment prendre <br> des exemples en lien avec l'éducation, la santé et le travail. |\n| Nationalité et <br> citoyenneté (vues en <br> CM2) | - la communauté nationale est une <br> communauté ouverte marquée par <br> la possibilité d'acquérir la nationalité <br> française comme par l'existence <br> d'une citoyenneté européenne ; | Examiner les diverses procédures par lesquelles s'acquiert <br> la nationalité française ; mettre en lumière des <br> personnalités d'origine étrangère ayant joué un rôle <br> significatif dans l'histoire nationale (s'appuyer sur le recueil <br> Portraits de France) ; présentation des droits afférents à la <br> citoyenneté européenne. |\n| Défense et sécurité <br> (vues en $4^{\\text {e }}$ ) | - la communauté nationale se <br> matérialise aussi par l'existence <br> d'une défense nationale. Celle-ci est <br> confrontée aux enjeux d'un monde à <br> la fois de plus en plus <br> interdépendant et soumis à des <br> tensions économiques, politiques et <br> culturelles constantes. Différents <br> dispositifs permettent à la jeunesse <br> de s'engager au service de la <br> défense et de la sécurité nationales. | Comprendre ce que recouvre la notion de «sécurité <br> nationale» introduite par le Livre blanc sur la défense et la <br> sécurité nationale (2008), tout en présentant les <br> perspectives d'une défense européenne. <br> Outre le service national universel, dont un des objectifs <br> est de renforcer l'engagement des jeunes et la cohésion <br> nationale, on évoquera les dispositifs en lien avec la <br> formation professionnelle : service militaire volontaire, <br> cadets la République, classes de défense et de sécurité <br> globale, classes et lycées engagés (éducation à la défense). |",
+      "text": "",
+      "dimensions": {
+        "dpi": 200,
+        "height": 2339,
+        "width": 1654
+      },
+      "images": [],
+      "index": 29,
+      "model_computed_fields": {},
+      "model_config": {
+        "populate_by_name": true,
+        "arbitrary_types_allowed": true,
+        "protected_namespaces": "()",
+        "validate_by_alias": true,
+        "validate_by_name": true
+      },
+      "model_extra": null,
+      "model_fields": {
+        "index": "annotation=int required=True",
+        "markdown": "annotation=str required=True",
+        "images": "annotation=List[OCRImageObject] required=True",
+        "dimensions": "annotation=Nullable[mistralai.models.ocrpagedimensions.OCRPageDimensions] required=True"
+      },
+      "model_fields_set": "{'index', 'markdown', 'images', 'dimensions'}"
+    },
+    {
+      "page_number": 31,
+      "markdown": "L'engagement politique des citoyennes et citoyens au service de la société\n\n| Notions abordées | Contenus d'enseignement | Démarches et situations d'apprentissage possibles |\n| :--: | :--: | :--: |\n| Citoyenneté active (vue en $3^{\\text {e }}$ ) | - Sauf mesure judiciaire particulière, tous les citoyens et citoyennes de la République sont éligibles à des fonctions représentatives (par exemple maire, député, sénateur) et ils ont donc accès à l'exercice de responsabilités sociales et politiques variées. Si le personnel politique est ainsi à la fois ouvert et renouvelable, c'est que tout citoyen a, en vertu de la loi, le statut de gouvernant potentiel. | Examiner les voies d'accès aux responsabilités politiques : associations, partis. Le rôle des campagnes électorales. Prendre un exemple de «professionnalisation » politique d'une personnalité. Présenter les différentes possibilités d'engagement des jeunes (institutions, associations, partis politiques, syndicats, etc.). <br> Confronter l'idéal de démocratie et la réalité du renouvellement des responsables politiques (parité femmes-hommes, représentation des différentes catégories socio-professionnelles, place des minorités). |",
+      "text": "",
+      "dimensions": {
+        "dpi": 200,
+        "height": 2339,
+        "width": 1654
+      },
+      "images": [],
+      "index": 30,
+      "model_computed_fields": {},
+      "model_config": {
+        "populate_by_name": true,
+        "arbitrary_types_allowed": true,
+        "protected_namespaces": "()",
+        "validate_by_alias": true,
+        "validate_by_name": true
+      },
+      "model_extra": null,
+      "model_fields": {
+        "index": "annotation=int required=True",
+        "markdown": "annotation=str required=True",
+        "images": "annotation=List[OCRImageObject] required=True",
+        "dimensions": "annotation=Nullable[mistralai.models.ocrpagedimensions.OCRPageDimensions] required=True"
+      },
+      "model_fields_set": "{'index', 'markdown', 'images', 'dimensions'}"
+    }
+  ],
+  "total_pages": 31
+}
