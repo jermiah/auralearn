@@ -31,17 +31,43 @@ class SupabaseClient:
         print("Note: Please run curriculum_chunks.sql in Supabase SQL Editor to create the table")
         return True
 
-    def upsert_chunks(self, chunks: List[CurriculumChunk]) -> bool:
+    def clear_table(self) -> bool:
+        """
+        Clear all data from the curriculum_chunks table
+        
+        Returns:
+            True if successful, False if failed
+        """
+        try:
+            print(f"   [WARNING] Clearing all data from {self.table_name} table...")
+            
+            # Delete all rows
+            response = self.supabase.table(self.table_name).delete().neq('id', '00000000-0000-0000-0000-000000000000').execute()
+            
+            print(f"   [OK] Table {self.table_name} cleared successfully")
+            return True
+            
+        except Exception as e:
+            print(f"   [ERROR] Failed to clear table: {e}")
+            return False
+
+    def upsert_chunks(self, chunks: List[CurriculumChunk], clear_first: bool = True) -> bool:
         """
         Insert or update curriculum chunks in the database
 
         Args:
             chunks: List of CurriculumChunk objects
+            clear_first: If True, clear table before inserting (default: True)
 
         Returns:
             True if successful, False if failed
         """
         try:
+            # Clear table first if requested
+            if clear_first:
+                if not self.clear_table():
+                    print("   [WARNING] Failed to clear table, continuing with insert...")
+            
             # Convert CurriculumChunk objects to dictionaries
             chunk_dicts = []
             for chunk in chunks:

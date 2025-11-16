@@ -19,17 +19,43 @@ class SupabaseClient:
         )
         self.table_name = 'teaching_guides_chunks'
 
-    def upsert_chunks(self, chunks: List[TeachingGuideChunk]) -> bool:
+    def clear_table(self) -> bool:
+        """
+        Clear all data from the teaching_guides_chunks table
+        
+        Returns:
+            True if successful, False if failed
+        """
+        try:
+            print(f"   [WARNING] Clearing all data from {self.table_name} table...")
+            
+            # Delete all rows
+            response = self.supabase.table(self.table_name).delete().neq('id', '00000000-0000-0000-0000-000000000000').execute()
+            
+            print(f"   [OK] Table {self.table_name} cleared successfully")
+            return True
+            
+        except Exception as e:
+            print(f"   [ERROR] Failed to clear table: {e}")
+            return False
+
+    def upsert_chunks(self, chunks: List[TeachingGuideChunk], clear_first: bool = True) -> bool:
         """
         Insert or update teaching guide chunks in the database
 
         Args:
             chunks: List of TeachingGuideChunk objects
+            clear_first: If True, clear table before inserting (default: True)
 
         Returns:
             True if successful, False if failed
         """
         try:
+            # Clear table first if requested
+            if clear_first:
+                if not self.clear_table():
+                    print("   [WARNING] Failed to clear table, continuing with insert...")
+            
             # Convert TeachingGuideChunk objects to dictionaries
             chunk_dicts = []
             for chunk in chunks:
