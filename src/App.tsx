@@ -31,6 +31,7 @@ import StudentSelection from "./pages/StudentSelection";
 import StudentAssessment from "./pages/StudentAssessment";
 import StudentGuide from "./pages/StudentGuide";
 import StudentCategories from "./pages/StudentCategories";
+import AdminDashboard from "./pages/AdminDashboard";
 
 const queryClient = new QueryClient();
 
@@ -90,6 +91,9 @@ const App = () => (
 
               {/* Settings (accessible by all authenticated users) */}
               <Route path="/settings" element={<ProtectedRoute><Layout><Settings /></Layout></ProtectedRoute>} />
+
+              {/* Admin Dashboard (publicly accessible for demo/jury) */}
+              <Route path="/admin" element={<AdminDashboard />} />
 
               {/* 404 Not Found */}
               <Route path="*" element={<NotFound />} />
