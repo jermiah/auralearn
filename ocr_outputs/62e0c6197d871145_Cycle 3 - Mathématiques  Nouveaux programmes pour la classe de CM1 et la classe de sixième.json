@@ -1,0 +1,820 @@
+{
+  "model": "mistral-ocr-2505",
+  "pages": [
+    {
+      "page_number": 1,
+      "markdown": "# Programme de mathématiques pour le cycle 3 \n\n## Sommaire\n\n## Principes\n\nObjectifs majeurs\nOrganisation du travail des élèves\nLa résolution de problèmes\nLa mémorisation, la construction d'automatismes et l'acquisition de stratégies de résolution\nLa place et le rôle de l'oral\nLes écrits en mathématiques\nL'évaluation des progrès et des acquis des élèves\nLes compétences psychosociales\nL'égalité entre tous les élèves, et particulièrement entre les filles et les garçons\nL'initiation à la pensée algébrique et à la pensée informatique\nOrganisation du programme\n\n## Nombres, calcul et résolution de problèmes\n\nCours moyen première année\nLes nombres entiers\nLes fractions\nLes nombres décimaux\nLe calcul mental\nLes quatre opérations\nLa résolution de problèmes\nAlgèbre\nCours moyen deuxième année\nLes nombres entiers\nLes fractions\nLes nombres décimaux\nLe calcul mental\nLes quatre opérations\nLa résolution de problèmes\nAlgèbre\nSixième\nLes nombres entiers et décimaux\nLes fractions\nAlgèbre\n\n## Grandeurs et mesures\n\nCours moyen première année\nLes longueurs\nLes masses\nLes contenances\nLes aires\nLes angles\nLe repérage dans le temps et les durées\nCours moyen deuxième année\nLes aires\nLes angles\nLe repérage dans le temps et les durées\nSixième\nLes longueurs\nLes aires\nLes volumes\nLe repérage dans le temps et les durées\n\n## Espace et géométrie\n\nCours moyen première année\nLa géométrie plane\nLes solides\nLe repérage dans l'espace\nCours moyen deuxième année\nLa géométrie plane",
+      "text": "",
+      "dimensions": {
+        "dpi": 200,
+        "height": 2339,
+        "width": 1654
+      },
+      "images": [],
+      "index": 0,
+      "model_computed_fields": {},
+      "model_config": {
+        "populate_by_name": true,
+        "arbitrary_types_allowed": true,
+        "protected_namespaces": "()",
+        "validate_by_alias": true,
+        "validate_by_name": true
+      },
+      "model_extra": null,
+      "model_fields": {
+        "index": "annotation=int required=True",
+        "markdown": "annotation=str required=True",
+        "images": "annotation=List[OCRImageObject] required=True",
+        "dimensions": "annotation=Nullable[mistralai.models.ocrpagedimensions.OCRPageDimensions] required=True"
+      },
+      "model_fields_set": "{'index', 'markdown', 'images', 'dimensions'}"
+    },
+    {
+      "page_number": 2,
+      "markdown": "\n\nLes solides\nDéplacements dans l'espace\nSixième\nÉtude de configurations planes\nLa vision dans l'espace\n\nOrganisation et gestion de données et probabilités\nCours moyen première année\nOrganisation et gestion de données\nLes probabilités\nCours moyen deuxième année\nOrganisation et gestion de données\nLes probabilités\nSixième\nOrganisation et gestion de données\nLes probabilités\n\nLa proportionnalité\nCours moyen première année\nCours moyen deuxième année\nSixième\n\nInitiation à la pensée informatique\nCours moyen première année\nCours moyen deuxième année\nSixième\n\n## Principes\n\nObjectifs majeurs\nLe programme d'enseignement des mathématiques au cycle 3 fixe des objectifs de différentes natures :\n— la poursuite et le renforcement des apprentissages mathématiques des élèves de l'école et du collège ;\n— l'acquisition de savoirs et de savoir-faire indispensables à la réussite au cycle 4 en mathématiques et dans les autres disciplines scolaires ;\n— le développement et le renforcement de compétences d'analyse, de raisonnement, de logique, d'argumentation qui constituent le fondement de la formation scientifique et qui contribuent au développement de l'esprit critique nécessaire à l'exercice éclairé de la citoyenneté ;\n— le développement de compétences permettant à chaque élève de gagner en autonomie et de renforcer son estime de soi ;\n— la lutte contre les déterminismes sociaux qui freinent la réussite scolaire ;\n— la prévention et la réduction des inégalités entre filles et garçons.\nPar ailleurs, l'enseignement des mathématiques au cycle 3 s'inscrit dans une démarche éducative plus large en sensibilisant les élèves aux défis environnementaux du 21e siècle, notamment le changement climatique, la perte de la biodiversité et l'épuisement des ressources naturelles.\n\nOrganisation du travail des élèves\nPour atteindre ces objectifs, il est fondamental de proposer aux élèves des activités variées. Leur diversité concerne :\n— les contextes liés à la vie quotidienne ou à d'autres disciplines, mais aussi internes aux mathématiques ;\n— les types de tâches qui peuvent être des entrainements à la mémorisation ou à l'automatisation, des exercices d'application pour stabiliser et consolider les connaissances, des évaluations à visée formative, des résolutions de problèmes favorisant la recherche, des débats collectifs autour d'une solution proposée ;\n— les modalités d'organisation du travail qui peut être effectué individuellement, en binômes ou en groupes plus larges, à l'écrit et à l'oral.\n\nLa résolution de problèmes\nAu cycle 3, la résolution de problèmes occupe une place centrale dans l'apprentissage des mathématiques, quel que soit le domaine du programme.\nElle contribue à donner du sens aux notions étudiées en les inscrivant dans des situations concrètes, qu'elles soient issues d'autres disciplines ou intra-mathématiques. Elle joue un rôle majeur dans le développement de compétences mathématiques (chercher, modéliser, représenter, calculer, raisonner, communiquer) et constitue le critère principal pour évaluer la maîtrise des concepts enseignés et pour en garantir l'appropriation du sens.",
+      "text": "",
+      "dimensions": {
+        "dpi": 200,
+        "height": 2339,
+        "width": 1654
+      },
+      "images": [],
+      "index": 1,
+      "model_computed_fields": {},
+      "model_config": {
+        "populate_by_name": true,
+        "arbitrary_types_allowed": true,
+        "protected_namespaces": "()",
+        "validate_by_alias": true,
+        "validate_by_name": true
+      },
+      "model_extra": null,
+      "model_fields": {
+        "index": "annotation=int required=True",
+        "markdown": "annotation=str required=True",
+        "images": "annotation=List[OCRImageObject] required=True",
+        "dimensions": "annotation=Nullable[mistralai.models.ocrpagedimensions.OCRPageDimensions] required=True"
+      },
+      "model_fields_set": "{'index', 'markdown', 'images', 'dimensions'}"
+    },
+    {
+      "page_number": 3,
+      "markdown": "La mémorisation, la construction d'automatismes et l'acquisition de stratégies de résolution\nPour être en capacité de résoudre des problèmes, l'élève doit pouvoir mobiliser des automatismes, c'est-à-dire d'un corpus de connaissances, de procédures et de stratégies diverses immédiatement disponibles. La maîtrise de ces automatismes allège la mémoire de travail de l'élève lors de la résolution de problèmes, lui permettant de se consacrer pleinement à des tâches cognitives de niveau supérieur comme la prise d'initiatives, la créativité ou le raisonnement. La construction d'automatismes et de stratégies de résolution est particulièrement valorisante car elle produit souvent des progrès rapides, ce qui engage les élèves dans un cercle vertueux et renforce leur confiance en leur capacité à réussir.\n\nAu cours moyen, les automatismes concernent principalement les faits numériques et les procédures de calcul que tout élève est tenu de maîtriser. Ils sont notamment explicités dans la rubrique «Calcul mental » du programme où ils sont accompagnés d'indicateurs précis de leur maîtrise. En effet, tout comme «savoir lire» ne signifie pas la même chose en CE1 et en CM2 concernant le nombre de mots lus en une minute, «Connaître les tables de multiplication » ne correspond pas aux mêmes attentes en CE1 et en CM2 sur le nombre de résultats que les élèves sont capables de restituer en une minute.\n\nEn $6^{\\text {e }}$, les automatismes couvrent l'ensemble des domaines du programme, mais portent uniquement sur des connaissances, des procédures et des stratégies déjà étudiées au cours moyen.\n\nAfin de favoriser un apprentissage solide des habiletés en calcul, qu'il soit mental ou posé, les élèves du cycle 3 n'utilisent pas de calculatrice au quotidien. Au cours moyen, ils ne disposent pas de calculatrice personnelle. Cependant, à l'école comme au collège, I'enseignant peut en mettre à disposition lorsqu'il juge leur usage pertinent, soit pour aborder une tâche spécifique, soit pour répondre aux besoins de certains élèves. Par exemple, la calculatrice peut être utilisée pour résoudre des problèmes dont les données numériques dépassent le cadre des calculs mentaux ou posés fixé par le programme.\n\n# La place et le rôle de l'oral \n\nLa verbalisation est un maillon essentiel dans l'acquisition des notions mathématiques : elle éclaire souvent le sens et aide à la mémorisation. Offrant à l'élève la possibilité de développer sa pensée, puis de la structurer, elle contribue également à la compréhension, à la réflexion et au raisonnement. Au même titre que la représentation, qui est une mise en images, la verbalisation est une mise en mots qui facilite l'accès à l'abstraction.\nLes séances de mathématiques fournissent de nombreuses opportunités de renforcer l'expression orale des élèves et leur capacité d'argumentation.\n\nLa présentation d'une réponse, d'une stratégie ou encore d'une solution d'un problème permet d'entraîner l'élève à s'exprimer face à un public et à produire un discours structuré et clair. Plutôt que de recopier au tableau sa solution, l'élève est encouragé à la décrire et à la commenter, éventuellement avec l'appui d'un outil comme le visualiseur.\n\nLa confrontation de solutions variées d'un même problème incite les élèves à argumenter, à comparer des méthodes ou à critiquer de manière constructive les démarches retenues. Ces activités contribuent à développer des compétences d'expression orale, tout en favorisant la structuration et la clarté du discours.\n\n## Les écrits en mathématiques\n\nEn mathématiques, au cycle 3, les élèves sont amenés à produire plusieurs types d'écrits, chacun ayant une fonction spécifique.\n\n- Les écrits intermédiaires rédigés lors des temps de recherche permettent à l'élève de poser les premiers éléments nécessaires à l'analyse d'un énoncé, de structurer sa pensée lors de la résolution d'un problème ou de noter des résultats intermédiaires pour soulager sa mémoire de travail lors d'un calcul mental. Ces écrits ne sont pas destinés à être évalués, mais ils offrent à l'enseignant une précieuse opportunité de repérer et de comprendre les difficultés rencontrées par un élève et, ainsi, de l'aider à les surmonter. Ils peuvent être notés sur une ardoise, sur un cahier de recherche ou encore dans le cahier d'exercices.\n- Les travaux écrits sous la forme de résolution d'exercices d'application, d'entraînement ou de problèmes sont essentiels. Leur trace est consignée dans un cahier ou un classeur. L'enseignant encourage l'élève à renseigner ce cahier ou ce classeur avec soin, tout en autorisant les essais et les erreurs inhérents aux apprentissages mathématiques. La validation régulière de ces écrits par l'enseignant, lorsqu'il circule dans les rangs ou qu'il relève les cahiers, permet de maintenir un haut niveau d'exigence, tant sur la précision des réponses que sur la présentation.\n- L'institutionnalisation des notions étudiées en classe est consignée sous forme de traces écrites dans le cahier ou le classeur de l'élève : définitions et propriétés, vocabulaire spécifique, procédures de calcul à mémoriser, exercice résolu pouvant servir de modèle, etc. Ces traces servent de référence pour l'élève, notamment quand il rencontre des difficultés lors de la résolution d'un exercice ou d'un problème.\n\n\n## L'évaluation des progrès et des acquis des élèves\n\nL'évaluation joue un rôle clé dans la régulation des apprentissages, tant pour l'enseignant que pour l'élève. Elle revêt différentes modalités dont l'observation mais conserve toujours une visée formative. Elle permet à l'élève de prendre conscience de ses réussites et de ses progrès, d'identifier et de comprendre ses erreurs, et de consolider ainsi ses acquis.\n\nL'élève doit être informé des critères de réussite, qui s'appuient sur ce qui a été travaillé en classe.\nCela lui permet de s'engager dans une démarche active et positive face à l'évaluation.",
+      "text": "",
+      "dimensions": {
+        "dpi": 200,
+        "height": 2339,
+        "width": 1654
+      },
+      "images": [],
+      "index": 2,
+      "model_computed_fields": {},
+      "model_config": {
+        "populate_by_name": true,
+        "arbitrary_types_allowed": true,
+        "protected_namespaces": "()",
+        "validate_by_alias": true,
+        "validate_by_name": true
+      },
+      "model_extra": null,
+      "model_fields": {
+        "index": "annotation=int required=True",
+        "markdown": "annotation=str required=True",
+        "images": "annotation=List[OCRImageObject] required=True",
+        "dimensions": "annotation=Nullable[mistralai.models.ocrpagedimensions.OCRPageDimensions] required=True"
+      },
+      "model_fields_set": "{'index', 'markdown', 'images', 'dimensions'}"
+    },
+    {
+      "page_number": 4,
+      "markdown": "\n\nUn retour sur les réussites et les erreurs suite à l'évaluation permet à l'enseignant de proposer des remédiations adaptées aux difficultés rencontrées.\n\nLes compétences psychosociales\n\nL'enseignement des mathématiques au cycle 3 contribue au développement de compétences psychosociales\n\nLa mémorisation de faits numériques ou de formules, l'automatisation de procédures de calcul mental ou posé et la lecture immédiate de graphiques développent et renforcent des aptitudes transférables à d'autres domaines.\n\nAu-delà du rôle majeur qu'elle joue dans le développement de compétences et savoirs mathématiques, la résolution de problèmes renforce l'aptitude des élèves à s'appuyer sur des savoirs, à analyser des données pour prendre des initiatives, pour élaborer des stratégies et pour faire des choix réfléchis.\n\nLa résolution de problèmes est l'occasion pour l'élève de mobiliser ses connaissances et d'en acquérir de nouvelles. L'élève se confronte à l'inconnu, éprouve le plaisir de chercher, perçoit ce qu'il peut apprendre de ses erreurs et développe confiance et curiosité.\n\nPour amener chaque élève à progresser et à réussir en mathématiques, il importe de lui donner l'occasion de s'exprimer, à l'écrit comme à l'oral, sans crainte de l'erreur ou du jugement porté par autrui, que ce soit l'un de ses pairs ou les professeurs. Les professeurs veillent à encourager chaque élève, à lui montrer ses réussites, à valoriser ses progrès et à le féliciter de ses efforts.\n\nDes modalités diverses (recherche en binômes ou en groupes plus larges, entraide entre élèves, exposé d'une réponse ou d'une solution, débat autour de celle-ci, etc.) favorisent et renforcent l'engagement de chaque élève, sa persévérance comme la capacité à écouter le point de vue d'autrui et la capacité à exprimer et argumenter le sien. Les professeurs instaurent dans leur classe un climat bienveillant favorable à l'écoute, à l'attention et au respect de toutes et tous.\n\nL'égalité entre tous les élèves, et particulièrement entre les filles et les garçons\n\nLes professeurs veillent à instaurer les conditions permettant à chaque élève de comprendre que les compétences en mathématiques ne sont ni innées ni liées à un genre ou à une situation sociale, mais qu'elles se construisent progressivement par le travail scolaire et la régularité des apprentissages.\n\nCette démarche suppose une attention particulière des professeurs à plusieurs éléments :\n\n— au choix des situations proposées, afin qu'elles soient accessibles et stimulantes pour tous les élèves ;\n— au regard porté sur chacun d'eux, en valorisant la mise en œuvre de stratégies de recherche et les progrès de manière équitable ;\n— à la répartition des tâches et des responsabilités confiées à chacun ;\n— à la sollicitation équilibrée des filles et des garçons à l'oral ;\n— aux retours oraux et écrits qu'il fournit aux élèves, en insistant sur leurs réussites et en leur proposant des pistes d'amélioration ;\n— aux occasions offertes à chaque élève de s'exprimer individuellement ou d'interagir au sein d'un groupe.\n\nAfin de modifier les représentations sociales et d'encourager une identification positive, il est essentiel de veiller à proposer des situations évitant la reproduction, même implicite de stéréotypes de genres, et de mettre en avant le travail et les réalisations de mathématiciennes et de femmes scientifiques. En effet, la projection sur un « modèle » participe, dès le plus jeune âge, à modifier les représentations sociales et celles liées aux genres.\n\nL'initiation à la pensée algébrique et à la pensée informatique\n\nJusqu'au CE2, les problèmes mathématiques proposés sont essentiellement de nature arithmétique, dans le sens où ils mettent en jeu des nombres ou des grandeurs. Dans les raisonnements que l'élève met en œuvre pour les résoudre, il progresse du connu vers l'inconnu. À partir du cycle 3, l'introduction de la pensée algébrique marque un changement de paradigme : il s'agit de raisonner sur des nombres inconnus, qui seront représentés au cycle 4 par des lettres. Le passage progressif de l'arithmétique à l'algèbre nécessite du temps et une approche adaptée. Pour accompagner cette transition, le programme du cycle 3 introduit quelques modèles pré-algébriques (schémas en barre, balances, motifs évolutifs). Ces outils permettent de manipuler des nombres inconnus représentés par des symboles ou par des mots, facilitant l'accès à ce nouveau mode de raisonnement.\n\nLa locution « pensée informatique » englobe une attitude intellectuelle et un ensemble de compétences essentielles pour comprendre les enjeux contemporains tels que l'intelligence artificielle. Au cycle 3, les élèves découvrent ce mode de pensée à travers des activités en lien avec les mathématiques, pouvant être réalisées avec ou sans machine. Ces activités permettent de développer des compétences dans les domaines de l'algorithmique, de la logique ou encore de la résolution de problèmes complexes, tout en sensibilisant les élèves aux enjeux du numérique. Un lien peut être établi avec le cadre de référence des compétences numériques.\n\nOrganisation du programme\n\nLes apprentissages figurant dans le programme recouvrent des domaines variés des mathématiques : nombres et calculs, algèbre, organisation et gestion des données, probabilités, géométrie, grandeurs et mesures, proportionnalité. L'initiation à la pensée informatique est intégrée à certains de ces domaines au cours moyen, tandis qu'elle constitue un domaine spécifique en 6º.\n\nLe programme est organisé selon ces domaines, avec quelques variantes de présentation entre le cours moyen et la 6º. Ainsi, le programme de 6º est scindé en deux rubriques : « Automatismes » et « Connaissances et capacités attendues ». Certains",
+      "text": "",
+      "dimensions": {
+        "dpi": 200,
+        "height": 2339,
+        "width": 1654
+      },
+      "images": [],
+      "index": 3,
+      "model_computed_fields": {},
+      "model_config": {
+        "populate_by_name": true,
+        "arbitrary_types_allowed": true,
+        "protected_namespaces": "()",
+        "validate_by_alias": true,
+        "validate_by_name": true
+      },
+      "model_extra": null,
+      "model_fields": {
+        "index": "annotation=int required=True",
+        "markdown": "annotation=str required=True",
+        "images": "annotation=List[OCRImageObject] required=True",
+        "dimensions": "annotation=Nullable[mistralai.models.ocrpagedimensions.OCRPageDimensions] required=True"
+      },
+      "model_fields_set": "{'index', 'markdown', 'images', 'dimensions'}"
+    },
+    {
+      "page_number": 5,
+      "markdown": "\n\ndomaines incluent également une rubrique « Mises en perspective historiques ou culturelles » pour enrichir les enseignements et contribuer à la culture générale des élèves. Ces éléments permettent aux enseignants de donner du sens aux apprentissages, d'éveiller la curiosité des élèves et d'inscrire les notions mathématiques dans une dimension historique et culturelle.\n\nDes exemples de réussite pour éclairer les objectifs d'apprentissage sont mis à disposition des professeurs, à titre indicatif, sur le site pédagogique du ministère :\n\n— classe de CM1 ;\n\n— classe de CM2 ;\n\n— classe de 6e.\n\n## Nombres, calcul et résolution de problèmes\n\nAu cycle 3, l'objectif est de poursuivre la compréhension de notre système de numération et de mobiliser ses propriétés lors de calculs. L'apprentissage des techniques opératoires et la compréhension des nombres se développent alors conjointement. En effet, l'enseignement des procédures utilisées pour effectuer des opérations ou des calculs dans toutes leurs modalités fournit des occasions aux élèves de faire évoluer leur compréhension du nombre. Il s'agit d'amener l'élève à adopter la procédure la plus efficace en fonction de ses connaissances ainsi que des nombres et des opérations mis en jeu dans les calculs. De même, si la maîtrise des techniques opératoires écrites permet à l'élève d'obtenir un résultat, la construction de ces techniques est l'occasion de retravailler les propriétés de la numération et de rencontrer des exemples d'algorithmes complexes. Les problèmes arithmétiques proposés au cycle 3 permettent d'enrichir le sens des opérations déjà abordées au cycle 2 et d'en étudier de nouvelles.\n\n## Cours moyen première année\n\nLes nombres entiers\n\nAu CM1, la compréhension des aspects décimal (base dix) et positionnel (la valeur d'un chiffre dépend de sa position) de la numération, étudiés depuis le CP, se renforce et s'étend avec l'introduction de deux nouveaux rangs dans l'écriture chiffrée : ceux des dizaines de milliers et des centaines de milliers. Ainsi, les connaissances et les savoir-faire attendus en fin de CM1 concernent les nombres s'écrivant avec au plus six chiffres. Toutefois, afin de renforcer les connaissances sur la numération relevant du cycle 2 et de privilégier en début d'année l'approfondissement de l'étude des fractions et des nombres décimaux, on se limite, pendant les deux premières périodes de l'année, aux nombres entiers s'écrivant avec au plus quatre chiffres. Les nombres écrits avec cinq ou six chiffres ne sont abordés qu'à partir de la période 3 ou du début de la période 4.\n\nLes élèves utilisent, comme au cours des années précédentes, des représentations du matériel multibase lors des travaux menés sur les nombres. Les élèves qui en ont besoin peuvent être invités à manipuler des objets tangibles, comme des cubes de mille unités, des plaques de cent unités, des barres de dix unités, des cubes unités.\n\nLa notion de multiple, introduite au cycle 2, est réactivée. Seuls les critères de divisibilité par 2, par 5 et par 10 figurent au programme. Dans les autres cas, les élèves s'appuient sur la connaissance des tables de multiplication ou effectuent des divisions ou des multiplications.\n\nObjectifs d'apprentissage\n\nComparer et dénombrer des collections en les organisant\n\nConstruire des collections de cardinal donné\n\nConnaître et utiliser les relations entre les unités de numération\n\nConnaître la suite écrite et la suite orale des nombres jusqu'à 999 999\n\nConnaître la valeur des chiffres en fonction de leur position dans un nombre\n\nConnaître et utiliser diverses représentations d'un nombre et passer de l'une à l'autre\n\nComprendre et savoir utiliser les expressions « égal à », « supérieur à », « inférieur à », « compris entre … et … »\n\nComparer, encadrer, intercaler des nombres entiers en utilisant les symboles », < et >\n\nOrdonner des nombres dans l'ordre croissant ou décroissant\n\nSavoir placer des nombres et repérer des points sur une demi-droite graduée\n\nSavoir reconnaître les multiples de 2, de 5 et de 10 à partir de leur écriture chiffrée\n\nSavoir déterminer si un nombre entier donné est un multiple d'un nombre entier inférieur ou égal à 10\n\nSavoir déterminer si un nombre entier inférieur ou égal à 10 est un diviseur d'un nombre entier donné\n\nLes fractions\n\nAu CM1 les élèves renforcent les connaissances et les savoir-faire acquis au cycle 2 sur les fractions en étendant leur étude aux fractions supérieures à 1.\n\nLes fractions sont utilisées avec différents sens :\n\n— comme au CE1, les fractions sont utilisées pour représenter une partie d'un tout dans le cadre d'un partage de ce tout en parts égales, la fraction étant alors le rapport entre la partie et le tout ;\n\n— dans la continuité du CE2, les fractions sont utilisées pour mesurer des grandeurs lorsque les nombres entiers ne sont pas suffisants ;",
+      "text": "",
+      "dimensions": {
+        "dpi": 200,
+        "height": 2339,
+        "width": 1654
+      },
+      "images": [],
+      "index": 4,
+      "model_computed_fields": {},
+      "model_config": {
+        "populate_by_name": true,
+        "arbitrary_types_allowed": true,
+        "protected_namespaces": "()",
+        "validate_by_alias": true,
+        "validate_by_name": true
+      },
+      "model_extra": null,
+      "model_fields": {
+        "index": "annotation=int required=True",
+        "markdown": "annotation=str required=True",
+        "images": "annotation=List[OCRImageObject] required=True",
+        "dimensions": "annotation=Nullable[mistralai.models.ocrpagedimensions.OCRPageDimensions] required=True"
+      },
+      "model_fields_set": "{'index', 'markdown', 'images', 'dimensions'}"
+    },
+    {
+      "page_number": 6,
+      "markdown": "- le travail sur la mesure de longueurs à l'aide de fractions permet d'introduire le repérage de points sur une demi-droite graduée par des fractions, et contribue ainsi à donner aux fractions le statut de nombres, qui s'intercalent entre les nombres entiers déjà connus;\n- au CM1, les fractions acquièrent également le statut d'opérateur multiplicatif pour le cas particulier des fractions unitaires ; les élèves apprennent à calculer des fractions de quantités ou de grandeurs comme un tiers de 12 billes ou un quart de 100 mètres.\n\nDans la continuité du cycle 2, les élèves travaillent avec des fractions dès la période 1 et les utilisent tout au long de l'année scolaire.\n\nLes fractions rencontrées au CM1 ont toutes un dénominateur inférieur ou égal à 20, hormis les fractions décimales qui peuvent avoir un dénominateur égal à 100 .\n\n# Objectifs d'apprentissage \n\nSavoir interpréter, représenter, écrire et lire des fractions\nSavoir écrire une fraction supérieure à 1 comme la somme d'un entier et d'une fraction inférieure à 1\nSavoir écrire la somme d'un entier et d'une fraction inférieure à 1 comme une unique fraction\nSavoir encadrer une fraction par deux nombres entiers consécutifs\nSavoir placer une fraction ou la somme d'un nombre entier et d'une fraction inférieure à un sur une demi-droite graduée\nSavoir repérer un point d'une demi-droite graduée par une fraction ou par la somme d'un nombre entier et d'une fraction Comparer des fractions\nAdditionner et soustraire des fractions\nDéterminer une fraction d'une quantité ou d'une grandeur\n\n## Les nombres décimaux\n\nLes nombres décimaux, abordés au cycle 2 par leurs écritures à virgule dans le cas particulier de la monnaie, sont réintroduits de manière plus générale au CM1 sous la forme de fractions décimales. L'écriture à virgule est réintroduite dans un second temps, comme un codage conventionnel de la décomposition canonique d'un nombre écrit sous la forme d'une somme de fractions décimales : ainsi l'écriture décimale 35,78 est présentée comme un codage destiné à simplifier l'écriture du nombre $35+\\frac{1}{10}+\\frac{8}{100}$.\n\nCette section du programme entretient des liens forts avec :\n\n- la partie « Grandeurs et mesures » où les nombres décimaux sont largement utilisés ;\n- les sous-parties « Calcul mental » et «Les quatre opérations » où sont présentées des compétences calculatoires que doivent développer les élèves sur les nombres décimaux ;\n- la sous-partie «Résolution de problèmes » où les nombres décimaux prennent tout leur sens.\n\nAu CM1, les nombres décimaux rencontrés ne vont pas au-delà des centièmes et s'écrivent donc avec au plus deux chiffres après la virgule.\n\nDes nombres décimaux exprimés avec une écriture à virgule sont rencontrés dès la période 1 dans le cadre de problèmes sur la monnaie prolongeant le travail mené au cycle 2. L'étude plus générale des nombres décimaux, introduits sous la forme de fractions décimales puis exprimés avec une écriture à virgule, est menée dès la période 2 du CM1.\n\n## Objectifs d'apprentissage\n\nInterpréter, représenter, écrire et lire des fractions décimales\nConnaître et utiliser les relations entre unités simples, dixièmes et centièmes\nPlacer une fraction décimale sur une demi-droite graduée et repérer un point d'une demi-droite graduée par une fraction décimale\nÉcrire une fraction décimale supérieure à 1 comme la somme d'un nombre entier et d'une fraction décimale inférieure à 1\nÉcrire une fraction décimale supérieure à 1 comme la somme d'un nombre entier et de fractions décimales ayant un numérateur inférieur à 10\nComparer, encadrer, intercaler des fractions décimales en utilisant les symboles », < et >\nOrdonner des fractions décimales dans l'ordre croissant ou décroissant\nPasser d'une écriture sous forme d'une fraction décimale ou d'une somme de fractions décimales à une écriture à virgule et réciproquement\nInterpréter, représenter, écrire et lire des nombres décimaux (écriture à virgule)\nPlacer un nombre décimal en écriture à virgule sur une demi-droite graduée et repérer un point d'une demi-droite graduée par un nombre décimal\nSavoir donner la partie entière et l'arrondi à l'entier d'un nombre décimal\nComparer, encadrer, intercaler, ordonner, par ordre croissant ou décroissant, des nombres décimaux donnés par leur écriture à virgule en utilisant les symboles », < et >",
+      "text": "",
+      "dimensions": {
+        "dpi": 200,
+        "height": 2339,
+        "width": 1654
+      },
+      "images": [],
+      "index": 5,
+      "model_computed_fields": {},
+      "model_config": {
+        "populate_by_name": true,
+        "arbitrary_types_allowed": true,
+        "protected_namespaces": "()",
+        "validate_by_alias": true,
+        "validate_by_name": true
+      },
+      "model_extra": null,
+      "model_fields": {
+        "index": "annotation=int required=True",
+        "markdown": "annotation=str required=True",
+        "images": "annotation=List[OCRImageObject] required=True",
+        "dimensions": "annotation=Nullable[mistralai.models.ocrpagedimensions.OCRPageDimensions] required=True"
+      },
+      "model_fields_set": "{'index', 'markdown', 'images', 'dimensions'}"
+    },
+    {
+      "page_number": 7,
+      "markdown": "# Le calcul mental \n\nL'enseignement du calcul mental au cours moyen est constitué de trois types d'apprentissages :\n\n- mémoriser des faits numériques qui peuvent être restitués de façon quasi instantanée ;\n- utiliser les connaissances sur la numération pour effectuer rapidement des calculs, en s'appuyant notamment sur la position des chiffres dans les nombres;\n- maîtriser des procédures de calcul mental efficaces qui seront progressivement automatisées.\n\nCertaines procédures de calcul mental peuvent nécessiter de garder des résultats intermédiaires en mémoire, ce qui peut être difficile pour certains élèves. Ceux-ci sont alors encouragés, au début des apprentissages, à noter par écrit ces résultats intermédiaires, puis à alléger progressivement le recours à l'écrit, jusqu'à s'en libérer totalement dès qu'ils n'en ont plus besoin.\n\nAu cours moyen, la mémorisation des résultats des tables d'addition et de multiplication se poursuit avec une fluence qui se renforce tout au long de l'année scolaire.\n\nLes procédures de calcul mental enseignées au cycle 2 sont utilisées tout au long de l'année, afin de renforcer leur automatisation.\nLes procédures doivent être explicitées et donner lieu à une trace écrite. D'autres procédures peuvent être enseignées ou simplement rencontrées et présentées.\n\nL'entraînement à une restitution rapide des résultats dans un climat serein et motivant aide les élèves à renforcer la mémorisation et l'automatisation des procédures.\n\n## Mémoriser des faits numériques\n\n## Objectifs d'apprentissage\n\nConnaître des faits numériques usuels relatifs aux nombres entiers\nConnaître quelques relations entre des fractions usuelles\nConnaître l'écriture décimale de fractions usuelles\n\n## Utiliser ses connaissances en numération pour calculer mentalement\n\n## Objectifs d'apprentissage\n\nAjouter ou soustraire un nombre entier inférieur à 10, d'unités, de dizaines, de centaines, de dixièmes ou de centièmes à un nombre décimal, lorsqu'il n'y a pas de retenue\nMultiplier un nombre entier par 10, 100 ou 1000\nMultiplier un nombre décimal par 10\nDiviser un nombre décimal par 10\n\n## Apprendre des procédures de calcul mental\n\n## Objectifs d'apprentissage\n\nAjouter ou soustraire $8,9,18,19,28,29,38$ ou 39 , à un nombre\nMultiplier un nombre entier inférieur à 10 par un nombre entier de dizaines ou de centaines\nMultiplier un nombre entier par 4 ou par 8\nMultiplier un nombre entier par 5\nUtiliser la distributivité de la multiplication par rapport à l'addition dans des cas simples\n\n## Les quatre opérations\n\nLes quatre opérations sont mobilisées au CM1 lors de la résolution de problèmes, qui permet de donner du sens aux opérations. Cette partie entretient également, de façon naturelle, un lien fort avec les autres parties du programme relatives aux nombres, aux grandeurs et au calcul mental.\n\nDes additions, des soustractions et des multiplications posées sont régulièrement utilisées dès le début de l'année, quand les nombres en jeu le justifient. Cependant, les élèves sont encouragés à privilégier le calcul mental à chaque fois que celui-ci est envisageable.\n\nLa commutativité de la multiplication est à nouveau explicitée lorsqu'elle est mobilisée.\nAu cours moyen, les élèves ne disposent pas de calculatrice personnelle. Des calculatrices peuvent être distribuées par l'enseignant pour certaines activités et à certains élèves, lorsque le professeur estime que cette mise à disposition peut être utile.\n\n## Objectifs d'apprentissage\n\nEstimer le résultat d'une opération\nSavoir effectuer un calcul contenant des parenthèses\nPoser en colonnes et effectuer des additions et des soustractions de nombres décimaux\nPoser et effectuer des multiplications de deux nombres entiers\nPoser et effectuer des multiplications d'un nombre décimal par un nombre entier inférieur à 10\nPoser et effectuer des divisions euclidiennes avec un diviseur à un chiffre",
+      "text": "",
+      "dimensions": {
+        "dpi": 200,
+        "height": 2339,
+        "width": 1654
+      },
+      "images": [],
+      "index": 6,
+      "model_computed_fields": {},
+      "model_config": {
+        "populate_by_name": true,
+        "arbitrary_types_allowed": true,
+        "protected_namespaces": "()",
+        "validate_by_alias": true,
+        "validate_by_name": true
+      },
+      "model_extra": null,
+      "model_fields": {
+        "index": "annotation=int required=True",
+        "markdown": "annotation=str required=True",
+        "images": "annotation=List[OCRImageObject] required=True",
+        "dimensions": "annotation=Nullable[mistralai.models.ocrpagedimensions.OCRPageDimensions] required=True"
+      },
+      "model_fields_set": "{'index', 'markdown', 'images', 'dimensions'}"
+    },
+    {
+      "page_number": 8,
+      "markdown": "# La résolution de problèmes \n\nLa résolution de problèmes arithmétiques fait l'objet d'un enseignement explicite qui vise à développer l'aptitude des élèves à résoudre des problèmes de manière autonome. Cet enseignement s'appuie sur le modèle de résolution de problèmes en quatre phases synthétisé par le schéma ci-dessous. Il constitue notamment un outil utile à l'enseignant pour identifier la ou les éventuelles étapes de la résolution sur lesquelles un élève est en difficulté :\n![img-0.jpeg](img-0.jpeg)\n\nLa phase «Comprendre» est particulièrement importante. Pour être en mesure de résoudre un problème, l'élève doit avoir saisi finement à la fois le sens de l'énoncé et celui de la question posée. Cette compréhension est vérifiable à travers la reformulation de «l'histoire» du problème, par l'élève lui-même, en utilisant ses propres mots. L'enseignant veille à ce que les élèves n'automatisent pas la reconnaissance d'une opération à effectuer à partir de termes de l'énoncé, en proposant régulièrement des problèmes dont l'énoncé contient des termes qui n'induisent pas l'opération attendue, par exemple, des énoncés comportant le mot «plus» alors que l'opération à effectuer est une soustraction.\n\nLa phase « Modéliser» conduit l'élève à identifier la ou les opérations qu'il va devoir effectuer pour trouver le résultat cherché. Au cours moyen, seuls les élèves qui en ont besoin continuent de manipuler du matériel tangible. Tous les élèves continuent à utiliser, quand cela les aide, des représentations schématiques afin d'identifier le modèle mathématique en jeu.\n\nAu CM1, la phase «Calculer» peut être traitée de différentes façons selon les outils dont disposent les élèves au moment où est proposé le problème : le calcul mental et le calcul posé sont les modalités privilégiées.\n\nLa phase «Répondre» conduit à quitter le domaine des mathématiques pour revenir au problème initialement posé en communiquant une solution. Cette phase est importante et doit être mise en lien avec la «Régulation» qui permet d'adopter une attitude critique sur le résultat trouvé. Cette attitude se manifeste notamment par des questions du type : «Le nombre de jetons rouges trouvé est inférieur au nombre de jetons verts, est-ce possible ? », «Le nombre de jetons rouges trouvé est supérieur au nombre total de jetons, est-ce possible ?», ou des questions relatives à la vraisemblance du résultat trouvé : « $4,5 \\mathrm{~m}$ pour la longueur d'une voiture, est-ce que cela est plausible ? », « 800 km entre Paris et New-York, est-ce que cela semble possible ?». L'élève doit apprendre à se poser systématiquement ce type de questions.\n\nLes données des problèmes proposés aux élèves sont dans le champ numérique maîtrisé au CM1, à savoir les nombres entiers jusqu'à 999 999, les nombres décimaux et les fractions. Le champ numérique dépend cependant fortement de la structure mathématique du problème : plus celle-ci est complexe, plus le champ numérique doit être réduit afin d'éviter une surcharge cognitive et de permettre aux élèves de se concentrer sur la structure du problème.\n\nLes élèves doivent traiter au moins 10 problèmes par semaine, une partie d'entre eux pouvant être des problèmes élémentaires, à l'énoncé bref, proposés oralement, la réponse étant simplement notée sur l'ardoise.\n\nAu cours de l'année, les élèves doivent apprendre à résoudre des problèmes dont les structures sont répertoriées dans le programme. Cependant, des problèmes relevant d'autres structures peuvent également être proposés tout au long de l'année.\n\n## Objectifs d'apprentissage\n\nRésoudre des problèmes additifs en une étape des types «parties-tout» et « comparaison»\nRésoudre des problèmes additifs en deux ou trois étapes\nRésoudre des problèmes multiplicatifs de type «parties-tout» en une étape\nRésoudre des problèmes de comparaison multiplicative\nRésoudre des problèmes mixtes en deux ou trois étapes\nRésoudre des problèmes de dénombrement\nRésoudre des problèmes d'optimisation\n\n## Algèbre\n\nL'objectif de cette sous-partie est d'initier les élèves à la «pensée algébrique» et en particulier de développer leur capacité à résoudre des problèmes en raisonnant sur des nombres sans connaître leur valeur. Les élèves apprennent à désigner ces nombres par des symboles ou par des lettres et à raisonner en écrivant avec ces symboles des relations mathématiques. Ils sont aussi",
+      "text": "",
+      "dimensions": {
+        "dpi": 200,
+        "height": 2339,
+        "width": 1654
+      },
+      "images": [
+        {
+          "id": "img-0.jpeg",
+          "top_left_x": 542,
+          "top_left_y": 292,
+          "bottom_right_x": 1083,
+          "bottom_right_y": 715,
+          "image_base64": null,
+          "image_annotation": null
+        }
+      ],
+      "index": 7,
+      "model_computed_fields": {},
+      "model_config": {
+        "populate_by_name": true,
+        "arbitrary_types_allowed": true,
+        "protected_namespaces": "()",
+        "validate_by_alias": true,
+        "validate_by_name": true
+      },
+      "model_extra": null,
+      "model_fields": {
+        "index": "annotation=int required=True",
+        "markdown": "annotation=str required=True",
+        "images": "annotation=List[OCRImageObject] required=True",
+        "dimensions": "annotation=Nullable[mistralai.models.ocrpagedimensions.OCRPageDimensions] required=True"
+      },
+      "model_fields_set": "{'index', 'markdown', 'images', 'dimensions'}"
+    },
+    {
+      "page_number": 9,
+      "markdown": "\n\namenés à identifier et à généraliser des structures, notamment dans le cadre de suites de motifs ou de suites de nombres ou de symboles en exprimant la relation entre deux éléments consécutifs ou entre le rang d’un élément et la valeur associée.\n\nLes nombres dont la valeur n’est pas connue peuvent être représentés par des symboles dans deux cas de figure. D’une part dans des situations où on cherche à trouver leur valeur. Par exemple, on peut écrire $\\times \\times \\times \\times \\times$ pour traduire que 2 paires de ciseaux et 3 stylos coûtent 20 euros. D’autre part, dans des situations où le symbole a un caractère générique et représente différentes valeurs que le nombre peut prendre ; par exemple, si on achète des tee-shirts à 12 € et si le coût de la livraison est 5 € alors, quel que soit le nombre de tee-shirts achetés, le prix à payer, en euro, peut s’écrire (N × 12) + 5, où N est le nombre de tee-shirts achetés. Des relations faisant intervenir des nombres inconnus peuvent aussi être représentées par des schémas en barre dans le cadre de la résolution de problèmes.\n\nLe travail mené conduit à étendre le sens du signe « = » : il n’est pas simplement un symbole placé entre une opération et son résultat. Il peut être placé entre deux expressions qui sont égales, ce qui conduit notamment à faire poindre la notion d’équation, comme dans l’égalité à compléter suivante : « 178 – … = 6 × 8 ».\n\nObjectifs d’apprentissage\n\nTrouver le nombre manquant dans une égalité à trous\n\nDéterminer la valeur d’un nombre inconnu en utilisant un symbole ou une lettre pour le représenter\n\nRésoudre des problèmes algébriques\n\nExécuter un programme de calcul\n\nIdentifier et formuler une règle de calcul pour poursuivre une suite de nombres\n\nIdentifier des régularités et poursuivre une suite de motifs évolutive\n\n## Cours moyen deuxième année\n\nLes nombres entiers\n\nAu CM2, la compréhension des aspects décimal (base dix) et positionnel (la valeur d’un chiffre dépend de sa position) de la numération se renforce et s’étend avec l’introduction de trois nouveaux rangs dans l’écriture chiffrée : ceux des millions, des dizaines de millions et des centaines de millions. Ainsi, les connaissances et les savoir-faire attendus en fin de CM2 concernent les nombres s’écrivant avec au plus neuf chiffres. Toutefois, afin de privilégier en début d’année le travail sur les fractions et les nombres décimaux, les nombres entiers rencontrés pendant les deux premières périodes de l’année seront ceux qui ont été étudiés au CM1 et qui s’écrivent avec au plus six chiffres.\n\nLa connaissance des notions de diviseur et de multiple est renforcée en vue de leur utilisation lors de travaux sur les fractions (comparaison de fractions, additions et soustractions). Seuls les critères de divisibilité par 2, 5 et 10 figurent au programme. Dans les autres cas, les élèves s’appuient sur la connaissance des tables de multiplication ou effectuent des divisions ou des multiplications.\n\nObjectifs d’apprentissage\n\nConnaître et utiliser les relations entre les unités de numération\n\nConnaître la suite écrite et la suite orale des nombres jusqu’à 999 999 999\n\nConnaître et utiliser diverses représentations d’un nombre et passer de l’une à l’autre\n\nConnaître la valeur des chiffres en fonction de leur position dans un nombre\n\nComparer, encadrer, intercaler des nombres entiers en utilisant les symboles », < et >\n\nOrdonner des nombres dans l’ordre croissant ou décroissant\n\nPlacer des nombres et repérer des points sur une demi-droite graduée\n\nDéterminer si un nombre entier inférieur ou égal à 10 est un diviseur d’un nombre entier donné ou si un nombre entier donné est un multiple d’un nombre entier inférieur ou égal à 10\n\nDéterminer des diviseurs d’un nombre entier inférieur ou égal à 100\n\nDéterminer tous les diviseurs d’un nombre entier inférieur ou égal à 30\n\nDéterminer les diviseurs communs à deux nombres entiers inférieurs ou égaux à 30\n\nDéterminer des multiples communs à deux nombres entiers inférieurs à 15\n\nLes fractions\n\nAu CM2 les élèves renforcent les connaissances et les savoir-faire acquis les années précédentes.\n\nLes fractions sont utilisées avec différents sens :\n\n— comme au CE1, les fractions sont utilisées pour représenter une partie d’un tout dans le cadre d’un partage de ce tout en parts égales, la fraction étant alors le rapport entre la partie et le tout ;\n\n— dans la continuité du CE2, les fractions sont utilisées pour mesurer des grandeurs, lorsque les nombres entiers ne sont pas suffisants ;\n\n— comme au CM1, le repérage de points sur une demi-droite graduée par des fractions contribue à donner aux fractions le statut de nombres qui s’intercalent entre les nombres entiers déjà connus ;",
+      "text": "",
+      "dimensions": {
+        "dpi": 200,
+        "height": 2339,
+        "width": 1654
+      },
+      "images": [],
+      "index": 8,
+      "model_computed_fields": {},
+      "model_config": {
+        "populate_by_name": true,
+        "arbitrary_types_allowed": true,
+        "protected_namespaces": "()",
+        "validate_by_alias": true,
+        "validate_by_name": true
+      },
+      "model_extra": null,
+      "model_fields": {
+        "index": "annotation=int required=True",
+        "markdown": "annotation=str required=True",
+        "images": "annotation=List[OCRImageObject] required=True",
+        "dimensions": "annotation=Nullable[mistralai.models.ocrpagedimensions.OCRPageDimensions] required=True"
+      },
+      "model_fields_set": "{'index', 'markdown', 'images', 'dimensions'}"
+    },
+    {
+      "page_number": 10,
+      "markdown": "- les fractions ont également le statut d'opérateur multiplicatif : au CM2, les élèves apprennent à calculer des fractions de quantités ou de grandeurs comme deux tiers de $12 €$ ou trois quarts de 100 mètres.\n\nDans la continuité du CM1, les élèves travaillent avec des fractions dès la période 1 et les utilisent tout au long de l'année scolaire.\nLes fractions rencontrées au CM2 ont toutes un dénominateur inférieur ou égal à 60, hormis les fractions décimales qui peuvent avoir un dénominateur égal à 100 ou à 1000 .\n\n# Objectifs d'apprentissage \n\nInterpréter, représenter, écrire et lire des fractions\nÉcrire une fraction supérieure à 1 comme la somme d'un entier et d'une fraction inférieure à 1\nÉcrire la somme d'un entier et d'une fraction inférieure à 1 comme une unique fraction\nEncadrer une fraction entre deux nombres entiers consécutifs\nPlacer une fraction ou la somme d'un nombre entier et d'une fraction inférieure à un sur une demi-droite graduée\nRepérer un point d'une demi-droite graduée par une fraction ou par la somme d'un nombre entier et d'une fraction\nComparer des fractions\nAdditionner et soustraire des fractions\nCalculer le produit d'un entier et d'une fraction\nDéterminer une fraction d'une quantité ou d'une grandeur\n\n## Les nombres décimaux\n\nAu CM1, l'écriture à virgule a été présentée comme un codage conventionnel de la décomposition d'un nombre sous forme d'une somme de fractions décimales : l'écriture décimale 35,78 a été introduite comme un codage destiné à simplifier l'écriture du nombre $35+\\frac{7}{10}+\\frac{8}{100}$. L'étude des nombres décimaux y est limitée aux dixièmes et aux centièmes.\n\nAu CM2, des nombres décimaux sont rencontrés dès la période 1 dans la continuité du travail mené au CM1 aussi bien par des écritures fractionnaires que des écritures à virgule. L'étude des nombres décimaux s'étend aux millièmes.\n\nCette section du programme entretient des liens forts avec :\n\n- la partie «Grandeurs et mesures» où les nombres décimaux sont largement utilisés ;\n- les sous-parties «Calcul mental » et «Les quatre opérations» où sont présentées des compétences calculatoires que doivent développer les élèves sur les nombres décimaux ;\n- la sous-partie «Résolution de problèmes» où les nombres décimaux prennent tout leur sens.\n\n\n## Objectifs d'apprentissage\n\nInterpréter, représenter, écrire et lire des fractions décimales\nConnaître et utiliser les relations entre unités simples, dixièmes, centièmes et millièmes\nPlacer une fraction décimale sur une demi-droite graduée et repérer un point d'une demi-droite graduée par une fraction décimale\nÉcrire une fraction décimale supérieure à 1 comme la somme d'un nombre entier et d'une fraction décimale inférieure à 1\nÉcrire une fraction décimale supérieure à 1 comme la somme d'un nombre entier et de fractions décimales ayant un numérateur inférieur à 10\nComparer, encadrer, intercaler des fractions décimales en utilisant les symboles $=,<$ et $>$\nOrdonner des fractions décimales dans l'ordre croissant ou décroissant\nPasser d'une écriture sous forme d'une fraction décimale ou de la somme de fractions décimales à une écriture à virgule et réciproquement\nInterpréter, représenter, écrire et lire des nombres décimaux (écriture à virgule)\nPlacer un nombre décimal en écriture à virgule sur une demi-droite graduée et repérer un point d'une demi-droite graduée par un nombre en écriture à virgule\nSavoir donner la partie entière et l'arrondi à l'entier d'un nombre décimal\nComparer, encadrer, intercaler, ordonner par ordre croissant ou décroissant des nombres décimaux donnés par leur écriture à virgule en utilisant les symboles $=,<$ et $>$\n\n## Le calcul mental\n\nL'enseignement du calcul mental au cours moyen est constitué de trois types d'apprentissages :\n\n- mémoriser des faits numériques qui peuvent être restitués de façon quasi instantanée ;\n- utiliser les connaissances sur la numération pour effectuer rapidement des calculs, en s'appuyant notamment sur la position des chiffres dans les nombres;\n- maîtriser des procédures de calcul mental efficaces qui seront progressivement automatisées.\n\nAu cours moyen, la mémorisation des résultats des tables d'addition et de multiplication se poursuit avec une fluence qui se renforce tout au long de l'année scolaire.",
+      "text": "",
+      "dimensions": {
+        "dpi": 200,
+        "height": 2339,
+        "width": 1654
+      },
+      "images": [],
+      "index": 9,
+      "model_computed_fields": {},
+      "model_config": {
+        "populate_by_name": true,
+        "arbitrary_types_allowed": true,
+        "protected_namespaces": "()",
+        "validate_by_alias": true,
+        "validate_by_name": true
+      },
+      "model_extra": null,
+      "model_fields": {
+        "index": "annotation=int required=True",
+        "markdown": "annotation=str required=True",
+        "images": "annotation=List[OCRImageObject] required=True",
+        "dimensions": "annotation=Nullable[mistralai.models.ocrpagedimensions.OCRPageDimensions] required=True"
+      },
+      "model_fields_set": "{'index', 'markdown', 'images', 'dimensions'}"
+    },
+    {
+      "page_number": 11,
+      "markdown": "Les procédures de calcul mental enseignées au cycle 2 et au CM1 sont utilisées tout au long de l'année, afin de renforcer leur automatisation.\n\nLes procédures doivent être explicitées et donner lieu à une trace écrite. L'entraînement à une restitution rapide des résultats, dans climat serein et motivant aide les élèves à renforcer la mémorisation et l'automatisation des procédures.\n\nIl est par ailleurs préférable que cet entraînement soit détaché de toute pression évaluative.\nMémoriser des faits numériques\n\n# Objectifs d'apprentissage \n\nConnaître des faits numériques usuels avec des entiers\nConnaître la moitié des nombres impairs jusqu'à 15\nConnaître quelques relations entre des fractions usuelles\nConnaître l'écriture décimale de fractions usuelles\nUtiliser ses connaissances en numération pour calculer mentalement\n\n## Objectifs d'apprentissage\n\nAjouter ou soustraire un nombre entier à un nombre décimal lorsqu'il n'y a pas de retenue\nAjouter un nombre entier à un nombre décimal lorsqu'il y a une retenue\nMultiplier un nombre décimal par 10, 100 ou 1000\nDiviser un nombre décimal par 10, 100 ou 1000\n\n## Apprendre des procédures de calcul mental\n\n## Objectifs d'apprentissage\n\nAjouter deux nombres décimaux inférieurs à 10, s'écrivant avec au plus un chiffre après la virgule\nAjouter ou soustraire $8,9,18,19,28,29, \\ldots, 98$ ou 99 à un nombre\nMultiplier un nombre entier, inférieur à 10, de dizaines, de centaines ou de milliers par un nombre entier, inférieur à 10, de\ndizaines, de centaines ou de milliers\nUtiliser la distributivité de la multiplication par rapport à l'addition dans des cas simples\nCalculer le double d'un nombre décimal dans des cas simples\nCalculer la moitié d'un nombre décimal dans des cas simples\nDiviser un nombre entier par 4 ou par 8\nMultiplier un nombre décimal par 5\nMultiplier un nombre décimal par 50\n\n## Les quatre opérations\n\nLes quatre opérations sont mobilisées au CM2 lors de la résolution de problèmes, qui permet de donner du sens aux opérations. Cette partie entretient également, de façon naturelle, un lien fort avec les autres parties du programme relatives aux nombres, aux grandeurs et au calcul mental.\n\nDes additions, des soustractions, des multiplications et des divisions euclidiennes posées sont régulièrement utilisées dès le début de l'année, quand les nombres en jeu le justifient. Cependant, les élèves sont encouragés à privilégier le calcul mental à chaque fois que celui-ci est envisageable.\n\nAu cours moyen, les élèves ne disposent pas de calculatrice personnelle. Des calculatrices peuvent cependant être distribuées par l'enseignant pour certaines activités et à certains élèves, lorsque le professeur estime que cette mise à disposition peut être utile.\n\n## Objectifs d'apprentissage\n\nEstimer le résultat d'une opération\nSavoir réaliser un calcul contenant une ou deux paires de parenthèses\nPoser et effectuer la multiplication d'un nombre décimal par un nombre entier\nPoser et effectuer des divisions décimales avec un dividende entier et un diviseur à un chiffre\nPoser et effectuer des divisions décimales avec un dividende décimal et un diviseur à un chiffre\n\n## La résolution de problèmes\n\nLa résolution de problèmes arithmétiques fait l'objet d'un enseignement explicite qui vise à développer l'aptitude des élèves à résoudre des problèmes de manière autonome. Cet enseignement s'appuie sur le modèle de la résolution de problèmes en quatre phases, synthétisé par le schéma ci-dessous. Il constitue notamment un outil utile à l'enseignant pour identifier la ou les éventuelles étapes de la résolution sur lesquelles un élève est en difficulté :",
+      "text": "",
+      "dimensions": {
+        "dpi": 200,
+        "height": 2339,
+        "width": 1654
+      },
+      "images": [],
+      "index": 10,
+      "model_computed_fields": {},
+      "model_config": {
+        "populate_by_name": true,
+        "arbitrary_types_allowed": true,
+        "protected_namespaces": "()",
+        "validate_by_alias": true,
+        "validate_by_name": true
+      },
+      "model_extra": null,
+      "model_fields": {
+        "index": "annotation=int required=True",
+        "markdown": "annotation=str required=True",
+        "images": "annotation=List[OCRImageObject] required=True",
+        "dimensions": "annotation=Nullable[mistralai.models.ocrpagedimensions.OCRPageDimensions] required=True"
+      },
+      "model_fields_set": "{'index', 'markdown', 'images', 'dimensions'}"
+    },
+    {
+      "page_number": 12,
+      "markdown": "![img-1.jpeg](img-1.jpeg)\n\nLa phase « Comprendre » est particulièrement importante. Pour être en mesure de résoudre un problème, l'élève doit avoir saisi finement à la fois le sens de l'énoncé et celui de la question posée. Cette compréhension est vérifiable à travers la reformulation de « l'histoire » du problème, par l'élève lui-même, en utilisant ses propres mots. L'enseignant veille à ce que les élèves n'automatisent pas la reconnaissance d'une opération à effectuer à partir de termes de l'énoncé, en proposant régulièrement des problèmes dont l'énoncé contient des termes qui n'induisent pas l'opération attendue, par exemple, des énoncés comportant le mot « plus » alors que l'opération à effectuer est une soustraction.\n\nLa phase « Modéliser » conduit l'élève à identifier la ou les opérations qu'il va devoir effectuer pour trouver le résultat cherché. Au cours moyen, seuls les élèves qui en ont besoin continuent de manipuler du matériel tangible. Tous les élèves continuent à utiliser, quand cela les aide, des représentations schématiques afin d'identifier le modèle mathématique en jeu.\n\nAu CM1, la phase « Calculer » peut être traitée de différentes façons selon les outils dont disposent les élèves au moment où est proposé le problème : le calcul mental et le calcul posé sont les modalités privilégiées.\n\nLa phase « Répondre » conduit à quitter le domaine des mathématiques pour revenir au problème initialement posé en communiquant une solution. Cette phase est importante et doit être mise en lien avec la « Régulation » qui permet d'adopter une attitude critique sur le résultat trouvé. Cette attitude se manifeste notamment par des questions du type : « Le nombre de jetons rouges trouvé est inférieur au nombre de jetons verts, est-ce possible ? », « Le nombre de jetons rouges trouvé est supérieur au nombre total de jetons, est-ce possible ? », ou des questions relatives à la vraisemblance du résultat trouvé : « 4,5 m pour la longueur d'une voiture, est-ce que cela est plausible ? », « 800 km entre Paris et New-York, est-ce que cela semble possible ? ». L'élève doit apprendre à se poser systématiquement ce type de questions.\n\nLes données des problèmes proposés aux élèves sont dans le champ numérique maîtrisé au CM2, à savoir les nombres entiers jusqu'à 999 999 999, les nombres décimaux et les fractions. Le champ numérique dépend cependant fortement de la structure mathématique du problème : plus celle-ci est complexe, plus le champ numérique doit être réduit afin d'éviter une surcharge cognitive et permettre aux élèves de se concentrer sur la structure du problème.\n\nLes élèves doivent traiter au moins 10 problèmes par semaine, une partie d'entre eux pouvant être des problèmes élémentaires, à l'énoncé bref, proposés oralement, la réponse étant simplement notée sur l'ardoise.\n\nAu cours de l'année, les élèves doivent apprendre à résoudre des problèmes dont les structures sont répertoriées dans le programme. Cependant, des problèmes relevant d'autres structures peuvent également être proposés tout au long de l'année.\n\n# **Objectifs d'apprentissage**\n\n- Résoudre des problèmes additifs en une ou plusieurs étapes\n- Résoudre des problèmes multiplicatifs de type « parties-tout » en une étape\n- Résoudre des problèmes mixtes en plusieurs étapes\n- Résoudre des problèmes de comparaison multiplicative\n- Résoudre des problèmes de dénombrement\n- Résoudre des problèmes d'optimisation\n- Résoudre des problèmes préparant à l'utilisation d'algorithmes\n\n# **Algèbre**\n\nL'objectif de cette sous-partie est d'initier les élèves à la « pensée algébrique » et en particulier de développer leur capacité à résoudre des problèmes en raison de son nombre sans connaître leur valeur. Les élèves apprennent à désigner ces nombres par des symboles ou par des lettres et à raisonner en écrivant avec ces symboles des relations mathématiques. Ils sont aussi amenés à identifier et à généraliser des structures, notamment dans le cadre de suites de motifs ou de suites de nombres ou de symboles en exprimant la relation entre deux éléments consécutifs ou entre le rang d'un élément et la valeur associée.\n\nLes nombres dont la valeur n'est pas connue peuvent être représentés par un symbole dans deux cas de figure :\n\n- d'une part, dans des situations où on cherche à trouver leur valeur. Par exemple, on peut utiliser la représentation $$ \\times \\times \\times \\times $$ pour traduire que 2 paires de ciseaux et 3 stylos coûtent 20 euros ;\n- d'autre part, dans des situations où le symbole a un caractère générique et représente différentes valeurs que le nombre peut prendre. Par exemple, si on achète des tee-shirts à 12 € et si le coût de la livraison est 5 €, alors quel que",
+      "text": "",
+      "dimensions": {
+        "dpi": 200,
+        "height": 2339,
+        "width": 1654
+      },
+      "images": [
+        {
+          "id": "img-1.jpeg",
+          "top_left_x": 542,
+          "top_left_y": 88,
+          "bottom_right_x": 1088,
+          "bottom_right_y": 512,
+          "image_base64": null,
+          "image_annotation": null
+        }
+      ],
+      "index": 11,
+      "model_computed_fields": {},
+      "model_config": {
+        "populate_by_name": true,
+        "arbitrary_types_allowed": true,
+        "protected_namespaces": "()",
+        "validate_by_alias": true,
+        "validate_by_name": true
+      },
+      "model_extra": null,
+      "model_fields": {
+        "index": "annotation=int required=True",
+        "markdown": "annotation=str required=True",
+        "images": "annotation=List[OCRImageObject] required=True",
+        "dimensions": "annotation=Nullable[mistralai.models.ocrpagedimensions.OCRPageDimensions] required=True"
+      },
+      "model_fields_set": "{'index', 'markdown', 'images', 'dimensions'}"
+    },
+    {
+      "page_number": 13,
+      "markdown": "soit le nombre de tee-shirts achetés, le prix à payer, en euro, peut s'écrire ( $N \\times 12)+5$, où $N$ est le nombre de tee-shirts achetés. Des relations faisant intervenir des nombres inconnus peuvent aussi être représentées par des schémas en barre dans le cadre de la résolution de problèmes.\n\nLe travail mené conduit à étendre le sens du signe «=» : il n'est pas simplement un symbole placé entre une opération et son résultat. Il peut être placé entre deux expressions qui sont égales, ce qui conduit notamment à faire poindre la notion d'équation, comme dans l'égalité à compléter suivante : «178 - ... $=6 \\times 8$ ».\n\n# Objectifs d'apprentissage \n\nTrouver le nombre manquant dans une égalité à trous\nRésoudre des problèmes algébriques\nExécuter ou produire un programme de calcul\nIdentifier et formuler une règle de calcul pour poursuivre une suite de nombres\nIdentifier des régularités et poursuivre une suite de motifs évolutive\nTrouver le nombre d'éléments pour une étape donnée dans une suite de motifs évolutive\n\n## Sixième\n\n## Les nombres entiers et décimaux\n\nEn classe de $6^{\\circ}$, l'étude des nombres et des opérations vise le double objectif d'élargir la compréhension de ces concepts et de développer des compétences en résolution de problèmes. Pour cela, les professeurs adoptent ainsi les stratégies pédagogiques qu'ils jugent les plus adaptées pour favoriser les progrès et la réussite des élèves.\n\nÀ l'école élémentaire, l'élève a étudié les principes de la numération décimale de position et les a appliqués aux nombres entiers jusqu'aux centaines de millions. En classe de $6^{\\circ}$, le milliard est introduit, en lien avec les champs « Organisation et gestion de données » et « Grandeurs et mesures », où des activités peuvent mobiliser de très grands nombres, par exemple dans le cadre de la démographie ou de distances dans l'Univers.\n\nEn classe de $6^{\\circ}$, l'élève consolide sa compréhension des nombres décimaux et utilise leurs différentes écritures apprises au cours moyen. À celles-ci vient s'ajouter l'écriture sous forme de pourcentage.\n\nPar le biais d'activités rituelles de calcul et la verbalisation de procédures, l'élève mémorise des connaissances et des procédures en vue de leur automatisation.\n\nLe sens des opérations étudiées au cours moyen s'élargit avec l'introduction de la multiplication de deux nombres décimaux. Cette notion requiert de dépasser la conception de la multiplication comme une addition itérée. La compréhension du nouveau sens ainsi attribué à la multiplication gagne, dans un premier temps, à prendre appui sur le calcul de l'aire d'un rectangle et de conversions d'unités. Dans un deuxième temps, l'élève apprend à décomposer les nombres pour se ramener au produit de deux nombres entiers et à appliquer les propriétés de commutativité et d'associativité de la multiplication. Même si leur nom n'est pas mentionné par le professeur, celui-ci doit les expliciter au début de l'apprentissage, et au-delà si nécessaire. Dans un troisième temps, l'élève automatise le positionnement de la virgule dans le résultat de la multiplication. Le recours systématique à un ordre de grandeur lui permet de contrôler le résultat.\n\nLes différents sens de la division (division partition pour calculer la valeur d'une part et division quotition pour calculer le nombre de parts égales) sont mobilisés dans le cadre de la résolution de problèmes, en complément avec le travail de la technique de la division posée (division euclidienne et division décimale), dans des cas simples précisés dans le programme. Lors de la résolution d'un problème mettant en jeu des nombres dépassant ce cadre, l'élève peut utiliser une calculatrice.\n\n## Automatismes\n\nL'élève restitue de manière automatique les résultats suivants, relatifs aux relations entre $\\frac{1}{1000}: \\frac{1}{100}: \\frac{1}{10}$ et 1 :\n$1=\\frac{10}{10}=\\frac{100}{100}=\\frac{1000}{1000}: \\frac{1}{10}=\\frac{10}{100}=\\frac{100}{1000}: \\frac{1}{100}=\\frac{10}{1000} ; 1=10 \\times \\frac{1}{10}=100 \\times \\frac{1}{100}: \\frac{1}{10}=10 \\times \\frac{1}{100}$.\nL'élève restitue de manière automatique les équivalences d'écriture suivantes : $\\frac{1}{10}=0,1 ; \\frac{1}{100}=0,01 ; \\frac{1}{1000}=0,001$.\nL'élève passe de manière automatique d'une écriture sous forme de fraction décimale ou de somme de fractions décimales à une écriture décimale, et inversement.\n\nPar exemple, il sait que les écritures $\\frac{4107}{1000} ; 4+\\frac{107}{1000} ; 4+\\frac{1}{10}+\\frac{7}{1000} ; 4,107$, représentent le même nombre.\nL'élève applique de manière automatique la procédure de multiplication d'un nombre décimal par 1, par 10, par 100 ou par 1000, en lien avec la numération.\n\nIl applique de manière automatique la procédure de division d'un nombre décimal par 1, par 10, par 100 ou par 1000.\nJusqu'à l'automatisation de ces connaissances et de ces procédures, et selon les besoins des élèves, la manipulation d'un outil du type «glisse-nombres» peut compléter la verbalisation en termes d'unités de numération.",
+      "text": "",
+      "dimensions": {
+        "dpi": 200,
+        "height": 2339,
+        "width": 1654
+      },
+      "images": [],
+      "index": 12,
+      "model_computed_fields": {},
+      "model_config": {
+        "populate_by_name": true,
+        "arbitrary_types_allowed": true,
+        "protected_namespaces": "()",
+        "validate_by_alias": true,
+        "validate_by_name": true
+      },
+      "model_extra": null,
+      "model_fields": {
+        "index": "annotation=int required=True",
+        "markdown": "annotation=str required=True",
+        "images": "annotation=List[OCRImageObject] required=True",
+        "dimensions": "annotation=Nullable[mistralai.models.ocrpagedimensions.OCRPageDimensions] required=True"
+      },
+      "model_fields_set": "{'index', 'markdown', 'images', 'dimensions'}"
+    },
+    {
+      "page_number": 14,
+      "markdown": "# Connaissances et capacités attendues \n\n## Objectifs d'apprentissage\n\nConnaître et utiliser la valeur des chiffres selon leur rang dans l'écriture d'un nombre\nConnaître les liens entre les unités de numération unité, dizaine, centaine, millier, dixième, centième, millième\nConnaître des grands nombres entiers\nReconnaître un nombre décimal\nConnaître la définition d'un pourcentage\nAssocier et utiliser différentes écritures d'un nombre décimal : écriture à virgule, fraction, nombre mixte, pourcentage\nPlacer sur une demi-droite graduée un point dont l'abscisse est un nombre décimal\nRepérer un nombre décimal sur une demi-droite graduée\nComparer deux nombres décimaux\nOrdonner une liste de nombres décimaux\nDonner la valeur arrondie à l'unité, au dixième ou au centième, d'un nombre décimal\nDéterminer ou connaître la valeur arrondie de certains nombres non décimaux\nEncadrer un nombre décimal par deux nombres décimaux, intercaler un nombre décimal entre deux nombres décimaux\nAdditionner et soustraire des nombres décimaux\nMultiplier un nombre entier ou un nombre décimal par 0,1, par 0,01, et par 0,001\nConnaître le lien avec la division par 10, 100 et par 1000\nComprendre le sens de la multiplication de deux nombres décimaux\nCalculer le produit de deux nombres décimaux\nContrôler les résultats à l'aide d'ordres de grandeur\nRésoudre des problèmes mettant en jeu des multiplications entre des nombres décimaux\nDiviser un nombre décimal par un nombre entier non nul inférieur à 10\nRésoudre des problèmes mettant en jeu des divisions décimales\nEffectuer la division euclidienne d'un nombre entier par un nombre entier inférieur à 100\nRésoudre des problèmes mettant en jeu des divisions euclidiennes\n\n## Prolongements possibles : mises en perspective historiques et culturelles\n\nDes activités fondées sur l'histoire des mathématiques permettent à l'élève de renforcer sa culture générale et de prendre du recul sur ses connaissances des nombres entiers ou décimaux.\n\nPar exemple :\n\n- la découverte d'écritures des nombres à partir de lettres ou de dessins : numérations acrophoniques grecque, romaine, hiéroglyphique égyptienne ;\n- la découverte d'algorithmes opératoires, développés dans plusieurs traditions mathématiques, comme la multiplication par jalousies ou en tableau ;\n- la manipulation d'abaques à jetons ou de bouliers pour remobiliser le principe de la numération et la notion de « base de numération»;\n- la découverte de la numération sexagésimale paléo-babylonienne, qui repose sur les mêmes principes mathématiques que le système utilisé pour exprimer des durées en heures, minutes et secondes. Le passage de ce système de numération au système décimal (et vice versa) est un autre contexte que celui des durées pour travailler la division euclidienne ;\n- la découverte de l'écriture des nombres décimaux utilisée par Simon Stevin de Bruges pour illustrer le lien entre numération décimale et fractions décimales.\n\n\n## Les fractions\n\nTout au long de la classe de $6^{\\text {e }}$, l'étude des fractions s'intègre à la résolution de problèmes, permettant ainsi de concrétiser le sens de quotient attribué à cette notion.\n\nL'étude des fractions à l'école élémentaire, débutant dès le CE1, s'est appuyée sur des manipulations et des représentations variées pour familiariser l'élève avec plusieurs des sens qui sont attribués à une fraction. Le premier sens, communément appelé \" partie d'un tout», consiste à prendre un « tout» de référence (une pizza fictive, une bande de papier, un morceau de ficelle, etc.), à le partager en parts égales et à prendre un certain nombre de ces parts. Si cette conception est intuitive pour les élèves, elle présente des difficultés lorsqu'il s'agit d'aborder des fractions supérieures à 1.\nAu CM1, les élèves ont appris que la fraction unitaire $\\frac{1}{4}$ est considérée comme une nouvelle unité de mesure.\nUne fraction comme $\\frac{7}{8}$, est définie comme la somme $\\frac{1}{4}+\\frac{1}{4}+\\frac{1}{4}+\\frac{1}{4}+\\frac{1}{4}+\\frac{1}{4}$ ce qui nécessite de considérer sept quarts alors que l'unité de référence n'en contient que quatre. Si une bande de papier est graduée en quarts, toute fraction, inférieure ou supérieure à 1 , correspond alors à un certain nombre de graduations : 3 graduations pour la fraction $\\frac{3}{4}$ et 7 graduations pour la",
+      "text": "",
+      "dimensions": {
+        "dpi": 200,
+        "height": 2339,
+        "width": 1654
+      },
+      "images": [],
+      "index": 13,
+      "model_computed_fields": {},
+      "model_config": {
+        "populate_by_name": true,
+        "arbitrary_types_allowed": true,
+        "protected_namespaces": "()",
+        "validate_by_alias": true,
+        "validate_by_name": true
+      },
+      "model_extra": null,
+      "model_fields": {
+        "index": "annotation=int required=True",
+        "markdown": "annotation=str required=True",
+        "images": "annotation=List[OCRImageObject] required=True",
+        "dimensions": "annotation=Nullable[mistralai.models.ocrpagedimensions.OCRPageDimensions] required=True"
+      },
+      "model_fields_set": "{'index', 'markdown', 'images', 'dimensions'}"
+    },
+    {
+      "page_number": 15,
+      "markdown": "fraction $\\frac{7}{4}$. Cette conception « mesure» de la fraction permet également de mieux appréhender le produit d'un entier par une fraction comme $7 \\times \\frac{1}{4}$.\n\nEn classe de $6^{\\circ}$, la fraction acquiert un nouveau sens : celui de quotient. L'objectif est de faire comprendre aux élèves qu'une fraction, par exemple $\\frac{3}{4}$, ne représente pas seulement 3 quarts d'une unité de référence, mais aussi le quart de 3, considéré comme « tout» à diviser en 4 parts égales. Ce sens de quotient, qui fait explicitement le lien avec la division, est introduit par des manipulations comme le partage d'une bande de papier ou d'un morceau de ficelle. Si ces manipulations sont simples pour des partages en $2,3,4$, voire 6 ou 8 parties égales d'une bande de longueur 3 cm , elles deviennent plus complexes pour des divisions en 5, 7 ou 11 parts pour illustrer le sens quotient des fractions $\\frac{3}{5}, \\frac{3}{7}, \\frac{3}{11}$. Les élèves peuvent alors utiliser un réseau de droites parallèles équidistantes, communément appelé « guide-âne».\n\nCes manipulations et le lien avec la division permettent à l'élève de comprendre la définition du quotient d'un entier a par un entier $b$ non nul et le nouveau sens de la fraction $\\frac{5}{6}$. Cette définition est mobilisée dans la résolution d'égalités à trous, qui préfigurent celle de l'équation $a \\times x=b$, ouvrant ainsi la voie à la pensée algébrique.\n\nLes élèves, déjà familiarisés à l'écriture multiplicative $7 \\times \\frac{1}{4}$, comprennent qu'elle représente le même nombre que $\\frac{1}{4} \\times 7$, en référence à l'aire d'un rectangle dont les mesures, dans une unité donnée, sont 7 et $\\frac{1}{4}$. Par ailleurs, une multiplication du type $\\frac{1}{4} \\times 7$ sert à exprimer le quart de 7 , introduisant une autre conception de la fraction, celle d'opérateur multiplicatif. Cet autre sens a déjà été abordé au cours moyen où la fraction opérait sur une quantité.\n\nEn classe de $6^{\\circ}$, la fraction opère également sur un nombre, notamment quand elle est exprimée sous forme de pourcentage. Parallèlement à l'approfondissement et à l'extension du sens attribué à une fraction, les techniques opératoires sont entretenues et, comme déjà mentionné, s'élargissent avec la multiplication entre une fraction et un entier. Dans la continuité du cours moyen, les élèves comparent des fractions, notamment en termes d'égalité.\n\nPour favoriser ces apprentissages, I'explicitation des procédures par le professeur et leur verbalisation par les élèves, I'utilisation de représentations variées et la mise à disposition de matériel de manipulation pour les élèves qui en ont besoin sont indispensables.\n\n# Automatismes \n\nL'élève sait reconnaître une fraction sur des représentations variées, par exemple :\n![img-2.jpeg](img-2.jpeg)\n\nL'élève connaît des relations entre $\\frac{1}{4}, \\frac{1}{2}, \\frac{3}{4}$ et 1 , et complète de manière automatique des «égalités à trous» du type : $\\frac{1}{2}+\\frac{1}{2}=\\ldots$ : $\\frac{1}{4}+\\frac{1}{4}=\\ldots ; 1-\\frac{1}{4}=\\ldots ; \\frac{1}{2}+\\frac{1}{4}=\\ldots ; 1-\\frac{1}{2}=\\ldots ; \\frac{3}{4}+\\frac{1}{4}=\\ldots ; \\frac{1}{2}-\\frac{1}{4}=\\ldots ; \\frac{3}{4}-\\frac{1}{4}=\\ldots$.\n\nL'élève sait passer de manière automatique d'une écriture fractionnaire à une écriture décimale, et inversement, dans les cas suivants : $\\frac{1}{4}=0,25 ; \\frac{1}{2}=0,5 ; \\frac{3}{4}=0,75 ; \\frac{3}{2}=1,5 ; \\frac{3}{2}=2 ; \\frac{3}{2}=2,5$.\n\nLes notions de diviseur et de multiple et les tables de multiplication sont réactivées en vue de leur utilisation dans le calcul sur les fractions (simplification, addition et soustraction).\n\nL'élève sait calculer $\\frac{2}{3}$ de 12 œufs, $\\frac{3}{4}$ de 10 m .\n\n## Connaissances et capacités attendues\n\nLe sens quotient d'une fraction\n\n## Objectifs d'apprentissage\n\nRelier une fraction au résultat exact de la division de son numérateur par son dénominateur\nComprendre et connaître la définition du quotient d'un entier a par un entier $b$ non nul\nCompléter des égalités à trous multiplicatives\nPlacer une fraction sur une demi-droite graduée dans des cas simples\nGraduer un segment de longueur donnée\nSavoir que la fraction $\\frac{5}{6}$ peut représenter un nombre entier, un nombre décimal non entier ou un nombre non décimal\nLa fraction comme opérateur multiplicatif\nEn $6^{\\circ}$, I'objectif est de faire opérer une fraction, non seulement sur une quantité ou sur une grandeur comme au cours moyen, mais également sur un nombre entier, ce qui constitue un niveau d'abstraction plus élevé.\n\n## Objectifs d'apprentissage\n\nUtiliser une multiplication pour appliquer une fraction à un nombre entier",
+      "text": "",
+      "dimensions": {
+        "dpi": 200,
+        "height": 2339,
+        "width": 1654
+      },
+      "images": [
+        {
+          "id": "img-2.jpeg",
+          "top_left_x": 66,
+          "top_left_y": 1113,
+          "bottom_right_x": 1371,
+          "bottom_right_y": 1260,
+          "image_base64": null,
+          "image_annotation": null
+        }
+      ],
+      "index": 14,
+      "model_computed_fields": {},
+      "model_config": {
+        "populate_by_name": true,
+        "arbitrary_types_allowed": true,
+        "protected_namespaces": "()",
+        "validate_by_alias": true,
+        "validate_by_name": true
+      },
+      "model_extra": null,
+      "model_fields": {
+        "index": "annotation=int required=True",
+        "markdown": "annotation=str required=True",
+        "images": "annotation=List[OCRImageObject] required=True",
+        "dimensions": "annotation=Nullable[mistralai.models.ocrpagedimensions.OCRPageDimensions] required=True"
+      },
+      "model_fields_set": "{'index', 'markdown', 'images', 'dimensions'}"
+    },
+    {
+      "page_number": 16,
+      "markdown": "\n\nComparer des fractions\n\nObjectifs d'apprentissage\nÉtablir des égalités de fractions\nComparer et encadrer des fractions\nOrdonner une liste de nombres écrits sous forme de fractions ou de nombres mixtes\nEffectuer des opérations sur les fractions\n\nObjectifs d'apprentissage\nAdditionner et soustraire des fractions\nMultiplier une fraction par un nombre entier\nRésoudre des problèmes mettant en jeu des fractions\nInventer des problèmes mettant en jeu des fractions\nPourcentages\n\nObjectifs d'apprentissage\nComprendre le sens d'un pourcentage\nCalculer une proportion (rapport entre une partie et le tout) et l'exprimer sous forme de pourcentage dans des cas simples\nAppliquer un pourcentage à une grandeur ou à un nombre\n\nProlongements possibles : mises en perspective historiques et culturelles\nL'élève découvre les contextes historiques (impôt, héritage, cadastre) qui ont conduit à la notion de fraction ainsi que leurs différentes écritures avant l'utilisation de la barre de fraction.\n\nIl comprend pourquoi une fraction a été appelée nombre rompu, nombre cassé ou encore nombre coupé.\n\nAlgèbre\nEn classe de 6e, la pensée algébrique est une approche qui pose les bases d'un raisonnement à la fois logique et abstrait, et permet aux élèves de commencer à s'éloigner des calculs numériques pour explorer des concepts plus généraux. Cette introduction reste ancrée dans des situations concrètes et visuelles, afin de rendre ces idées accessibles et progressives.\n\nLa pensée algébrique est une manière de réfléchir et de résoudre des problèmes mathématiques en utilisant des outils et des concepts qui ne nécessitent pas toujours la connaissance exacte des nombres. Elle consiste à raisonner sur les relations entre des quantités plutôt que sur les valeurs elles-mêmes.\n\nPour faciliter cette transition, les élèves utilisent des représentations visuelles et des outils qui rendent les concepts abstraits plus concrets, tels que les motifs évolutifs et les schémas en barre. Progressivement, les élèves passent d'un raisonnement purement concret à un raisonnement symbolique. Dans un premier temps, les quantités inconnues sont exprimées à l'aide de mots, de dessins ou éventuellement de lettres. Ce n'est qu'au cycle 4 que les lettres seront introduites de manière formelle. Ce passage à l'abstraction doit se faire avec soin, car il n'est pas un objectif prioritaire en 6e. La pensée algébrique ne se limite pas à un domaine spécifique : elle irrigue l'ensemble du programme de mathématiques. Elle est mobilisée dans des situations variées.\n\nRésoudre des problèmes mettant en jeu des nombres inconnus\n\nObjectifs d'apprentissage\nUtiliser des modèles pré-algébriques pour résoudre des problèmes algébriques\nIdentifier la structure d'un motif évolutif en repérant une régularité et en identifiant une structure\n\n## Grandeurs et mesures\nCours moyen première année\nLe travail sur les grandeurs et les mesures est mené dans la continuité de ce qui a été fait au cycle 2.\n\nLes longueurs, les masses et les contenances permettent de nourrir le travail mené sur les fractions et les nombres décimaux. Ces nombres permettent en effet de mesurer des grandeurs quand les entiers ne suffisent plus.\n\nLes connaissances et les savoir-faire sur les mesures de longueur, de masse et de contenance sont réinvestis dans le cadre de l'enseignement de la résolution de problèmes, notamment de ceux qui relèvent de la proportionnalité. L'estimation de longueurs, de masses et de contenances contribue à développer un regard critique sur les résultats obtenus lors de la résolution de problèmes pour valider la vraisemblance des résultats trouvés.\n\nLes connaissances et les savoir-faire sur les longueurs sont également mobilisés en géométrie plane lors de constructions.\n\nUn tableau peut être utilisé pour présenter les différentes unités multiples et sous-multiples du mètre, du gramme ou du litre et leurs relations, par exemple, les unités de masse allant du milligramme à la tonne. Cependant, au cours moyen, les élèves n'utilisent pas de tableaux pour effectuer des conversions ; ils s'appuient sur les relations connues entre les unités en jeu, comme",
+      "text": "",
+      "dimensions": {
+        "dpi": 200,
+        "height": 2339,
+        "width": 1654
+      },
+      "images": [],
+      "index": 15,
+      "model_computed_fields": {},
+      "model_config": {
+        "populate_by_name": true,
+        "arbitrary_types_allowed": true,
+        "protected_namespaces": "()",
+        "validate_by_alias": true,
+        "validate_by_name": true
+      },
+      "model_extra": null,
+      "model_fields": {
+        "index": "annotation=int required=True",
+        "markdown": "annotation=str required=True",
+        "images": "annotation=List[OCRImageObject] required=True",
+        "dimensions": "annotation=Nullable[mistralai.models.ocrpagedimensions.OCRPageDimensions] required=True"
+      },
+      "model_fields_set": "{'index', 'markdown', 'images', 'dimensions'}"
+    },
+    {
+      "page_number": 17,
+      "markdown": "\n\npar exemple : « 3,5 mètres est égal à 350 centimètres, car 1 mètre est égal à 100 centimètres. ». Les tâches de conversion contribuent ainsi à renforcer la compréhension et la maîtrise de la numération décimale.\n\nL'aire est introduite au CM1, en suivant la même progressivité que pour les autres grandeurs au cycle 2 : les élèves abordent cette notion en comparant des surfaces selon leur aire sans utiliser de mesures, puis ils apprennent à déterminer des aires en utilisant une unité et un quadrillage.\n\nIl n'est pas attendu de mémorisation de formules de périmètres ou d'aires de figures planes au CM1, l'enseignement privilégiant l'acquisition de leur sens et la détermination de mesures s'appuyant sur des pavages. Cependant, les élèves peuvent établir eux-mêmes des règles de calcul et les utiliser, comme par exemple le fait que le périmètre d'un carré est le quadruple de la longueur de l'un de ses côtés.\n\nAu cycle 2, les élèves ont commencé à évoquer les angles dans le cadre de travaux sur les polygones en parlant d'angle droit. Au CM1, le travail sur la grandeur « angle » se généralise en comparant des angles. Au cours moyen, les élèves ne travaillent qu'avec des angles saillants.\n\nLe travail sur le repérage dans le temps et sur les durées s'appuie sur ce qui a été mené au cycle 2 et vise une parfaite compréhension des unités que sont les heures et les minutes et des relations qui les lient. Des problèmes en une ou plusieurs étapes, utilisant des ressources variées, sont proposés régulièrement pour renforcer l'aptitude à effectuer des calculs avec les unités « heure » et « minute ».\n\nLes longueurs\n\nObjectifs d'apprentissage\n\nConnaître et utiliser les unités de longueur du millimètre au kilomètre et les symboles associés\n\nConnaître les relations entre les unités de longueur\n\nChoisir une unité adaptée pour exprimer une longueur\n\nComparer des longueurs\n\nDisposer de quelques longueurs de référence\n\nEstimer la longueur d'un objet ou d'une distance\n\nSavoir ce qu'est le périmètre d'une figure plane\n\nDéterminer le périmètre d'un polygone en utilisant une règle graduée\n\nRésoudre des problèmes mettant en jeu les longueurs des côtés d'un polygone et son périmètre\n\nLes masses\n\nObjectifs d'apprentissage\n\nConnaître et utiliser les unités de masse du milligramme au kilogramme et la tonne, et les symboles associés\n\nConnaître les relations entre les unités de masse\n\nChoisir une unité adaptée pour exprimer une masse\n\nComparer des masses\n\nDisposer de quelques masses de référence\n\nEstimer la masse d'un objet\n\nLes contenances\n\nObjectifs d'apprentissage\n\nConnaître et utiliser les unités de contenance du millilitre à l'hectolitre et les symboles associés\n\nConnaître les relations entre les unités de contenance\n\nChoisir une unité adaptée pour exprimer une contenance\n\nComparer des contenances\n\nLes aires\n\nObjectifs d'apprentissage\n\nComparer les aires de différentes figures planes\n\nDéterminer des aires\n\nConnaître et utiliser les centimètres carrés pour exprimer des aires\n\nLes angles\n\nObjectifs d'apprentissage\n\nUtiliser le lexique spécifique associé aux angles\n\nComprendre et utiliser les notations des angles\n\nComparer des angles",
+      "text": "",
+      "dimensions": {
+        "dpi": 200,
+        "height": 2339,
+        "width": 1654
+      },
+      "images": [],
+      "index": 16,
+      "model_computed_fields": {},
+      "model_config": {
+        "populate_by_name": true,
+        "arbitrary_types_allowed": true,
+        "protected_namespaces": "()",
+        "validate_by_alias": true,
+        "validate_by_name": true
+      },
+      "model_extra": null,
+      "model_fields": {
+        "index": "annotation=int required=True",
+        "markdown": "annotation=str required=True",
+        "images": "annotation=List[OCRImageObject] required=True",
+        "dimensions": "annotation=Nullable[mistralai.models.ocrpagedimensions.OCRPageDimensions] required=True"
+      },
+      "model_fields_set": "{'index', 'markdown', 'images', 'dimensions'}"
+    },
+    {
+      "page_number": 18,
+      "markdown": "Le repérage dans le temps et les durées\n\n# Objectifs d'apprentissage \n\nLire l'heure sur une horloge à aiguilles\nPositionner les aiguilles d'une horloge correspondant à une heure donnée en heure et minute\nComparer et mesurer des durées écoulées entre deux instants affichés sur une horloge (instants et durées sont exprimés en heure et minute)\nRésoudre des problèmes à une ou deux étapes impliquant des durées\n\n## Cours moyen deuxième année\n\nAu CM2, les connaissances des grandeurs rencontrées précédemment se renforcent progressivement. Cela s'opère principalement dans le cadre de la résolution de problèmes, mais également grâce à des exercices plus courts, qui peuvent être effectués à l'oral. Le travail mené contribue à donner du sens aux unités de mesure rencontrées, notamment à travers des estimations de mesures pour des objets manipulés, mais aussi pour des éléments non manipulables (distance entre deux villes, durée d'un film, volume d'eau d'une piscine, etc.).\n\nLe travail sur la proportionnalité est aussi une occasion de renforcer les connaissances des élèves sur les grandeurs et leurs mesures.\n\nUn tableau peut être utilisé pour présenter les différentes unités multiples et sous-multiples du mètre, du gramme ou du litre et leurs relations. Par exemple, les unités de masse allant du milligramme à la tonne. Cependant, au cours moyen, les élèves n'utilisent pas de tableaux pour effectuer des conversions ; ils s'appuient sur les relations connues entre les unités en jeu, comme par exemple : « 3,5 mètres est égal à 350 centimètres car 1 mètre est égal à 100 centimètres. ». Les tâches de conversion contribuent ainsi à renforcer la compréhension et la maîtrise de la numération décimale.\n\nIl n'est pas attendu de mémorisation de formules de périmètres de figures planes au CM2, I'enseignement privilégiant I'acquisition du sens. Cependant, les élèves peuvent établir eux-mêmes des règles de calcul et les utiliser, comme par exemple le fait que le périmètre d'un carré est le quadruple de la longueur de l'un de ses côtés.\n\nLe travail sur les angles, amorcé au CM1, se poursuit au CM2. L'unité degré est introduite à partir de la mesure de l'angle droit. L'utilisation d'un instrument de mesure des angles (rapporteur) ne relève pas du CM2 et sera introduite au collège. Au cours moyen, les élèves ne travaillent qu'avec des angles saillants.\n\nAu CM2, la compréhension du système sexagésimal (base soixante) utilisé pour les unités de durée s'étend avec l'introduction des secondes. Les unités de durée sont régulièrement utilisées dans divers cadres (EPS, travail sur la fluence en lecture ou en calcul, sciences, etc.). Des problèmes en une ou plusieurs étapes, utilisant des ressources variées, sont proposés régulièrement pour renforcer l'aptitude à effectuer des calculs avec les unités heure, minute et seconde.\n\n## Les aires\n\nObjectifs d'apprentissage\nComparer les aires de différentes figures planes\nDéterminer des aires\nConnaître et utiliser les unités centimètre carré, décimètre carré et mètre carré pour exprimer des aires\nConvertir des aires entre différentes unités\nDéterminer l'aire d'un carré ou d'un rectangle\nLes angles\nObjectifs d'apprentissage\nUtiliser le lexique spécifique associé aux angles\nComprendre et utiliser les notations des angles\nComparer des angles\nConstruire un angle égal à la somme de deux angles donnés ou un angle multiple d'un angle donné\nConstruire par pliage la moitié d'un angle donné\nSavoir qu'un angle droit mesure $90^{\\circ}$\nLe repérage dans le temps et les durées\nObjectifs d'apprentissage\nLire l'heure sur une horloge à aiguilles\nPositionner les aiguilles d'une horloge correspondant à une heure donnée en heure, minute et seconde\nComparer et mesurer des durées écoulées entre deux instants affichés sur une horloge (instants et durées sont exprimés en heure, minute et seconde)\nRésoudre des problèmes à une ou plusieurs étapes impliquant des durées",
+      "text": "",
+      "dimensions": {
+        "dpi": 200,
+        "height": 2339,
+        "width": 1654
+      },
+      "images": [],
+      "index": 17,
+      "model_computed_fields": {},
+      "model_config": {
+        "populate_by_name": true,
+        "arbitrary_types_allowed": true,
+        "protected_namespaces": "()",
+        "validate_by_alias": true,
+        "validate_by_name": true
+      },
+      "model_extra": null,
+      "model_fields": {
+        "index": "annotation=int required=True",
+        "markdown": "annotation=str required=True",
+        "images": "annotation=List[OCRImageObject] required=True",
+        "dimensions": "annotation=Nullable[mistralai.models.ocrpagedimensions.OCRPageDimensions] required=True"
+      },
+      "model_fields_set": "{'index', 'markdown', 'images', 'dimensions'}"
+    },
+    {
+      "page_number": 19,
+      "markdown": "# Sixième \n\nEn classe de $6^{\\circ}$, l'élève renforce ses connaissances du cours moyen sur les grandeurs et les mesures à travers l'automatisation de certains résultats et la résolution de problèmes. Ce domaine permet d'établir des liens avec les notions figurant dans les champs «Géométrie», «Nombres et calculs» et «Proportionnalité».\n\nL'élève apprend à calculer le périmètre d'un disque (également désigné comme périmètre d'un cercle par abus de langage qui sera toléré pour l'élève) et à effectuer des conversions d'unités d'aire. Les formules du périmètre d'un carré, d'un rectangle, d'un disque et celles de l'aire d'un carré ou d'un rectangle s'installent progressivement. Ces formules constituent une première sensibilisation au calcul littéral. L'élève substitue une valeur numérique à une lettre pour calculer, en situation, un périmètre ou une aire.\n\nIl découvre l'unité de volume $\\mathrm{cm}^{3}$. En lien avec les problèmes de dénombrement d'assemblages de cubes, il détermine des volumes.\n\nLe travail sur les mesures d'angle est intégré au champ «Géométrie», dans lequel on traite simultanément l'objet géométrique «angle» et la mesure de la grandeur «angle».\n\nConcernant les durées, les élèves résolvent des problèmes mobilisant des conversions entre le système décimal et le système sexagésimal, consolidant leurs compétences en gestion des unités de temps.\n\n## Les longueurs\n\n## Automatismes\n\nL'élève connaît les significations des préfixes allant du kilo- au milli-, ainsi que les relations entre le mètre, ses multiples et ses sous-multiples, et fait le lien avec les unités de numération du système décimal.\n\nL'élève connaît les relations entre deux unités successives du système décimal, par exemple : $1 \\mathrm{dm}=10 \\mathrm{~cm}$ et $1 \\mathrm{~cm}=\\frac{1}{10} \\mathrm{dm}=0,1 \\mathrm{dm}$.\n\nL'élève sait convertir en mètre une longueur donnée dans une autre unité, multiple ou sous-multiple du mètre. Inversement, l'élève sait convertir dans une unité donnée une longueur exprimée en mètre.\n\nL'élève sait utiliser le compas comme outil de report de longueurs.\nIl sait que le périmètre d'une figure plane est la longueur de son contour. L'élève sait calculer le périmètre d'un carré et d'un rectangle.\n\n## Connaissances et capacités attendues\n\nObjectifs d'apprentissage\nSavoir que le périmètre du disque est proportionnel à son diamètre\nConnaître la formule du périmètre d'un disque\nCalculer le périmètre d'un disque\nCalculer des périmètres de figures composées\nRésoudre des problèmes impliquant des longueurs\n\n## Les aires\n\n## Automatismes\n\nL'élève sait comparer des aires sans avoir recours à la mesure, par superposition ou par découpage et recollement de surfaces.\nL'élève sait que $1 \\mathrm{~cm}^{2}$ est l'aire d'un carré de 1 cm de côté, que $1 \\mathrm{~m}^{2}$ est l'aire d'un carré de 1 m de côté, que $1 \\mathrm{dm}^{2}$ est l'aire d'un carré de 1 dm de côté.\n\nDans des cas simples, l'élève sait déterminer l'aire d'une surface en s'appuyant sur un quadrillage composé de carreaux dont les côtés mesurent 1 cm .\n\nL'élève sait que: $1 \\mathrm{~m}^{2}=1 \\mathrm{~m} \\times 1 \\mathrm{~m}=10 \\mathrm{dm} \\times 10 \\mathrm{dm}=10 \\times 10 \\mathrm{dm}^{2}=100 \\mathrm{dm}^{2}$;\n$1 \\mathrm{dm}^{2}=1 \\mathrm{dm} \\times 1 \\mathrm{dm}=10 \\mathrm{~cm} \\times 10 \\mathrm{~cm}=10 \\times 10 \\mathrm{~cm}^{2}=100 \\mathrm{~cm}^{2}$.\nL'élève mémorise que $1 \\mathrm{~cm}^{2}$ est égal à un centième de $1 \\mathrm{dm}^{2}$, qu'il écrit $1 \\mathrm{~cm}^{2}=\\frac{1}{100} \\mathrm{dm}^{2}$ ou $1 \\mathrm{~cm}^{2}=0,01 \\mathrm{dm}^{2}$.\nL'élève mémorise que $1 \\mathrm{dm}^{2}$ est égal à un centième de $1 \\mathrm{~m}^{2}$, qu'il écrit $1 \\mathrm{dm}^{2}=\\frac{1}{100} \\mathrm{~m}^{2}$ ou $1 \\mathrm{dm}^{2}=0,01 \\mathrm{~m}^{2}$.\n\n## Connaissances et capacités attendues\n\nObjectifs d'apprentissage\nEffectuer des conversions d'aire\nConnaître la formule de l'aire d'un carré ou d'un rectangle\nCalculer l'aire d'un carré ou d'un rectangle",
+      "text": "",
+      "dimensions": {
+        "dpi": 200,
+        "height": 2339,
+        "width": 1654
+      },
+      "images": [],
+      "index": 18,
+      "model_computed_fields": {},
+      "model_config": {
+        "populate_by_name": true,
+        "arbitrary_types_allowed": true,
+        "protected_namespaces": "()",
+        "validate_by_alias": true,
+        "validate_by_name": true
+      },
+      "model_extra": null,
+      "model_fields": {
+        "index": "annotation=int required=True",
+        "markdown": "annotation=str required=True",
+        "images": "annotation=List[OCRImageObject] required=True",
+        "dimensions": "annotation=Nullable[mistralai.models.ocrpagedimensions.OCRPageDimensions] required=True"
+      },
+      "model_fields_set": "{'index', 'markdown', 'images', 'dimensions'}"
+    },
+    {
+      "page_number": 20,
+      "markdown": "# Les volumes \n\n## Connaissances et capacités attendues\n\nObjectifs d'apprentissage\nConnaître l'unité centimètre cube\nComparer des volumes\nDéterminer un volume\nLe repérage dans le temps et les durées\n\n## Automatismes\n\n- L'élève lit l'heure sur un cadran à aiguilles ou sur un affichage digital (heures, minutes et secondes).\n- L'élève place les aiguilles pour qu'une horloge indique une heure donnée.\n- L'élève connaît les unités de mesure de durées jour, heure, minute et seconde et les relations qui les lient.\n- L'élève sait combien de jours il y a dans une année (bissextile ou non), combien d'années il y a dans un siècle, et dans un millénaire.\n- L'élève sait qu'une demi-heure c'est 30 minutes, qu'un quart d'heure c'est 15 minutes, que trois quarts d'heure c'est 45 minutes.\n\n\n## Connaissances et capacités attendues\n\n## Objectifs d'apprentissage\n\nEffectuer des calculs sur des horaires et des durées\nRésoudre des problèmes impliquant des horaires et des durées\nConvertir des durées\n\n## Mises en perspective historiques et culturelles\n\nL'élève découvre l'histoire et le fonctionnement de différents types de calendriers : solaires, lunaires ou luni-solaires. Il comprend le lien entre les calendriers julien et grégorien et les différentes approximations de la valeur de l'année tropique.\n\nSelon ses intérêts et ses besoins, l'élève peut également s'interroger sur les moyens de partager le temps, découvrir les clepsydres (horloges à eau) ou d'autres instruments historiques et interculturels (grecs, arabes, chinois).\n\n## Espace et géométrie\n\nCours moyen première année\n\n## La géométrie plane\n\nDans la continuité des apprentissages du cycle 2, I'acquisition des connaissances sur les figures de référence et sur les relations géométriques se poursuit lors de descriptions, de constructions et de résolutions de problèmes.\n\nIl est particulièrement important que le professeur s'exprime dans un langage précis utilisant le vocabulaire géométrique approprié et qu'il encourage les élèves à se l'approprier et, progressivement, à l'utiliser. Ce vocabulaire prend son sens grâce aux constructions et aux problèmes proposés.\n\nSi l'enseignant utilise de manière rigoureuse les notations usuelles avec des parenthèses pour la droite (AB), des crochets pour le segment [AB], une parenthèse et un crochet pour la demi-droite [AB), et aucune parenthèse pour la longueur $A B$, aucune connaissance de ces conventions n'est exigible pour les élèves : les consignes explicitent donc systématiquement les symboles utilisés. Par exemple, il ne sera pas demandé aux élèves de « tracer [AB]», mais de « tracer le segment [AB]».\n\n## Objectifs d'apprentissage\n\nUtiliser le vocabulaire géométrique approprié dans le contexte d'apprentissage des notions correspondantes\nUtiliser les outils géométriques usuels : règle, règle graduée, équerre et compas\nConnaître les codes usuels utilisés en géométrie\nDécrire et reconnaître un cercle et un disque comme un ensemble de points caractérisés par leur distance à un point donné\nReconnaître et utiliser la notion de perpendicularité\nReconnaître et utiliser la notion de parallélisme\nReconnaître et nommer les figures suivantes en faisant référence à leur définition : triangle, triangle rectangle, triangle isocèle, triangle équilatéral, quadrilatère, carré, rectangle et losange\nConnaître les propriétés de parallélisme des côtés opposés, des égalités de longueurs et d'angles pour les figures usuelles : triangle rectangle, triangle isocèle, triangle équilatéral, carré, rectangle et losange.\nReproduire ou construire un carré, un rectangle, un triangle, un triangle rectangle ou un cercle ou des assemblages de ces figures sur tout support (papier quadrillé, pointé ou uni), avec une règle graduée, une équerre ou un compas.\nConstruire une figure géométrique composée de segments, de droites, de polygones usuels et de cercles.",
+      "text": "",
+      "dimensions": {
+        "dpi": 200,
+        "height": 2339,
+        "width": 1654
+      },
+      "images": [],
+      "index": 19,
+      "model_computed_fields": {},
+      "model_config": {
+        "populate_by_name": true,
+        "arbitrary_types_allowed": true,
+        "protected_namespaces": "()",
+        "validate_by_alias": true,
+        "validate_by_name": true
+      },
+      "model_extra": null,
+      "model_fields": {
+        "index": "annotation=int required=True",
+        "markdown": "annotation=str required=True",
+        "images": "annotation=List[OCRImageObject] required=True",
+        "dimensions": "annotation=Nullable[mistralai.models.ocrpagedimensions.OCRPageDimensions] required=True"
+      },
+      "model_fields_set": "{'index', 'markdown', 'images', 'dimensions'}"
+    },
+    {
+      "page_number": 21,
+      "markdown": "Reconnaître si une figure possède un ou plusieurs axes de symétrie\nCompléter une figure pour la rendre symétrique par rapport à une droite donnée, horizontale ou verticale\nConstruire, sur papier quadrillé, la figure symétrique d'une figure donnée par rapport à une droite horizontale ou verticale\n\n# Les solides \n\nLes connaissances et les savoir-faire attendus se construisent à partir de résolutions de problèmes associées à une verbalisation mobilisant le vocabulaire géométrique : il est particulièrement important que le professeur s'exprime dans un langage précis utilisant le vocabulaire géométrique approprié et qu'il encourage les élèves à se l'approprier et, progressivement, à l'utiliser. Les élèves doivent pouvoir justifier la nature géométrique d'un polyèdre en ayant recours aux propriétés géométriques de ses faces.\n\nAu CM1, la liste des solides connus des élèves s'enrichit avec l'introduction du prisme droit. La connaissance des solides continue à se développer lors d'activités de construction, de description et de classements d'objets. Les élèves travaillent avec des solides en trois dimensions, mais aussi avec leurs représentations en perspective. Ils comprennent que certaines faces, certaines arêtes et certains sommets ne sont pas visibles dans de telles représentations et que les arêtes non visibles sont éventuellement tracées en pointillés. S'ils ne construisent pas eux-mêmes de telles représentations, ils savent néanmoins identifier un solide à partir d'une représentation en perspective.\n\nDans ce programme, le terme « pavé » est utilisé pour désigner le parallélépipède rectangle. En classe, les termes « pavé droit» ou « pavé » peuvent être utilisés indifféremment.\n\n## Objectifs d'apprentissage\n\nNommer un cube, une boule, un pavé, un cône, une pyramide, un cylindre et un prisme droit\nDécrire un cube, un pavé, une pyramide et un prisme droit en faisant référence à des propriétés et en utilisant le vocabulaire approprié\nConnaître le nombre et la nature des faces d'un cube ou d'un pavé\nConnaître la nature des faces d'une pyramide\nConnaître la nature des faces d'un prisme droit\nConstruire un cube, un pavé, une pyramide ou un prisme droit\nReconnaître un patron d'un cube\nConstruire un patron d'un cube\n\n## Le repérage dans l'espace\n\nObjectifs d'apprentissage\nConnaître et utiliser le vocabulaire lié aux déplacements\nComprendre, utiliser et produire une suite d'instructions qui décrivent un déplacement en utilisant un vocabulaire spatial précis\nRésoudre des problèmes portant sur des assemblages de cubes\n\n## Cours moyen deuxième année\n\n## La géométrie plane\n\nL'acquisition des connaissances sur les figures de référence et sur les relations géométriques se poursuit lors de descriptions, de constructions et de résolutions de problèmes.\n\nIl est particulièrement important que le professeur s'exprime dans un langage adéquat utilisant un vocabulaire géométrique précis et qu'il encourage les élèves à se l'approprier et, progressivement, à l'utiliser. Ce vocabulaire prend son sens grâce aux constructions et aux problèmes proposés.\n\nSi l'enseignant utilise de manière rigoureuse les notations usuelles avec des parenthèses pour la droite (AB), des crochets pour le segment [AB], une parenthèse et un crochet pour la demi-droite [AB) et aucune parenthèse pour la longueur $A B$, aucune connaissance de ces conventions n'est exigible pour les élèves : les consignes expliciteront donc systématiquement les symboles utilisés. Par exemple, il ne sera pas demandé aux élèves de « tracer [AB]», mais de « tracer le segment [AB]».\n\n## Objectifs d'apprentissage\n\nUtiliser le vocabulaire géométrique approprié dans le contexte d'apprentissage des notions correspondantes\nUtiliser les outils géométriques usuels : règle, règle graduée, équerre et compas\nConnaître les notations et les codes usuels utilisés en géométrie\nReconnaître et utiliser la notion de perpendicularité\nReconnaître et utiliser la notion de parallélisme\nDécrire et reconnaître un cercle et un disque comme un ensemble de points caractérisés par leur distance à un point donné\nReconnaître et nommer les figures suivantes en s'appuyant sur leur définition : triangle, triangle rectangle, triangle isocèle, triangle équilatéral, quadrilatère, carré, rectangle, losange, trapèze, trapèze rectangle, pentagone et hexagone",
+      "text": "",
+      "dimensions": {
+        "dpi": 200,
+        "height": 2339,
+        "width": 1654
+      },
+      "images": [],
+      "index": 20,
+      "model_computed_fields": {},
+      "model_config": {
+        "populate_by_name": true,
+        "arbitrary_types_allowed": true,
+        "protected_namespaces": "()",
+        "validate_by_alias": true,
+        "validate_by_name": true
+      },
+      "model_extra": null,
+      "model_fields": {
+        "index": "annotation=int required=True",
+        "markdown": "annotation=str required=True",
+        "images": "annotation=List[OCRImageObject] required=True",
+        "dimensions": "annotation=Nullable[mistralai.models.ocrpagedimensions.OCRPageDimensions] required=True"
+      },
+      "model_fields_set": "{'index', 'markdown', 'images', 'dimensions'}"
+    },
+    {
+      "page_number": 22,
+      "markdown": "\n\nConnaître les propriétés de parallélisme des côtés opposés, des égalités de longueurs et d'angles pour les figures usuelles : triangle rectangle, triangle isocèle, triangle équilatéral, carré, rectangle, losange, trapèze et trapèze rectangle\n\nReproduire ou construire un carré, un rectangle, un triangle, un triangle rectangle ou un cercle ou des assemblages de ces figures sur tout support (papier quadrillé, pointé ou uni), avec une règle graduée, une équerre ou un compas.\n\nConstruire une figure géométrique composée de segments, de droites, de polygones usuels et de cercles\n\nÉlaborer un programme de construction\n\nConstruire, sur papier quadrillé, la figure symétrique d'une figure donnée par rapport à une droite verticale, horizontale ou une diagonale du quadrillage\n\nLes solides\n\nLes connaissances et les savoir-faire attendus se construisent à partir de résolutions de problèmes associées à une verbalisation mobilisant le vocabulaire géométrique : il est particulièrement important que le professeur s'exprime dans un langage précis utilisant le vocabulaire géométrique approprié et qu'il encourage les élèves à se l'approprier et, progressivement, à l'utiliser. Les élèves doivent pouvoir justifier la nature géométrique d'un polyèdre en ayant recours aux propriétés géométriques de ses faces.\n\nAu CM2, les élèves travaillent avec des solides en trois dimensions, mais aussi avec des représentations en perspective. La connaissance des solides continue à se développer à travers des activités de construction, de description et de classements d'objets. Ils comprennent que certaines faces, certaines arêtes et certains sommets ne sont pas visibles dans de telles représentations et que les arêtes non visibles sont éventuellement tracées en pointillés. S'ils ne construisent pas eux-mêmes de telles représentations, ils savent néanmoins identifier un solide à partir d'une représentation en perspective.\n\nDans ce programme, le terme « pavé » est utilisé pour désigner le parallélépipède rectangle. En classe, les termes « pavé droit » ou « pavé » peuvent être utilisés indifféremment.\n\nObjectifs d'apprentissage\n\nNommer un cube, une boule, un pavé, un cône, une pyramide, un cylindre ou un prisme droit\n\nDécrire un cube, un pavé, une pyramide ou un prisme droit en faisant référence à des propriétés et en utilisant le vocabulaire approprié\n\nReconnaître un patron d'un cube\n\nConstruire un patron d'un cube\n\nReconnaître un patron d'un pavé\n\nDéplacements dans l'espace\n\nObjectifs d'apprentissage\n\nConnaître et utiliser le vocabulaire lié aux déplacements\n\nComprendre, utiliser et produire une suite d'instructions qui décrivent un déplacement en utilisant un vocabulaire spatial précis\n\nRésoudre des problèmes portant sur des assemblages de cubes\n\nSixième\n\nÉtude de configurations planes\n\nAu cours moyen, l'élève a acquis des connaissances sur les figures géométriques de référence et sur les positions relatives de droites lors de descriptions, de constructions et de la résolution de problèmes. Le vocabulaire géométrique et certaines notations ont été introduits progressivement.\n\nEn classe de 6°, les travaux géométriques de reproduction, de description et de construction se poursuivent. L'éventail des définitions, qui s'élargit à de nouveaux objets, permet de dégager leur caractère abstrait et universel.\n\nLes observations et les constructions s'appuient sur des définitions et des propriétés. Le professeur peut utiliser un logiciel de géométrie dynamique pour la visualisation de certaines constructions. Cependant, le maniement par l'élève des instruments traditionnels de la géométrie, accompagné de la verbalisation de ses démarches, sont des facteurs essentiels pour que les constructions dépassent le statut de simples activités pour déboucher sur de véritables apprentissages et faciliter le passage à l'abstraction.\n\nAu-delà de ces activités de construction, la présentation par le professeur et la mise en place progressive par l'élève lui-même de preuves favorisent le développement du raisonnement logique et de la pensée déductive. L'élève accède ainsi à ces facultés essentielles dans de nombreuses autres disciplines scolaires, facultés qui seront également un atout majeur dans sa future vie personnelle et professionnelle.\n\nLa feuille de papier n'est pas le seul support aux activités géométriques : les objets de la vie courante, mais aussi l'environnement ordinaire de l'élève (la salle de classe ou la cour de récréation), s'y prêtent également. Les deux principaux sujets d'étude sont les distances et les angles, qui sont abordés à travers la manipulation, l'observation, les constructions, l'initiation au raisonnement et la mise en place de preuves. La construction d'une preuve repose sur l'élaboration et la structuration de la pensée et de la parole individuelle, orale ou écrite, mais également sur la confrontation de ses propres idées à celles d'autrui, dans des situations de débat ou d'entraide. Les compétences mathématiques et langagières sont ainsi développées conjointement.",
+      "text": "",
+      "dimensions": {
+        "dpi": 200,
+        "height": 2339,
+        "width": 1654
+      },
+      "images": [],
+      "index": 21,
+      "model_computed_fields": {},
+      "model_config": {
+        "populate_by_name": true,
+        "arbitrary_types_allowed": true,
+        "protected_namespaces": "()",
+        "validate_by_alias": true,
+        "validate_by_name": true
+      },
+      "model_extra": null,
+      "model_fields": {
+        "index": "annotation=int required=True",
+        "markdown": "annotation=str required=True",
+        "images": "annotation=List[OCRImageObject] required=True",
+        "dimensions": "annotation=Nullable[mistralai.models.ocrpagedimensions.OCRPageDimensions] required=True"
+      },
+      "model_fields_set": "{'index', 'markdown', 'images', 'dimensions'}"
+    },
+    {
+      "page_number": 23,
+      "markdown": "\n\nAutomatismes\n\n- L'élève connaît le lexique et le codage des objets de base de la géométrie plane : angle droit, égalité de longueurs, égalité d'angles.\n- Il reconnaît un carré, un rectangle, un triangle.\n- Il reconnaît si une figure possède un ou plusieurs axes de symétrie.\n- Il sait coder des angles droits et des longueurs égales.\n\nConnaissances et capacités attendues\n\nDistances\n\nObjectifs d'apprentissage\n\nConnaître et utiliser la définition de la distance entre deux points\n\nConnaître et utiliser la définition du milieu d'un segment\n\nCercles et disques\n\nObjectifs d'apprentissage\n\nConnaître les définitions d'un cercle, d'un disque, d'un rayon, d'un diamètre, d'une corde\n\nComprendre la définition d'un cercle et celle d'un disque sous la forme d'ensembles de points\n\nRésoudre des problèmes mettant en jeu des distances à un point\n\nMédiatrice d'un segment\n\nObjectifs d'apprentissage\n\nConnaître la définition de la médiatrice d'un segment\n\nComprendre et utiliser la propriété caractéristique de la médiatrice d'un segment\n\nRésoudre des problèmes en s'appuyant sur la propriété caractéristique de la médiatrice\n\nAngles\n\nObjectifs d'apprentissage\n\nConnaître et utiliser les angles ainsi que le lexique et les notations qui s'y rapportent : angle droit, angle plat, angle plein, angle nul, angle aigu, angle obtus, angles opposés par le sommet, angles adjacents, angles supplémentaires\n\nMesurer un angle\n\nConstruire un angle de mesure donnée\n\nBissectrice d'un angle saillant\n\nObjectifs d'apprentissage\n\nConnaître la définition de la bissectrice d'un angle saillant\n\nUtiliser la définition de la bissectrice d'un angle pour effectuer des constructions et résoudre des problèmes\n\nTriangles\n\nLe triangle se prête à un travail portant conjointement sur les distances et sur les angles. Le positionnement d'un triangle sur la feuille doit être varié. À l'aide du compas, l'élève remarque que la donnée de trois longueurs ne permet pas toujours de construire un triangle.\n\nObjectifs d'apprentissage\n\nConstruire des triangles\n\nConnaître et utiliser les propriétés angulaires des triangles particuliers : triangle rectangle, triangle isocèle, triangle équilatéral\n\nConnaître la valeur de la somme des mesures des angles d'un triangle\n\nL'utiliser pour calculer des angles, effectuer des constructions et résoudre des problèmes\n\nSavoir que les médiatrices d'un triangle sont concourantes\n\nConnaître et construire le cercle circonscrit à un triangle\n\nSymétrie axiale\n\nLe travail de construction réalisé au cours moyen se poursuit. Différents supports peuvent être utilisés : papier quadrillé, papier pointé, auxquels on ajoute le papier uni.\n\nObjectifs d'apprentissage\n\nConnaître la définition du symétrique d'un point par rapport à une droite\n\nConnaître et utiliser les propriétés de la symétrie axiale pour effectuer des constructions\n\nLa vision dans l'espace\n\nEn classe de 6°, la connaissance des solides étudiés au cours moyen est entretenue sous la forme d'automatismes. En prolongement des apprentissages déjà installés, la vision dans l'espace est consolidée à travers des activités de différentes",
+      "text": "",
+      "dimensions": {
+        "dpi": 200,
+        "height": 2339,
+        "width": 1654
+      },
+      "images": [],
+      "index": 22,
+      "model_computed_fields": {},
+      "model_config": {
+        "populate_by_name": true,
+        "arbitrary_types_allowed": true,
+        "protected_namespaces": "()",
+        "validate_by_alias": true,
+        "validate_by_name": true
+      },
+      "model_extra": null,
+      "model_fields": {
+        "index": "annotation=int required=True",
+        "markdown": "annotation=str required=True",
+        "images": "annotation=List[OCRImageObject] required=True",
+        "dimensions": "annotation=Nullable[mistralai.models.ocrpagedimensions.OCRPageDimensions] required=True"
+      },
+      "model_fields_set": "{'index', 'markdown', 'images', 'dimensions'}"
+    },
+    {
+      "page_number": 24,
+      "markdown": "natures portant sur des assemblages de cubes : passage, dans les deux sens, entre l'objet à trois dimensions et ses diverses représentations à deux dimensions, dénombrements.\n\n# Automatismes \n\nL'élève identifie dans un ensemble de solides lesquels sont des pyramides, des boules, des cubes, des cylindres, des pavés, des cônes ou des prismes droits.\n\n## Connaissances et capacités attendues\n\nObjectifs d'apprentissage\nVoir dans l'espace des assemblages de cubes\n\n## Organisation et gestion de données et probabilités\n\n## Cours moyen première année\n\n## Organisation et gestion de données\n\nAu CM1, les caractères statistiques étudiés peuvent être aussi bien qualitatifs comme un moyen de transport, une couleur ou un sport pratiqué, que quantitatifs comme le nombre de frères et sœurs, l'âge exprimé en années entières, la hauteur d'une plante ou la masse d'un animal.\n\nLes élèves résolvent des problèmes dont les données peuvent être prélevées dans des tableaux, dans des diagrammes en barres ou sur des courbes.\n\nCette partie du programme fournit l'occasion de confronter les élèves à des données réelles relatives à des sujets d'actualité, comme le changement climatique, la pollution ou la perte de biodiversité.\n\nLes connaissances et les compétences acquises sont renforcées lors de travaux réalisés dans les autres disciplines: EPS, histoire et géographie, sciences et technologie, etc. Ceci permet la confrontation à divers types de données et à des représentations graphiques variées.\n\n## Objectifs d'apprentissage\n\nRecueillir des données et produire un tableau, un diagramme en barres ou un ensemble de points dans un repère pour les présenter\nLire et interpréter les données d'un tableau à simple ou double entrée, d'un diagramme en barres ou d'une courbe\nRésoudre des problèmes en une ou plusieurs étapes en utilisant les données d'un tableau à simple ou double entrée, d'un diagramme en barres ou d'une courbe\n\n## Les probabilités\n\nAu CM1, les élèves bénéficient d'une première familiarisation avec des expériences aléatoires. Un des objectifs de cet enseignement est de comprendre qu'il existe des évènements dont la réalisation est certaine, d'autres dont la réalisation est impossible, et d'autres encore dont on ne peut pas affirmer a priori s'ils se réaliseront ou pas.\n\nUn autre objectif porte sur la comparaison de probabilités d'évènements. Certains évènements, comme «obtenir pile» en lançant une pièce de monnaie, «obtenir un nombre pair» en lançant un dé ou « obtenir une carte rouge» en tirant une carte au hasard dans un jeu de 32 cartes ont une chance sur deux de se réaliser, ce qui signifie que la probabilité qu'ils se réalisent est la même que celle qu'ils ne se réalisent pas. D'autres évènements, comme « obtenir un 2 » en lançant un dé, ont plus de chances de ne pas se réaliser que de se réaliser. Les élèves apprennent à estimer les probabilités d'évènements sur une échelle allant de «impossible» à «certain», en distinguant les évènements «peu probables» qui ont moins d'une chance sur deux de se réaliser, des évènements «probables» qui ont plus d'une chance sur deux de se réaliser.\n\nUn autre objectif de l'enseignement des probabilités au CM1 est de familiariser les élèves avec quelques modèles classiques d'expériences aléatoires (jet d'une pièce de monnaie, lancer de dé, tirages dans une urne, tirage d'une carte dans un jeu de 52 cartes, etc.).\n\nDans des cas simples, les élèves apprennent à recenser toutes les issues possibles d'une expérience aléatoire. Ils découvrent ainsi en particulier que, selon les cas, toutes les issues peuvent avoir, ou non, la même chance de se réaliser. Ils se familiarisent ainsi avec la notion d'équiprobabilité.\n\n## Objectifs d'apprentissage\n\nIdentifier des expériences aléatoires\nIdentifier toutes les issues possibles lors d'une expérience aléatoire simple\nComprendre et utiliser le vocabulaire approprié : «impossible», « possible», «certain», « probable», « peu probable», « une chance sur deux»\nComparer des issues d'expériences aléatoires ou des évènements selon leur probabilité de réalisation\nComprendre que ce n'est pas parce qu'il y a deux issues possibles que chacune a une chance sur deux de se réaliser\nReconnaître des situations d'équiprobabilité",
+      "text": "",
+      "dimensions": {
+        "dpi": 200,
+        "height": 2339,
+        "width": 1654
+      },
+      "images": [],
+      "index": 23,
+      "model_computed_fields": {},
+      "model_config": {
+        "populate_by_name": true,
+        "arbitrary_types_allowed": true,
+        "protected_namespaces": "()",
+        "validate_by_alias": true,
+        "validate_by_name": true
+      },
+      "model_extra": null,
+      "model_fields": {
+        "index": "annotation=int required=True",
+        "markdown": "annotation=str required=True",
+        "images": "annotation=List[OCRImageObject] required=True",
+        "dimensions": "annotation=Nullable[mistralai.models.ocrpagedimensions.OCRPageDimensions] required=True"
+      },
+      "model_fields_set": "{'index', 'markdown', 'images', 'dimensions'}"
+    },
+    {
+      "page_number": 25,
+      "markdown": "# Cours moyen deuxième année \n\n## Organisation et gestion de données\n\nAu CM2 comme au CM1, les caractères statistiques étudiés peuvent être aussi bien qualitatifs comme, un moyen de transport, une couleur ou un sport pratiqué, que quantitatifs comme, par exemple, le nombre de frères et sœurs, l'âge exprimé en années entières, la hauteur d'une plante ou la masse d'un animal.\n\nLes élèves résolvent des problèmes dont les données peuvent être prélevées dans un texte, dans des tableaux, dans des diagrammes en barres, dans des diagrammes circulaires ou sur des courbes.\n\nCette partie du programme est l'occasion de confronter les élèves à des données réelles relatives à des sujets d'actualité, comme le changement climatique, la pollution ou la perte de biodiversité.\n\nLes connaissances et les compétences acquises sont renforcées lors de travaux réalisés dans les autres disciplines: EPS, histoire et géographie, sciences et technologie, etc. Ceci permet la confrontation à divers types de données et à des représentations graphiques variées.\n\n## Objectifs d'apprentissage\n\nRecueillir des données et produire un tableau, un diagramme en barres ou un ensemble de points dans un repère pour présenter des données recueillies\n\nLire et interpréter les données d'un tableau, d'un diagramme en barres, d'un diagramme circulaire ou d'une courbe\nRésoudre des problèmes en une ou deux étapes en utilisant les données d'un tableau, d'un diagramme en barres, d'un diagramme circulaire ou d'une courbe\n\n## Les probabilités\n\nAu CM2, les élèves renforcent les apprentissages du CM1.\nDans des situations où les issues d'une expérience aléatoire sont équiprobables, les élèves apprennent à identifier et à dénombrer les issues correspondant à un évènement. Ces dénombrements leur permettent de quantifier les probabilités d'évènements, sous la forme de «a chances sur $b$ », où $a$ est le nombre d'issues réalisant l'évènement dont on cherche la probabilité et $b$ le nombre total d'issues de l'expérience aléatoire.\n\nLa perception de la notion d'indépendance est initiée en reproduisant une même expérience aléatoire, par exemple celle d'un lancer de dé, et en faisant prendre conscience aux élèves que le dé «ne se souvient pas» du résultat sorti lors du lancer précédent. Dans le cas d'une expérience constituée de plusieurs épreuves indépendantes, les élèves apprennent à utiliser un tableau à double entrée ou un arbre pour recenser, d'une part, toutes les issues possibles et, d'autre part, celles qui réalisent l'évènement dont on recherche la probabilité.\n\nAu CM2, le travail sur les probabilités est amorcé au plus tard en période 2.\n\n## Objectifs d'apprentissage\n\nIdentifier toutes les issues possibles lors d'une expérience aléatoire simple\nIdentifier toutes les issues réalisant un évènement dans une expérience aléatoire simple\nDans une situation d'équiprobabilité, lors d'une expérience aléatoire simple, exprimer la probabilité d'un évènement sous la forme «a chances sur $b$ »\nComparer des probabilités dans des cas simples\nComprendre la notion d'indépendance lors de la répétition de la même expérience aléatoire\nDans des situations d'équiprobabilité, recenser toutes les issues possibles d'une expérience aléatoire en deux étapes dans un tableau ou dans un arbre afin de déterminer des probabilités\n\n## Sixième\n\n## Organisation et gestion de données\n\nÀ l'école élémentaire, les élèves ont recueilli des données et ont construit des tableaux à simple ou double entrée, des diagrammes en barres ou des courbes pour les présenter. Inversement, ils ont lu et interprété des informations contenues dans un tableau à double entrée, un diagramme en barres, un diagramme circulaire et d'une courbe. Ils ont résolu des problèmes en une ou deux étapes mobilisant ces différents types de représentation.\n\nEn classe de $6^{\\text {e }}$, l'élève consolide ces notions, en menant lui-même les différentes phases d'une enquête statistique, ce qui le conduit à prendre des initiatives et à organiser son travail. Il est confronté à des données objectives relatives à des sujets d'actualité comme le changement climatique, la pollution ou la perte de biodiversité. L'interprétation de ces données sollicite son esprit critique et sa capacité d'argumentation. L'enseignement de cette partie du programme contribue à l'acquisition de connaissances et de méthodes essentielles dans d'autres disciplines telles que, par exemple, la géographie, les sciences ou l'éducation physique et sportive.",
+      "text": "",
+      "dimensions": {
+        "dpi": 200,
+        "height": 2339,
+        "width": 1654
+      },
+      "images": [],
+      "index": 24,
+      "model_computed_fields": {},
+      "model_config": {
+        "populate_by_name": true,
+        "arbitrary_types_allowed": true,
+        "protected_namespaces": "()",
+        "validate_by_alias": true,
+        "validate_by_name": true
+      },
+      "model_extra": null,
+      "model_fields": {
+        "index": "annotation=int required=True",
+        "markdown": "annotation=str required=True",
+        "images": "annotation=List[OCRImageObject] required=True",
+        "dimensions": "annotation=Nullable[mistralai.models.ocrpagedimensions.OCRPageDimensions] required=True"
+      },
+      "model_fields_set": "{'index', 'markdown', 'images', 'dimensions'}"
+    },
+    {
+      "page_number": 26,
+      "markdown": "# Automatismes \n\nL'élève sait lire un tableau, un diagramme en barres, un diagramme circulaire ou une courbe dans des cas adaptés à une lecture immédiate.\n\n## Connaissances et capacités attendues\n\n## Objectifs d'apprentissage\n\nPlanifier une enquête et recueillir des données\nRéaliser des mesures et les consigner dans un tableau\nConstruire un tableau simple pour présenter des données (observations, caractères)\nFaire un choix en filtrant les données d'un tableau selon un critère\n\n## Les probabilités\n\nAu CM2, dans le cadre d'une situation d'équiprobabilité, les élèves ont appris à dénombrer l'ensemble des issues possibles d'une expérience aléatoire, ainsi qu'à identifier et à compter celles qui correspondent à un évènement. Ces dénombrements leur ont permis de quantifier les probabilités d'évènements, sous la forme de «a chances sur $b$ », où $a$ est le nombre d'issues correspondant à l'évènement et $b$ le nombre total d'issues possibles de l'expérience aléatoire.\n\nIls ont également travaillé sur la répétition d'une même expérience aléatoire, comme par exemple celle du lancer d'une pièce de monnaie, et sur la notion d'indépendance. Ils ont pris conscience que le dé «ne se souvient pas» du résultat du lancer précédent. Dans le cadre d'une expérience constituée de deux épreuves indépendantes, les élèves ont appris à utiliser des tableaux à double entrée ou des arbres pour recenser toutes les issues possibles et celles qui réalisent l'évènement dont on cherche la probabilité.\n\nEn classe de $6^{\\text {e }}$, un objectif majeur est de passer de la traduction d'une probabilité en termes de chances ( $a$ chances sur $b$ ) à son expression par le nombre égal au quotient $\\frac{5}{2}$ (pouvant être lu « $a$ sur $b$ »), qui peut s'exprimer comme une fraction, un nombre décimal ou un pourcentage.\n\nL'approche fréquentiste des probabilités est également introduite. Cela permet d'interpréter certains résultats abordés au cours moyen.\n\nIl n'est pas attendu que l'élève utilise le vocabulaire spécifique aux probabilités (expérience, issue, univers, évènement) de manière autonome, mais le professeur peut l'employer.\n\n## Connaissances et capacités attendues\n\n## Objectifs d'apprentissage\n\nSavoir que la probabilité d'un évènement est un nombre compris entre 0 et 1\nCalculer des probabilités dans des situations simples d'équiprobabilité\nComparer des résultats d'une expérience aléatoire répétée à une probabilité calculée\n\n## La proportionnalité\n\nCours moyen première année\nLe travail sur la proportionnalité conduit au CM1 s'inscrit dans la continuité du travail sur la résolution de problèmes multiplicatifs mené au cycle 2. En effet, les élèves ont déjà résolu des exemples simples de problèmes relevant de la proportionnalité comme «Des tee-shirts coûtent $13 €$ chacun. Quel est le prix de 6 tee-shirts?».\n\nAu CM1, la notion de proportionnalité entre deux grandeurs est explicitement introduite dans le cadre de la résolution de problèmes: les élèves apprennent à identifier des situations relevant de la proportionnalité et à mettre en œuvre dans ce cadre des raisonnements fondés sur la propriété de la linéarité pour la multiplication. Par exemple, pour le problème « 4 pains aux raisins coûtent $7 €$. Quel est le prix de 12 pains aux raisins ?», les élèves comprennent qu'il est inutile de déterminer le prix unitaire pour répondre à la question posée.\n\nAfin d'éviter le risque de développement d'automatismes ne s'appuyant pas sur le sens, les élèves n'utilisent pas de tableaux de proportionnalité au cours moyen. La résolution de problèmes de proportionnalité s'appuie uniquement sur des raisonnements formulés en langage naturel, à l'oral comme à l'écrit: «Si j'achète 3 fois plus de pains aux raisins, alors je vais payer 3 fois plus. », «Si je prends 4 fois moins de feuilles de papier, alors l'épaisseur de la pile de feuilles sera 4 fois plus petite. », etc.\n\nAu cours moyen, les problèmes posés le sont tous dans le cadre des grandeurs et ne portent pas sur des suites de nombres hors contexte.\n\n## Objectifs d'apprentissage\n\nIdentifier une situation de proportionnalité\nSavoir résoudre un problème de proportionnalité",
+      "text": "",
+      "dimensions": {
+        "dpi": 200,
+        "height": 2339,
+        "width": 1654
+      },
+      "images": [],
+      "index": 25,
+      "model_computed_fields": {},
+      "model_config": {
+        "populate_by_name": true,
+        "arbitrary_types_allowed": true,
+        "protected_namespaces": "()",
+        "validate_by_alias": true,
+        "validate_by_name": true
+      },
+      "model_extra": null,
+      "model_fields": {
+        "index": "annotation=int required=True",
+        "markdown": "annotation=str required=True",
+        "images": "annotation=List[OCRImageObject] required=True",
+        "dimensions": "annotation=Nullable[mistralai.models.ocrpagedimensions.OCRPageDimensions] required=True"
+      },
+      "model_fields_set": "{'index', 'markdown', 'images', 'dimensions'}"
+    },
+    {
+      "page_number": 27,
+      "markdown": "\n\nCours moyen deuxième année\n\nLe travail sur la proportionnalité conduit au CM2 s'inscrit dans la continuité du travail mené au CM1 : les savoir-faire développés se consolident et s'enrichissent à travers la résolution de problèmes nécessitant plusieurs étapes.\n\nAfin d'éviter le risque de développement d'automatismes ne s'appuyant pas sur le sens, les élèves n'utilisent pas de tableaux de proportionnalité au cours moyen. La résolution de problèmes de proportionnalité s'appuie uniquement sur des raisonnements formulés en langage naturel, à l'oral comme à l'écrit : « Si j'achète 3 fois plus de pains aux raisins, alors je vais payer 3 fois plus. », « Si je prends 4 fois moins de feuilles de papier, alors l'épaisseur de la pile de feuilles sera 4 fois plus petite. », etc.\n\nLes problèmes posés le sont tous dans le cadre des grandeurs et ne portent pas sur des suites de nombres hors contexte. Seuls des raisonnements fondés sur les propriétés de linéarité pour la multiplication et pour l'addition sont attendus ; ni l'utilisation du coefficient de proportionnalité, ni le recours au « produit en croix » ne sont enseignés au cours moyen.\n\nObjectifs d'apprentissage\n\nIdentifier une situation de proportionnalité\n\nSavoir résoudre un problème de proportionnalité\n\nSixième\n\nAu cours moyen, la proportionnalité était exclusivement abordée dans le cadre des grandeurs et elle était identifiée par l'effet sur la seconde grandeur de la multiplication de la première par un nombre donné. L'élève a ainsi appris à identifier des situations de proportionnalité et à utiliser des raisonnements fondés sur la propriété de linéarité pour la multiplication ou pour l'addition.\n\nEn classe de 6°, la proportionnalité continue d'être étudiée exclusivement dans le cadre des grandeurs, et, ne concerne pas les suites de nombres. La définition de la proportionnalité entre deux grandeurs est formalisée et reliée à l'utilisation d'expression du type « prix au kilo ». Celles-ci anticipent la notion de grandeur quotient qui sera étudiée au cycle 4. L'élève est sensibilisé au « modèle » de la proportionnalité. Il résout des problèmes qui en relèvent en utilisant la procédure la mieux adaptée aux nombres mis en jeu : linéarité multiplicative ou additive, retour à l'unité. Comme au cours moyen, il est encouragé à laisser apparaître à l'intérieur des calculs les unités des grandeurs manipulées.\n\nPlusieurs outils permettent de représenter une situation de proportionnalité : tableau, flèches, parenthèses (qui anticipent la notation fonctionnelle). Lorsqu'il s'agit d'un tableau, le nom de chaque grandeur, accompagné de son unité, y figure explicitement. La recherche de données manquantes dans un tableau s'appuie sur le sens de la proportionnalité : l'élève verbalise les relations entre les mesures d'une grandeur (2 fois plus, 3 fois moins, etc.) ou s'appuie sur la constance d'une grandeur telle que « prix au kilo » ou « nombre de battements du cœur par minute » relevant du langage courant. Dans cette optique de compréhension du sens de la proportionnalité, notion essentielle dans la vie quotidienne et dans de nombreuses autres disciplines, la technique du « produit en croix » n'est pas enseignée.\n\nAutomatismes\n\n- L'élève sait repérer des relations multiplicatives simples entre des nombres (double, quadruple, moitié, tiers, quart).\n- Il associe de manière automatique les expressions du type : « 4 fois plus grand, 4 fois plus petit, 5 fois plus, 5 fois moins » à une multiplication ou à une division.\n\nConnaissances et capacités attendues\n\nObjectifs d'apprentissage\n\nConnaître la définition de la proportionnalité entre deux grandeurs et la mettre en lien avec des expressions de la vie courante\n\nIdentifier si une situation relève du « modèle » de la proportionnalité\n\nRésoudre un problème de proportionnalité en choisissant une procédure adaptée : propriété de linéarité pour la multiplication ou l'addition, retour à l'unité\n\nReprésenter une situation de proportionnalité à l'aide d'un tableau ou de notations symboliques\n\nS'initier à la résolution de problèmes d'échelles\n\nInitiation à la pensée informatique\n\nLe mode de pensée informatique est une approche universelle permettant de résoudre des problèmes complexes en exploitant des processus de calcul, qu'ils soient réalisés par des humains ou par des machines. En s'initiant à la pensée informatique, l'élève développe des connaissances et des capacités qui sont transposables à d'autres disciplines et qui le préparent aux défis du monde contemporain.\n\nAu cycle 2, dans la continuité du cycle 1, l'élève a déjà développé des raisonnements qui relèvent de la pensée informatique. Dès le CP, l'élève a appris à réaliser un déplacement dans l'espace à partir d'un codage ou à coder de tels déplacements, notamment pour programmer un robot se déplaçant sur un quadrillage ou un personnage se déplaçant dans un quadrillage sur un écran de tablette ou d'ordinateur. L'apprentissage des algorithmes des opérations posées tout au long du cycle 2 contribue également à l'initiation à la pensée informatique. À partir du CE1, l'élève a aussi appris à poursuivre des suites évolutives comme « 1, 2, 4, 7, 11, 16, etc. » ou « 1, 2, 4, 8, 16, etc. ».",
+      "text": "",
+      "dimensions": {
+        "dpi": 200,
+        "height": 2339,
+        "width": 1654
+      },
+      "images": [],
+      "index": 26,
+      "model_computed_fields": {},
+      "model_config": {
+        "populate_by_name": true,
+        "arbitrary_types_allowed": true,
+        "protected_namespaces": "()",
+        "validate_by_alias": true,
+        "validate_by_name": true
+      },
+      "model_extra": null,
+      "model_fields": {
+        "index": "annotation=int required=True",
+        "markdown": "annotation=str required=True",
+        "images": "annotation=List[OCRImageObject] required=True",
+        "dimensions": "annotation=Nullable[mistralai.models.ocrpagedimensions.OCRPageDimensions] required=True"
+      },
+      "model_fields_set": "{'index', 'markdown', 'images', 'dimensions'}"
+    },
+    {
+      "page_number": 28,
+      "markdown": "\n\nCes premiers apprentissages qui contribuent au développement de la pensée informatique se poursuivent au cours moyen : algorithmes des opérations posées, programmes de constructions géométriques, programmes de calcul, suites évolutives. Ces éléments, abordés dans les autres domaines de ce programme, sont résumés dans les paragraphes ci-après.\n\n## Cours moyen première année\n\nAu CM1, l'élève continue d'utiliser et de produire des codages de déplacements en élargissant les environnements dans lesquels ces déplacements ont lieu (quartier, ville, etc.). La programmation de robot est également toujours envisagée lorsque l'école en est équipée.\n\nDans le cadre de l'initiation à la pensée algébrique, l'élève continue de travailler sur des suites évolutives qui s'appuient sur des algorithmes plus en plus complexes comme « 80 ; 85 ; 83 ; 88 ; 86 ; 91 ; 89 ; 94 ; 92, etc. » ou « 1 ; 2 ; 6 ; 7 ; 11 ; 12 ; 16 ; etc. » et il peut utiliser des logiciels de programmation par blocs ou un tableur pour déterminer des termes éloignés. Il exécute également des programmes de calcul comme le suivant :\n\n— choisir un nombre entier ;\n\n— ajouter 2 au nombre choisi ;\n\n— multiplier le résultat trouvé à l'étape précédente par 4 ;\n\n— écrire le nombre obtenu.\n\nCes programmes peuvent aussi être codés avec un logiciel de programmation par bloc comme Scratch ou sur une feuille d'un tableur en faisant apparaître les différentes étapes, de manière à vérifier les résultats obtenus.\n\nLa réalisation de figures géométriques s'appuyant sur des programmes de construction comme « Trace un rectangle ABCD tel que AB = 5 cm et BC = 3 cm. Trace le cercle de centre A qui passe par le milieu du côté [AB]. » contribue également au développement de la pensée informatique.\n\n## Cours moyen deuxième année\n\nLes activités menées au CM1 qui contribuent au développement de la pensée informatique se poursuivent au CM2 en se complexifiant.\n\nL'élève continue d'utiliser et de produire des codages de déplacements en élargissant les environnements dans lesquels ces déplacements ont lieu (quartier, ville, etc.) et en augmentant le nombre d'instructions des programmes utilisés ou produits. La programmation de robots est également toujours envisagée lorsque l'école en est équipée.\n\nDans le cadre de l'initiation à la pensée algébrique, l'élève continue de travailler sur des suites évolutives de nombres ou de motifs qui s'appuient sur des algorithmes de plus en plus complexes comme « 7 ; 15 ; 31 ; 63 ; 127, etc. » ou\n\n| étape 1 | étape 2 | étape 3 | étape 4 |\n\net il peut utiliser des logiciels de programmation par blocs ou un tableur pour déterminer des termes éloignés. Il exécute également des programmes de calcul ayant jusqu'à trois instructions comme le suivant :\n\n— choisir un nombre entier ;\n\n— ajouter 2 au nombre choisi ;\n\n— multiplier le résultat trouvé à l'étape précédente par 4 ;\n\n— retirer 3 au nombre obtenu à l'étape précédente ;\n\n— écrire le nombre obtenu.\n\nCes programmes peuvent aussi être codés avec un logiciel de programmation par bloc comme Scratch ou sur une feuille d'un tableur en faisant apparaître les différentes étapes, de manière à vérifier les résultats obtenus.\n\nLa réalisation de figures géométriques s'appuyant sur des programmes de construction contribue également au développement de la pensée informatique. Au CM2, l'élève apprend à produire des programmes de construction dans des cas simples.\n\n## Sixième\n\nEn plus de la consolidation des raisonnements précédents, le programme de 6e permet l'initiation progressive à la compréhension de notions plus spécifiques de l'informatique : instructions, séquences d'instructions, entrées, sorties, répétitions. Les activités proposées peuvent être réalisées avec ou sans machine (robot ou logiciel de programmation graphique par blocs comme Scratch). L'utilisation d'un tableur peut également être envisagée pour l'étude des suites évolutives de nombres.\n\nObjectifs d'apprentissage\n\nIdentifier une instruction ou une séquence d'instructions\n\nProduire et exécuter une séquence d'instructions\n\nRépéter à la main une séquence d'instructions pour accomplir une tâche imposée\n\nProgrammer la construction d'un chemin simple",
+      "text": "",
+      "dimensions": {
+        "dpi": 200,
+        "height": 2339,
+        "width": 1654
+      },
+      "images": [],
+      "index": 27,
+      "model_computed_fields": {},
+      "model_config": {
+        "populate_by_name": true,
+        "arbitrary_types_allowed": true,
+        "protected_namespaces": "()",
+        "validate_by_alias": true,
+        "validate_by_name": true
+      },
+      "model_extra": null,
+      "model_fields": {
+        "index": "annotation=int required=True",
+        "markdown": "annotation=str required=True",
+        "images": "annotation=List[OCRImageObject] required=True",
+        "dimensions": "annotation=Nullable[mistralai.models.ocrpagedimensions.OCRPageDimensions] required=True"
+      },
+      "model_fields_set": "{'index', 'markdown', 'images', 'dimensions'}"
+    }
+  ],
+  "total_pages": 28
+}

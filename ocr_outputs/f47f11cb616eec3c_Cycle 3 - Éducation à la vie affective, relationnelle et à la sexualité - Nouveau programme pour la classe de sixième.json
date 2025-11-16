@@ -1,0 +1,557 @@
+{
+  "model": "mistral-ocr-2505",
+  "pages": [
+    {
+      "page_number": 1,
+      "markdown": "![img-0.jpeg](img-0.jpeg)\n\n![img-1.jpeg](img-1.jpeg)\n\n# Programme d'éducation à la vie affective et relationnelle, et à la sexualité au collège",
+      "text": "",
+      "dimensions": {
+        "dpi": 200,
+        "height": 2339,
+        "width": 1654
+      },
+      "images": [
+        {
+          "id": "img-0.jpeg",
+          "top_left_x": 133,
+          "top_left_y": 72,
+          "bottom_right_x": 334,
+          "bottom_right_y": 252,
+          "image_base64": null,
+          "image_annotation": null
+        },
+        {
+          "id": "img-1.jpeg",
+          "top_left_x": 760,
+          "top_left_y": 734,
+          "bottom_right_x": 974,
+          "bottom_right_y": 888,
+          "image_base64": null,
+          "image_annotation": null
+        }
+      ],
+      "index": 0,
+      "model_computed_fields": {},
+      "model_config": {
+        "populate_by_name": true,
+        "arbitrary_types_allowed": true,
+        "protected_namespaces": "()",
+        "validate_by_alias": true,
+        "validate_by_name": true
+      },
+      "model_extra": null,
+      "model_fields": {
+        "index": "annotation=int required=True",
+        "markdown": "annotation=str required=True",
+        "images": "annotation=List[OCRImageObject] required=True",
+        "dimensions": "annotation=Nullable[mistralai.models.ocrpagedimensions.OCRPageDimensions] required=True"
+      },
+      "model_fields_set": "{'index', 'markdown', 'images', 'dimensions'}"
+    },
+    {
+      "page_number": 2,
+      "markdown": "# Principes, valeurs, finalités \n\n«Une information et une éducation à la sexualité sont dispensées dans les écoles, les collèges et les lycées à raison d'au moins trois séances annuelles et par groupes d'âge homogène» (article L. 312-16 du Code de l'éducation). Créée par la loi n 2001-588 du 4 juillet 2001, l'éducation à la sexualité se déploie de manière progressive de l'école maternelle jusqu'aux classes du lycée, à travers une approche globale, positive et bienveillante : elle prend la forme d'une éducation à la vie affective et relationnelle à l'école primaire et d'une éducation à la vie affective et relationnelle, et à la sexualité au collège et au lycée. Elle associe trois champs de connaissances et de compétences : le champ biologique, le champ psycho-émotionnel et le champ juridique et social. L'éducation à la sexualité s'inscrit dans la politique éducative, sociale et de santé en faveur des élèves et dans le parcours éducatif de santé, qui vise à développer le pouvoir d'agir des enfants et des adolescents ainsi que des habitudes favorables à la santé et au bien-être.\n\nDestinée à tous les élèves, encadrée par un programme national, l'éducation à la sexualité exprime un engagement collectif de la Nation. En complément du rôle des parents et des familles des élèves, elle revêt un caractère obligatoire et elle est mise en œuvre sur l'ensemble du territoire, dans les établissements publics et dans les établissements privés sous contrat. Cette éducation se fonde sur les principes et valeurs de la République, parmi lesquelles l'égalité, l'accès de tous à l'éducation et la laïcité.\n\nDans ses objectifs comme dans ses démarches, l'éducation à la sexualité permet l'apprentissage du respect de l'intimité corporelle et psychique des élèves, en tenant compte de leur rythme de croissance et de développement, de leurs différences et de leurs singularités.\n\n- Elle vise l'égalité de considération et de dignité, en particulier l'égalité entre les femmes et les hommes.\n- Elle contribue à la lutte contre les discriminations énoncées à l'article 225-1 du Code pénal et opérées entre les personnes sur le fondement «de leur sexe », «de leur identité de genre » et «de leur orientation sexuelle» (hétérosexualité, homosexualité, bisexualité, asexualité).\n- Elle éduque au principe du consentement et contribue à la prévention des différentes formes de violences, notamment des violences sexistes et sexuelles.\n- Elle contribue au repérage de l'inceste.\n- Elle vise à construire une culture commune de l'égalité et du respect.\n\nL'éducation à la sexualité promeut des relations respectueuses et participe au développement de compétences psychosociales.\n\nAdossée aux savoirs qui constituent les disciplines enseignées de l'école au lycée, l'éducation à la sexualité répond aux missions spécifiques que la Nation confie à l'École en matière d'instruction, de sensibilisation et de développement des capacités de réflexion des élèves. Elle s'ordonne selon trois questions suivies et approfondies tout au long de la scolarité, qui définissent les trois axes du programme : comment se connaître, vivre et grandir sereinement avec son corps? Comment rencontrer les autres, construire avec eux des relations",
+      "text": "",
+      "dimensions": {
+        "dpi": 200,
+        "height": 2339,
+        "width": 1654
+      },
+      "images": [],
+      "index": 1,
+      "model_computed_fields": {},
+      "model_config": {
+        "populate_by_name": true,
+        "arbitrary_types_allowed": true,
+        "protected_namespaces": "()",
+        "validate_by_alias": true,
+        "validate_by_name": true
+      },
+      "model_extra": null,
+      "model_fields": {
+        "index": "annotation=int required=True",
+        "markdown": "annotation=str required=True",
+        "images": "annotation=List[OCRImageObject] required=True",
+        "dimensions": "annotation=Nullable[mistralai.models.ocrpagedimensions.OCRPageDimensions] required=True"
+      },
+      "model_fields_set": "{'index', 'markdown', 'images', 'dimensions'}"
+    },
+    {
+      "page_number": 3,
+      "markdown": "respectueuses et s'y épanouir ? Comment trouver sa place dans la société, y être libre et responsable?\nLe programme invite à ne pas limiter l'actualité d'une question aux seules références ou exemples contemporains. L'enseignement scolaire permet en effet, à travers l'étude d'œuvres parfois éloignées dans le temps et l'examen d'une grande diversité de documents, de considérer les permanences et les variations des questions qui se sont posées et se posent encore à l'humanité, dans la diversité de son histoire et de ses cultures. L'éducation à la sexualité se nourrit d'une culture générale et civique, qu'elle contribue en retour à alimenter.\n\nL'éducation à la sexualité nécessite un ajustement à l'âge et à la maturité des élèves. Elle se construit en deux étapes successives : une «éducation à la vie affective et relationnelle» pour l'école maternelle et l'école élémentaire, une «éducation à la vie affective et relationnelle, et à la sexualité » pour le collège et le lycée.\n\nDans le premier degré (école maternelle et élémentaire), elle prend la forme d'une éducation à la vie affective et relationnelle axée sur le développement de l'enfant et des relations sociales. Elle aide les enfants à comprendre les transformations de leur propre corps et celui des autres, à développer le respect de l'intimité et des droits de chaque personne, et à poser les bases d'une citoyenneté éclairée.\n\nDans le second degré (collège et lycée), l'éducation à la sexualité, qui vient en complément de la vie affective et relationnelle, apporte des informations adaptées à l'âge des élèves sur leur santé, leurs droits, et les comportements ou relations responsables. Au-delà de la prévention et de l'information, elle propose un parcours progressif visant l'épanouissement personnel et relationnel, tout en cultivant une réflexion sur les dimensions affectives, sociales et culturelles de la sexualité.\n\nLa sexualité requiert un degré de maturité et de responsabilité auquel il s'agit de préparer les élèves, progressivement, en respectant leur rythme de développement et en tenant compte des expériences auxquelles ils sont confrontés. Une attention particulière est accordée aux élèves à besoins éducatifs particuliers, notamment aux élèves en situation de handicap, afin de les inclure dans le travail collectif de sensibilisation et de réflexion.\n\nL'éducation à la sexualité, par son programme qui associe sensibilisation, savoirs et réflexion, doit être pensée et mise en œuvre de manière interdisciplinaire et pluriprofessionnelle, aussi bien dans le premier degré que dans le second degré. Les professeurs en ont la responsabilité première. Elle peut être mise en œuvre en coresponsabilité avec les personnels éducatifs, sociaux et de santé de l'éducation nationale qui jouent un rôle essentiel par leur expertise propre.\n\nLes professeurs conçoivent et organisent collégialement la mise en œuvre pédagogique de cette éducation sous le pilotage et avec le soutien des directeurs d'école ou des chefs d'établissement, garants de la mise en œuvre effective de cet enseignement et de ses principes. Les corps d'inspection et les personnels sociaux et de santé apportent leur conseil en tant que de besoin. L'éducation à la sexualité est inscrite au projet d'école ou d'établissement. Les équipes tiennent compte des besoins identifiés des élèves.",
+      "text": "",
+      "dimensions": {
+        "dpi": 200,
+        "height": 2339,
+        "width": 1654
+      },
+      "images": [],
+      "index": 2,
+      "model_computed_fields": {},
+      "model_config": {
+        "populate_by_name": true,
+        "arbitrary_types_allowed": true,
+        "protected_namespaces": "()",
+        "validate_by_alias": true,
+        "validate_by_name": true
+      },
+      "model_extra": null,
+      "model_fields": {
+        "index": "annotation=int required=True",
+        "markdown": "annotation=str required=True",
+        "images": "annotation=List[OCRImageObject] required=True",
+        "dimensions": "annotation=Nullable[mistralai.models.ocrpagedimensions.OCRPageDimensions] required=True"
+      },
+      "model_fields_set": "{'index', 'markdown', 'images', 'dimensions'}"
+    },
+    {
+      "page_number": 4,
+      "markdown": "Des partenaires extérieurs, tels que des associations spécialisées, dont les compétences sont dûment reconnues et agréées aux niveaux national ou académique, peuvent être associés aux équipes de personnels de l'éducation nationale. L'intervention d'associations agréées et d'institutions partenaires, lorsqu'elle a lieu, est systématiquement anticipée, préparée et coordonnée avec un ou plusieurs membres de l'équipe éducative ; elle s'effectue toujours en leur présence. Sous la responsabilité pédagogique de l'équipe éducative et sous la responsabilité du chef d'établissement, les intervenants extérieurs respectent la nature scolaire de cette éducation, sans jamais l'instrumentaliser et en promouvant le respect et l'égalité.\n\nDans leurs démarches pédagogique et éducative, les professeurs et les personnels éducatifs, sociaux et de santé en charge de ce programme sont garants du respect du Code de l'éducation, notamment des principes de neutralité, de laïcité, de la liberté des élèves et de la prise en compte de la singularité de leur parcours de vie.\n\nEn complément des séances collectives d'éducation à la sexualité, les personnels sociaux et de santé de l'éducation nationale peuvent proposer aux élèves qui en auraient besoin des consultations individuelles. Ces consultations peuvent en effet contribuer au repérage et à la prévention des violences sexuelles.\n\n# Organisation et mise en œuvre \n\n## $\\rightarrow$ Organisation du programme\n\nLe programme repose sur trois principes: I'unité, la progressivité, la complémentarité. L'unité du programme repose sur trois axes communs à l'ensemble des niveaux et des moments d'enseignement :\n\n- se connaître, vivre et grandir avec son corps ;\n- rencontrer les autres et construire avec eux des relations, s'y épanouir ;\n- trouver sa place dans la société, y être libre et responsable.\n\nSe connaître, vivre et grandir avec son corps\n\nRencontrer les autres et construire des relations, s'y épanouir\n\nTrouver sa place dans la société, y être libre et responsable",
+      "text": "",
+      "dimensions": {
+        "dpi": 200,
+        "height": 2339,
+        "width": 1654
+      },
+      "images": [],
+      "index": 3,
+      "model_computed_fields": {},
+      "model_config": {
+        "populate_by_name": true,
+        "arbitrary_types_allowed": true,
+        "protected_namespaces": "()",
+        "validate_by_alias": true,
+        "validate_by_name": true
+      },
+      "model_extra": null,
+      "model_fields": {
+        "index": "annotation=int required=True",
+        "markdown": "annotation=str required=True",
+        "images": "annotation=List[OCRImageObject] required=True",
+        "dimensions": "annotation=Nullable[mistralai.models.ocrpagedimensions.OCRPageDimensions] required=True"
+      },
+      "model_fields_set": "{'index', 'markdown', 'images', 'dimensions'}"
+    },
+    {
+      "page_number": 5,
+      "markdown": "Les contenus et les modalités des séances sont progressifs et adaptés à l'âge et à la maturité des élèves :\n\n- les objectifs d'apprentissage sont différenciés pour tenir compte du niveau de maturité et de connaissance des élèves ;\n- les notions et compétences sont reprises à divers endroits du programme pour permettre des approfondissements ou des changements de perspective, dans le cadre d'une construction spiralaire des savoirs et des savoir-faire adaptée à l'âge des élèves.\n\nL'éducation à la sexualité est mise en œuvre, pour chaque niveau, au travers d'au moins trois séances annuelles spécifiques obligatoires, mais aussi lors de temps d'apprentissages déployés à partir des autres enseignements, aussi bien dans le premier degré que dans le second. Les différentes séances et séquences sont complémentaires et constituent un ensemble annuel cohérent. Les liens avec les programmes disciplinaires comme avec les éducations transversales sont explicités dans des ressources d'accompagnement publiées sur Éduscol. Ils constituent autant de prolongements ou de compléments aux trois séances spécifiques obligatoires. Chaque séance est dotée de contenus didactiques et pédagogiques propres qui permettent, à travers la mise en œuvre de démarches et d'activités, l'acquisition des notions et compétences visées.\n\nLes modalités didactiques et pédagogiques sont placées sous la responsabilité des équipes pédagogiques, qui les ajustent aux situations et besoins particuliers. Le programme est articulé avec le parcours éducatif de santé et d'autres dispositifs de l'établissement tels que le programme de lutte contre le harcèlement à l'école. En complément des trois séances spécifiques obligatoires, conformément au Code de l'éducation (article L. 312-16), des temps dévolus à des évènements particuliers, des heures de vie de classe, des projets engageant une ou plusieurs classes, des heures de projet d'éducation à la citoyenneté au cycle 4 peuvent aussi être mis en place.\n\n# $\\rightarrow$ Mise en œuvre des séances spécifiques obligatoires \n\nLe premier degré intègre les éléments de programme dans les formes d'organisation qui lui sont propres. Au collège et au lycée, où le fonctionnement par séances paraît le plus approprié, une durée d'environ deux heures semble adéquate pour que les éléments du programme soient présentés et travaillés et que les élèves puissent se les approprier. Les séances donnent toute leur place à des modalités participatives qui permettent à chaque élève de s'exprimer, de poser des questions et d'écouter les autres. Elles permettent d'accueillir les questions et demandes des élèves et de faire place à leur parole.\n\nLa programmation et l'organisation de temps ou de séances (contenus, créneaux mobilisés, articulations interdisciplinaires, intervenants, etc.) sont préparées par les personnels responsables des séances spécifiques et présentées dans le cadre des conseils des maîtres et de cycles pour le premier degré et dans le cadre du conseil pédagogique pour le second degré, en dialogue avec le comité d'éducation à la santé, à la citoyenneté et à l'environnement (CESCE). Les notions et compétences associées sont travaillées de façon équilibrée dans les séances spécifiques et dans les contenus disciplinaires qui s'y prêtent. Les parents d'élèves sont informés des objectifs d'apprentissage annuels de cette éducation.",
+      "text": "",
+      "dimensions": {
+        "dpi": 200,
+        "height": 2339,
+        "width": 1654
+      },
+      "images": [],
+      "index": 4,
+      "model_computed_fields": {},
+      "model_config": {
+        "populate_by_name": true,
+        "arbitrary_types_allowed": true,
+        "protected_namespaces": "()",
+        "validate_by_alias": true,
+        "validate_by_name": true
+      },
+      "model_extra": null,
+      "model_fields": {
+        "index": "annotation=int required=True",
+        "markdown": "annotation=str required=True",
+        "images": "annotation=List[OCRImageObject] required=True",
+        "dimensions": "annotation=Nullable[mistralai.models.ocrpagedimensions.OCRPageDimensions] required=True"
+      },
+      "model_fields_set": "{'index', 'markdown', 'images', 'dimensions'}"
+    },
+    {
+      "page_number": 6,
+      "markdown": "# $\\rightarrow$ La place des compétences psychosociales dans le cadre des séances d'éducation à la vie affective et relationnelle, et à la sexualité \n\nLes compétences psychosociales (CPS) constituent une des composantes du programme. Elles regroupent des compétences cognitives, émotionnelles et sociales qui permettent d'améliorer les relations à soi et aux autres. Les compétences spécifiques à acquérir sont précisées dans les tableaux suivants, et leur formulation tient toujours compte du contexte et des exigences proprement scolaires.\n\n## $\\rightarrow$ Parcours de l'élève\n\nL'éducation à la vie affective et relationnelle (école primaire) et à la vie affective et relationnelle, et à la sexualité (collège et lycée) se déploie de manière progressive de l'école maternelle jusqu'aux classes du lycée. Pour chaque niveau, les trois axes du programme (se connaître, vivre et grandir avec son corps ; rencontrer les autres et construire avec eux des relations, s'y épanouir ; trouver sa place dans la société, y être libre et responsable) sont explorés à travers des objectifs d'apprentissage déclinés en notions et compétences. Des propositions de démarches et d'activités pour les séances spécifiques d'éducation à la sexualité y sont associées. Elles constituent des propositions ouvertes et non prescriptives qu'il convient de compléter et d'ajuster en fonction du contexte de l'établissement et des besoins repérés ou exprimés des élèves. Sans que cela ne revête un caractère obligatoire, la coanimation, notamment avec les personnels de santé et sociaux, est à privilégier pour ces séances spécifiques.\n\n## Programme d'éducation à la vie affective et relationnelle pour l'école maternelle\n\nÀ l'école maternelle, l'éducation à la vie affective et relationnelle se développe à partir de la considération du corps, des sentiments et des émotions, du respect de l'intimité et de l'égalité entre les filles et les garçons. L'ensemble des activités et des apprentissages inscrits dans le programme permet aux élèves de découvrir les conditions élémentaires du respect de soi et des autres. Il s'agit de sensibiliser les élèves aux exigences complémentaires de liberté, d'égalité et de respect et de leur permettre de prendre progressivement connaissance d'eux-mêmes, de s'épanouir dans leurs relations avec les autres, notamment en développant leurs compétences psychosociales. Pour mettre en œuvre le programme d'éducation à la vie affective et relationnelle, l'équipe éducative peut s'appuyer sur le quotidien de la classe et sur les activités qu'ils ont l'habitude de mener. Une coanimation des séances est possible avec un autre membre de l'équipe éducative. Une attention soutenue est donnée au repérage d'enfants en danger, et plus largement à la protection de l'enfance.\n\n## Programme d'éducation à la vie affective et relationnelle pour l'école élémentaire\n\nLe travail conduit à l'école élémentaire prend appui sur les acquis du cycle 1, notamment pour ce qui concerne la découverte du corps et des principales émotions, la compréhension et le respect de l'intimité corporelle, la découverte des règles et des principes de la vie en groupe et en société. Les équipes enseignantes responsables des cycles 2 et 3, le cas échéant en coanimation avec les personnels sociaux et de santé de l'éducation nationale, apportent aux élèves des connaissances scientifiques plus précises sur leur corps et leurs émotions. Les",
+      "text": "",
+      "dimensions": {
+        "dpi": 200,
+        "height": 2339,
+        "width": 1654
+      },
+      "images": [],
+      "index": 5,
+      "model_computed_fields": {},
+      "model_config": {
+        "populate_by_name": true,
+        "arbitrary_types_allowed": true,
+        "protected_namespaces": "()",
+        "validate_by_alias": true,
+        "validate_by_name": true
+      },
+      "model_extra": null,
+      "model_fields": {
+        "index": "annotation=int required=True",
+        "markdown": "annotation=str required=True",
+        "images": "annotation=List[OCRImageObject] required=True",
+        "dimensions": "annotation=Nullable[mistralai.models.ocrpagedimensions.OCRPageDimensions] required=True"
+      },
+      "model_fields_set": "{'index', 'markdown', 'images', 'dimensions'}"
+    },
+    {
+      "page_number": 7,
+      "markdown": "élèves apprennent à identifier des adultes de confiance et ils découvrent également différents types de familles. Les professeurs et les autres personnels en charge des séances veillent à I'utilisation d'un vocabulaire précis, scientifique.\n\nÀ partir du cycle 3, étant donné les changements induits par la puberté et le passage progressif de l'enfance à l'adolescence, l'éducation à la vie affective et relationnelle apporte aux élèves les éléments de connaissance et de réflexion leur permettant d'appréhender de manière éclairée les changements qu'ils constatent et éprouvent, tant pour ce qui concerne leur propre corps que celui des autres. Cette éducation poursuit un objectif de prévention, notamment dans le cadre de la lutte contre les violences sexistes et sexuelles ; elle vise également à doter les élèves de compétences et de connaissances qui leur permettent de vivre leur vie affective et relationnelle de façon libre, responsable, respectueuse et épanouissante.\n\nProgramme d'éducation à la vie affective et relationnelle, et à la sexualité pour le collège Le passage de l'enfance à l'adolescence occasionne pour les élèves du collège des changements majeurs, à la fois physiques, physiologiques et psychologiques. Si les changements du corps et de la personnalité sont sources d'explorations et d'expériences nouvelles, tant dans le rapport à soi que dans le rapport aux autres, ils peuvent être sources d'interrogations, d'inquiétudes voire de mises en danger. Dans une École qui adopte pleinement les principes de respect, de libre choix, d'égalité et d'inclusion, l'éducation à la vie affective, relationnelle, et à la sexualité fournit aux élèves de collège des connaissances, des repères culturels, ainsi que des outils de sensibilisation et de réflexion, pour les aider à comprendre et à vivre sereinement les changements qu'ils traversent. La notion de sexualité est progressivement appréhendée dans l'ensemble de ses implications. L'information des élèves comporte une approche positive de la sexualité de même que la prévention des risques.\nLes questionnements déployés pendant les séances sont autant d'occasions pour inviter les élèves à des démarches créatives, associant notamment les lettres, les arts, les sports, et pour nouer des liens avec les autres parcours éducatifs.\n\n# Programme d'éducation à la vie affective et relationnelle, et à la sexualité pour les classes du lycée général et technologique, du lycée professionnel et pour les classes préparant au certificat d'aptitude professionnelle (CAP) \n\nAu lycée, la dimension réflexive et critique est approfondie par l'étude de réalités ou de situations plus complexes. Le programme invite à la fois au développement de connaissances plus précises et à l'approfondissement de la capacité de questionnement des élèves, au bénéfice de leur maturité personnelle et de leur citoyenneté.\nCes progressions s'appuient sur les acquis antérieurs des années de collège. Les questions et les connaissances travaillées durant le cursus peuvent désormais, compte tenu de l'âge et de la culture des élèves, faire l'objet d'une réflexion plus approfondie, parcourant tout le spectre de la vie affective, relationnelle et de la sexualité dans ses enjeux personnels et interpersonnels ainsi que dans ses enjeux sociaux et politiques et dans leur dimension citoyenne.\nAu lycée général, technologique et professionnel, la classe de seconde explore les tensions entre l'intime et le social ; la classe de première invite à considérer les conduites, les tentations, les plaisirs et les risques ; la classe de terminale rassemble les acquis permettant",
+      "text": "",
+      "dimensions": {
+        "dpi": 200,
+        "height": 2339,
+        "width": 1654
+      },
+      "images": [],
+      "index": 6,
+      "model_computed_fields": {},
+      "model_config": {
+        "populate_by_name": true,
+        "arbitrary_types_allowed": true,
+        "protected_namespaces": "()",
+        "validate_by_alias": true,
+        "validate_by_name": true
+      },
+      "model_extra": null,
+      "model_fields": {
+        "index": "annotation=int required=True",
+        "markdown": "annotation=str required=True",
+        "images": "annotation=List[OCRImageObject] required=True",
+        "dimensions": "annotation=Nullable[mistralai.models.ocrpagedimensions.OCRPageDimensions] required=True"
+      },
+      "model_fields_set": "{'index', 'markdown', 'images', 'dimensions'}"
+    },
+    {
+      "page_number": 8,
+      "markdown": "à l'élève d'appréhender la sexualité en jeune adulte responsable, respectueux de sa propre liberté comme de celle des autres. Pour les classes préparant au certificat d'aptitude professionnelle (CAP), ces notions sont adaptées pour être abordées de manière progressive sur deux années au lieu de trois.\n\n# $\\rightarrow$ Objectifs d'apprentissage pour chaque niveau \n\n| Niveaux | Se connaître, vivre et grandir avec son corps | Rencontrer les autres et construire des relations, s'y épanouir | Trouver sa place dans la société, y être libre et responsable |\n| :--: | :--: | :--: | :--: |\n| À aborder avant 4 ans | Connaître son corps. Comprendre ce qu'est l'intimité. | Apprendre à exprimer son accord ou son refus, apprendre à envisager et à respecter un refus. | Appréhender et comprendre l'égalité entre les filles et les garçons et la liberté d'être soi-même. |\n| À partir de 4 ans ou dès que les apprentissages précédents ont pu être observés | Connaître son corps et identifier des émotions. | Identifier une personne de confiance (adulte, enfant), apprendre à faire appel à eux. | Vivre l'égalité entre les filles et les garçons. Découvrir les différentes structures familiales et les respecter. |\n| À partir de 5 ans ou dès que les apprentissages précédents ont pu être observés | Connaître son corps, ses sensations et ses émotions. | Identifier différents types de sentiments dans sa relation à l'autre. | Découvrir les ressemblances et les différences entre les autres et soi, respecter les autres dans leur différence ; être respecté par eux. |\n| CP | Connaître son corps. Comprendre ce qu'est l'intimité. | Comprendre la diversité des émotions et des sentiments : les siens et ceux des autres. | Appartenir à une famille, comprendre la nature, la fonction et le sens des liens familiaux. |\n| CE1 | Grandir, avoir une bonne connaissance et estime de soi, protéger son intimité. | Comprendre les différentes dimensions (affectives, éthiques, sociales et légales) d'une relation humaine. | Promouvoir des relations égalitaires, repérer des discriminations issues de stéréotypes, notamment de genre. |\n| CE2 | Se sentir bien dans son corps et en prendre soin. | Comprendre ce qu'est le consentement, les différentes manières de le solliciter et de l'exprimer ou d'accepter et de respecter un refus. | Connaître ses droits. |\n| CM1 | Connaître les changements de son corps. | Apprendre à développer des relations constructives et à repérer les situations de harcèlement. | Promouvoir des relations égalitaires et positives ; comprendre les stéréotypes pour lutter contre les discriminations. |",
+      "text": "",
+      "dimensions": {
+        "dpi": 200,
+        "height": 2339,
+        "width": 1654
+      },
+      "images": [],
+      "index": 7,
+      "model_computed_fields": {},
+      "model_config": {
+        "populate_by_name": true,
+        "arbitrary_types_allowed": true,
+        "protected_namespaces": "()",
+        "validate_by_alias": true,
+        "validate_by_name": true
+      },
+      "model_extra": null,
+      "model_fields": {
+        "index": "annotation=int required=True",
+        "markdown": "annotation=str required=True",
+        "images": "annotation=List[OCRImageObject] required=True",
+        "dimensions": "annotation=Nullable[mistralai.models.ocrpagedimensions.OCRPageDimensions] required=True"
+      },
+      "model_fields_set": "{'index', 'markdown', 'images', 'dimensions'}"
+    },
+    {
+      "page_number": 9,
+      "markdown": "| CM2 | Connaître et comprendre les changements de son corps et celui des autres. | Promouvoir des relations positives, apprendre à repérer et se protéger des violences sexistes et sexuelles. | Prévenir les risques liés à l'usage du numérique et d'Internet. |\n| :--: | :--: | :--: | :--: |\n| Sixième | Comprendre et apprendre à vivre les changements de son corps. | Entrer en relation avec les autres et comprendre que les relations peuvent changer. | Trouver sa place au sein d'un groupe sans renier ses propres sentiments, respecter les autres et en être respecté. |\n| Cinquième | Développer librement sa personnalité sans se sentir obligé ou contraint. | Choisir ses relations : connaître et assumer ses préférences, comprendre qu'elles peuvent évoluer. | Distinguer vie publique et vie privée, en réfléchissant à ce que signifie la liberté individuelle, en particulier sur les réseaux sociaux. |\n| Quatrième | Aborder la sexualité comme une réalité complexe pouvant faire intervenir le plaisir, I'amour, la reproduction, etc. | Développer une compréhension critique et respectueuse des relations interpersonnelles et des enjeux associés à la sexualité ; favoriser des choix responsables et protecteurs en matière de santé sexuelle et relationnelle. | Étudier des représentations de la sexualité dans l'espace public et en examiner leur dimension égalitaire ou inégalitaire. |\n| Troisième | Interroger les liens entre bonheur, émotions et sexualité. | Construire une relation réciproque et égalitaire; savoir reconnaître et caractériser des contextes de danger et de vulnérabilité. | Inscrire la sexualité dans la définition et le respect des droits humains. |\n| Seconde | Prendre soin de son corps et développer une image positive de soi. | Reconnaître et comprendre ses émotions, ses sentiments et ceux des autres. | Se protéger et protéger les autres : I'intimité à l'ère des réseaux sociaux. |\n| Première | Faire des choix en restant maître de soi et attentif à sa santé. | Désirer et vouloir, donner ou refuser son consentement, savoir être libre et respecter les autres et leurs propres libertés. | Être soi, entre acceptation et déni. |\n| Terminale | Reconnaître ses émotions et ses désirs pour mieux se connaître. | S'épanouir dans une relation équilibrée à l'autre. | Être libre d'être soi parmi les autres et réfléchir aux conditions sociales garantissant cette liberté. |\n| Première année de CAP | Prendre soin de son corps et développer une image positive de soi. | Reconnaître et comprendre ses émotions, ses sentiments, et ceux des autres ; donner ou refuser son consentement. | Se protéger et protéger les autres : I'intimité à l'ère des réseaux sociaux. |\n| Deuxième année de CAP | Se connaître, rester maître de soi. | S'épanouir dans une relation équilibrée à l'autre. | Être libre d'être soi parmi les autres et réfléchir aux conditions sociales garantissant cette liberté. |",
+      "text": "",
+      "dimensions": {
+        "dpi": 200,
+        "height": 2339,
+        "width": 1654
+      },
+      "images": [],
+      "index": 8,
+      "model_computed_fields": {},
+      "model_config": {
+        "populate_by_name": true,
+        "arbitrary_types_allowed": true,
+        "protected_namespaces": "()",
+        "validate_by_alias": true,
+        "validate_by_name": true
+      },
+      "model_extra": null,
+      "model_fields": {
+        "index": "annotation=int required=True",
+        "markdown": "annotation=str required=True",
+        "images": "annotation=List[OCRImageObject] required=True",
+        "dimensions": "annotation=Nullable[mistralai.models.ocrpagedimensions.OCRPageDimensions] required=True"
+      },
+      "model_fields_set": "{'index', 'markdown', 'images', 'dimensions'}"
+    },
+    {
+      "page_number": 10,
+      "markdown": "# $\\rightarrow$ Objectifs d'apprentissage par axe du programme et par niveau \n\n| Niveaux | Se connaître, vivre et grandir avec son corps | Rencontrer les autres et construire des relations, s'y épanouir | Trouver sa place dans la société, y être libre et responsable |\n| :--: | :--: | :--: | :--: |\n| Sixième | - Comprendre et apprendre à vivre les changements de son corps. | - Entrer en relation avec les autres et comprendre que les relations peuvent changer. | - Trouver sa place au sein d'un groupe sans renier ses propres sentiments, respecter les autres et en être respecté. |\n| Cinquième | - Développer librement sa personnalité sans se sentir obligé ou contraint. | - Choisir ses relations : connaître et assumer ses préférences, comprendre qu'elles peuvent évoluer. | - Distinguer vie publique et vie privée, en réfléchissant à ce que signifie la liberté individuelle, en particulier sur les réseaux sociaux. |\n| Quatrième | - Aborder la sexualité comme une réalité complexe pouvant faire intervenir le plaisir, l'amour, la reproduction, etc. | - Développer une compréhension critique et respectueuse des relations interpersonnelles et des enjeux associés à la sexualité ; favoriser des choix responsables et protecteurs en matière de santé sexuelle et relationnelle. | - Étudier des représentations de la sexualité dans l'espace public et en examiner la dimension égalitaire ou inégalitaire. |\n| Troisième | - Interroger les liens entre bonheur, émotions et sexualité. | - Construire une relation réciproque et égalitaire; savoir reconnaître et caractériser des contextes de danger et de vulnérabilité. | - Inscrire la sexualité dans la définition et le respect des droits humains. |\n\n## $\\rightarrow$ Sixième\n\nLes trois séances spécifiques doivent aborder l'ensemble des objectifs d'apprentissage et des notions et compétences associées.\n\nSe connaître, vivre et grandir avec son corps\nObjectif d'apprentissage : Comprendre et apprendre à vivre les changements de son corps.\n\n| Notions et compétences | Propositions de démarches et d'activités pour les séances spécifiques |\n| :--: | :--: |\n| - Connaître les changements induits par la puberté. | - Réfléchir collectivement, en s'appuyant sur des textes scientifiques et le programme des sciences et technologie : <br> - autour du mot «puberté » et ce qu'il peut signifier ; |",
+      "text": "",
+      "dimensions": {
+        "dpi": 200,
+        "height": 2339,
+        "width": 1654
+      },
+      "images": [],
+      "index": 9,
+      "model_computed_fields": {},
+      "model_config": {
+        "populate_by_name": true,
+        "arbitrary_types_allowed": true,
+        "protected_namespaces": "()",
+        "validate_by_alias": true,
+        "validate_by_name": true
+      },
+      "model_extra": null,
+      "model_fields": {
+        "index": "annotation=int required=True",
+        "markdown": "annotation=str required=True",
+        "images": "annotation=List[OCRImageObject] required=True",
+        "dimensions": "annotation=Nullable[mistralai.models.ocrpagedimensions.OCRPageDimensions] required=True"
+      },
+      "model_fields_set": "{'index', 'markdown', 'images', 'dimensions'}"
+    },
+    {
+      "page_number": 11,
+      "markdown": "- Comprendre que la puberté est une composante de l'adolescence, qui entraîne des changements physiques, physiologiques, psychologiques et affectifs, et savoir que ces changements se produisent selon des rythmes différents pour chaque individu.\n- Savoir que les menstruations (règles) douloureuses nécessitent une consultation médicale.\n- à la diversité des rythmes biologiques des individus: le passage de l'enfance à l'adolescence suit-il un rythme unique ? Est-ce un modèle unique ? Quelle place y a-t-il pour la singularité ? ;\n- autour des changements induits par la puberté dans ses différentes dimensions (biologique, psychoaffective, morale, socioculturelle, relationnelle) et de leur diversité ; - sur la manière de trouver des informations, fiables et adaptées à son âge, au sujet de la puberté ; - à des comportements et moyens qui aident à se sentir à l'aise avec les effets et conséquences des transformations corporelles, tout particulièrement les menstruations (règles).\n- Observer et analyser la diversité des représentations du corps sexué à partir d'œuvres artistiques (peinture, sculpture, etc.) ou littéraires (anciennes ou contemporaines) et prendre conscience du fait que chaque personne a un corps singulier et qu'il existe des différences en termes de taille, de morphologie et de fonctionnement.\n- Porter un regard bienveillant sur soi : nommer ses forces et ses qualités.\n\n\n# Rencontrer les autres et construire des relations, s'y épanouir \n\nObjectif d'apprentissage : Entrer en relation avec les autres et comprendre que les relations peuvent changer.\n\n## Notions et compétences\n\n- Caractériser le contexte, la nature et les enjeux d'une relation interpersonnelle : indifférence/intérêt ; familiarité/altérité ; sympathie/antipathie ; attirance/répulsion. - Savoir penser de façon critique : reconnaître les influences positives et négatives des pairs sur les décisions et les comportements à l'adolescence. - Connaître, en particulier dans l'usage des outils numériques, le cadre légal qui vise à protéger la vie privée et respecter l'intimité de tout individu et la dimension éthique qui le sous-tend.\n- Développer des relations constructives : développer des liens sociaux.\n\n\n## Propositions de démarches et d'activités pour les séances spécifiques\n\n- À partir d'un atelier de photolangage ou d'exemples fictifs de témoignages, identifier les composantes des différentes relations interpersonnelles (par exemple, la confiance, l'échange, le respect, le soutien, l'empathie, la solidarité) et montrer comment elles peuvent être exprimées.\n- Analyser une liste de messages circulant dans les réseaux sociaux et impliquant la considération du corps des autres (messages adaptés à l'âge de 11-12 ans) et inviter les élèves :\n- à jouer un rôle de modérateur en argumentant leurs décisions;\n- à identifier ce qu'il convient de faire si l'on est victime ou témoin de cyberharcèlement (identifier des adultes de confiances, dans l'établissement et en dehors, à qui en parler ; s'adresser à des structures ou services d'aide : 119, 3018, services de police et de gendarmerie).\n- Décrire une situation de harcèlement selon plusieurs points de vue en décrivant les émotions ressenties par les différents protagonistes.",
+      "text": "",
+      "dimensions": {
+        "dpi": 200,
+        "height": 2339,
+        "width": 1654
+      },
+      "images": [],
+      "index": 10,
+      "model_computed_fields": {},
+      "model_config": {
+        "populate_by_name": true,
+        "arbitrary_types_allowed": true,
+        "protected_namespaces": "()",
+        "validate_by_alias": true,
+        "validate_by_name": true
+      },
+      "model_extra": null,
+      "model_fields": {
+        "index": "annotation=int required=True",
+        "markdown": "annotation=str required=True",
+        "images": "annotation=List[OCRImageObject] required=True",
+        "dimensions": "annotation=Nullable[mistralai.models.ocrpagedimensions.OCRPageDimensions] required=True"
+      },
+      "model_fields_set": "{'index', 'markdown', 'images', 'dimensions'}"
+    },
+    {
+      "page_number": 12,
+      "markdown": "# Trouver sa place dans la société, y être libre et responsable \n\nObjectif d'apprentissage : Trouver sa place au sein d'un groupe sans renier ses propres émotions, respecter les autres et être respecté.\n\n## Notions et compétences\n\n- Étudier les fonctionnements sociaux : - en différenciant : règles, normes, modèles et stéréotypes ;\n- en interrogeant les normes sociales et culturelles et en analysant leurs impacts ; - en considérant les processus de hiérarchisation ou d'exclusion (réelle ou symbolique) à l'œuvre au sein des groupes d'appartenance.\n- Comprendre ce que signifie, à la puberté, la liberté d'être soi-même et le devoir de respect des autres.\n- Développer des relations fondées sur l'acceptation des autres dans leur diversité, la collaboration, la coopération, l'entraide.\n\n\n## Propositions de démarches et d'activités pour les séances spécifiques\n\n- Réfléchir à l'organisation et à l'utilisation des espaces du collège : les stéréotypes ont-ils une répercussion négative et inégalitaire ? Proposer des stratégies pour une organisation et une utilisation plus égalitaire des espaces partagés.\n- Réfléchir de façon argumentée : «être à l'aise», ou « ne pas être à l'aise», lorsqu'on se trouve au milieu des autres. À quoi cela est-il dû ? Comment agir pour que chacune et chacun se sente mieux ?\n- Identifier et caractériser le lien entre des enjeux individuels de santé et des enjeux collectifs (par exemple, en posant la question de la vaccination comme acte citoyen).\n\n\n## $\\rightarrow$ Cinquième\n\nLes trois séances spécifiques doivent aborder l'ensemble des objectifs d'apprentissage et des notions et compétences associées.\n\n## Se connaître, vivre et grandir avec son corps\n\nObjectif d'apprentissage : Développer librement sa personnalité sans se sentir obligé ou contraint.\n\n## Notions et compétences\n\n- Différencier sexe, genre et orientation sexuelle et respecter leurs diversités.\n- Comprendre comment l'attirance et les sentiments amoureux permettent de prendre conscience de son orientation sexuelle.\n- Comprendre que la diversité des apparences physiques n'empêche pas l'égalité, et réciproquement.\n- Identifier la santé comme un « état complet de bien-être physique, mental et social » (définition de l'Organisation mondiale de la santé).\n- Développer des relations sociales constructives : I'acceptation des autres dans leur diversité.\n\n\n## Propositions de démarches et d'activités pour les séances spécifiques\n\n- En s'appuyant sur des documents scientifiques et les programmes de sciences et technologie, identifier ce qui relève de la détermination du sexe biologique, du genre et de l'orientation sexuelle.\n- Prévenir les discriminations liées au sexe, au genre ou à l'orientation sexuelle.\n- Analyser les notions de santé et de bien-être : par exemple, que signifie « être en bonne santé », «ne pas être en forme», « aller bien», « aller mal » ? Comment différencier un malaise, un trouble, une douleur, une maladie ? Quelles conséquences pratiques en tirer? Comment se faire aider?\n- Analyser les places que la société confère aux femmes et aux hommes, leurs parcours sociaux ou professionnels : sont-ils différenciés, hiérarchisés, choisis, imposés?\n- Déterminer des facteurs qui les influencent positivement et négativement.\n- Étudier des législations nationales et des accords internationaux qui reconnaissent et protègent les droits humains de chaque individu.",
+      "text": "",
+      "dimensions": {
+        "dpi": 200,
+        "height": 2339,
+        "width": 1654
+      },
+      "images": [],
+      "index": 11,
+      "model_computed_fields": {},
+      "model_config": {
+        "populate_by_name": true,
+        "arbitrary_types_allowed": true,
+        "protected_namespaces": "()",
+        "validate_by_alias": true,
+        "validate_by_name": true
+      },
+      "model_extra": null,
+      "model_fields": {
+        "index": "annotation=int required=True",
+        "markdown": "annotation=str required=True",
+        "images": "annotation=List[OCRImageObject] required=True",
+        "dimensions": "annotation=Nullable[mistralai.models.ocrpagedimensions.OCRPageDimensions] required=True"
+      },
+      "model_fields_set": "{'index', 'markdown', 'images', 'dimensions'}"
+    },
+    {
+      "page_number": 13,
+      "markdown": "Rencontrer les autres et construire des relations, s'y épanouir Objectif d'apprentissage : Choisir ses relations ; connaître et assumer ses préférences, comprendre qu'elles peuvent évoluer.\n\n| Notions et compétences | Propositions de démarches et d'activités pour les séances spécifiques |\n| :--: | :--: |\n| - Reconnaître l'importance de la diversité et de la non-discrimination et prendre conscience que chaque individu a droit à la liberté et au respect. <br> - Identifier ce qui caractérise une relation interpersonnelle positive et ce qui caractérise une relation interpersonnelle négative. <br> - Comprendre que tout acte de nature sexuelle non désiré constitue une violence sexuelle. <br> - S'affirmer par le consentement et le refus. <br> - Développer des relations sociales fondées sur l'acceptation des autres dans leur diversité, la collaboration, la coopération, l'entraide. <br> - Prendre conscience que les réseaux sociaux et Internet diffusent des contenus sexuellement explicites, interdits aux personnes mineures, qui peuvent être choquants, violents, peuvent véhiculer des stéréotypes et banaliser des comportements violents. Élaborer des stratégies pour s'en protéger et protéger les autres. | - Discuter de façon argumentée et réflexive : « qu'est-ce qu'une relation respectueuse de l'intimité et de l'intégrité corporelle des personnes ? » <br> - À partir d'exemples dans la littérature ou les médias, définir la notion de consentement et les différentes manières de le solliciter, de l'exprimer, d'exprimer le refus, de reconnaître le consentement, de reconnaître et respecter le refus. Expliquer l'importance du consentement sur la prise de décisions relatives à la sexualité. <br> - À partir de textes de littérature ou d'extraits de film, analyser différentes relations amicales ou amoureuses pour identifier les facteurs positifs de relations agréables et heureuses, et les facteurs venant faire obstacle à de telles relations. <br> - Discuter de façon argumentée et réflexive : qu'est-ce qu'une relation respectueuse de l'intimité des personnes qui entrent en relation ? <br> - Réfléchir sur les conséquences des comportements problématiques et sur la manière de développer des relations positives et constructives. <br> - Analyser des cas simples et concrets (tirés de situations de saisines de la Cnil ou du Défenseur des droits) pour sensibiliser aux questions des données personnelles, du cyberharcèlement et de contenus illégaux. |\n\n# Trouver sa place dans la société, y être libre et responsable \n\nObjectif d'apprentissage : Distinguer vie publique et vie privée, en réfléchissant à la signification de la liberté individuelle, en particulier sur les réseaux sociaux.\n\n## Notions et compétences\n\n- Définir les notions de liberté, de respect et d'égalité concernant le sexe, le genre et l'orientation sexuelle.\n- Identifier des situations de cyberviolences à caractères sexistes et sexuels et leurs effets néfastes.\n- Prendre conscience que chaque individu possède des droits humains (droit à la dignité, droit au respect de sa vie privée, droit à l'image).\n- Savoir comment réagir de manière efficace lorsqu'une personne est victime de harcèlement ou de violences sexistes ou sexuelles (pratiquer une écoute empathique, apporter du soutien solidaire à la victime, signaler les violences). - Prendre conscience que l'utilisation d'Internet et des réseaux sociaux peut entraîner des situations dangereuses ou des infractions à la loi, élaborer des stratégies pour s'en protéger et protéger les autres. - Développer sa capacité d'écoute, I'attention portée aux autres et des relations sociales constructives. - Savoir faire des choix responsables.\n\n\n## Propositions de démarches et d'activités pour les séances spécifiques\n\n- Réfléchir sur les intentions, les pensées, les émotions et les comportements à partir de situations cybersexistes ou cyberviolentes qu'ils auraient pu rencontrer ou connaître.\n- Identifier des personnes de confiance à qui signaler des violences et demander de l'aide, pour soi ou quelqu'un d'autre, prendre connaissance du 3018, le numéro pour les personnes victimes ou témoins d'un cas de harcèlement et/ou de violences numériques.\n- S'inscrire dans une démarche empathique et comprendre où se situe la limite entre l'acceptable et l'inacceptable.\n- Analyser ou rejouer, dans le cadre d'un théâtre forum, certaines saynètes mettant en scène différents protagonistes (victime, agresseur, témoins) pour prendre la mesure des risques et des responsabilités impliquées. - Définir les droits humains en matière de défense contre les discriminations. Se documenter et s'informer sur des législations visant à protéger les droits des individus et à lutter contre les discriminations, en particulier l'article 225-1 du Code pénal.",
+      "text": "",
+      "dimensions": {
+        "dpi": 200,
+        "height": 2339,
+        "width": 1654
+      },
+      "images": [],
+      "index": 12,
+      "model_computed_fields": {},
+      "model_config": {
+        "populate_by_name": true,
+        "arbitrary_types_allowed": true,
+        "protected_namespaces": "()",
+        "validate_by_alias": true,
+        "validate_by_name": true
+      },
+      "model_extra": null,
+      "model_fields": {
+        "index": "annotation=int required=True",
+        "markdown": "annotation=str required=True",
+        "images": "annotation=List[OCRImageObject] required=True",
+        "dimensions": "annotation=Nullable[mistralai.models.ocrpagedimensions.OCRPageDimensions] required=True"
+      },
+      "model_fields_set": "{'index', 'markdown', 'images', 'dimensions'}"
+    },
+    {
+      "page_number": 14,
+      "markdown": "# $\\rightarrow$ Quatrième \n\nLes trois séances spécifiques doivent aborder l'ensemble des objectifs d'apprentissage et des notions et compétences associées.\n\n## Se connaître, vivre et grandir avec son corps\n\n(1) Objectif d'apprentissage : Aborder la sexualité comme une réalité complexe pouvant faire intervenir le plaisir, l'amour, la reproduction, etc.\n\n## Notions et compétences\n\n- Envisager les différents aspects de la sexualité : physique/psychologique ; personnelle/interpersonnelle ; impliquant différentes parties du corps ; faisant l'objet d'une série de représentations et de modèles sociaux pouvant impliquer l'amour, le plaisir, la reproduction.\n- Savoir qu'il existe des personnes intersexes.\n- Envisager la sexualité comme un cheminement personnel singulier et comprendre sa diversité d'expression.\n- Comprendre, identifier, apprendre à gérer ses émotions.\n- Connaître où et comment s'informer ou bénéficier de dépistages ou d'une prise en charge médicale en santé sexuelle (vaccination contre les infections à papillomavirus humains, douleurs gynécologiques, troubles du cycle menstruel, dépistage de l'endométriose, etc.).\n- Développer sa capacité à faire des choix responsables.\n\n\n## Propositions de démarches et d'activités pour les séances spécifiques\n\n- Reconnaître la variété des termes et des niveaux de langue associés à la sexualité et à son expression (vécue, imaginée, objective et scientifique).\n- Repérer les différents sentiments ou les différentes émotions en lien avec la sexualité, ainsi que les manières dont le corps se trouve impliqué et représenté.\n- Apprendre à gérer ses émotions, comprendre leur importance pour développer des relations de qualité et prévenir les violences.\n- Présenter et expliquer les différentes sources d'information sur la santé sexuelle et leur fonctionnement (infirmerie de l'établissement, centres de santé sexuelle de la ville, centres gratuits d'information, de dépistage et de diagnostic.\n\n\n## Rencontrer les autres et construire des relations, s'y épanouir\n\n(1) Objectif d'apprentissage : Développer une compréhension critique et respectueuse des relations interpersonnelles et des enjeux associés à la sexualité ; favoriser des choix responsables et protecteurs en matière de santé sexuelle et relationnelle.\n\n## Notions et compétences\n\n- Définir la notion de relation (échange, don, partage, réciprocité), les positions au sein des groupes d'appartenance, la notion de consentement dans son rapport à la liberté.\n- Connaître les incidences des réseaux sociaux sur les relations et les choix de relations : être ou ne pas être sous le regard des autres ; examiner ce que ce regard des autres apporte à l'affirmation de soi et à la reconnaissance, pourquoi il peut aussi nuire et comment s'en protéger ; identifier les ressources et les comptes favorables ou non au bien-être et à l'estime de soi.\n\nPropositions de démarches et d'activités pour les séances spécifiques\n\n- En étudiant ou en représentant une scène de rencontre amoureuse (en littérature, au cinéma, au théâtre), repérer et analyser les notions de consentement et de plaisir.\n- Repérer et analyser les mécanismes d'emprise et de domination psychologique qui ont pour but de soumettre et contrôler la victime, et qui sont des mécanismes intrinsèques :\n- des violences au sein du couple ;\n- des violences sexuelles de personnes ayant autorité sur un enfant, un adolescent, un adulte (famille, entraîneur sportif, soignant);\n- de l'exploitation sexuelle.\n- Identifier ce qui caractérise un délit et les personnesressources susceptibles d'apporter de l'aide, à partir d'une situation ou d'un témoignage fictif, ou bien d'un témoignage réel déjà exprimé dans l'espace public.",
+      "text": "",
+      "dimensions": {
+        "dpi": 200,
+        "height": 2339,
+        "width": 1654
+      },
+      "images": [],
+      "index": 13,
+      "model_computed_fields": {},
+      "model_config": {
+        "populate_by_name": true,
+        "arbitrary_types_allowed": true,
+        "protected_namespaces": "()",
+        "validate_by_alias": true,
+        "validate_by_name": true
+      },
+      "model_extra": null,
+      "model_fields": {
+        "index": "annotation=int required=True",
+        "markdown": "annotation=str required=True",
+        "images": "annotation=List[OCRImageObject] required=True",
+        "dimensions": "annotation=Nullable[mistralai.models.ocrpagedimensions.OCRPageDimensions] required=True"
+      },
+      "model_fields_set": "{'index', 'markdown', 'images', 'dimensions'}"
+    },
+    {
+      "page_number": 15,
+      "markdown": "- Comprendre les problèmes associés à la diffusion et au commerce des images (des autres ou de soi), à la marchandisation du corps, à l'exploitation sexuelle, à la prostitution des mineurs, savoir comment il est possible de s'en protéger et d'être aidé pour le faire.\n- Comprendre l'importance de prendre des décisions favorables à sa santé et celle des autres, faire des choix responsables : - décision d'avoir ou non un rapport sexuel ; - prévention des infections sexuellement transmissibles (modes de transmission et moyens de protection) ; - prévention des grossesses non prévues et/ ou non désirées (moyens de contraception, interruption volontaire de grossesse).\n- Identifier un adulte de confiance, un lieu, un service d'aide et de soutien à qui s'adresser pour échanger, poser des questions, trouver des informations en lien avec sa santé sexuelle, bénéficier d'un dépistage ou d'une prise en charge médicale ou être aidé en cas de violences sexistes et sexuelles (y compris l'inceste) ou de violences fondées sur des discriminations telles que définies par le Code pénal.\n- Savoir demander de l'aide pour soi ou pour une autre personne.\n- Identifier les situations où le partage d'images ou de documents en ligne est interdit (harcèlement), ainsi que les conséquences de l'utilisation du «like» ou du «j'aime», quelle qu'en soit la forme.\n- Identifier, à partir d'exemples fictifs, des attitudes qui permettent :\n- de reconnaître les risques liés à la diffusion d'images (dont des images qui exposent des corps nus, partiellement nus ou sexualisés) et comment s'en protéger ;\n- d'aider les victimes de cyberviolences sexistes et sexuelles ;\n- d'identifier des adultes de confiance, des autorités et des services disponibles pour aider les victimes (3018 pour les violences numériques et 119 enfance en danger); - de montrer comment réagir de manière efficace lorsque l'on est victime ou témoin de violences ; - d'apprendre à lutter contre les cyberviolences sexistes et sexuelles, notamment en signalant les contenus intimes non consentis diffusés (pornodivulgation), les comptes et les supports destinés à harceler une personne par la diffusion de contenus humiliants.\n\n\n# Trouver sa place dans la société, y être libre et responsable \n\nCe dispositif d'automatologie : Étudier des représentations de la sexualité dans l'espace public et en interroger la dimension égalitaire ou inégalitaire.\n\n## Notions et compétences\n\n- Analyser la notion de norme sociale, de modèle, de stéréotype et réfléchir aux effets induits : intégration, exclusion, socialisation, normalisation.\n- Repérer et expliquer la différence entre des situations ou des représentations égalitaires et d'autres qui ne le sont pas (femmes/hommes ; majorités/minorités).\n- Savoir penser de façon critique.\n- Décrypter les messages et les images de la sexualité dans les médias (explicites et/ou implicites).\n- Comprendre la notion de pornographie, la différencier des contenus érotiques et prendre conscience que la pornographie représente, de manière faussement réaliste et stéréotypée, des actes sexuels dépourvus de toute dimension affective ou sentimentale et souvent violents.\n- Comprendre les raisons de l'interdiction d'accès des mineurs à la pornographie, inscrite dans le Code pénal.\n- Identifier les conséquences de la prostitution sur la santé des victimes et prendre conscience que les réseaux prostitutionnels utilisent les réseaux sociaux pour développer leurs activités illégales.\n\n\n## Propositions de démarches et d'activités pour les séances spécifiques\n\n- Par l'analyse d'images et de spots publicitaires, repérer et analyser la marchandisation des corps, la sexualisation des situations et des corps ainsi que les stéréotypes véhiculés.\n- Analyser les stéréotypes dans une perspective historique pour discuter d'égalité dans la sexualité, à partir d'œuvres littéraires ou artistiques.\n- Réaliser une exposition de sensibilisation des autres collégiens de l'établissement sur les stéréotypes et les questions d'égalité.\n- À partir de témoignages ou d'extraits de reportages, identifier les mécanismes de recrutement des systèmes prostitutionnels (via les réseaux sociaux ou des recruteurs).",
+      "text": "",
+      "dimensions": {
+        "dpi": 200,
+        "height": 2339,
+        "width": 1654
+      },
+      "images": [],
+      "index": 14,
+      "model_computed_fields": {},
+      "model_config": {
+        "populate_by_name": true,
+        "arbitrary_types_allowed": true,
+        "protected_namespaces": "()",
+        "validate_by_alias": true,
+        "validate_by_name": true
+      },
+      "model_extra": null,
+      "model_fields": {
+        "index": "annotation=int required=True",
+        "markdown": "annotation=str required=True",
+        "images": "annotation=List[OCRImageObject] required=True",
+        "dimensions": "annotation=Nullable[mistralai.models.ocrpagedimensions.OCRPageDimensions] required=True"
+      },
+      "model_fields_set": "{'index', 'markdown', 'images', 'dimensions'}"
+    },
+    {
+      "page_number": 16,
+      "markdown": "# $\\rightarrow$ Troisième \n\nLes trois séances spécifiques doivent aborder l'ensemble des objectifs d'apprentissage et des notions et compétences associées.\n\n## Se connaître, vivre et grandir avec son corps\n\nObjectif d'apprentissage : Interroger les liens entre bonheur, émotions et sexualité.\n\n## Notions et compétences\n\n- Définir les notions de désir, d'excitation, de plaisir, de bonheur, ainsi que leurs relations à la sexualité.\n- Faire la différence entre le désir qui fait référence aux imaginations, aux émotions et aux envies, et le comportement qui correspond à des actions qui peuvent être réfléchies et contrôlées ; examiner la part et la place de la liberté dans ces différentes situations.\n- Comprendre que le désir peut ne pas toujours être assouvi.\n- Développer sa capacité à maîtriser ses impulsions, ses émotions et ses sentiments.\n- Prendre conscience que les pratiques de mutilations sexuelles féminines, qui ne touchent pas directement la fonction reproductive et atteignent la fonction de plaisir, de sexualité et de construction de soi des femmes qui en sont victimes, correspondent à une appropriation du corps des femmes et à l'enrayement de leur liberté de choix.\n\n\n## Propositions de démarches et d'activités pour les séances spécifiques\n\n- Réfléchir à la notion de « santé sexuelle».\n- Comprendre comment fonctionnent les émotions et les impulsions pour mieux les gérer. Jouer des saynètes montrant plusieurs manières de réagir à une même situation.\n- Examiner, en s'appuyant sur une œuvre littéraire, artistique, ce que la sexualité peut avoir d'attrayant ou d'exaltant, mais aussi ce qu'elle peut avoir d'inquiétant (et pour quelles raisons).\n- Développer une analyse critique des représentations, parfois fausses ou déformées, associées à la sexualité (par exemple autour de la performance ou de la première fois) ainsi que des idées préconçues sur le genre ou l'orientation sexuelle.\n- S'engager dans des activités interactives, permettant de s'exprimer et d'échanger des points de vue (par exemple la photo-expression).\n- Identifier les conséquences immédiates et durables des mutilations sexuelles, comprendre que ces violences sont enracinées dans les inégalités historiques entre les femmes et les hommes, qu'elles constituent une atteinte aux droits fondamentaux de la personne, qu'elles sont interdites et sévèrement punies par la loi et qu'aucune tradition ne peut justifier de tels actes. Identifier les personnes, les lieux et les services d'aides et de soutien.\n\n\n## Rencontrer les autres et construire des relations, s'y épanouir\n\nObjectif d'apprentissage : Construire une relation réciproque et égalitaire ; savoir reconnaître et caractériser des contextes de danger et de vulnérabilité.\n\n## Notions et compétences\n\n- Distinguer les notions de partage, de consentement, de réciprocité, de frustration ; prendre la mesure des enjeux et des difficultés liés au partage des sensations, des émotions, des plaisirs : par exemple, être d'accord ou pas ; être synchrone ou asynchrone.\n- Analyser la notion de risque, pour soi et pour les autres, aux plans physiques et psychologiques ; faire des choix responsables pour sa santé et celle des autres.\n\n\n## Propositions de démarches et d'activités pour les séances spécifiques\n\n- Repérer et analyser des situations de partage et de réciprocité, mais aussi de non-partage et de frustration; interroger ce qui est en jeu : égalité et liberté dans la relation, et dans le partage (ou non) des désirs ; réaliser une production collective ou individuelle (chanson, poème, scène de théâtre, vidéo) pour partager son analyse.\n- À partir de situations fictives, identifier différents risques ; s'informer sur l'IVG, les moyens de prévention, de protection, de contraception et leurs conditions d'accès ; identifier les ressources dans l'établissement et hors de l'établissement : ressources en ligne, numéro vert «sexualité, contraception, IVG », centres gratuits d'information, de dépistage et de diagnostic. Produire une plaquette ou une affiche d'information et de référencement des ressources locales et nationales à destination d'autres élèves.",
+      "text": "",
+      "dimensions": {
+        "dpi": 200,
+        "height": 2339,
+        "width": 1654
+      },
+      "images": [],
+      "index": 15,
+      "model_computed_fields": {},
+      "model_config": {
+        "populate_by_name": true,
+        "arbitrary_types_allowed": true,
+        "protected_namespaces": "()",
+        "validate_by_alias": true,
+        "validate_by_name": true
+      },
+      "model_extra": null,
+      "model_fields": {
+        "index": "annotation=int required=True",
+        "markdown": "annotation=str required=True",
+        "images": "annotation=List[OCRImageObject] required=True",
+        "dimensions": "annotation=Nullable[mistralai.models.ocrpagedimensions.OCRPageDimensions] required=True"
+      },
+      "model_fields_set": "{'index', 'markdown', 'images', 'dimensions'}"
+    },
+    {
+      "page_number": 17,
+      "markdown": "- Prendre la mesure des risques à prévenir ou à maîtriser s'agissant de la sexualité : - réduction des risques d'infections sexuellement transmissibles (IST), y compris d'infection par le VIH : modes de transmission, moyens de protection, dépistage, prophylaxie préexposition (PrEP), traitement post-exposition au VIH (TPE), vaccination contre les infections à papillomavirus (HPV) ;\n- grossesses non prévues et/ou non désirées : moyens de contraception, tests de grossesse, interruption volontaire de grossesse (IVG).\n- Prendre conscience de la place qu'occupent l'attirance et les sentiments dans une relation.\n- Reconnaître l'importance de donner et d'obtenir le consentement. Apprendre à accepter un refus de la part de l'autre.\n- Prendre conscience que l'usage de substances psychoactives modifie le raisonnement et augmente le risque de prise de décision inappropriée y compris en matière de sexualité.\n- Reconnaître des mécanismes d'emprise et des situations de violences (physiques, psychologiques, verbales, violences sexistes, violences sexuelles, cyberviolences, violences au sein du couple ou non) ; prendre conscience de leurs effets néfastes et de l'importance pour une personne qui en est victime de chercher du soutien.\n- Comprendre que le mariage forcé est une atteinte aux droits humains fondamentaux.\n- Prendre connaissance du cadre juridique (constitution, loi) qui garantit le droit d'accès à l'IVG et connaître les lieux qui permettent d'y avoir accès.\n- Réfléchir à la question de la protection des risques et de son sens pour soi et pour les autres : de quoi, pourquoi, pour qui et comment se protéger ?\n- À partir de situations fictives ou de phrases types (par exemple, « elle/il a dit non, mais elle/il voulait dire oui» ; « elle/il n'a pas dit qu'elle/il n'était pas d'accord»), participer à un débat réflexif pour apprendre à caractériser le consentement.\n- Analyser ce qui peut avoir une influence sur la capacité à reconnaître ou à donner le consentement (par exemple, les substances psychoactives, les situations de violences [telles que l'emprise], les situations de handicap, les situations de domination ou de pouvoir, la soumission chimique).\n- Définir ce qu'est un mariage forcé, décrire les différentes manières de contraindre au mariage ; comprendre qu'il est possible d'échapper à un mariage forcé, que la loi protège les victimes et qu'aucune situation ou tradition ne justifie un mariage forcé ; identifier à qui s'adresser si l'on est victime ou témoin. - Aborder la question des violences conjugales et du féminicide.\n\n\n# Trouver sa place dans la société, y être libre et responsable \n\nO Objectif d'apprentissage : Inscrire la sexualité dans la définition et le respect des droits humains.\n\n## Notions et compétences\n\n- Déterminer le champ des droits et des devoirs en matière de sexualité et comprendre leur raison d'être (principes et valeurs impliquées : égalité entre les femmes et les hommes, entre les orientations sexuelles, droit à la différence). - Caractériser et savoir reconnaître une situation de violence sexuelle (y compris l'inceste), de stigmatisation, de violence ou de discrimination opérée sur le fondement notamment du sexe, de l'orientation sexuelle, de l'identité de genre ou de l'état de santé (article 225-1 du Code pénal) : homophobie et autres.\n- Prendre conscience que les victimes n'en sont jamais responsables et réfléchir aux moyens d'y faire face (soutien aux victimes, capacité à chercher et trouver de l'aide, promotion de l'égalité, éducation).\n\nPropositions de démarches et d'activités pour les séances spécifiques\n\n- Analyser les lois et leurs évolutions rendant compte de l'évolution de la société, prendre conscience des décalages entre principes universels et réalité, en comparant :\n- une situation contemporaine posant problème au regard des lois en vigueur ;\n- une situation plus ancienne à replacer dans un contexte historique antérieur, associé à d'autres éléments légaux, en considérant par exemple, la dépénalisation de l'homosexualité pour les mineurs de plus de 15 ans (France : loi du 4 août 1982), son retrait de la liste des pathologies (OMS : 17 mai 1990).\n- Les situations étudiées peuvent prendre appui sur des films (fiction ou actualité) ou être présentées sous forme de jeu de questions-réponses permettant d'aborder les questions de genre et d'orientation sexuelle en les replaçant dans un contexte historique et légal.\n- Interroger la place des discriminations envers l'orientation sexuelle dans le champ sportif, analyser les processus de conformité à une norme et d'influences au sein des groupes sportifs, proposer des stratégies efficaces pour les prévenir et y mettre fin.",
+      "text": "",
+      "dimensions": {
+        "dpi": 200,
+        "height": 2339,
+        "width": 1654
+      },
+      "images": [],
+      "index": 16,
+      "model_computed_fields": {},
+      "model_config": {
+        "populate_by_name": true,
+        "arbitrary_types_allowed": true,
+        "protected_namespaces": "()",
+        "validate_by_alias": true,
+        "validate_by_name": true
+      },
+      "model_extra": null,
+      "model_fields": {
+        "index": "annotation=int required=True",
+        "markdown": "annotation=str required=True",
+        "images": "annotation=List[OCRImageObject] required=True",
+        "dimensions": "annotation=Nullable[mistralai.models.ocrpagedimensions.OCRPageDimensions] required=True"
+      },
+      "model_fields_set": "{'index', 'markdown', 'images', 'dimensions'}"
+    },
+    {
+      "page_number": 18,
+      "markdown": "- Développer sa capacité d'écoute et l'attention portée aux autres.\n- Mettre en lien le respect des droits humains avec les évolutions de la société, des lois et des politiques publiques.\n- Analyser des situations réelles ou fictives de violences sexistes et de violences sexuelles ; apprendre à les caractériser et les différencier ; identifier des facteurs de vulnérabilité ; réfléchir au rôle actif que toute personne peut jouer pour les prévenir ou les dénoncer.\n- Connaître les numéros d'urgence comme le 119 pour les mineurs.\n- Rédiger des témoignages selon différents points de vue.",
+      "text": "",
+      "dimensions": {
+        "dpi": 200,
+        "height": 2339,
+        "width": 1654
+      },
+      "images": [],
+      "index": 17,
+      "model_computed_fields": {},
+      "model_config": {
+        "populate_by_name": true,
+        "arbitrary_types_allowed": true,
+        "protected_namespaces": "()",
+        "validate_by_alias": true,
+        "validate_by_name": true
+      },
+      "model_extra": null,
+      "model_fields": {
+        "index": "annotation=int required=True",
+        "markdown": "annotation=str required=True",
+        "images": "annotation=List[OCRImageObject] required=True",
+        "dimensions": "annotation=Nullable[mistralai.models.ocrpagedimensions.OCRPageDimensions] required=True"
+      },
+      "model_fields_set": "{'index', 'markdown', 'images', 'dimensions'}"
+    },
+    {
+      "page_number": 19,
+      "markdown": "education.gouv.fr",
+      "text": "",
+      "dimensions": {
+        "dpi": 200,
+        "height": 2339,
+        "width": 1654
+      },
+      "images": [],
+      "index": 18,
+      "model_computed_fields": {},
+      "model_config": {
+        "populate_by_name": true,
+        "arbitrary_types_allowed": true,
+        "protected_namespaces": "()",
+        "validate_by_alias": true,
+        "validate_by_name": true
+      },
+      "model_extra": null,
+      "model_fields": {
+        "index": "annotation=int required=True",
+        "markdown": "annotation=str required=True",
+        "images": "annotation=List[OCRImageObject] required=True",
+        "dimensions": "annotation=Nullable[mistralai.models.ocrpagedimensions.OCRPageDimensions] required=True"
+      },
+      "model_fields_set": "{'index', 'markdown', 'images', 'dimensions'}"
+    }
+  ],
+  "total_pages": 19
+}
