@@ -225,7 +225,7 @@ export default function Assessment() {
                 <p className="text-sm text-muted-foreground">
                   Every question is generated directly from the official French national curriculum.
 Assessments are fully aligned with the required learning objectives and offer a clear view of how well students understand the expected knowledge.
-Their results help teachers follow progress over time and support each student more effectively
+Their results help teachers follow progress over time and support each student more effectively.
                 </p>
               </div>
             </div>
