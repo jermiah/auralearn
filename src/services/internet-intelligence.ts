@@ -87,7 +87,7 @@ const toolImplementations = {
 };
 
 /**
- * Search for teaching strategies using BlackBox AI with Brave Search tool
+ * Search for teaching strategies using Brave Search API via backend
  */
 export async function searchTeachingStrategies(
   studentCategory: StudentCategory,
@@ -95,37 +95,65 @@ export async function searchTeachingStrategies(
 ): Promise<BraveSearchResult[]> {
   const categoryText = studentCategory.replace(/_/g, ' ');
 
-  const prompt = `Search for high-quality educational resources about teaching ${curriculumTopic} to ${categoryText} students.
-
-Find 10-15 results from:
-- Educational websites (edutopia.org, understood.org, teachthought.com)
-- Teaching blogs
-- Research papers (ERIC, academic journals)
-- YouTube teaching videos
-- Teacher resource sites
-
-For each result, I need:
-- Title
-- URL
-- Brief snippet/description
-- Type (article, blog, pdf, video, website)
-- Relevance score (0-1)
-
-Return results as a JSON array.`;
-
   try {
-    const response = await runAgenticLoop(
-      prompt,
-      [braveSearchTool],
-      toolImplementations,
-      'You are a research assistant specialized in finding educational resources. Use the brave_search tool to find relevant teaching materials.'
-    );
+    // Map student category to segment name for Brave Search
+    const segmentMap: Record<StudentCategory, string> = {
+      slow_processing: 'Slow Processing',
+      fast_processor: 'Fast Processor',
+      high_energy: 'High Energy / Needs Movement',
+      visual_learner: 'Visual Learner',
+      logical_learner: 'Logical Learner',
+      sensitive_low_confidence: 'Sensitive / Low Confidence',
+      easily_distracted: 'Easily Distracted',
+      needs_repetition: 'Needs Repetition',
+    };
 
-    // Parse the response to extract search results
-    const results = parseSearchResults(response, categoryText, curriculumTopic);
+    const segment = segmentMap[studentCategory] || categoryText;
+
+    // Call our Python backend service
+    const apiUrl = import.meta.env.VITE_API_URL || 'http://localhost:5000';
+    const response = await fetch(`${apiUrl}/api/teaching-resources/${encodeURIComponent(segment)}`);
+
+    if (!response.ok) {
+      throw new Error(`API returned ${response.status}`);
+    }
+
+    const data = await response.json();
+
+    // Transform the response to match our BraveSearchResult format
+    const results: BraveSearchResult[] = [];
+
+    // Add blog/article results
+    if (data.blogs && Array.isArray(data.blogs)) {
+      data.blogs.forEach((url: string, index: number) => {
+        results.push({
+          title: `Teaching Strategy ${index + 1} for ${segment}`,
+          url,
+          snippet: `Educational resource for teaching ${curriculumTopic} to ${categoryText} students`,
+          type: url.includes('blog') ? 'blog' : 'article',
+          relevanceScore: 0.9 - (index * 0.05),
+        });
+      });
+    }
+
+    // Add YouTube video results
+    if (data.youtube_links && Array.isArray(data.youtube_links)) {
+      data.youtube_links.forEach((url: string, index: number) => {
+        results.push({
+          title: `Video: Teaching ${segment} Students`,
+          url,
+          snippet: `Video tutorial on effective strategies for ${categoryText} learners`,
+          type: 'video',
+          relevanceScore: 0.85 - (index * 0.05),
+        });
+      });
+    }
+
+    console.log(`✅ Found ${results.length} resources from Brave Search API`);
     return results;
+
   } catch (error) {
-    console.error('Error in searchTeachingStrategies:', error);
+    console.error('Error calling Brave Search API, using fallback:', error);
     // Return mock data as fallback
     return mockBraveSearchResults(categoryText, curriculumTopic);
   }
