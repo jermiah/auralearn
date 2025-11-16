@@ -221,10 +221,11 @@ export default function Assessment() {
             <div className="flex items-start gap-3">
               <Sparkles className="w-6 h-6 text-purple-600 flex-shrink-0 mt-1" />
               <div>
-                <h3 className="font-semibold text-lg mb-1">AI-Powered Assessment Generation</h3>
+                <h3 className="font-semibold text-lg mb-1">Curriculum-Aligned Smart Assessments</h3>
                 <p className="text-sm text-muted-foreground">
-                  Questions are dynamically generated using Gemini 2.5 Flash based on your subject ({user?.primary_subject || 'not set'}) 
-                  and grade level ({user?.primary_grade_level || 'not set'}). Each student gets personalized questions.
+                  Every question is generated directly from the official French national curriculum.
+Assessments are fully aligned with the required learning objectives and offer a clear view of how well students understand the expected knowledge.
+Their results help teachers follow progress over time and support each student more effectively
                 </p>
               </div>
             </div>
