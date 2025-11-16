@@ -4,12 +4,30 @@ import { supabase } from '@/lib/supabase';
 
 export type UserRole = 'teacher' | 'parent';
 
+export type SubjectType = 
+  | 'francais'
+  | 'langues_vivantes'
+  | 'arts_plastiques'
+  | 'education_musicale'
+  | 'histoire_des_arts'
+  | 'education_physique_sportive'
+  | 'enseignement_moral_civique'
+  | 'histoire_geographie'
+  | 'sciences_technologie'
+  | 'mathematiques';
+
+export type GradeLevelType = 'CM1' | 'CM2';
+
 export interface UserProfile {
   id: string;
   clerk_id: string;
   email: string;
   role: UserRole;
   full_name?: string;
+  primary_subject?: SubjectType;
+  primary_grade_level?: GradeLevelType;
+  school_name?: string;
+  onboarding_completed?: boolean;
 }
 
 interface AuthContextType {

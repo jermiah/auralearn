@@ -1,13 +1,16 @@
 import { useEffect, useState } from "react";
 import { Card } from "@/components/ui/card";
 import { Button } from "@/components/ui/button";
-import { Eye, TrendingUp, TrendingDown, Minus, Loader2, AlertCircle, Calendar } from "lucide-react";
+import { Eye, TrendingUp, TrendingDown, Minus, Loader2, AlertCircle, Calendar, FileText, Download } from "lucide-react";
 import { useNavigate } from "react-router-dom";
 import { supabase } from "@/lib/supabase";
 import { useAuth } from "@/contexts/AuthContext";
 import { useToast } from "@/hooks/use-toast";
 import { Badge } from "@/components/ui/badge";
 import { useTranslation } from "react-i18next";
+import { prepareReportData, generatePDFReport } from "@/services/assessment-report-service";
+import { generateAssessmentSummary } from "@/services/assessment-ai-summary";
+
 
 interface StudentWithAssessment {
   id: string;
@@ -160,6 +163,211 @@ export default function Dashboard() {
     if (!category) return t('dashboard.categories.not_assessed');
     return t(`dashboard.categories.${category}`, category);
   };
+
+  // Report generation functions
+  const generateStudentReport = async (studentId: string, studentName: string) => {
+    try {
+      toast({
+        title: t('dashboard.generatingReport'),
+        description: t('dashboard.pleaseWait'),
+      });
+
+      // Get the latest assessment for this student
+      const { data: assessments, error } = await supabase
+        .from('student_assessments')
+        .select('*')
+        .eq('student_id', studentId)
+        .order('completed_at', { ascending: false })
+        .limit(1);
+
+      if (error) throw error;
+
+      if (!assessments || assessments.length === 0) {
+        toast({
+          title: t('dashboard.noAssessmentFound'),
+          description: t('dashboard.studentNotAssessed'),
+          variant: "destructive",
+        });
+        return;
+      }
+
+      const assessmentId = assessments[0].id;
+
+      // Generate report data
+      const reportData = await prepareReportData(assessmentId);
+      if (!reportData) {
+        throw new Error('Failed to prepare report data');
+      }
+
+      // Generate AI summary
+      const aiSummary = await generateAssessmentSummary(reportData, {
+        language: 'en', // TODO: Get from user preferences
+        detailLevel: 'detailed',
+        includeRecommendations: true,
+      });
+
+      reportData.aiSummary = aiSummary;
+
+      // Generate PDF
+      await generatePDFReport(reportData);
+
+      toast({
+        title: t('dashboard.reportGenerated'),
+        description: t('dashboard.reportDownloaded', { name: studentName }),
+      });
+    } catch (error: any) {
+      console.error('Error generating report:', error);
+      toast({
+        title: t('dashboard.reportGenerationFailed'),
+        description: error.message || t('errors.generic'),
+        variant: "destructive",
+      });
+    }
+  };
+
+  const generateClassReport = async () => {
+    try {
+      toast({
+        title: t('dashboard.generatingClassReport'),
+        description: t('dashboard.pleaseWait'),
+      });
+
+      // Get all assessments for the teacher's classes
+      const { data: classes, error: classError } = await supabase
+        .from("classes")
+        .select("id, name")
+        .eq("user_id", user?.id);
+
+      if (classError) throw classError;
+
+      if (!classes || classes.length === 0) {
+        toast({
+          title: t('dashboard.noClassesFound'),
+          description: t('dashboard.createClassFirst'),
+          variant: "destructive",
+        });
+        return;
+      }
+
+      const classIds = classes.map(c => c.id);
+      const className = classes.length === 1 ? classes[0].name : 'All Classes';
+
+      // Get recent assessments (last 30 days)
+      const thirtyDaysAgo = new Date();
+      thirtyDaysAgo.setDate(thirtyDaysAgo.getDate() - 30);
+
+      const { data: assessments, error: assessmentError } = await supabase
+        .from('student_assessments')
+        .select(`
+          *,
+          students!inner (
+            name,
+            class_id
+          )
+        `)
+        .in('students.class_id', classIds)
+        .gte('completed_at', thirtyDaysAgo.toISOString())
+        .order('completed_at', { ascending: false });
+
+      if (assessmentError) throw assessmentError;
+
+      if (!assessments || assessments.length === 0) {
+        toast({
+          title: t('dashboard.noRecentAssessments'),
+          description: t('dashboard.noAssessmentsLast30Days'),
+          variant: "destructive",
+        });
+        return;
+      }
+
+      // Generate class summary using AI
+      const classSummary = await generateClassSummary(
+        assessments,
+        className,
+        'en' // TODO: Get from user preferences
+      );
+
+      // Create a simple PDF with class summary
+      const pdf = new (await import('jspdf')).default();
+      let yPosition = 20;
+      const lineHeight = 7;
+      const pageWidth = 210;
+      const margin = 20;
+      const contentWidth = pageWidth - 2 * margin;
+
+      pdf.setFontSize(20);
+      pdf.setFont('helvetica', 'bold');
+      pdf.text('Class Performance Report', pageWidth / 2, yPosition, { align: 'center' });
+      yPosition += lineHeight * 2;
+
+      pdf.setFontSize(14);
+      pdf.setFont('helvetica', 'normal');
+      pdf.text(`Class: ${className}`, margin, yPosition);
+      yPosition += lineHeight;
+      pdf.text(`Report Period: Last 30 days`, margin, yPosition);
+      yPosition += lineHeight;
+      pdf.text(`Total Assessments: ${assessments.length}`, margin, yPosition);
+      yPosition += lineHeight * 2;
+
+      // Class statistics
+      const totalScore = assessments.reduce((sum, a) => sum + a.score, 0);
+      const totalQuestions = assessments.reduce((sum, a) => sum + a.total_questions, 0);
+      const classAverage = ((totalScore / totalQuestions) * 100).toFixed(1);
+
+      pdf.setFontSize(16);
+      pdf.setFont('helvetica', 'bold');
+      pdf.text('Class Statistics', margin, yPosition);
+      yPosition += lineHeight;
+
+      pdf.setFontSize(12);
+      pdf.setFont('helvetica', 'normal');
+      pdf.text(`Average Score: ${classAverage}%`, margin, yPosition);
+      yPosition += lineHeight;
+      pdf.text(`Total Students Assessed: ${new Set(assessments.map(a => a.student_id)).size}`, margin, yPosition);
+      yPosition += lineHeight * 2;
+
+      // AI Summary
+      pdf.setFontSize(16);
+      pdf.setFont('helvetica', 'bold');
+      pdf.text('Performance Analysis', margin, yPosition);
+      yPosition += lineHeight;
+
+      pdf.setFontSize(11);
+      pdf.setFont('helvetica', 'normal');
+      const summaryLines = pdf.splitTextToSize(classSummary, contentWidth);
+      summaryLines.forEach((line: string) => {
+        if (yPosition > 270) {
+          pdf.addPage();
+          yPosition = 20;
+        }
+        pdf.text(line, margin, yPosition);
+        yPosition += lineHeight;
+      });
+
+      // Footer
+      const date = new Date().toLocaleDateString();
+      pdf.setFontSize(9);
+      pdf.setFont('helvetica', 'italic');
+      pdf.text(`Generated on ${date}`, pageWidth / 2, 285, { align: 'center' });
+
+      // Save
+      const filename = `Class_Report_${className.replace(/\s+/g, '_')}_${date.replace(/\//g, '-')}.pdf`;
+      pdf.save(filename);
+
+      toast({
+        title: t('dashboard.classReportGenerated'),
+        description: t('dashboard.classReportDownloaded'),
+      });
+    } catch (error: any) {
+      console.error('Error generating class report:', error);
+      toast({
+        title: t('dashboard.classReportGenerationFailed'),
+        description: error.message || t('errors.generic'),
+        variant: "destructive",
+      });
+    }
+  };
+
 
   if (isLoading) {
     return (
@@ -330,6 +538,18 @@ export default function Dashboard() {
                       <Eye className="w-4 h-4 mr-1" />
                       {t('dashboard.profile')}
                     </Button>
+                    {student.latest_score !== null && (
+                      <Button
+                        size="sm"
+                        variant="outline"
+                        className="rounded-lg"
+                        onClick={() => generateStudentReport(student.id, student.name)}
+                      >
+                        <Download className="w-4 h-4 mr-1" />
+                        {t('dashboard.downloadReport')}
+                      </Button>
+                    )}
+
                   </div>
                 </div>
               ))}
@@ -337,10 +557,15 @@ export default function Dashboard() {
           </Card>
 
           <div className="flex justify-end gap-4">
+            <Button onClick={generateClassReport} size="lg" className="rounded-xl px-8">
+              <FileText className="w-5 h-5 mr-2" />
+              {t('dashboard.generateClassReport')}
+            </Button>
             <Button onClick={() => navigate("/insights")} size="lg" className="rounded-xl px-8">
               {t('dashboard.viewClassInsights')}
             </Button>
           </div>
+
         </>
       )}
     </div>

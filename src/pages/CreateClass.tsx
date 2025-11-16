@@ -41,6 +41,8 @@ export default function CreateClass() {
   const [isLoading, setIsLoading] = useState(true);
   const [showCSVDialog, setShowCSVDialog] = useState(false);
   const [csvClassName, setCSVClassName] = useState("");
+  const [selectedFile, setSelectedFile] = useState<File | null>(null);
+  const [isUploading, setIsUploading] = useState(false);
   const fileInputRef = useRef<HTMLInputElement>(null);
 
   // Load existing class and students from database
@@ -308,9 +310,34 @@ export default function CreateClass() {
     if (file) {
       if (!file.name.endsWith('.csv')) {
         toast.error(t('createClass.csvUpload.uploadCSVFile'));
+        e.target.value = ''; // Reset file input
         return;
       }
-      processCSVFile(file);
+      setSelectedFile(file);
+    }
+  };
+
+  const handleCSVSubmit = async () => {
+    if (!selectedFile) {
+      toast.error(t('createClass.csvUpload.selectFileFirst'));
+      return;
+    }
+
+    if (!csvClassName.trim()) {
+      toast.error(t('createClass.enterClassName'));
+      return;
+    }
+
+    setIsUploading(true);
+    try {
+      await processCSVFile(selectedFile);
+      // Reset state after successful upload
+      setSelectedFile(null);
+      if (fileInputRef.current) {
+        fileInputRef.current.value = '';
+      }
+    } finally {
+      setIsUploading(false);
     }
   };
 
@@ -534,7 +561,17 @@ export default function CreateClass() {
       </div>
 
       {/* CSV Upload Dialog */}
-      <Dialog open={showCSVDialog} onOpenChange={setShowCSVDialog}>
+      <Dialog open={showCSVDialog} onOpenChange={(open) => {
+        setShowCSVDialog(open);
+        if (!open) {
+          // Reset state when dialog closes
+          setSelectedFile(null);
+          setCSVClassName("");
+          if (fileInputRef.current) {
+            fileInputRef.current.value = '';
+          }
+        }
+      }}>
         <DialogContent>
           <DialogHeader>
             <DialogTitle>{t('createClass.csvUpload.title')}</DialogTitle>
@@ -550,6 +587,7 @@ export default function CreateClass() {
                 onChange={(e) => setCSVClassName(e.target.value)}
                 placeholder={t('createClass.classNamePlaceholder')}
                 className="mt-2"
+                disabled={isUploading}
               />
             </div>
             <div>
@@ -560,7 +598,13 @@ export default function CreateClass() {
                 accept=".csv"
                 onChange={handleFileChange}
                 className="mt-2 w-full"
+                disabled={isUploading}
               />
+              {selectedFile && (
+                <p className="text-sm text-muted-foreground mt-2">
+                  {t('createClass.csvUpload.fileSelected', { filename: selectedFile.name })}
+                </p>
+              )}
             </div>
             <div className="text-sm text-muted-foreground">
               <p className="font-medium mb-2">{t('createClass.csvUpload.format')}</p>
@@ -569,6 +613,23 @@ export default function CreateClass() {
                 John Doe,parent@email.com,<br/>
                 Jane Smith,jane.parent@email.com,jane.parent2@email.com
               </code>
+            </div>
+            <div className="flex gap-2 pt-2">
+              <Button
+                onClick={handleCSVSubmit}
+                disabled={!selectedFile || !csvClassName.trim() || isUploading}
+                className="flex-1"
+              >
+                <Upload className="w-4 h-4 mr-2" />
+                {isUploading ? t('common.uploading') || 'Uploading...' : t('createClass.csvUpload.uploadButton')}
+              </Button>
+              <Button
+                variant="outline"
+                onClick={() => setShowCSVDialog(false)}
+                disabled={isUploading}
+              >
+                {t('createClass.cancel')}
+              </Button>
             </div>
           </div>
         </DialogContent>

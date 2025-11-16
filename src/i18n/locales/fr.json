@@ -24,6 +24,8 @@
     "confirm": "Confirmer",
     "yes": "Oui",
     "no": "Non",
+    "optional": "optionnel",
+    "saving": "Enregistrement...",
     "class": "Classe"
   },
   "navigation": {
@@ -39,6 +41,39 @@
     "studentGuide": "Guide Élève",
     "insights": "Analyses",
     "signOut": "Se Déconnecter"
+  },
+  "subjects": {
+    "francais": "Français",
+    "langues_vivantes": "Langues Vivantes",
+    "arts_plastiques": "Arts Plastiques",
+    "education_musicale": "Éducation Musicale",
+    "histoire_des_arts": "Histoire des Arts",
+    "education_physique_sportive": "Éducation Physique et Sportive",
+    "enseignement_moral_civique": "Enseignement Moral et Civique",
+    "histoire_geographie": "Histoire et Géographie",
+    "sciences_technologie": "Sciences et Technologie",
+    "mathematiques": "Mathématiques"
+  },
+  "onboarding": {
+    "title": "Complétez Votre Profil",
+    "description": "Aidez-nous à personnaliser votre expérience d'enseignement en partageant quelques détails sur votre domaine d'enseignement.",
+    "primarySubject": "Matière Principale",
+    "selectSubject": "Sélectionnez votre matière principale",
+    "subjectHelp": "Cela sera utilisé pour générer des évaluations et des ressources ciblées pour vos élèves.",
+    "primaryGradeLevel": "Niveau Scolaire Principal",
+    "selectGradeLevel": "Sélectionnez votre niveau scolaire principal",
+    "gradeLevelHelp": "Choisissez le niveau que vous enseignez principalement.",
+    "schoolName": "Nom de l'École",
+    "schoolNamePlaceholder": "Entrez le nom de votre école",
+    "complete": "Terminer la Configuration",
+    "completing": "Finalisation...",
+    "success": "Profil complété avec succès !",
+    "error": "Échec de la complétion du profil. Veuillez réessayer.",
+    "note": "Note",
+    "noteText": "Vous pouvez mettre à jour ces préférences à tout moment dans vos Paramètres.",
+    "validation": {
+      "requiredFields": "Veuillez remplir tous les champs obligatoires"
+    }
   },
   "home": {
     "title": "LearnAura",
@@ -86,7 +121,25 @@
     "assessments_plural": "évaluations",
     "reassessSoon": "Réévaluer Bientôt",
     "profile": "Profil",
+    "downloadReport": "Télécharger le Rapport",
+    "generatingReport": "Génération du Rapport",
+    "pleaseWait": "Veuillez patienter...",
+    "reportGenerated": "Rapport Généré",
+    "reportDownloaded": "Rapport téléchargé pour {{name}}",
+    "reportGenerationFailed": "Échec de la Génération du Rapport",
+    "noAssessmentFound": "Aucune Évaluation Trouvée",
+    "studentNotAssessed": "Cet élève n'a pas encore été évalué",
+    "generateClassReport": "Générer le Rapport de Classe",
+    "generatingClassReport": "Génération du Rapport de Classe",
+    "classReportGenerated": "Rapport de Classe Généré",
+    "classReportDownloaded": "Rapport de classe téléchargé",
+    "classReportGenerationFailed": "Échec de la Génération du Rapport de Classe",
+    "noClassesFound": "Aucune Classe Trouvée",
+    "createClassFirst": "Veuillez d'abord créer une classe",
+    "noRecentAssessments": "Aucune Évaluation Récente",
+    "noAssessmentsLast30Days": "Aucune évaluation trouvée au cours des 30 derniers jours",
     "viewClassInsights": "Voir les Analyses de Classe",
+
     "noStudents": {
       "title": "Aucun Élève Trouvé",
       "description": "Créez une classe et ajoutez des élèves pour commencer à suivre les données d'évaluation.",
@@ -131,7 +184,9 @@
     },
     "linkCopied": "Lien d'évaluation copié dans le presse-papiers !",
     "linkCopyFailed": "Échec de la copie du lien",
-    "loadFailed": "Échec du chargement des classes"
+    "loadFailed": "Échec du chargement des classes",
+    "generatingQuestions": "Génération de questions IA...",
+    "questionsGenerated": "Questions générées avec succès !"
   },
   "settings": {
     "title": "Paramètres",
@@ -152,9 +207,16 @@
       "french": "Français"
     },
     "profile": {
-      "title": "Profil Enseignant",
+      "title": "Profil Utilisateur",
       "uploadPhoto": "Télécharger une Photo",
       "photoRecommendation": "Recommandé : 400x400px, max 2 Mo"
+    },
+    "teacherProfile": {
+      "title": "Profil d'Enseignement",
+      "currentSubject": "Matière actuelle",
+      "currentGrade": "Niveau scolaire actuel",
+      "updateSuccess": "Profil d'enseignement mis à jour avec succès !",
+      "updateError": "Échec de la mise à jour du profil d'enseignement. Veuillez réessayer."
     },
     "dataManagement": {
       "title": "Gestion des Données",
@@ -218,7 +280,10 @@
       "uploadCSVFile": "Veuillez télécharger un fichier CSV",
       "successfullyAdded": "{{count}} élèves ajoutés avec succès",
       "noValidStudents": "Aucun élève valide trouvé dans le CSV",
-      "failedToProcess": "Échec du traitement du fichier CSV"
+      "failedToProcess": "Échec du traitement du fichier CSV",
+      "uploadButton": "Télécharger les Élèves",
+      "fileSelected": "Fichier sélectionné : {{filename}}",
+      "selectFileFirst": "Veuillez d'abord sélectionner un fichier CSV"
     },
     "errors": {
       "failedToLoad": "Échec du chargement des données de classe",

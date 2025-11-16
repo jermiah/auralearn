@@ -100,7 +100,7 @@ export default function TeachingGuide() {
             <div>
               <h1 className="text-4xl font-bold text-foreground">Teaching Guide</h1>
               <p className="text-muted-foreground">
-                Internet-powered strategies for every learning profile
+                AI-powered strategies for every learning profile
               </p>
             </div>
           </div>
@@ -117,7 +117,7 @@ export default function TeachingGuide() {
               <p className="text-sm text-muted-foreground">
                 This guide combines research from educational websites, teaching blogs, and YouTube
                 expert videos to provide you with the most effective strategies for each student
-                category. Each guide is AI-generated based on current best practices.
+                category. Each guide is generated based on current best practices.
               </p>
             </CardContent>
           </Card>
@@ -173,7 +173,7 @@ export default function TeachingGuide() {
           <CardHeader>
             <CardTitle className="flex items-center gap-2">
               <Loader2 className="w-5 h-5 animate-spin text-primary" />
-              Powered by Internet Intelligence
+              Powered by AI
             </CardTitle>
           </CardHeader>
           <CardContent>
@@ -181,10 +181,9 @@ export default function TeachingGuide() {
               Each teaching guide is generated in real-time using:
             </p>
             <ul className="mt-2 space-y-1 text-sm text-muted-foreground">
-              <li>• Brave Search - Latest educational research and articles</li>
-              <li>• YouTube Transcripts - Expert teaching videos and demonstrations</li>
-              <li>• AI Analysis - GPT-4 powered insight generation</li>
-              <li>• Supabase Storage - Cached guides for faster access</li>
+              <li>• Latest educational research and articles</li>
+              <li>• Expert teaching videos and demonstrations</li>
+              <li>• AI powered insight generation</li>
             </ul>
           </CardContent>
         </Card>

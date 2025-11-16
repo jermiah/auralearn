@@ -26,6 +26,7 @@ import TeacherSignUp from "./pages/auth/TeacherSignUp";
 import ParentSignUp from "./pages/auth/ParentSignUp";
 import RoleSelection from "./pages/auth/RoleSelection";
 import AuthCallback from "./pages/auth/AuthCallback";
+import TeacherOnboarding from "./pages/auth/TeacherOnboarding";
 import StudentSelection from "./pages/StudentSelection";
 import StudentAssessment from "./pages/StudentAssessment";
 import StudentGuide from "./pages/StudentGuide";
@@ -65,9 +66,14 @@ const App = () => (
               {/* Auth callback */}
               <Route path="/auth-callback" element={<AuthCallback />} />
 
+              {/* Teacher onboarding */}
+              <Route path="/teacher-onboarding" element={<ProtectedRoute requireRole="teacher"><TeacherOnboarding /></ProtectedRoute>} />
+
               {/* Public student assessment routes */}
               <Route path="/student-selection/:classId" element={<StudentSelection />} />
               <Route path="/student-assessment/:classId/:studentId" element={<StudentAssessment />} />
+              {/* Token-based assessment route (secure, personalized) */}
+              <Route path="/student-assessment/token/:token" element={<StudentAssessment />} />
 
               {/* Teacher-only routes */}
               <Route path="/create-class" element={<ProtectedRoute requireRole="teacher"><Layout><CreateClass /></Layout></ProtectedRoute>} />

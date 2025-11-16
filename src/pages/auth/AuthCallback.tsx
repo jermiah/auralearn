@@ -80,7 +80,12 @@ export default function AuthCallback() {
 
           // Redirect based on role
           if (finalRole === 'teacher') {
-            navigate('/create-class', { replace: true });
+            // Check if teacher has completed onboarding
+            if (!user?.onboarding_completed) {
+              navigate('/teacher-onboarding', { replace: true });
+            } else {
+              navigate('/dashboard', { replace: true });
+            }
           } else if (finalRole === 'parent') {
             navigate('/parent-guide', { replace: true });
           }

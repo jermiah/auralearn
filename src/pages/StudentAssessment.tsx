@@ -6,15 +6,23 @@ import { Card, CardContent, CardHeader, CardTitle, CardDescription } from "@/com
 import { RadioGroup, RadioGroupItem } from "@/components/ui/radio-group";
 import { Label } from "@/components/ui/label";
 import { Progress } from "@/components/ui/progress";
-import { CheckCircle2, Circle, Loader2 } from "lucide-react";
+import { CheckCircle2, Circle, Loader2, AlertCircle } from "lucide-react";
 import { useToast } from "@/hooks/use-toast";
+import { useTranslation } from "react-i18next";
+import { generateAssessmentQuestions } from "@/services/gemini-assessment-generator";
+import { SubjectType, GradeLevelType } from "@/contexts/AuthContext";
+import { 
+  validateAssessmentToken, 
+  markTokenAsUsed, 
+  logAssessmentAccess 
+} from "@/services/assessment-token-service";
 
 interface Question {
   id: string;
   category: string;
   difficulty_level: number;
-  question_type: string;
-  base_question: string;
+  question?: string;
+  base_question?: string;
   options: { value: string; label: string }[];
   correct_answer: string;
   explanation: string;
@@ -36,11 +44,14 @@ interface AssessmentResult {
 }
 
 const StudentAssessment = () => {
-  const { classId, studentId } = useParams();
+  const { classId, studentId, token } = useParams();
   const navigate = useNavigate();
   const { toast } = useToast();
+  const { t, i18n } = useTranslation();
 
-  const [student, setStudent] = useState<{ id: string; name: string } | null>(null);
+  const [student, setStudent] = useState<{ id: string; name: string; primary_category?: string } | null>(null);
+  const [accessMethod, setAccessMethod] = useState<'token' | 'manual_selection'>('manual_selection');
+  const [tokenError, setTokenError] = useState<string | null>(null);
   const [questions, setQuestions] = useState<Question[]>([]);
   const [currentQuestionIndex, setCurrentQuestionIndex] = useState(0);
   const [selectedAnswer, setSelectedAnswer] = useState<string>("");
@@ -54,80 +65,185 @@ const StudentAssessment = () => {
   const [result, setResult] = useState<AssessmentResult | null>(null);
 
   useEffect(() => {
-    loadStudentAndQuestions();
-  }, [classId, studentId]);
+    if (token) {
+      // Token-based access
+      loadStudentByToken();
+    } else if (classId && studentId) {
+      // Manual selection access
+      loadStudentAndQuestions();
+    }
+  }, [classId, studentId, token]);
 
-  const loadStudentAndQuestions = async () => {
+  const loadStudentByToken = async () => {
     setIsLoading(true);
+    setAccessMethod('token');
 
     try {
+      // Validate token
+      const validation = await validateAssessmentToken(token!);
+
+      if (!validation.valid) {
+        setTokenError(validation.errorMessage || 'Invalid or expired token');
+        setIsLoading(false);
+        return;
+      }
+
+      // Mark token as used
+      await markTokenAsUsed(token!);
+
+      // Log access
+      await logAssessmentAccess(
+        validation.studentId!,
+        validation.classId!,
+        'token',
+        token
+      );
+
       // Load student info
       const { data: studentData, error: studentError } = await supabase
         .from("students")
-        .select("id, name")
+        .select("id, name, class_id, primary_category")
+        .eq("id", validation.studentId)
+        .single();
+
+      if (studentError) throw studentError;
+      setStudent(studentData);
+
+      // Load questions based on student's profile
+      await loadQuestionsForStudent(studentData);
+
+    } catch (error: any) {
+      console.error("Error loading assessment by token:", error);
+      setTokenError(error.message || "Failed to load assessment");
+      setIsLoading(false);
+    }
+  };
+
+  const loadStudentAndQuestions = async () => {
+    setIsLoading(true);
+    setAccessMethod('manual_selection');
+
+    try {
+      // Log manual access
+      await logAssessmentAccess(
+        studentId!,
+        classId!,
+        'manual_selection'
+      );
+
+      // Load student info
+      const { data: studentData, error: studentError } = await supabase
+        .from("students")
+        .select("id, name, class_id, primary_category")
         .eq("id", studentId)
         .single();
 
       if (studentError) throw studentError;
       setStudent(studentData);
 
-      // Load assessment questions (adaptive difficulty)
-      const { data: questionsData, error: questionsError } = await supabase
-        .from("assessment_questions")
-        .select("*")
-        .eq("is_active", true)
-        .order("difficulty_level");
+      // Load questions
+      await loadQuestionsForStudent(studentData);
 
-      if (questionsError) throw questionsError;
-
-      // Select 10 questions with adaptive difficulty (start medium)
-      const selectedQuestions = selectAdaptiveQuestions(questionsData || []);
-      setQuestions(selectedQuestions);
     } catch (error: any) {
       console.error("Error loading assessment:", error);
       toast({
-        title: "Error",
-        description: "Failed to load assessment. Please try again.",
+        title: t('common.error'),
+        description: error.message || "Failed to load assessment. Please try again.",
         variant: "destructive",
       });
-    } finally {
       setIsLoading(false);
     }
   };
 
-  const selectAdaptiveQuestions = (allQuestions: any[]): Question[] => {
-    // Start with medium difficulty (5-6)
-    // We'll implement true adaptive logic in the handleNext function
-    const startingDifficulty = 5;
+  const loadQuestionsForStudent = async (studentData: any) => {
+    try {
 
-    // Get 10 questions starting at medium difficulty
-    const selectedQuestions: Question[] = [];
-    const usedIds = new Set<string>();
+      // Load class info to get teacher
+      const { data: classData, error: classError } = await supabase
+        .from("classes")
+        .select("user_id")
+        .eq("id", studentData.class_id)
+        .single();
 
-    // Group questions by difficulty
-    const questionsByDifficulty = allQuestions.reduce((acc, q) => {
-      if (!acc[q.difficulty_level]) {
-        acc[q.difficulty_level] = [];
+      if (classError) throw classError;
+
+      // Load teacher profile to get subject and grade level
+      // Try with clerk_id first, if not found, try with id
+      let teacherData = null;
+      
+      const { data: teacherByClerkId, error: clerkError } = await supabase
+        .from("users")
+        .select("primary_subject, primary_grade_level")
+        .eq("clerk_id", classData.user_id)
+        .maybeSingle();
+
+      if (teacherByClerkId) {
+        teacherData = teacherByClerkId;
+      } else {
+        // Try with id field
+        const { data: teacherById, error: idError } = await supabase
+          .from("users")
+          .select("primary_subject, primary_grade_level")
+          .eq("id", classData.user_id)
+          .maybeSingle();
+        
+        teacherData = teacherById;
       }
-      acc[q.difficulty_level].push(q);
-      return acc;
-    }, {} as Record<number, any[]>);
 
-    let currentDifficulty = startingDifficulty;
+      // Set default values if teacher hasn't completed onboarding or not found
+      const subject = (teacherData?.primary_subject || 'mathematiques') as SubjectType;
+      const gradeLevel = (teacherData?.primary_grade_level || 'CM1') as GradeLevelType;
 
-    for (let i = 0; i < 10; i++) {
-      const availableQuestions = questionsByDifficulty[currentDifficulty] || [];
-      const unusedQuestions = availableQuestions.filter(q => !usedIds.has(q.id));
+      // Generate questions using Gemini based on teacher's profile, user's language, and student's learning profile
+      const language = i18n.language.startsWith('fr') ? 'fr' : 'en';
+      
+      console.log('Generating personalized assessment questions:', { 
+        subject, 
+        gradeLevel, 
+        language,
+        studentCategory: studentData.primary_category,
+        accessMethod
+      });
 
-      if (unusedQuestions.length > 0) {
-        const randomIndex = Math.floor(Math.random() * unusedQuestions.length);
-        const selectedQuestion = unusedQuestions[randomIndex];
-        selectedQuestions.push(selectedQuestion);
-        usedIds.add(selectedQuestion.id);
-      }
+      const generatedQuestions = await generateAssessmentQuestions(
+        {
+          subject,
+          gradeLevel,
+          language: language as 'en' | 'fr',
+          // Future: Add student profile for personalization
+          // studentProfile: {
+          //   primaryCategory: studentData.primary_category,
+          // }
+        },
+        10
+      );
+
+      // Convert to Question format
+      const formattedQuestions: Question[] = generatedQuestions.map(q => ({
+        id: q.id,
+        category: q.category,
+        difficulty_level: q.difficulty_level,
+        question: q.question,
+        base_question: q.question,
+        options: q.options,
+        correct_answer: q.correct_answer,
+        explanation: q.explanation,
+      }));
+
+      setQuestions(formattedQuestions);
+      
+      toast({
+        title: t('common.success'),
+        description: accessMethod === 'token' 
+          ? "Personalized assessment loaded successfully!" 
+          : "Assessment questions generated successfully!",
+      });
+    } catch (error: any) {
+      console.error("Error loading questions:", error);
+      throw error;
+    } finally {
+      setIsLoading(false);
     }
-
-    return selectedQuestions;
   };
 
   const startAssessment = () => {
@@ -143,7 +259,7 @@ const StudentAssessment = () => {
   const handleNext = () => {
     if (!selectedAnswer) {
       toast({
-        title: "Please select an answer",
+        title: t('studentAssessment.selectAnswer'),
         description: "You must select an answer before continuing.",
         variant: "destructive",
       });
@@ -227,7 +343,7 @@ const StudentAssessment = () => {
       const { data: assessmentData, error: assessmentError } = await supabase
         .from("student_assessments")
         .insert({
-          student_id: studentId,
+          student_id: student?.id,
           questions_data: questions,
           answers: finalAnswers,
           score: correctCount,
@@ -249,7 +365,7 @@ const StudentAssessment = () => {
       await supabase
         .from("students")
         .update({ primary_category: category })
-        .eq("id", studentId);
+        .eq("id", student?.id);
 
       // Show results
       setResult({
@@ -262,13 +378,13 @@ const StudentAssessment = () => {
       setShowResult(true);
 
       toast({
-        title: "Assessment Complete!",
+        title: t('studentAssessment.completed'),
         description: `You scored ${correctCount} out of ${questions.length}. Great job!`,
       });
     } catch (error: any) {
       console.error("Error submitting assessment:", error);
       toast({
-        title: "Error",
+        title: t('common.error'),
         description: "Failed to submit assessment. Please try again.",
         variant: "destructive",
       });
@@ -278,26 +394,60 @@ const StudentAssessment = () => {
   };
 
   const getCategoryDisplayName = (category: string): string => {
-    const categoryNames: Record<string, string> = {
-      slow_processing: "Slow Processing",
-      fast_processor: "Fast Processor",
-      high_energy: "High Energy",
-      visual_learner: "Visual Learner",
-      logical_learner: "Logical Learner",
-      sensitive_low_confidence: "Sensitive/Low Confidence",
-      easily_distracted: "Easily Distracted",
-      needs_repetition: "Needs Repetition",
-      average_learner: "Average Learner",
-    };
-    return categoryNames[category] || category;
+    return t(`dashboard.categories.${category}`);
   };
+
+  // Token error state
+  if (tokenError) {
+    return (
+      <div className="min-h-screen flex items-center justify-center bg-gradient-to-br from-red-50 to-orange-50 p-6">
+        <Card className="w-full max-w-md">
+          <CardHeader className="text-center">
+            <div className="mx-auto mb-4 h-20 w-20 rounded-full bg-red-100 flex items-center justify-center">
+              <AlertCircle className="h-12 w-12 text-red-600" />
+            </div>
+            <CardTitle className="text-2xl font-bold text-red-900">Access Denied</CardTitle>
+            <CardDescription className="text-base text-red-700">
+              {tokenError}
+            </CardDescription>
+          </CardHeader>
+          <CardContent className="space-y-4">
+            <div className="bg-red-50 border-l-4 border-red-400 p-4 rounded">
+              <p className="text-sm text-red-800">
+                <strong>Possible reasons:</strong>
+              </p>
+              <ul className="list-disc list-inside text-sm text-red-700 mt-2 space-y-1">
+                <li>The assessment link has expired</li>
+                <li>The link has already been used</li>
+                <li>The link is invalid</li>
+              </ul>
+            </div>
+            <p className="text-sm text-gray-600 text-center">
+              Please contact your teacher for a new assessment link.
+            </p>
+            <Button
+              onClick={() => navigate('/')}
+              variant="outline"
+              className="w-full"
+            >
+              Go to Home
+            </Button>
+          </CardContent>
+        </Card>
+      </div>
+    );
+  }
 
   if (isLoading) {
     return (
       <div className="min-h-screen flex items-center justify-center bg-gradient-to-br from-purple-50 to-blue-50">
         <div className="text-center">
           <Loader2 className="h-12 w-12 animate-spin text-purple-600 mx-auto mb-4" />
-          <p className="text-lg text-gray-600">Loading assessment...</p>
+          <p className="text-lg text-gray-600">
+            {accessMethod === 'token' 
+              ? 'Validating your personalized assessment...' 
+              : t('studentAssessment.loading')}
+          </p>
         </div>
       </div>
     );
@@ -311,15 +461,15 @@ const StudentAssessment = () => {
             <div className="mx-auto mb-4 h-20 w-20 rounded-full bg-green-100 flex items-center justify-center">
               <CheckCircle2 className="h-12 w-12 text-green-600" />
             </div>
-            <CardTitle className="text-3xl font-bold">Assessment Complete!</CardTitle>
+            <CardTitle className="text-3xl font-bold">{t('studentAssessment.completed')}</CardTitle>
             <CardDescription className="text-lg">
-              Great job, {student?.name}! Here are your results.
+              {t('studentAssessment.thankYou')}
             </CardDescription>
           </CardHeader>
           <CardContent className="space-y-6">
             <div className="grid grid-cols-2 gap-4">
               <div className="bg-blue-50 p-4 rounded-lg text-center">
-                <p className="text-sm text-gray-600 mb-1">Score</p>
+                <p className="text-sm text-gray-600 mb-1">{t('dashboard.score')}</p>
                 <p className="text-3xl font-bold text-blue-600">
                   {result.score}/{result.total_questions}
                 </p>
@@ -350,18 +500,28 @@ const StudentAssessment = () => {
 
             <div className="bg-yellow-50 border-l-4 border-yellow-400 p-4 rounded">
               <p className="text-sm text-yellow-800">
-                <strong>Your teacher will receive these results</strong> and will create a personalized
-                learning plan just for you. You'll be able to take another assessment in 30 days to track your progress!
+                <strong>{t('studentAssessment.resultsAvailable')}</strong>
               </p>
             </div>
 
-            <Button
-              onClick={() => navigate(`/student-selection/${classId}`)}
-              className="w-full"
-              size="lg"
-            >
-              Back to Student Selection
-            </Button>
+            {accessMethod === 'manual_selection' && (
+              <Button
+                onClick={() => navigate(`/student-selection/${classId}`)}
+                className="w-full"
+                size="lg"
+              >
+                {t('common.back')}
+              </Button>
+            )}
+            {accessMethod === 'token' && (
+              <Button
+                onClick={() => navigate('/')}
+                className="w-full"
+                size="lg"
+              >
+                Go to Home
+              </Button>
+            )}
           </CardContent>
         </Card>
       </div>
@@ -417,6 +577,7 @@ const StudentAssessment = () => {
 
   const currentQuestion = questions[currentQuestionIndex];
   const progress = ((currentQuestionIndex + 1) / questions.length) * 100;
+  const questionText = currentQuestion.question || currentQuestion.base_question || '';
 
   return (
     <div className="min-h-screen bg-gradient-to-br from-purple-50 to-blue-50 p-6">
@@ -425,7 +586,7 @@ const StudentAssessment = () => {
         <div className="mb-6">
           <div className="flex items-center justify-between mb-2">
             <span className="text-sm font-medium text-gray-600">
-              Question {currentQuestionIndex + 1} of {questions.length}
+              {t('studentAssessment.question', { current: currentQuestionIndex + 1, total: questions.length })}
             </span>
             <span className="text-sm font-medium text-gray-600">
               {student?.name}
@@ -437,7 +598,7 @@ const StudentAssessment = () => {
         {/* Question Card */}
         <Card>
           <CardHeader>
-            <CardTitle className="text-2xl">{currentQuestion.base_question}</CardTitle>
+            <CardTitle className="text-2xl">{questionText}</CardTitle>
           </CardHeader>
           <CardContent className="space-y-4">
             <RadioGroup value={selectedAnswer} onValueChange={handleAnswerSelect}>
@@ -472,12 +633,12 @@ const StudentAssessment = () => {
                 {isSubmitting ? (
                   <>
                     <Loader2 className="mr-2 h-5 w-5 animate-spin" />
-                    Submitting...
+                    {t('studentAssessment.submitting')}
                   </>
                 ) : currentQuestionIndex === questions.length - 1 ? (
-                  "Submit Assessment"
+                  t('studentAssessment.finishAssessment')
                 ) : (
-                  "Next Question"
+                  t('studentAssessment.nextQuestion')
                 )}
               </Button>
             </div>

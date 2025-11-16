@@ -24,6 +24,8 @@
     "confirm": "Confirm",
     "yes": "Yes",
     "no": "No",
+    "optional": "optional",
+    "saving": "Saving...",
     "class": "Class"
   },
   "navigation": {
@@ -39,6 +41,39 @@
     "studentGuide": "Student Guide",
     "insights": "Insights",
     "signOut": "Sign Out"
+  },
+  "subjects": {
+    "francais": "French",
+    "langues_vivantes": "Modern Languages",
+    "arts_plastiques": "Visual Arts",
+    "education_musicale": "Music Education",
+    "histoire_des_arts": "Art History",
+    "education_physique_sportive": "Physical Education",
+    "enseignement_moral_civique": "Moral and Civic Education",
+    "histoire_geographie": "History and Geography",
+    "sciences_technologie": "Science and Technology",
+    "mathematiques": "Mathematics"
+  },
+  "onboarding": {
+    "title": "Complete Your Profile",
+    "description": "Help us personalize your teaching experience by sharing a few details about your teaching focus.",
+    "primarySubject": "Primary Subject",
+    "selectSubject": "Select your primary subject",
+    "subjectHelp": "This will be used to generate targeted assessments and resources for your students.",
+    "primaryGradeLevel": "Primary Grade Level",
+    "selectGradeLevel": "Select your primary grade level",
+    "gradeLevelHelp": "Choose the grade level you primarily teach.",
+    "schoolName": "School Name",
+    "schoolNamePlaceholder": "Enter your school name",
+    "complete": "Complete Setup",
+    "completing": "Completing...",
+    "success": "Profile completed successfully!",
+    "error": "Failed to complete profile. Please try again.",
+    "note": "Note",
+    "noteText": "You can update these preferences anytime in your Settings.",
+    "validation": {
+      "requiredFields": "Please fill in all required fields"
+    }
   },
   "home": {
     "title": "LearnAura",
@@ -86,7 +121,25 @@
     "assessments_plural": "assessments",
     "reassessSoon": "Reassess Soon",
     "profile": "Profile",
+    "downloadReport": "Download Report",
+    "generatingReport": "Generating Report",
+    "pleaseWait": "Please wait...",
+    "reportGenerated": "Report Generated",
+    "reportDownloaded": "Report downloaded for {{name}}",
+    "reportGenerationFailed": "Report Generation Failed",
+    "noAssessmentFound": "No Assessment Found",
+    "studentNotAssessed": "This student has not been assessed yet",
+    "generateClassReport": "Generate Class Report",
+    "generatingClassReport": "Generating Class Report",
+    "classReportGenerated": "Class Report Generated",
+    "classReportDownloaded": "Class report downloaded",
+    "classReportGenerationFailed": "Class Report Generation Failed",
+    "noClassesFound": "No Classes Found",
+    "createClassFirst": "Please create a class first",
+    "noRecentAssessments": "No Recent Assessments",
+    "noAssessmentsLast30Days": "No assessments found in the last 30 days",
     "viewClassInsights": "View Class Insights",
+
     "noStudents": {
       "title": "No Students Found",
       "description": "Create a class and add students to start tracking assessment data.",
@@ -131,7 +184,9 @@
     },
     "linkCopied": "Assessment link copied to clipboard!",
     "linkCopyFailed": "Failed to copy link",
-    "loadFailed": "Failed to load classes"
+    "loadFailed": "Failed to load classes",
+    "generatingQuestions": "Generating AI questions...",
+    "questionsGenerated": "Questions generated successfully!"
   },
   "settings": {
     "title": "Settings",
@@ -152,9 +207,16 @@
       "french": "Français"
     },
     "profile": {
-      "title": "Teacher Profile",
+      "title": "User Profile",
       "uploadPhoto": "Upload Photo",
       "photoRecommendation": "Recommended: 400x400px, max 2MB"
+    },
+    "teacherProfile": {
+      "title": "Teaching Profile",
+      "currentSubject": "Current subject",
+      "currentGrade": "Current grade level",
+      "updateSuccess": "Teaching profile updated successfully!",
+      "updateError": "Failed to update teaching profile. Please try again."
     },
     "dataManagement": {
       "title": "Data Management",
@@ -218,7 +280,10 @@
       "uploadCSVFile": "Please upload a CSV file",
       "successfullyAdded": "Successfully added {{count}} students",
       "noValidStudents": "No valid students found in CSV",
-      "failedToProcess": "Failed to process CSV file"
+      "failedToProcess": "Failed to process CSV file",
+      "uploadButton": "Upload Students",
+      "fileSelected": "File selected: {{filename}}",
+      "selectFileFirst": "Please select a CSV file first"
     },
     "errors": {
       "failedToLoad": "Failed to load class data",
