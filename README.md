@@ -1,73 +1,192 @@
-# Welcome to your Lovable project
+# LearnAura - Personalized Learning for Every Student
 
-## Project info
+LearnAura gives teachers a complete, instant understanding of every student — academically, cognitively, and behaviourally — and generates the exact resources needed to teach a mixed-level classroom effectively.
 
-**URL**: https://lovable.dev/projects/3d05703a-ad49-471f-9090-8ad419524a5d
+## 🎯 What LearnAura Does
 
-## How can I edit this code?
+### 1. Academic Assessment
+- 10 curriculum-aligned questions per student
+- Instant heatmap showing who is advanced, on track, struggling, or needs support
+- Built directly from official French national curriculum
 
-There are several ways of editing your application.
+### 2. Cognitive Profile Assessment
+- **Student self-assessment**: 15 questions via smart voice agent
+- **Parent assessment**: 15 parallel questions about their child
+- **Combined profile**: Both averaged for accurate, triangulated insights
+- Measures: processing speed, working memory, attention, learning style, confidence, motivation
 
-**Use Lovable**
+### 3. Automatic Teaching Strategies
+- Generated from official French Ministry teaching guides
+- Based on real pedagogy, not generic advice
+- Personalized for each student's learning profile
 
-Simply visit the [Lovable Project](https://lovable.dev/projects/3d05703a-ad49-471f-9090-8ad419524a5d) and start prompting.
+### 4. Differentiated Worksheets
+- One-click generation of Support/Core/Advanced materials
+- Fully personalized and curriculum-aligned
+- Saves teachers 5+ hours per week
 
-Changes made via Lovable will be committed automatically to this repo.
+## 🚀 Getting Started
 
-**Use your preferred IDE**
+### Prerequisites
+- Node.js & npm - [install with nvm](https://github.com/nvm-sh/nvm#installing-and-updating)
+- Python 3.11+ - [download here](https://www.python.org/downloads/)
+- Supabase account - [sign up here](https://supabase.com)
 
-If you want to work locally using your own IDE, you can clone this repo and push changes. Pushed changes will also be reflected in Lovable.
-
-The only requirement is having Node.js & npm installed - [install with nvm](https://github.com/nvm-sh/nvm#installing-and-updating)
-
-Follow these steps:
+### Quick Start
 
 ```sh
-# Step 1: Clone the repository using the project's Git URL.
+# Clone the repository
 git clone <YOUR_GIT_URL>
+cd aura-learn
 
-# Step 2: Navigate to the project directory.
-cd <YOUR_PROJECT_NAME>
+# Install frontend dependencies
+npm install
 
-# Step 3: Install the necessary dependencies.
-npm i
+# Set up Python virtual environment
+python -m venv venv
+source venv/bin/activate  # On Windows: .\venv\Scripts\activate
 
-# Step 4: Start the development server with auto-reloading and an instant preview.
+# Install backend dependencies
+cd backend
+pip install -r requirements.txt
+
+# Configure environment variables
+cp .env.example .env
+# Edit .env with your Supabase credentials
+
+# Start development servers
+# Terminal 1: Frontend
 npm run dev
+
+# Terminal 2: Backend
+cd backend
+python app.py
 ```
 
-**Edit a file directly in GitHub**
+Visit `http://localhost:5173` to see the application.
 
-- Navigate to the desired file(s).
-- Click the "Edit" button (pencil icon) at the top right of the file view.
-- Make your changes and commit the changes.
+## 📚 Documentation
 
-**Use GitHub Codespaces**
+### Quick Guides
+- **[Quick Start](QUICKSTART.md)** - Get up and running
+- **[Setup Guide](SETUP_GUIDE.md)** - Complete installation
+- **[Deployment Guide](docs/scoring/DEPLOYMENT_GUIDE.md)** - Deploy combined scoring system
 
-- Navigate to the main page of your repository.
-- Click on the "Code" button (green button) near the top right.
-- Select the "Codespaces" tab.
-- Click on "New codespace" to launch a new Codespace environment.
-- Edit files directly within the Codespace and commit and push your changes once you're done.
+### Full Documentation
+See **[docs/README.md](docs/README.md)** for complete documentation index.
 
-## What technologies are used for this project?
+Key sections:
+- **Assessment System** - How academic and cognitive assessments work
+- **Scoring System** - Combined scoring algorithm (cognitive 60% + academic 40%)
+- **Teaching Resources** - Automatic strategy and worksheet generation
+- **Database Setup** - Supabase configuration and migrations
 
-This project is built with:
+### Hackathon
+- **[Hackathon Alignment](docs/product/HACKATHON_ALIGNMENT.md)** - How LearnAura solves the challenge
 
-- Vite
-- TypeScript
-- React
-- shadcn-ui
-- Tailwind CSS
+## 🛠️ Tech Stack
 
-## How can I deploy this project?
+### Frontend
+- **React** - UI framework
+- **TypeScript** - Type safety
+- **Vite** - Build tool
+- **Tailwind CSS** - Styling
+- **shadcn-ui** - Component library
 
-Simply open [Lovable](https://lovable.dev/projects/3d05703a-ad49-471f-9090-8ad419524a5d) and click on Share -> Publish.
+### Backend
+- **Python 3.11** - Backend language
+- **Flask** - API framework
+- **Supabase** - Database and authentication
+- **PostgreSQL** - Database
+- **Gemini AI** - Assessment generation
+- **Mistral AI** - OCR and document processing
 
-## Can I connect a custom domain to my Lovable project?
+### AI & Integrations
+- **Voice Agent** - Student cognitive assessment
+- **Brave Search** - Teaching resource discovery
+- **Blackbox AI** - Code assistance and development support
 
-Yes, you can!
+## 🔧 Development
 
-To connect a domain, navigate to Project > Settings > Domains and click Connect Domain.
+### Running Tests
+```sh
+# Frontend tests
+npm run test
 
-Read more here: [Setting up a custom domain](https://docs.lovable.dev/features/custom-domain#custom-domain)
+# Backend validation
+cd backend
+python validate_combined_scoring.py
+```
+
+### Database Migrations
+
+All SQL migrations are in `supabase/migrations/`. See [supabase/migrations/README.md](supabase/migrations/README.md) for details.
+
+To apply the latest combined scoring system:
+1. Open Supabase SQL Editor
+2. Copy contents of `supabase/migrations/supabase-combined-scoring-system.sql`
+3. Run it
+4. Execute: `python backend/populate_category_scores.py --force`
+
+### Code Quality
+
+This project uses **Blackbox AI** for code assistance and maintaining code quality.
+
+## 📁 Project Structure
+
+```
+aura-learn/
+├── src/                    # Frontend React application
+│   ├── components/        # React components
+│   ├── pages/            # Page components
+│   ├── lib/              # Utilities and helpers
+│   └── i18n/             # Translations (French/English)
+│
+├── backend/               # Python backend
+│   ├── app.py            # Main Flask application
+│   ├── assessment_handler.py
+│   ├── populate_category_scores.py
+│   ├── validate_combined_scoring.py
+│   └── assessment_pipeline/  # Document ingestion
+│
+├── supabase/migrations/   # Database migrations
+│
+├── docs/                  # Documentation
+│   ├── assessments/      # Assessment system
+│   ├── scoring/          # Scoring algorithms
+│   ├── product/          # Product documentation
+│   └── ...
+│
+└── public/               # Static assets
+```
+
+## 🤝 Contributing
+
+1. Fork the repository
+2. Create a feature branch (`git checkout -b feature/amazing-feature`)
+3. Commit your changes (`git commit -m 'Add amazing feature'`)
+4. Push to the branch (`git push origin feature/amazing-feature`)
+5. Open a Pull Request
+
+## 📄 License
+
+This project is proprietary software. All rights reserved.
+
+## 🆘 Support
+
+For questions or issues:
+- Check the [documentation](docs/README.md)
+- Review [troubleshooting guides](docs/scoring/DEPLOYMENT_GUIDE.md#troubleshooting)
+- Open an issue on GitHub
+
+## 🎓 About
+
+LearnAura is designed to solve the critical challenge facing French education: how to effectively teach 30 students at 30 different levels within a 55-minute class period.
+
+Built for teachers, by understanding teachers.
+
+**Assess today. Teach better tomorrow.**
+
+---
+
+**Made with ❤️ for French Education**
