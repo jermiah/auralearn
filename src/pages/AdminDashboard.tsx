@@ -1,7 +1,7 @@
 import { useState, useEffect } from 'react';
 import { supabase } from '@/lib/supabase';
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from '@/components/ui/card';
-import { Users, School, BookOpen, CheckCircle, TrendingUp, Activity } from 'lucide-react';
+import { Users, School, CheckCircle, TrendingUp, Activity } from 'lucide-react';
 
 interface KPIData {
   totalTeachers: number;
@@ -40,9 +40,9 @@ export default function AdminDashboard() {
     try {
       setLoading(true);
 
-      // Fetch total teachers
+      // Fetch total teachers from users table
       const { count: totalTeachers } = await supabase
-        .from('profiles')
+        .from('users')
         .select('*', { count: 'exact', head: true })
         .eq('role', 'teacher');
 
@@ -61,19 +61,20 @@ export default function AdminDashboard() {
         .from('assessments')
         .select('*', { count: 'exact', head: true });
 
-      // Fetch completed academic assessments
+      // Fetch completed academic assessments (assessment_results table)
       const { count: completedAssessments } = await supabase
-        .from('assessment_responses')
+        .from('assessment_results')
         .select('*', { count: 'exact', head: true });
 
-      // Fetch cognitive assessments
+      // Fetch completed cognitive assessments
       const { count: cognitiveAssessments } = await supabase
-        .from('cognitive_assessment_responses')
-        .select('*', { count: 'exact', head: true });
+        .from('cognitive_assessments')
+        .select('*', { count: 'exact', head: true })
+        .eq('status', 'completed');
 
-      // Fetch teachers by school
+      // Fetch teachers by school (from users table)
       const { data: teachersBySchool } = await supabase
-        .from('profiles')
+        .from('users')
         .select('school_name')
         .eq('role', 'teacher')
         .not('school_name', 'is', null);
@@ -89,13 +90,14 @@ export default function AdminDashboard() {
         count: count as number
       })).sort((a, b) => b.count - a.count);
 
-      // Fetch classes by grade
+      // Fetch classes by grade (using grade_level field)
       const { data: classes } = await supabase
         .from('classes')
-        .select('grade, subject');
+        .select('grade_level, subject');
 
       const gradeCounts = classes?.reduce((acc: any, curr) => {
-        acc[curr.grade] = (acc[curr.grade] || 0) + 1;
+        const grade = curr.grade_level || 'Unknown';
+        acc[grade] = (acc[grade] || 0) + 1;
         return acc;
       }, {});
 
@@ -135,7 +137,7 @@ export default function AdminDashboard() {
       sevenDaysAgo.setDate(sevenDaysAgo.getDate() - 7);
 
       const { data: recentTeachers } = await supabase
-        .from('profiles')
+        .from('users')
         .select('created_at')
         .eq('role', 'teacher')
         .gte('created_at', sevenDaysAgo.toISOString());
@@ -146,9 +148,9 @@ export default function AdminDashboard() {
         .gte('created_at', sevenDaysAgo.toISOString());
 
       const { data: recentAssessmentResponses } = await supabase
-        .from('assessment_responses')
-        .select('created_at')
-        .gte('created_at', sevenDaysAgo.toISOString());
+        .from('assessment_results')
+        .select('completed_at')
+        .gte('completed_at', sevenDaysAgo.toISOString());
 
       // Group by day
       const activityByDay: any = {};
@@ -170,7 +172,7 @@ export default function AdminDashboard() {
       });
 
       recentAssessmentResponses?.forEach(a => {
-        const date = a.created_at.split('T')[0];
+        const date = a.completed_at.split('T')[0];
         if (activityByDay[date]) activityByDay[date].assessments++;
       });
 
@@ -195,18 +197,28 @@ export default function AdminDashboard() {
       }, {});
 
       const avgStudentsPerClass = totalClasses && classStudentCounts
-        ? Object.values(classStudentCounts).reduce((sum: number, count: any) => sum + count, 0) / totalClasses
+        ? Object.values(classStudentCounts).reduce((sum: number, count: any) => sum + Number(count), 0) / totalClasses
         : 0;
 
       const assessmentCompletionRate = totalAssessments
         ? ((completedAssessments || 0) / (totalAssessments || 1)) * 100
         : 0;
 
-      // Active teachers in last 7 days
-      const { count: activeTeachersLast7Days } = await supabase
+      // Active teachers in last 7 days (teachers who created assessments)
+      const { data: recentAssessments } = await supabase
         .from('assessments')
-        .select('teacher_id', { count: 'exact', head: true })
+        .select('class_id')
         .gte('created_at', sevenDaysAgo.toISOString());
+
+      // Get unique teacher IDs from classes
+      const classIds = recentAssessments?.map(a => a.class_id) || [];
+      const { data: activeClasses } = await supabase
+        .from('classes')
+        .select('teacher_id')
+        .in('id', classIds);
+
+      const uniqueTeachers = new Set(activeClasses?.map(c => c.teacher_id));
+      const activeTeachersLast7Days = uniqueTeachers.size;
 
       setKpiData({
         totalTeachers: totalTeachers || 0,
