@@ -5,6 +5,9 @@
 The Combined Scoring System integrates **TWO types of assessments** to calculate comprehensive category scores for each student:
 
 1. **Cognitive Assessment** (60% weight) - **HOW** they learn (learning profile)
+   - Student self-assessment (15 questions via voice agent)
+   - Parent assessment (15 questions about their child)
+   - Combined and averaged for final cognitive score
 2. **Academic Assessment** (40% weight) - **WHAT** they struggle with (curriculum performance)
 
 ### Key Features
@@ -28,7 +31,9 @@ Student Completes Assessments
          ↓
 ┌────────────────────────────────────────────────────────┐
 │ COGNITIVE ASSESSMENT (60% weight)                      │
-│ - 15 Likert questions (1-5 scale)                      │
+│ - Student self-assessment: 15 questions via voice agent│
+│ - Parent assessment: 15 questions about their child    │
+│ - Both averaged to create final cognitive profile      │
 │ - 6 domains: processing_speed, working_memory,         │
 │   attention_focus, learning_style, self_efficacy,      │
 │   motivation_engagement                                │

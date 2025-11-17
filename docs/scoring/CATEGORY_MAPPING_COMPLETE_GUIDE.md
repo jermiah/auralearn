@@ -537,6 +537,9 @@ python backend/populate_category_scores.py --student-id <uuid>
 
 1. **Cognitive Assessment Infrastructure**
    - 15-question assessment across 6 domains ✅
+   - Student self-assessment (via voice agent) ✅
+   - Parent assessment (15 questions about their child) ✅
+   - Both averaged for final cognitive profile ✅
    - Likert scale (1-5) responses ✅
    - `cognitive_assessment_results` table storing domain_scores ✅
    - `calculate_domain_scores()` SQL function ✅
@@ -569,13 +572,13 @@ This is EXPECTED behavior - the system is working correctly but needs actual ass
 
 ### 🎯 To Get Real Assessment-Based Scores
 
-Students need to complete the cognitive assessment:
-1. Navigate to Cognitive Assessment page
-2. Answer 15 Likert scale questions
-3. Submit assessment
+Students and parents need to complete the cognitive assessment:
+1. Student: Navigate to Cognitive Assessment page and complete 15 questions via voice agent
+2. Parent: Complete parallel assessment (15 questions about their child)
+3. System: Averages both assessments to create final cognitive profile
 4. Trigger automatically calculates category scores
 5. Teaching Guide page shows students in correct categories
-6. Radar charts display accurate profiles
+6. Radar charts display accurate profiles with triangulation (student/parent/teacher)
 
 ---
 
