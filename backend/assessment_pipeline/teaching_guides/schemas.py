@@ -19,4 +19,5 @@ class TeachingGuideChunk(BaseModel):
     page_start: int
     page_end: int
     is_general: bool
+    applicable_categories: List[str] = []  # NEW: Learning categories this guide addresses
     lang: str = "fr"
