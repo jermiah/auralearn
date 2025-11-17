@@ -1,29 +1,188 @@
 # LearnAura - Personalized Learning for Every Student
 
+**Assess today. Teach better tomorrow.**
+
+---
+
+## 🔥 The Problem Schools Face — Reality in France Today
+
+Every French classroom follows the same model: **one teacher, around thirty students, and only 55 minutes** to teach.
+
+But behind this apparent simplicity lies the biggest challenge in French education:
+
+### **A single classroom contains 30 different levels.**
+
+Some students are 2–3 years ahead.
+Some are 2–3 years behind.
+Others are struggling with attention, confidence, motivation, language barriers, or specific learning needs.
+
+This extreme heterogeneity forces teachers to do the impossible:
+
+- Teach advanced students who finish everything early
+- Support students who cannot access the lesson
+- Manage behavior caused by boredom, frustration, or confusion
+- Follow the national curriculum
+- Create differentiated materials for multiple levels
+- **All within the same 55-minute period**
+
+### The Result?
+
+**1. Students fall behind silently** — Because teachers simply can't diagnose learning gaps in time.
+
+**2. Fast learners lose interest** — Because the lesson is too slow or too repetitive for them.
+
+**3. Teachers drown in workload** — Because preparing 2–4 versions of every lesson takes 10–15 hours per week.
+
+**This is not a teacher problem. This is a structural system problem.**
+
+Teachers cannot personalize for 30 students at once with the tools they have today.
+
+- The Ministry knows it.
+- Teachers know it.
+- Parents know it.
+- Students feel it.
+
+**This is the challenge LearnAura solves.**
+
+---
+
+## ⭐ What LearnAura Does
+
 LearnAura gives teachers a complete, instant understanding of every student — academically, cognitively, and behaviourally — and generates the exact resources needed to teach a mixed-level classroom effectively.
 
-## 🎯 What LearnAura Does
+### 1. Academic Assessment (10 questions)
 
-### 1. Academic Assessment
-- 10 curriculum-aligned questions per student
-- Instant heatmap showing who is advanced, on track, struggling, or needs support
-- Built directly from official French national curriculum
+The academic assessment is built directly from the **official French national curriculum**.
+The system uses AI to automatically generate smart, curriculum-aligned questions tailored to the grade and subject selected.
 
-### 2. Cognitive Profile Assessment
-- **Student self-assessment**: 15 questions via smart voice agent
-- **Parent assessment**: 15 parallel questions about their child
-- **Combined profile**: Both averaged for accurate, triangulated insights
-- Measures: processing speed, working memory, attention, learning style, confidence, motivation
+**Teachers can:**
+- Share one assessment link with the entire class
+- Or generate personalized versions for each student
 
-### 3. Automatic Teaching Strategies
-- Generated from official French Ministry teaching guides
-- Based on real pedagogy, not generic advice
-- Personalized for each student's learning profile
+**Students complete 10 questions, and LearnAura immediately identifies who is:**
+- Advanced
+- On track
+- Needs attention
+- Struggling
+- Needs immediate support
 
-### 4. Differentiated Worksheets
-- One-click generation of Support/Core/Advanced materials
-- Fully personalized and curriculum-aligned
-- Saves teachers 5+ hours per week
+All results appear in a clean, colour-coded **heatmap that teachers understand in seconds**.
+
+---
+
+### 2. Cognitive Profile Assessment (15 questions)
+
+The cognitive assessment shows **how** each student learns — not just what they know.
+
+**It measures:**
+- Processing speed
+- Working memory
+- Attention
+- Learning style
+- Self-confidence
+- Motivation
+
+**Dual Assessment Approach:**
+
+1. **Student self-assessment** — Powered by a smart **voice agent** that talks with the student, listens to them, and adapts to their pace and comfort level. This makes the assessment more personal, more accurate, and more authentic.
+
+2. **Parent assessment** — Similar 15 questions about their child, providing external perspective on learning behaviors.
+
+3. **Combined profile** — Both assessments are averaged for accurate, triangulated insights that reduce single-source bias.
+
+**Teachers instantly see each student's:**
+- Primary learning category
+- Secondary category
+
+**Examples include:**
+- Visual learner
+- Slow processor
+- Needs repetition
+- Easily distracted
+- Sensitive / low confidence
+- High-energy learner
+- Fast processor
+- Logical learner
+
+**Insights that usually take months now appear in minutes.**
+
+---
+
+### 3. Automatic Teaching Strategies Based on Real Pedagogy
+
+**This is the core innovation.**
+
+Every strategy LearnAura generates comes from:
+- The **official French Ministry of Education curriculum**
+- The **official teaching guides**
+- The top **teacher blogs**
+- The top **educational videos**
+- Modern classroom best practices
+
+Our system extracts, transcribes, and synthesizes these sources to create **practical, modern, realistic** strategies for each learner profile.
+
+Nothing is generic.
+Nothing is random.
+It is **real French pedagogy**, enriched with today's best techniques.
+
+---
+
+### 4. Automatic Support / Core / Advanced Worksheets
+
+In **one click**, LearnAura generates differentiated worksheets so every student works at the right level.
+
+- **Support group** — Scaffolded content for struggling students
+- **Core group** — Standard curriculum-aligned content
+- **Advanced group** — Enriched, challenging content
+
+Everything is personalized.
+Everything is instant.
+**Zero extra work for teachers.**
+
+---
+
+## 🌟 The Benefits for Schools
+
+### 1. Identify student needs in minutes — not months
+
+Instant clarity → better decisions → faster progress.
+
+### 2. Every lesson becomes more effective
+
+Teachers know exactly who needs what before class begins.
+
+### 3. Dramatic improvement in student outcomes
+
+- Struggling students catch up
+- Advanced students grow
+- Confidence increases for everyone
+
+### 4. Behaviour improves naturally
+
+Because lessons finally match each student's learning needs.
+
+### 5. Differentiation becomes easy
+
+Support, Core, Advanced — all generated automatically.
+
+### 6. Stronger parent communication
+
+- Clear reports
+- Clear understanding
+- Clear collaboration
+- Parents actively participate in assessment process
+
+### 7. Fully aligned with the official French curriculum
+
+Teachers know it is safe, compliant, and academically rigorous.
+
+### 8. Monday-morning ready
+
+- Assess Friday → Teach Monday
+- Instant heatmap, instant strategies, instant worksheets
+- Works in any collège or primary school
+
+---
 
 ## 🚀 Getting Started
 
