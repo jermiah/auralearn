@@ -130,7 +130,7 @@ def main():
 
         updated_count += 1
         print(f"  [OK] Updated category scores")
-        print(f"  [OK] Primary: {primary_category} → {new_primary}")
+        print(f"  [OK] Primary: {primary_category} -> {new_primary}")
         if new_secondary:
             print(f"  [OK] Secondary: {new_secondary}")
         print(f"  [OK] Scores: {category_scores}\n")
