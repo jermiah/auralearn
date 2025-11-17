@@ -476,13 +476,22 @@ IF attention_focus < 2.5 AND motivation < 3.5 THEN
 IF attention_focus < 2.5 AND motivation > 3.5 THEN
   high_energy = 65-80 (HIGH)
 
--- Visual Learner (high learning_style preference)
-IF learning_style > 4.0 THEN
-  visual_learner = 75-90 (HIGH)
+-- Visual Learner (high learning_style + LOW processing_speed)
+-- Visual learners process info better with images (spatial processing)
+IF learning_style > 4.0 AND processing_speed < 3.5 THEN
+  visual_learner = 75-100 (HIGH)
+  logical_learner = 32-40 (LOW)
 
--- Logical Learner (high learning_style for logic)
-IF learning_style > 4.0 THEN
-  logical_learner = 75-90 (HIGH)
+-- Logical Learner (high learning_style + HIGH processing_speed)
+-- Logical learners process info better with sequences (analytical processing)
+IF learning_style > 4.0 AND processing_speed >= 4.0 THEN
+  logical_learner = 75-100 (HIGH)
+  visual_learner = 32-40 (LOW)
+
+-- Mixed Profile (high learning_style + MEDIUM processing_speed)
+IF learning_style > 4.0 AND processing_speed >= 3.5 AND < 4.0 THEN
+  visual_learner = 67-85 (MODERATE-HIGH)
+  logical_learner = 67-85 (MODERATE-HIGH)
 ```
 
 ### Automatic Trigger

@@ -101,20 +101,33 @@ BEGIN
     v_easily_distracted := ROUND((2.5 / v_attention_focus * 50))::INT;
   END IF;
   
-  -- 7. Visual Learner: High score if learning_style > 4.0 (assuming visual preference)
-  IF v_learning_style > 4.0 THEN
-    v_visual_learner := ROUND(((v_learning_style - 4.0) / 1.0 * 40 + 50))::INT;
+  -- 7. Visual Learner: High learning_style + Low processing_speed indicates visual preference
+  -- Visual learners process information better with images/diagrams (spatial processing)
+  IF v_learning_style > 4.0 AND v_processing_speed < 3.5 THEN
+    -- Strong visual + slow processing = Strong visual learner
+    v_visual_learner := ROUND(((v_learning_style - 3.0) / 2.0 * 50 + 50))::INT;
+    v_logical_learner := ROUND((v_learning_style / 5.0 * 40))::INT;
+  ELSIF v_learning_style > 4.0 AND v_processing_speed >= 3.5 THEN
+    -- Strong learning + fast processing = Mixed (could be both)
+    v_visual_learner := ROUND(((v_learning_style - 3.0) / 2.0 * 35 + 50))::INT;
+    v_logical_learner := ROUND(((v_learning_style - 3.0) / 2.0 * 35 + 50))::INT;
+  ELSIF v_learning_style >= 3.0 THEN
+    -- Moderate learning style = Balanced
+    v_visual_learner := ROUND((v_learning_style / 5.0 * 60))::INT;
+    v_logical_learner := ROUND((v_learning_style / 5.0 * 60))::INT;
   ELSE
-    v_visual_learner := ROUND((v_learning_style / 4.0 * 50))::INT;
+    -- Low learning style = Low scores
+    v_visual_learner := ROUND((v_learning_style / 5.0 * 40))::INT;
+    v_logical_learner := ROUND((v_learning_style / 5.0 * 40))::INT;
   END IF;
-  
-  -- 8. Logical Learner: High score if learning_style > 4.0 (assuming logical preference)
-  -- Note: In real implementation, this should check specific question responses
-  -- For now, using inverse of visual (if not strongly visual, might be logical)
-  IF v_learning_style > 4.0 THEN
-    v_logical_learner := ROUND(((v_learning_style - 4.0) / 1.0 * 30 + 40))::INT;
-  ELSE
-    v_logical_learner := ROUND((v_learning_style / 4.0 * 60))::INT;
+
+  -- 8. Logical Learner: High learning_style + High processing_speed indicates logical preference
+  -- Logical learners process information better with sequences/patterns (analytical processing)
+  -- Override previous calculation with stronger evidence
+  IF v_learning_style > 4.0 AND v_processing_speed >= 4.0 THEN
+    -- Strong learning + fast processing = Strong logical learner
+    v_logical_learner := ROUND(((v_learning_style - 3.0) / 2.0 * 50 + 50))::INT;
+    v_visual_learner := ROUND((v_learning_style / 5.0 * 40))::INT;
   END IF;
   
   -- Ensure all scores are within 0-100 range

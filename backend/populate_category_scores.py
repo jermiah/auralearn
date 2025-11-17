@@ -1,7 +1,11 @@
 """
-Populate category_scores for students based on their cognitive assessments
-This calculates real scores (0-100) from cognitive domain scores (1-5)
-Uses the SQL function calculate_category_scores_from_cognitive()
+Populate category_scores for students based on COMBINED assessments
+This calculates real scores (0-100) from:
+  - Cognitive assessment (60% weight) - HOW they learn
+  - Academic assessment (40% weight) - WHAT they struggle with
+Uses the SQL function calculate_combined_category_scores()
+
+Students can belong to MULTIPLE buckets if they score >= 60 in multiple categories
 """
 
 import os
@@ -14,43 +18,77 @@ load_dotenv()
 
 supabase = create_client(os.getenv('SUPABASE_URL'), os.getenv('SUPABASE_SERVICE_ROLE_KEY'))
 
-def calculate_category_scores_from_cognitive(student_id):
+def calculate_combined_category_scores(student_id):
     """
-    Calculate category scores from cognitive assessment using SQL function
+    Calculate COMBINED category scores (cognitive + academic) using SQL function
     Returns dict with 8 category scores (0-100)
     """
     try:
-        # Call the SQL function via RPC
-        result = supabase.rpc('calculate_category_scores_from_cognitive', {
+        # Call the combined SQL function via RPC
+        result = supabase.rpc('calculate_combined_category_scores', {
             'p_student_id': student_id
         }).execute()
-        
+
         if result.data:
             return result.data
         return None
     except Exception as e:
-        print(f"  [ERROR] Failed to calculate scores: {e}")
+        print(f"  [ERROR] Failed to calculate combined scores: {e}")
         return None
 
-def get_cognitive_assessment(student_id):
-    """Get latest cognitive assessment for student"""
+def get_student_buckets(student_id, threshold=60):
+    """
+    Get all category buckets where student scores >= threshold
+    Returns array of category names
+    """
     try:
-        result = supabase.table('cognitive_assessment_results')\
+        result = supabase.rpc('get_student_buckets', {
+            'p_student_id': student_id,
+            'p_threshold': threshold
+        }).execute()
+
+        if result.data:
+            return result.data
+        return []
+    except Exception as e:
+        print(f"  [ERROR] Failed to get buckets: {e}")
+        return []
+
+def get_assessment_status(student_id):
+    """Check which assessments exist for student"""
+    cognitive = None
+    academic = None
+
+    try:
+        cog_result = supabase.table('cognitive_assessment_results')\
             .select('domain_scores, calculated_at')\
             .eq('student_id', student_id)\
             .order('calculated_at', desc=True)\
             .limit(1)\
             .execute()
-        
-        if result.data and len(result.data) > 0:
-            return result.data[0]
-        return None
+
+        if cog_result.data and len(cog_result.data) > 0:
+            cognitive = cog_result.data[0]
     except Exception as e:
-        print(f"  [ERROR] Failed to get cognitive assessment: {e}")
-        return None
+        pass
+
+    try:
+        acad_result = supabase.table('student_assessments')\
+            .select('score, total_questions, time_taken, assessment_date')\
+            .eq('student_id', student_id)\
+            .order('assessment_date', desc=True)\
+            .limit(1)\
+            .execute()
+
+        if acad_result.data and len(acad_result.data) > 0:
+            academic = acad_result.data[0]
+    except Exception as e:
+        pass
+
+    return cognitive, academic
 
 def main():
-    parser = argparse.ArgumentParser(description='Populate student category scores from cognitive assessments')
+    parser = argparse.ArgumentParser(description='Populate student category scores from COMBINED assessments (cognitive + academic)')
     parser.add_argument('--force', action='store_true', help='Recalculate even if category_scores already exists')
     parser.add_argument('--student-id', type=str, help='Process only specific student ID')
     args = parser.parse_args()
@@ -63,7 +101,8 @@ def main():
 
     students = students_result.data
     print(f"\n{'='*70}")
-    print(f"CATEGORY SCORE POPULATION FROM COGNITIVE ASSESSMENTS")
+    print(f"COMBINED CATEGORY SCORE POPULATION")
+    print(f"Cognitive (60%) + Academic (40%) Assessments")
     print(f"{'='*70}\n")
     print(f"Found {len(students)} students")
     print(f"Force recalculate: {args.force}\n")
@@ -85,11 +124,11 @@ def main():
             skipped_count += 1
             continue
 
-        # Check if student has cognitive assessment
-        cognitive_assessment = get_cognitive_assessment(student_id)
-        
-        if not cognitive_assessment:
-            print(f"  [WARN] No cognitive assessment found - using balanced profile")
+        # Check which assessments exist for student
+        cognitive_assessment, academic_assessment = get_assessment_status(student_id)
+
+        if not cognitive_assessment and not academic_assessment:
+            print(f"  [WARN] No assessments found - using balanced profile")
             # Use balanced profile (50 for all categories)
             category_scores = {
                 'slow_processing': 50,
@@ -103,15 +142,26 @@ def main():
             }
             no_assessment_count += 1
         else:
-            print(f"  [INFO] Found cognitive assessment from {cognitive_assessment['calculated_at']}")
-            print(f"  [INFO] Domain scores: {cognitive_assessment['domain_scores']}")
-            
-            # Calculate category scores from cognitive assessment
-            category_scores = calculate_category_scores_from_cognitive(student_id)
-            
+            # Show assessment status
+            if cognitive_assessment:
+                print(f"  [COGNITIVE] Found assessment from {cognitive_assessment['calculated_at']}")
+                print(f"  [COGNITIVE] Domain scores: {cognitive_assessment['domain_scores']}")
+            if academic_assessment:
+                score_pct = (academic_assessment['score'] / academic_assessment['total_questions']) * 100
+                print(f"  [ACADEMIC] Found assessment from {academic_assessment['assessment_date']}")
+                print(f"  [ACADEMIC] Score: {academic_assessment['score']}/{academic_assessment['total_questions']} ({score_pct:.1f}%), Time: {academic_assessment['time_taken']}s")
+
+            # Calculate COMBINED category scores (cognitive + academic)
+            category_scores = calculate_combined_category_scores(student_id)
+
             if not category_scores:
-                print(f"  [ERROR] Failed to calculate category scores")
+                print(f"  [ERROR] Failed to calculate combined category scores")
                 continue
+
+            # Get all buckets (categories >= 60)
+            buckets = get_student_buckets(student_id, threshold=60)
+            if buckets:
+                print(f"  [BUCKETS] Student belongs to {len(buckets)} bucket(s): {', '.join(buckets)}")
 
         # Determine primary and secondary categories (highest scores)
         sorted_categories = sorted(category_scores.items(), key=lambda x: x[1], reverse=True)
@@ -136,13 +186,15 @@ def main():
         print(f"  [OK] Scores: {category_scores}\n")
 
     print(f"\n{'='*70}")
-    print(f"SUMMARY")
+    print(f"SUMMARY - COMBINED SCORING SYSTEM")
     print(f"{'='*70}")
     print(f"Total students: {len(students)}")
     print(f"Updated: {updated_count}")
     print(f"Skipped (already had scores): {skipped_count}")
-    print(f"No cognitive assessment: {no_assessment_count}")
-    print(f"\n[SUCCESS] Category score population complete!")
+    print(f"No assessments: {no_assessment_count}")
+    print(f"\n[SUCCESS] Combined category score population complete!")
+    print(f"\nNOTE: Students can belong to MULTIPLE buckets if they score >= 60 in multiple categories")
+    print(f"      Category scores combine cognitive (60%) + academic (40%) assessments")
 
 if __name__ == '__main__':
     main()
