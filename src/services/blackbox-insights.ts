@@ -8,6 +8,7 @@
 import { StudentCategory, categoryDisplayNames, Strategy, Activity, ResourceLink, ChecklistItem } from '../lib/supabase';
 import { BraveSearchResult, YouTubeTranscriptResult } from './internet-intelligence';
 import { generateStructuredResponse } from './blackbox-client';
+import { getCurriculumGuidesForCategory, formatCurriculumGuidesForAI } from './curriculum-guide-service';
 
 export interface GenerateInsightParams {
   studentCategory: StudentCategory;
@@ -46,6 +47,17 @@ export async function generateTeachingInsight(
 
   const categoryName = categoryDisplayNames[studentCategory];
 
+  // Fetch official curriculum guides
+  console.log('📚 Fetching official curriculum teaching guides...');
+  const curriculumGuides = await getCurriculumGuidesForCategory(
+    studentCategory,
+    curriculumTopic,
+    gradeLevel
+  );
+  const formattedCurriculumGuides = formatCurriculumGuidesForAI(curriculumGuides);
+
+  console.log(`✅ Retrieved ${curriculumGuides.length} curriculum guide chunks`);
+
   // Build the prompt
   const systemPrompt = buildSystemPrompt(audience);
   const userPrompt = buildUserPrompt(
@@ -53,6 +65,7 @@ export async function generateTeachingInsight(
     curriculumTopic,
     webResources,
     youtubeTranscripts,
+    formattedCurriculumGuides,
     gradeLevel,
     studentCount,
     audience
@@ -62,6 +75,7 @@ export async function generateTeachingInsight(
     category: categoryName,
     topic: curriculumTopic,
     audience,
+    curriculumGuidesCount: curriculumGuides.length,
   });
 
   try {
@@ -85,41 +99,47 @@ export async function generateTeachingInsight(
  */
 function buildSystemPrompt(audience: 'teacher' | 'parent'): string {
   if (audience === 'teacher') {
-    return `You are an expert educational consultant specializing in differentiated instruction and special education.
+    return `You are an expert educational consultant specializing in differentiated instruction and special education, with expertise in the French Education Nationale curriculum.
 
 Your role is to help teachers create effective learning experiences for students with diverse learning needs.
 
 You will receive:
 - A student learning profile (e.g., "Visual Learner", "Slow Processing")
 - A curriculum topic they're teaching
+- Official French Education Nationale curriculum teaching guides
 - Web articles and research about teaching strategies
 - YouTube video transcripts with teaching tips
 
 Generate a comprehensive teaching guide with:
 1. A summary of this learning profile (2-3 sentences)
-2. 3-5 key strategies with clear explanations of why they work
-3. 3-4 practical classroom activities with step-by-step instructions
+2. 3-5 key strategies with clear explanations of why they work (prioritize strategies from official curriculum guides)
+3. 3-4 practical classroom activities with step-by-step instructions (align with curriculum standards)
 4. Recommended resources (from the provided web links)
-5. A brief lesson plan outline for Support, Core, and Advanced groups
+5. A brief lesson plan outline for Support, Core, and Advanced groups (following curriculum guidelines)
+
+IMPORTANT: Give priority to strategies and approaches from the official curriculum guides, then supplement with web research and video insights.
 
 Focus on classroom management, lesson planning, grouping strategies, and assessment methods.`;
   } else {
-    return `You are a compassionate educational consultant specializing in helping parents support their children's learning at home.
+    return `You are a compassionate educational consultant specializing in helping parents support their children's learning at home, with knowledge of the French Education Nationale curriculum.
 
 Your role is to provide practical, encouraging advice for parents whose children have specific learning needs.
 
 You will receive:
 - A description of how their child learns (e.g., "Visual Learner", "Needs Repetition")
 - A subject/topic the child is working on
+- Official French Education Nationale curriculum teaching guides (to align home support with school)
 - Research articles and videos about teaching strategies
 - YouTube transcripts with educational advice
 
 Generate a helpful parent guide with:
 1. A warm, reassuring summary of their child's learning style (2-3 sentences)
-2. 3-5 key strategies parents can use at home (simple, specific, encouraging)
-3. 3-4 practical home activities (using everyday materials)
+2. 3-5 key strategies parents can use at home (simple, specific, encouraging, aligned with curriculum)
+3. 3-4 practical home activities (using everyday materials, supporting curriculum goals)
 4. Recommended resources for parents (articles, videos)
 5. A weekly home support checklist with small, doable actions
+
+IMPORTANT: Ensure home activities support what's being taught in school according to the curriculum guides.
 
 Focus on home routines, motivation, communication with the child, homework support, and building confidence. Use warm, encouraging language. Avoid jargon.`;
   }
@@ -133,6 +153,7 @@ function buildUserPrompt(
   curriculumTopic: string,
   webResources: BraveSearchResult[],
   youtubeTranscripts: YouTubeTranscriptResult[],
+  curriculumGuides: string,
   gradeLevel: string,
   studentCount: number | undefined,
   audience: 'teacher' | 'parent'
@@ -156,17 +177,25 @@ function buildUserPrompt(
     )
     .join('\n');
 
+  const curriculumSection = curriculumGuides
+    ? `${curriculumGuides}\n\n`
+    : '(No official curriculum guides available for this topic)\n\n';
+
   return `Learning Profile: ${categoryName}
 Curriculum Topic: ${curriculumTopic}
 Grade Level: ${gradeLevel}
 ${studentInfo}
+${curriculumSection}
 WEB RESOURCES:
 ${resourcesText}
 
 YOUTUBE VIDEO TRANSCRIPTS:
 ${transcriptsText}
 
-Based on the above information, generate a comprehensive ${audience === 'teacher' ? 'teaching guide' : 'parent support guide'} that combines research-based strategies from the web resources and practical tips from the video transcripts.
+Based on the above information, generate a comprehensive ${audience === 'teacher' ? 'teaching guide' : 'parent support guide'} that:
+1. PRIORITIZES strategies and approaches from the official curriculum guides
+2. Supplements with research-based strategies from the web resources
+3. Includes practical tips from the video transcripts
 
 Make it specific to helping ${categoryName} students learn ${curriculumTopic}.
 

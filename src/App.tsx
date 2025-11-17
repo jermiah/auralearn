@@ -32,6 +32,7 @@ import StudentAssessment from "./pages/StudentAssessment";
 import StudentGuide from "./pages/StudentGuide";
 import StudentCategories from "./pages/StudentCategories";
 import AdminDashboard from "./pages/AdminDashboard";
+import RadarDashboard from "./pages/RadarDashboard";
 
 const queryClient = new QueryClient();
 
@@ -94,6 +95,10 @@ const App = () => (
 
               {/* Admin Dashboard (publicly accessible for demo/jury) */}
               <Route path="/admin" element={<AdminDashboard />} />
+
+              {/* Radar Analytics Dashboard (accessible by teachers) */}
+              <Route path="/radar" element={<ProtectedRoute requireRole="teacher"><Layout><RadarDashboard /></Layout></ProtectedRoute>} />
+              <Route path="/radar/:studentId" element={<ProtectedRoute requireRole="teacher"><Layout><RadarDashboard /></Layout></ProtectedRoute>} />
 
               {/* 404 Not Found */}
               <Route path="*" element={<NotFound />} />

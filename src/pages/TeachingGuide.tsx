@@ -1,4 +1,4 @@
-import { useState } from "react";
+import { useState, useEffect } from "react";
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/components/ui/card";
 import { Button } from "@/components/ui/button";
 import { Badge } from "@/components/ui/badge";
@@ -14,71 +14,158 @@ import {
   BookOpen,
   Loader2,
 } from "lucide-react";
-import { StudentCategory, categoryDisplayNames } from "@/lib/supabase";
+import { StudentCategory, categoryDisplayNames, supabase } from "@/lib/supabase";
 import { TeachingGuidePanel } from "@/components/TeachingGuidePanel";
 
-// Category configuration with icons and colors
+// Category configuration with icons and colors (without student counts - these come from DB)
 const categoryConfig: Record<
   StudentCategory,
-  { icon: typeof Clock; color: string; description: string; studentCount: number }
+  { icon: typeof Clock; color: string; description: string }
 > = {
   slow_processing: {
     icon: Clock,
     color: "from-blue-500 to-cyan-500",
     description: "Students who need extra time to process information and complete tasks",
-    studentCount: 5,
   },
   fast_processor: {
     icon: Zap,
     color: "from-yellow-500 to-orange-500",
     description: "Students who grasp concepts quickly and need enrichment",
-    studentCount: 7,
   },
   high_energy: {
     icon: Activity,
     color: "from-green-500 to-emerald-500",
     description: "Students who learn best through movement and hands-on activities",
-    studentCount: 6,
   },
   visual_learner: {
     icon: Eye,
     color: "from-purple-500 to-pink-500",
     description: "Students who learn best through visual representations and diagrams",
-    studentCount: 8,
   },
   logical_learner: {
     icon: Brain,
     color: "from-indigo-500 to-blue-500",
     description: "Students who excel with structured, sequential thinking",
-    studentCount: 6,
   },
   sensitive_low_confidence: {
     icon: Heart,
     color: "from-pink-500 to-rose-500",
     description: "Students who need emotional support and confidence building",
-    studentCount: 4,
   },
   easily_distracted: {
     icon: Target,
     color: "from-red-500 to-orange-500",
     description: "Students who struggle with sustained attention and focus",
-    studentCount: 5,
   },
   needs_repetition: {
     icon: Repeat,
     color: "from-teal-500 to-cyan-500",
     description: "Students who benefit from repeated practice and review",
-    studentCount: 6,
   },
 };
 
 export default function TeachingGuide() {
   const [selectedCategory, setSelectedCategory] = useState<StudentCategory | null>(null);
   const [curriculumTopic, setCurriculumTopic] = useState("mathematics");
+  const [classData, setClassData] = useState<any>({});
+  const [totalStudents, setTotalStudents] = useState(0);
+  const [categoryCounts, setCategoryCounts] = useState<Record<StudentCategory, number>>({
+    slow_processing: 0,
+    fast_processor: 0,
+    high_energy: 0,
+    visual_learner: 0,
+    logical_learner: 0,
+    sensitive_low_confidence: 0,
+    easily_distracted: 0,
+    needs_repetition: 0,
+  });
+  const [loading, setLoading] = useState(true);
 
-  // Get class data from localStorage (in production, fetch from Supabase)
-  const classData = JSON.parse(localStorage.getItem("currentClass") || "{}");
-  const totalStudents = classData.students?.length || 30;
+  // Fetch real data from Supabase
+  useEffect(() => {
+    async function fetchClassData() {
+      try {
+        // Try to get class from localStorage first
+        const storedClass = localStorage.getItem("currentClass");
+        let classId = storedClass ? JSON.parse(storedClass).id : null;
+
+        if (!classId) {
+          // If no class in localStorage, get the first class for the current teacher
+          const { data: user } = await supabase.auth.getUser();
+          if (user?.user) {
+            const { data: classes } = await supabase
+              .from("classes")
+              .select("*")
+              .eq("teacher_id", user.user.id)
+              .limit(1);
+
+            if (classes && classes.length > 0) {
+              classId = classes[0].id;
+              setClassData(classes[0]);
+            }
+          }
+        } else {
+          setClassData(JSON.parse(storedClass));
+        }
+
+        if (classId) {
+          // Fetch students for this class and count by category
+          const { data: students, error } = await supabase
+            .from("students")
+            .select("id, name, primary_category, secondary_category, category_scores")
+            .eq("class_id", classId);
+
+          if (error) throw error;
+
+          if (students) {
+            setTotalStudents(students.length);
+
+            // Count students by category (using both primary_category and category_scores)
+            const counts: Record<StudentCategory, number> = {
+              slow_processing: 0,
+              fast_processor: 0,
+              high_energy: 0,
+              visual_learner: 0,
+              logical_learner: 0,
+              sensitive_low_confidence: 0,
+              easily_distracted: 0,
+              needs_repetition: 0,
+            };
+
+            students.forEach((student) => {
+              // First, count by primary_category if set
+              if (student.primary_category) {
+                counts[student.primary_category as StudentCategory]++;
+              }
+              // If no primary_category, use category_scores
+              else if (student.category_scores) {
+                const categories = Object.entries(student.category_scores) as [StudentCategory, number][];
+                categories.forEach(([category, score]) => {
+                  // Count student in categories where they score >= 50
+                  if (score >= 50 && category in counts) {
+                    counts[category]++;
+                  }
+                });
+              }
+            });
+
+            setCategoryCounts(counts);
+          }
+        } else {
+          // No class found - use demo/default values
+          setTotalStudents(30);
+        }
+      } catch (error) {
+        console.error("Error fetching class data:", error);
+        // Fallback to demo values
+        setTotalStudents(30);
+      } finally {
+        setLoading(false);
+      }
+    }
+
+    fetchClassData();
+  }, []);
 
   const handleOpenGuide = (category: StudentCategory) => {
     setSelectedCategory(category);
@@ -87,6 +174,17 @@ export default function TeachingGuide() {
   const handleClosePanel = () => {
     setSelectedCategory(null);
   };
+
+  if (loading) {
+    return (
+      <div className="min-h-screen bg-background p-8 flex items-center justify-center">
+        <div className="text-center space-y-4">
+          <Loader2 className="w-12 h-12 animate-spin text-primary mx-auto" />
+          <p className="text-muted-foreground">Loading your teaching guides...</p>
+        </div>
+      </div>
+    );
+  }
 
   return (
     <div className="min-h-screen bg-background p-8">
@@ -115,8 +213,8 @@ export default function TeachingGuide() {
             </CardHeader>
             <CardContent>
               <p className="text-sm text-muted-foreground">
-                This guide combines research from educational websites, teaching blogs, and YouTube
-                expert videos to provide you with the most effective strategies for each student
+                This guide combines research from educational websites, teaching blogs, YouTube
+                expert videos, and official French Education Nationale curriculum teaching guides to provide you with the most effective strategies for each student
                 category. Each guide is generated based on current best practices.
               </p>
             </CardContent>
@@ -128,6 +226,7 @@ export default function TeachingGuide() {
           {(Object.keys(categoryConfig) as StudentCategory[]).map((category) => {
             const config = categoryConfig[category];
             const Icon = config.icon;
+            const studentCount = categoryCounts[category];
 
             return (
               <Card
@@ -147,7 +246,7 @@ export default function TeachingGuide() {
                           {categoryDisplayNames[category]}
                         </CardTitle>
                         <Badge variant="secondary" className="mt-1">
-                          {config.studentCount} students
+                          {studentCount} {studentCount === 1 ? 'student' : 'students'}
                         </Badge>
                       </div>
                     </div>
@@ -158,9 +257,10 @@ export default function TeachingGuide() {
                   <Button
                     onClick={() => handleOpenGuide(category)}
                     className="w-full bg-gradient-to-r from-primary to-info hover:opacity-90"
+                    disabled={studentCount === 0}
                   >
                     <BookOpen className="w-4 h-4 mr-2" />
-                    View Teaching Guide
+                    {studentCount === 0 ? 'No Students in Category' : 'View Teaching Guide'}
                   </Button>
                 </CardContent>
               </Card>
@@ -181,9 +281,10 @@ export default function TeachingGuide() {
               Each teaching guide is generated in real-time using:
             </p>
             <ul className="mt-2 space-y-1 text-sm text-muted-foreground">
+              <li>• Official French Education Nationale curriculum teaching guides</li>
               <li>• Latest educational research and articles</li>
               <li>• Expert teaching videos and demonstrations</li>
-              <li>• AI powered insight generation</li>
+              <li>• AI-powered insight generation combining all sources</li>
             </ul>
           </CardContent>
         </Card>
@@ -196,7 +297,8 @@ export default function TeachingGuide() {
           curriculumTopic={curriculumTopic}
           audience="teacher"
           classId={classData.id || "demo-class"}
-          studentCount={categoryConfig[selectedCategory].studentCount}
+          studentCount={categoryCounts[selectedCategory]}
+          gradeLevel={classData.grade_level}
           onClose={handleClosePanel}
         />
       )}
